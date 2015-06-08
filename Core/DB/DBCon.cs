@@ -12,9 +12,17 @@ namespace Core.DB
         {
             return new UMDataContext(ConfigurationManager.ConnectionStrings["DBConString"].ConnectionString);
         }
-        public static GeneralDataContext GetGeneralDataContext()
+        public static CMDataContext GetCMDataContext()
         {
-            return new GeneralDataContext(ConfigurationManager.ConnectionStrings["DBConString"].ConnectionString);
+            return new CMDataContext(ConfigurationManager.ConnectionStrings["DBConString"].ConnectionString);
+        }
+        public static FilesDataContext GetFilesDataContext()
+        {
+            return new FilesDataContext(ConfigurationManager.ConnectionStrings["DBConString"].ConnectionString);
+        }
+        public static ToolsDataContext GetToolsDataContext()
+        {
+            return new ToolsDataContext(ConfigurationManager.ConnectionStrings["DBConString"].ConnectionString);
         }
     }
 }

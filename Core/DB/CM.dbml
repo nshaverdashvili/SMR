@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SMR" Class="CMDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=server.abs.ge,1443;Initial Catalog=SMR;Persist Security Info=True;User ID=sa" SettingsObjectName="Core.Properties.Settings" SettingsPropertyName="SMRConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.sp_News" Method="sp_News">
+    <Parameter Name="iud" Type="System.Int32" DbType="Int" />
+    <Parameter Name="NewsID" Parameter="newsID" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="NewsDate" Parameter="newsDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="Title" Parameter="title" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="FullText" Parameter="fullText" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="LangID" Parameter="langID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CategoryID" Parameter="categoryID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="SortVal" Parameter="sortVal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IsVisible" Parameter="isVisible" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="VideoURL" Parameter="videoURL" Type="System.String" DbType="NVarChar(300)" />
+    <Parameter Name="GalleryID" Parameter="galleryID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.sp_Pages" Method="sp_Pages">
+    <Parameter Name="iud" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageID" Parameter="pageID" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ParentID" Parameter="parentID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Title" Parameter="title" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="TemplateID" Parameter="templateID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="URL" Parameter="uRL" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="Note" Parameter="note" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="GalleryID" Parameter="galleryID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LangID" Parameter="langID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IsVisible" Parameter="isVisible" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.fn_List_News" Method="fn_List_News" IsComposable="true">
+    <Parameter Name="NewsID" Parameter="newsID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="fn_List_NewsResult">
+      <Column Name="NewsDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
+      <Column Name="FullText" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="LangID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CategoryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SortVal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="VideoURL" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="GalleryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.fn_List_Pages" Method="fn_List_Pages" IsComposable="true">
+    <Parameter Name="PageID" Parameter="pageID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="fn_List_PagesResult">
+      <Column Name="ParentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TemplateID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="URL" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="GalleryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="LangID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

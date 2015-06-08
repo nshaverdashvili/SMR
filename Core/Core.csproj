@@ -30,6 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Base">
+      <HintPath>..\Extdll\Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Lib">
+      <HintPath>..\Extdll\Lib.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
@@ -41,30 +47,60 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DB\DBCon.cs" />
-    <Compile Include="DB\General.designer.cs">
+    <Compile Include="CM\News.cs" />
+    <Compile Include="CM\Pages.cs" />
+    <Compile Include="DB\CM.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>General.dbml</DependentUpon>
+      <DependentUpon>CM.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DBCon.cs" />
+    <Compile Include="DB\Files.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Files.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="DB\Tools.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Tools.dbml</DependentUpon>
     </Compile>
     <Compile Include="DB\UM.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>UM.dbml</DependentUpon>
     </Compile>
+    <Compile Include="Files\Files.cs" />
+    <Compile Include="Files\Gallery.cs" />
+    <Compile Include="Files\Utilities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Tools\Configurator.cs" />
+    <Compile Include="Tools\Dictionary.cs" />
+    <Compile Include="Tools\Plugins.cs" />
+    <Compile Include="UM\Permissions.cs" />
+    <Compile Include="UM\Roles.cs" />
     <Compile Include="UM\Users.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="DB\General.dbml">
+    <None Include="DB\CM.dbml">
       <Generator>MSLinqToSQLGenerator</Generator>
-      <LastGenOutput>General.designer.cs</LastGenOutput>
+      <LastGenOutput>CM.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB\Files.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Files.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB\Tools.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Tools.designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
     <None Include="DB\UM.dbml">
@@ -86,8 +122,19 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="DB\General.dbml.layout">
-      <DependentUpon>General.dbml</DependentUpon>
+    <None Include="DB\Files.dbml.layout">
+      <DependentUpon>Files.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="DB\Tools.dbml.layout">
+      <DependentUpon>Tools.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DB\CM.dbml.layout">
+      <DependentUpon>CM.dbml</DependentUpon>
     </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
