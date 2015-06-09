@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Core.Tools
 {
-    class Configurator
+    class Utilities
     {
     }
 }

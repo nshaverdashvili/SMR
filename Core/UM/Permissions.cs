@@ -21,6 +21,7 @@ namespace Core.UM
     {
 
     }
+
     public class UserPermissions
     {
         public int RecordID { get; set; }

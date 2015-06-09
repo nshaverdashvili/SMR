@@ -84,8 +84,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Plugins\jquery\jquery-1.11.3.js" />
     <Content Include="Plugins\jquery\jquery-1.11.3.min.js" />
+    <Content Include="Plugins\modernizr\modernizr.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
