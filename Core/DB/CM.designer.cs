@@ -70,14 +70,6 @@ namespace Core.DB
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_Pages")]
-		public int sp_Pages([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> iud, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PageID", DbType="Int")] ref System.Nullable<int> pageID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ParentID", DbType="Int")] System.Nullable<int> parentID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Title", DbType="NVarChar(250)")] string title, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Description", DbType="NVarChar(MAX)")] string description, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TemplateID", DbType="Int")] System.Nullable<int> templateID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="URL", DbType="NVarChar(250)")] string uRL, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Note", DbType="NVarChar(500)")] string note, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="GalleryID", DbType="Int")] System.Nullable<int> galleryID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="LangID", DbType="Int")] System.Nullable<int> langID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IsVisible", DbType="Int")] System.Nullable<int> isVisible)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iud, pageID, parentID, title, description, templateID, uRL, note, galleryID, langID, isVisible);
-			pageID = ((System.Nullable<int>)(result.GetParameterValue(1)));
-			return ((int)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.fn_List_News", IsComposable=true)]
 		public IQueryable<fn_List_NewsResult> fn_List_News([global::System.Data.Linq.Mapping.ParameterAttribute(Name="NewsID", DbType="Int")] System.Nullable<int> newsID)
 		{
@@ -88,6 +80,14 @@ namespace Core.DB
 		public IQueryable<fn_List_PagesResult> fn_List_Pages([global::System.Data.Linq.Mapping.ParameterAttribute(Name="PageID", DbType="Int")] System.Nullable<int> pageID)
 		{
 			return this.CreateMethodCallQuery<fn_List_PagesResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), pageID);
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_Pages")]
+		public int sp_Pages([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> iud, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PageID", DbType="Int")] ref System.Nullable<int> pageID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ParentID", DbType="Int")] System.Nullable<int> parentID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Title", DbType="NVarChar(250)")] string title, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Description", DbType="NVarChar(MAX)")] string description, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TemplateID", DbType="Int")] System.Nullable<int> templateID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="URL", DbType="NVarChar(250)")] string uRL, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Note", DbType="NVarChar(500)")] string note, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="GalleryID", DbType="Int")] System.Nullable<int> galleryID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="LangID", DbType="Int")] System.Nullable<int> langID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IsVisible", DbType="Bit")] System.Nullable<bool> isVisible)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iud, pageID, parentID, title, description, templateID, uRL, note, galleryID, langID, isVisible);
+			pageID = ((System.Nullable<int>)(result.GetParameterValue(1)));
+			return ((int)(result.ReturnValue));
 		}
 	}
 	

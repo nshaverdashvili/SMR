@@ -38,7 +38,22 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Base">
+      <HintPath>..\Extdll\Base.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxThemes.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxTreeList.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Lib">
+      <HintPath>..\Extdll\Lib.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Linq" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -57,6 +72,156 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Themes\DevEx\Editors\caChallengeImageBack.png" />
+    <Content Include="App_Themes\DevEx\Editors\edtBtnBack.png" />
+    <Content Include="App_Themes\DevEx\Editors\edtBtnDisabledBack.png" />
+    <Content Include="App_Themes\DevEx\Editors\edtBtnHBack.png" />
+    <Content Include="App_Themes\DevEx\Editors\edtBtnPBack.png" />
+    <Content Include="App_Themes\DevEx\Editors\edtDropDownBtnHBack.png" />
+    <Content Include="App_Themes\DevEx\Editors\edtDropDownBtnPBack.png" />
+    <Content Include="App_Themes\DevEx\Editors\edtProgressBack.png" />
+    <Content Include="App_Themes\DevEx\Editors\edtProgressIndicatorBack.png" />
+    <Content Include="App_Themes\DevEx\Editors\edtTokenBoxTokenBackground.png" />
+    <Content Include="App_Themes\DevEx\Editors\edtTrackBarBarHighlightH.gif" />
+    <Content Include="App_Themes\DevEx\Editors\edtTrackBarBarHighlightV.gif" />
+    <Content Include="App_Themes\DevEx\Editors\edtTrackBarDoubleLargeTickH.gif" />
+    <Content Include="App_Themes\DevEx\Editors\edtTrackBarDoubleLargeTickV.gif" />
+    <Content Include="App_Themes\DevEx\Editors\edtTrackBarDoubleSmallTickH.gif" />
+    <Content Include="App_Themes\DevEx\Editors\edtTrackBarDoubleSmallTickV.gif" />
+    <Content Include="App_Themes\DevEx\Editors\edtTrackBarLargeTickH.gif" />
+    <Content Include="App_Themes\DevEx\Editors\edtTrackBarLargeTickV.gif" />
+    <Content Include="App_Themes\DevEx\Editors\edtTrackBarSmallTickH.gif" />
+    <Content Include="App_Themes\DevEx\Editors\edtTrackBarSmallTickV.gif" />
+    <Content Include="App_Themes\DevEx\Editors\edtTrackBarTrackH.gif" />
+    <Content Include="App_Themes\DevEx\Editors\edtTrackBarTrackV.gif" />
+    <Content Include="App_Themes\DevEx\Editors\lbHeaderBack.png" />
+    <Content Include="App_Themes\DevEx\Editors\Loading.gif" />
+    <Content Include="App_Themes\DevEx\Editors\sprite.css" />
+    <Content Include="App_Themes\DevEx\Editors\sprite.png" />
+    <Content Include="App_Themes\DevEx\Editors\styles.css" />
+    <Content Include="App_Themes\DevEx\GridView\gvFocusedBack.png" />
+    <Content Include="App_Themes\DevEx\GridView\gvGroupPanelBack.png" />
+    <Content Include="App_Themes\DevEx\GridView\gvHeaderBack.png" />
+    <Content Include="App_Themes\DevEx\GridView\gvPagerPanelBack.png" />
+    <Content Include="App_Themes\DevEx\GridView\gvTitleBack.png" />
+    <Content Include="App_Themes\DevEx\GridView\Loading.gif" />
+    <Content Include="App_Themes\DevEx\GridView\sprite.css" />
+    <Content Include="App_Themes\DevEx\GridView\sprite.png" />
+    <Content Include="App_Themes\DevEx\GridView\StatusBarLoading.gif" />
+    <Content Include="App_Themes\DevEx\GridView\styles.css" />
+    <Content Include="App_Themes\DevEx\TreeList\CssImages\AltBack.png" />
+    <Content Include="App_Themes\DevEx\TreeList\CssImages\ControlBack.png" />
+    <Content Include="App_Themes\DevEx\TreeList\CssImages\FocusedBack.png" />
+    <Content Include="App_Themes\DevEx\TreeList\CssImages\HeaderBack.png" />
+    <Content Include="App_Themes\DevEx\TreeList\CssImages\PagerBack.png" />
+    <Content Include="App_Themes\DevEx\TreeList\CssImages\PreviewBack.png" />
+    <Content Include="App_Themes\DevEx\TreeList\CssImages\TitleBack.png" />
+    <Content Include="App_Themes\DevEx\TreeList\Loading.gif" />
+    <Content Include="App_Themes\DevEx\TreeList\sprite.css" />
+    <Content Include="App_Themes\DevEx\TreeList\sprite.png" />
+    <Content Include="App_Themes\DevEx\TreeList\styles.css" />
+    <Content Include="App_Themes\DevEx\Web\dvItemBack.png" />
+    <Content Include="App_Themes\DevEx\Web\dvPagerPanelBack.png" />
+    <Content Include="App_Themes\DevEx\Web\dvPagerPanelSpacingBack.png" />
+    <Content Include="App_Themes\DevEx\Web\edtBtnBack.png" />
+    <Content Include="App_Themes\DevEx\Web\edtBtnDisabledBack.png" />
+    <Content Include="App_Themes\DevEx\Web\edtBtnHBack.png" />
+    <Content Include="App_Themes\DevEx\Web\fmFileCheck.png" />
+    <Content Include="App_Themes\DevEx\Web\fmSplitterSeparator.gif" />
+    <Content Include="App_Themes\DevEx\Web\igLoading.gif" />
+    <Content Include="App_Themes\DevEx\Web\igNavBtnsBack.png" />
+    <Content Include="App_Themes\DevEx\Web\isLoading.gif" />
+    <Content Include="App_Themes\DevEx\Web\Loading.gif" />
+    <Content Include="App_Themes\DevEx\Web\mHorzItemSepBack.png" />
+    <Content Include="App_Themes\DevEx\Web\mHorzLargeItemSepBack.png" />
+    <Content Include="App_Themes\DevEx\Web\mItemBack.png" />
+    <Content Include="App_Themes\DevEx\Web\mItemHBack.png" />
+    <Content Include="App_Themes\DevEx\Web\mItemSBack.png" />
+    <Content Include="App_Themes\DevEx\Web\mScrollHBack.png" />
+    <Content Include="App_Themes\DevEx\Web\mScrollPBack.png" />
+    <Content Include="App_Themes\DevEx\Web\mSubItemHBack.png" />
+    <Content Include="App_Themes\DevEx\Web\mSubItemSepBack.png" />
+    <Content Include="App_Themes\DevEx\Web\mVertItemSepBack.png" />
+    <Content Include="App_Themes\DevEx\Web\nbHBack.png" />
+    <Content Include="App_Themes\DevEx\Web\nbIHBack.png" />
+    <Content Include="App_Themes\DevEx\Web\nbISBack.png" />
+    <Content Include="App_Themes\DevEx\Web\ncPagerPanelSpacingBack.png" />
+    <Content Include="App_Themes\DevEx\Web\pcFBack.png" />
+    <Content Include="App_Themes\DevEx\Web\pcHBack.png" />
+    <Content Include="App_Themes\DevEx\Web\pDropDownButtonHoverBack.png" />
+    <Content Include="App_Themes\DevEx\Web\pDropDownButtonPressedBack.png" />
+    <Content Include="App_Themes\DevEx\Web\pSepBack.png" />
+    <Content Include="App_Themes\DevEx\Web\rcMapImage.png" />
+    <Content Include="App_Themes\DevEx\Web\rFileTabBack.png" />
+    <Content Include="App_Themes\DevEx\Web\rFileTabHoverBack.png" />
+    <Content Include="App_Themes\DevEx\Web\rFileTabPressedBack.png" />
+    <Content Include="App_Themes\DevEx\Web\rGroupSepBack.png" />
+    <Content Include="App_Themes\DevEx\Web\rItemHBack.png" />
+    <Content Include="App_Themes\DevEx\Web\rItemSBack.png" />
+    <Content Include="App_Themes\DevEx\Web\rpHBack.png" />
+    <Content Include="App_Themes\DevEx\Web\rpTEdgeBack.png" />
+    <Content Include="App_Themes\DevEx\Web\splHSepHBack.png" />
+    <Content Include="App_Themes\DevEx\Web\splResizingPointer.gif" />
+    <Content Include="App_Themes\DevEx\Web\splVSepHBack.png" />
+    <Content Include="App_Themes\DevEx\Web\sprite.css" />
+    <Content Include="App_Themes\DevEx\Web\sprite.png" />
+    <Content Include="App_Themes\DevEx\Web\styles.css" />
+    <Content Include="App_Themes\DevEx\Web\tcTabBack.png" />
+    <Content Include="App_Themes\DevEx\Web\tcTabHoverBack.png" />
+    <Content Include="App_Themes\DevEx\Web\tiFBBack.png" />
+    <Content Include="App_Themes\DevEx\Web\tiHBack.png" />
+    <Content Include="App_Themes\DevEx\Web\tvNodeLoading.gif" />
+    <Content Include="App_Themes\DevEx\Web\ucButtonBack.png" />
+    <Content Include="App_Themes\DevEx\Web\ucButtonDisabledBack.png" />
+    <Content Include="App_Themes\DevEx\Web\ucButtonHoverBack.png" />
+    <Content Include="App_Themes\DevEx\Web\ucButtonPressedBack.png" />
+    <Content Include="App_Themes\DevEx\Web\ucProgressBack.png" />
+    <Content Include="App_Themes\DevEx\Web\ucProgressIndicatorBack.png" />
+    <Content Include="Content\css\managerStyle.css" />
+    <Content Include="Content\css\style.css" />
+    <Content Include="Content\images\grid\1434315178_Cancel.png" />
+    <Content Include="Content\images\grid\add.png" />
+    <Content Include="Content\images\grid\cancel.png" />
+    <Content Include="Content\images\grid\ClearFilter.png" />
+    <Content Include="Content\images\grid\comment.png" />
+    <Content Include="Content\images\grid\copy.png" />
+    <Content Include="Content\images\grid\delete.png" />
+    <Content Include="Content\images\grid\download.png" />
+    <Content Include="Content\images\grid\edit.png" />
+    <Content Include="Content\images\grid\extract.png" />
+    <Content Include="Content\images\grid\info.png" />
+    <Content Include="Content\images\grid\lock.png" />
+    <Content Include="Content\images\grid\statistics.png" />
+    <Content Include="Content\images\grid\succsses.png" />
+    <Content Include="Manager\Default.aspx" />
+    <Content Include="Manager\Files\Files.aspx" />
+    <Content Include="Manager\Files\Galleries.aspx" />
+    <Content Include="Manager\LogIn.aspx" />
+    <Content Include="Manager\UM\Permissions.aspx" />
+    <Content Include="Manager\UM\Roles.aspx" />
+    <Content Include="Manager\UM\Users.aspx" />
+    <Content Include="Plugins\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="Plugins\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="Plugins\bootstrap\css\bootstrap.css" />
+    <Content Include="Plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Plugins\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Plugins\bootstrap\js\bootstrap.js" />
+    <Content Include="Plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Plugins\bootstrap\js\npm.js" />
+    <Content Include="Plugins\fancybox\blank.gif" />
+    <Content Include="Plugins\fancybox\fancybox_loading%402x.gif" />
+    <Content Include="Plugins\fancybox\fancybox_loading.gif" />
+    <Content Include="Plugins\fancybox\fancybox_overlay.png" />
+    <Content Include="Plugins\fancybox\fancybox_sprite%402x.png" />
+    <Content Include="Plugins\fancybox\fancybox_sprite.png" />
+    <Content Include="Plugins\fancybox\helpers\fancybox_buttons.png" />
+    <Content Include="Plugins\fancybox\helpers\jquery.fancybox-buttons.css" />
+    <Content Include="Plugins\fancybox\helpers\jquery.fancybox-buttons.js" />
+    <Content Include="Plugins\fancybox\helpers\jquery.fancybox-media.js" />
+    <Content Include="Plugins\fancybox\helpers\jquery.fancybox-thumbs.css" />
+    <Content Include="Plugins\fancybox\helpers\jquery.fancybox-thumbs.js" />
+    <Content Include="Plugins\fancybox\jquery.fancybox.css" />
+    <Content Include="Plugins\fancybox\jquery.fancybox.js" />
     <Content Include="Plugins\jqueryUI\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
     <Content Include="Plugins\jqueryUI\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
     <Content Include="Plugins\jqueryUI\images\ui-bg_flat_10_000000_40x100.png" />
@@ -75,6 +240,68 @@
     <Content Include="Plugins\jqueryUI\jquery-ui.min.js" />
     <Content Include="Plugins\jqueryUI\jquery-ui.theme.min.css" />
     <Content Include="Plugins\jquery\jquery-1.11.3.min.map" />
+    <Content Include="packages.config" />
+    <Content Include="Manager\AdminPage.Master" />
+    <Content Include="Plugins\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="Plugins\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Plugins\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Plugins\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Plugins\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Plugins\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Plugins\fancybox\helpers\Thumbs.db" />
+    <Content Include="App_Themes\DevEx\ASPxButton.skin" />
+    <Content Include="App_Themes\DevEx\ASPxButtonEdit.skin" />
+    <Content Include="App_Themes\DevEx\ASPxCalendar.skin" />
+    <Content Include="App_Themes\DevEx\ASPxCallbackPanel.skin" />
+    <Content Include="App_Themes\DevEx\ASPxCaptcha.skin" />
+    <Content Include="App_Themes\DevEx\ASPxCheckBox.skin" />
+    <Content Include="App_Themes\DevEx\ASPxCheckBoxList.skin" />
+    <Content Include="App_Themes\DevEx\ASPxCloudControl.skin" />
+    <Content Include="App_Themes\DevEx\ASPxColorEdit.skin" />
+    <Content Include="App_Themes\DevEx\ASPxComboBox.skin" />
+    <Content Include="App_Themes\DevEx\ASPxDataView.skin" />
+    <Content Include="App_Themes\DevEx\ASPxDateEdit.skin" />
+    <Content Include="App_Themes\DevEx\ASPxDockPanel.skin" />
+    <Content Include="App_Themes\DevEx\ASPxDropDownEdit.skin" />
+    <Content Include="App_Themes\DevEx\ASPxFileManager.skin" />
+    <Content Include="App_Themes\DevEx\ASPxFilterControl.skin" />
+    <Content Include="App_Themes\DevEx\ASPxFormLayout.skin" />
+    <Content Include="App_Themes\DevEx\ASPxGridLookup.skin" />
+    <Content Include="App_Themes\DevEx\ASPxGridView.skin" />
+    <Content Include="App_Themes\DevEx\ASPxHeadline.skin" />
+    <Content Include="App_Themes\DevEx\ASPxHyperLink.skin" />
+    <Content Include="App_Themes\DevEx\ASPxImageGallery.skin" />
+    <Content Include="App_Themes\DevEx\ASPxImageSlider.skin" />
+    <Content Include="App_Themes\DevEx\ASPxLabel.skin" />
+    <Content Include="App_Themes\DevEx\ASPxListBox.skin" />
+    <Content Include="App_Themes\DevEx\ASPxLoadingPanel.skin" />
+    <Content Include="App_Themes\DevEx\ASPxMemo.skin" />
+    <Content Include="App_Themes\DevEx\ASPxMenu.skin" />
+    <Content Include="App_Themes\DevEx\ASPxNavBar.skin" />
+    <Content Include="App_Themes\DevEx\ASPxNewsControl.skin" />
+    <Content Include="App_Themes\DevEx\ASPxPageControl.skin" />
+    <Content Include="App_Themes\DevEx\ASPxPager.skin" />
+    <Content Include="App_Themes\DevEx\ASPxPopupControl.skin" />
+    <Content Include="App_Themes\DevEx\ASPxPopupMenu.skin" />
+    <Content Include="App_Themes\DevEx\ASPxProgressBar.skin" />
+    <Content Include="App_Themes\DevEx\ASPxRadioButton.skin" />
+    <Content Include="App_Themes\DevEx\ASPxRadioButtonList.skin" />
+    <Content Include="App_Themes\DevEx\ASPxRatingControl.skin" />
+    <Content Include="App_Themes\DevEx\ASPxRibbon.skin" />
+    <Content Include="App_Themes\DevEx\ASPxRoundPanel.skin" />
+    <Content Include="App_Themes\DevEx\ASPxSiteMapControl.skin" />
+    <Content Include="App_Themes\DevEx\ASPxSpinEdit.skin" />
+    <Content Include="App_Themes\DevEx\ASPxSplitter.skin" />
+    <Content Include="App_Themes\DevEx\ASPxTabControl.skin" />
+    <Content Include="App_Themes\DevEx\ASPxTextBox.skin" />
+    <Content Include="App_Themes\DevEx\ASPxTimeEdit.skin" />
+    <Content Include="App_Themes\DevEx\ASPxTitleIndex.skin" />
+    <Content Include="App_Themes\DevEx\ASPxTokenBox.skin" />
+    <Content Include="App_Themes\DevEx\ASPxTrackBar.skin" />
+    <Content Include="App_Themes\DevEx\ASPxTreeList.skin" />
+    <Content Include="App_Themes\DevEx\ASPxTreeView.skin" />
+    <Content Include="App_Themes\DevEx\ASPxUploadControl.skin" />
+    <Content Include="App_Themes\DevEx\ASPxValidationSummary.skin" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -86,17 +313,102 @@
     <Content Include="Global.asax" />
     <Content Include="Plugins\jquery\jquery-1.11.3.min.js" />
     <Content Include="Plugins\modernizr\modernizr.js" />
+    <Content Include="Plugins\normalize\normalize.css" />
+    <Content Include="Scripts\frontjs\global.js" />
+    <Content Include="Scripts\managerjs\global.js" />
+    <Content Include="Manager\Tools\Dictionaries.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Manager\AdminPage.Master.cs">
+      <DependentUpon>AdminPage.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\AdminPage.Master.designer.cs">
+      <DependentUpon>AdminPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Files\Files.aspx.cs">
+      <DependentUpon>Files.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Files\Files.aspx.designer.cs">
+      <DependentUpon>Files.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Files\Galleries.aspx.cs">
+      <DependentUpon>Galleries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Files\Galleries.aspx.designer.cs">
+      <DependentUpon>Galleries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\LogIn.aspx.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\LogIn.aspx.designer.cs">
+      <DependentUpon>LogIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\UM\Permissions.aspx.cs">
+      <DependentUpon>Permissions.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\UM\Permissions.aspx.designer.cs">
+      <DependentUpon>Permissions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\UM\Roles.aspx.cs">
+      <DependentUpon>Roles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\UM\Roles.aspx.designer.cs">
+      <DependentUpon>Roles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\UM\Users.aspx.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\UM\Users.aspx.designer.cs">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PageBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Models\MasterBase.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Manager\Tools\Dictionaries.aspx.cs">
+      <DependentUpon>Dictionaries.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Tools\Dictionaries.aspx.designer.cs">
+      <DependentUpon>Dictionaries.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Content\images\icons\" />
+    <Folder Include="Manager\CM\" />
+    <Folder Include="Popups\" />
+    <Folder Include="UserControls\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{408fab30-acd3-4000-8e43-12c1d24c9767}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

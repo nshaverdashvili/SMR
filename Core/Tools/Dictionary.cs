@@ -9,7 +9,7 @@ namespace Core.Tools
 {
     public class Dictionary
     {
-        public int? ID { get; set; }
+        public int? DictionaryID { get; set; }
         public int? DictionaryCode { get; set; }
         public string Caption { get; set; }
         public string Caption1 { get; set; }
@@ -27,14 +27,15 @@ namespace Core.Tools
     {
         public int? ID { get; set; }
 
-        public List<Dictionary> ListDictionary(int? Lvl, int? Code, bool? IsVisible=null)
+        public List<Dictionary> ListDictionary(int? Lvl, int? Code, bool? IsVisible = null) //
         {
-            return TryToReturn(string.Format("Core.Tools.DictionariesRepository.ListDictionary(Lvl = {0}, Code = {1}, IsVisible = {2})", Lvl, Code, IsVisible), () =>
+            return TryToReturn(string.Format("Core.Tools.DictionariesRepository.ListDictionary()"), () =>
             {
                 using (var db = DB.DBCon.GetToolsDataContext())
                 {
-                    return db.fn_List_Dictionaries(Lvl, Code, IsVisible).Select(s => new Dictionary { 
-                        ID = s.DictionaryID,
+                    return db.fn_List_Dictionaries(Lvl, Code, IsVisible).Select(s => new Dictionary
+                    {
+                        DictionaryID = s.DictionaryID,
                         Caption=s.Caption,
                         Caption1=s.Caption1,
                         ParentID=s.ParentID,
@@ -44,7 +45,6 @@ namespace Core.Tools
                         SortVal=s.SortVal,
                         DictionaryCode=s.DictionaryCode                    
                     }).ToList();
-
                 }
             });
         }

@@ -16,6 +16,38 @@ namespace Core.Files
     }
     public class GalleryRepository : ObjectBase
     {
+        public int? ID { get; set; }
+        public List<Gallery> ListGallery()
+        {
+            return TryToReturn(string.Format("Core.Files.GalleryRepository.ListGallery()"), () =>
+            {
+                using (var db = DB.DBCon.GetFilesDataContext())
+                {
+                    return db.fn_List_Gallery(null).Select(s => new Gallery
+                    {
+                        Title=s.Title,
+                        Description=s.Description,
+                        LangID=s.LangID
+                    }).ToList();
+                }
+            });
+        }
+        public void SP_Galleries(byte? iud = null, int? RecordID = null, string Title = null, string Description = null, int? LangID = null)
+        {
+            TryExecute(string.Format(@"Core.Files.GalleryRepository(iud	= {0}, RecordID	= {1}, Title = {2}, 
+            Description = {3}, LangID = {4})", iud, RecordID, Title, Description, LangID), () =>
+                             {
+                                 using (var db = DB.DBCon.GetFilesDataContext())
+                                 {
+                                     int? NewID = RecordID;
+                                     db.sp_Gallery(iud, ref NewID, Title, Description, LangID);
+                                     this.ID = NewID;
+                                 }
+                             });
+        }
+    
+
+
 
     }
     

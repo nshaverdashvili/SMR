@@ -28,10 +28,11 @@
   <Function Name="dbo.fn_List_Files" Method="fn_List_Files" IsComposable="true">
     <Parameter Name="FileID" Parameter="fileID" Type="System.Int32" DbType="Int" />
     <ElementType Name="fn_List_FilesResult">
+      <Column Name="FileID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="FileName" Type="System.String" DbType="NVarChar(300) NOT NULL" CanBeNull="false" />
       <Column Name="Description" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
       <Column Name="URL" Type="System.String" DbType="NVarChar(250) NOT NULL" CanBeNull="false" />
-      <Column Name="TypeID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="TypeID" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>

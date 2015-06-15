@@ -1,0 +1,146 @@
+.dxGridView_gvCellError_DevEx,
+.dxGridView_gvCollapsedButton_DevEx,
+.dxGridView_gvCollapsedButtonRtl_DevEx,
+.dxGridView_gvDetailCollapsedButton_DevEx,
+.dxGridView_gvDetailCollapsedButtonRtl_DevEx,
+.dxGridView_gvDetailExpandedButton_DevEx,
+.dxGridView_gvDetailExpandedButtonRtl_DevEx,
+.dxGridView_gvDragAndDropArrowDown_DevEx,
+.dxGridView_gvDragAndDropArrowUp_DevEx,
+.dxGridView_gvDragAndDropHideColumn_DevEx,
+.dxGridView_gvExpandedButton_DevEx,
+.dxGridView_gvExpandedButtonRtl_DevEx,
+.dxGridView_gvFilterRowButton_DevEx,
+.dxGridView_gvHeaderFilter_DevEx,
+.dxGridView_gvHeaderFilterActive_DevEx,
+.dxGridView_gvHeaderSortDown_DevEx,
+.dxGridView_gvHeaderSortUp_DevEx,
+.dxGridView_gvParentGroupRows_DevEx,
+.dxGridView_WindowResizer_DevEx,
+.dxGridView_WindowResizerRtl_DevEx
+{
+    background-image: url('sprite.png');
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+.dxGridView_gvCellError_DevEx
+{
+    background-position: -55px 0px;
+    width: 14px;
+    height: 14px;
+}
+.dxGridView_gvCollapsedButton_DevEx
+{
+    background-position: -33px -23px;
+    width: 13px;
+    height: 13px;
+}
+.dxGridView_gvCollapsedButtonRtl_DevEx
+{
+    background-position: 0px -37px;
+    width: 13px;
+    height: 13px;
+}
+.dxGridView_gvDetailCollapsedButton_DevEx
+{
+    background-position: -14px -51px;
+    width: 13px;
+    height: 13px;
+}
+.dxGridView_gvDetailCollapsedButtonRtl_DevEx
+{
+    background-position: -47px -23px;
+    width: 13px;
+    height: 13px;
+}
+.dxGridView_gvDetailExpandedButton_DevEx
+{
+    background-position: -28px -37px;
+    width: 13px;
+    height: 13px;
+}
+.dxGridView_gvDetailExpandedButtonRtl_DevEx
+{
+    background-position: -42px -37px;
+    width: 13px;
+    height: 13px;
+}
+.dxGridView_gvDragAndDropArrowDown_DevEx
+{
+    background-position: -42px -51px;
+    width: 11px;
+    height: 9px;
+}
+.dxGridView_gvDragAndDropArrowUp_DevEx
+{
+    background-position: -54px -51px;
+    width: 11px;
+    height: 9px;
+}
+.dxGridView_gvDragAndDropHideColumn_DevEx
+{
+    background-position: 0px 0px;
+    width: 22px;
+    height: 22px;
+}
+.dxGridView_gvExpandedButton_DevEx
+{
+    background-position: 0px -51px;
+    width: 13px;
+    height: 13px;
+}
+.dxGridView_gvExpandedButtonRtl_DevEx
+{
+    background-position: -14px -37px;
+    width: 13px;
+    height: 13px;
+}
+.dxGridView_gvFilterRowButton_DevEx
+{
+    background-position: -19px -23px;
+    width: 13px;
+    height: 13px;
+}
+.dxGridView_gvHeaderFilter_DevEx
+{
+    background-position: -39px 0px;
+    width: 15px;
+    height: 15px;
+}
+.dxGridView_gvHeaderFilterActive_DevEx
+{
+    background-position: -23px 0px;
+    width: 15px;
+    height: 15px;
+}
+.dxGridView_gvHeaderSortDown_DevEx
+{
+    background-position: -55px -17px;
+    width: 7px;
+    height: 5px;
+}
+.dxGridView_gvHeaderSortUp_DevEx
+{
+    background-position: -63px -17px;
+    width: 7px;
+    height: 5px;
+}
+.dxGridView_gvParentGroupRows_DevEx
+{
+    background-position: 0px -23px;
+    width: 18px;
+    height: 13px;
+}
+.dxGridView_WindowResizer_DevEx
+{
+    background-position: -56px -37px;
+    width: 13px;
+    height: 13px;
+}
+.dxGridView_WindowResizerRtl_DevEx
+{
+    background-position: -28px -51px;
+    width: 13px;
+    height: 13px;
+}
+

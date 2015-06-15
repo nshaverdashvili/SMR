@@ -62,14 +62,6 @@ namespace Core.DB
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_Authenticate")]
-		public int sp_Authenticate([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Username", DbType="VarChar(100)")] string username, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Password", DbType="NVarChar(200)")] string password, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Xml")] ref System.Xml.Linq.XElement x)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username, password, x);
-			x = ((System.Xml.Linq.XElement)(result.GetParameterValue(2)));
-			return ((int)(result.ReturnValue));
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_Permissions")]
 		public int sp_Permissions([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="TinyInt")] System.Nullable<byte> iud, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PermissionID", DbType="Int")] ref System.Nullable<int> permissionID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ParentID", DbType="Int")] System.Nullable<int> parentID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Caption", DbType="NVarChar(100)")] string caption, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PageName", DbType="NVarChar(100)")] string pageName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CodeName", DbType="NVarChar(50)")] string codeName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SortVal", DbType="Int")] System.Nullable<int> sortVal, [global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Bit")] System.Nullable<bool> isVisible)
 		{
@@ -225,6 +217,12 @@ namespace Core.DB
 		public System.Nullable<bool> sec_IsUsernameUniq([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Username", DbType="VarChar(100)")] string username)
 		{
 			return ((System.Nullable<bool>)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), username).ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.fn_Authenticate", IsComposable=true)]
+		public System.Xml.Linq.XElement fn_Authenticate([global::System.Data.Linq.Mapping.ParameterAttribute(Name="UserName", DbType="NVarChar(100)")] string userName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Password", DbType="NVarChar(100)")] string password)
+		{
+			return ((System.Xml.Linq.XElement)(this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userName, password).ReturnValue));
 		}
 	}
 	

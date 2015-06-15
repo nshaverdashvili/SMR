@@ -156,16 +156,34 @@ namespace Core.DB
 	public partial class fn_List_FilesResult
 	{
 		
+		private int _FileID;
+		
 		private string _FileName;
 		
 		private string _Description;
 		
 		private string _URL;
 		
-		private int _TypeID;
+		private System.Nullable<int> _TypeID;
 		
 		public fn_List_FilesResult()
 		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FileID", DbType="Int NOT NULL")]
+		public int FileID
+		{
+			get
+			{
+				return this._FileID;
+			}
+			set
+			{
+				if ((this._FileID != value))
+				{
+					this._FileID = value;
+				}
+			}
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FileName", DbType="NVarChar(300) NOT NULL", CanBeNull=false)]
@@ -216,8 +234,8 @@ namespace Core.DB
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TypeID", DbType="Int NOT NULL")]
-		public int TypeID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TypeID", DbType="Int")]
+		public System.Nullable<int> TypeID
 		{
 			get
 			{

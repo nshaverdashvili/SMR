@@ -1,11 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SMR" Class="UMDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=server.abs.ge,1443;Initial Catalog=SMR;Persist Security Info=True;User ID=sa" SettingsObjectName="Core.Properties.Settings" SettingsPropertyName="SMRConnectionString" Provider="System.Data.SqlClient" />
-  <Function Name="dbo.sp_Authenticate" Method="sp_Authenticate">
-    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="VarChar(100)" />
-    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(200)" />
-    <Parameter Name="x" Type="System.Xml.Linq.XElement" DbType="Xml" Direction="InOut" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.sp_Permissions" Method="sp_Permissions">
     <Parameter Name="iud" Type="System.Byte" DbType="TinyInt" />
     <Parameter Name="PermissionID" Parameter="permissionID" Type="System.Int32" DbType="Int" Direction="InOut" />
@@ -229,5 +223,10 @@
   <Function Name="dbo.sec_IsUsernameUniq" Method="sec_IsUsernameUniq" IsComposable="true">
     <Parameter Name="Username" Parameter="username" Type="System.String" DbType="VarChar(100)" />
     <Return Type="System.Boolean" />
+  </Function>
+  <Function Name="dbo.fn_Authenticate" Method="fn_Authenticate" IsComposable="true">
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Xml.Linq.XElement" />
   </Function>
 </Database>

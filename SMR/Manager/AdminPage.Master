@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminPage.master.cs" Inherits="SMR.Manager.AdminPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>    
+    <asp:Literal ID="litPlugins" runat="server"></asp:Literal>
+    <link href="/Content/css/managerStyle.css" rel="stylesheet" />
+    <script src="/Scripts/managerjs/global.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container-fluid">
+        <div class="row">
+             <div class="col-md-2">
+                 <nav>
+                     <asp:Repeater runat="server" ID="rptManu" ItemType="Core.UM.Permissions" OnItemDataBound="rptManu_ItemDataBound">
+                         <HeaderTemplate>
+                             <ul>
+                         </HeaderTemplate>
+                         <ItemTemplate>
+                             <li><h4><%#Item.Caption %></h4></li>
+                             <asp:Repeater runat="server" ID="rptSubManu" ItemType="Core.UM.Permissions">
+                                 <HeaderTemplate>
+                                     <ul>
+                                 </HeaderTemplate>
+                                 <ItemTemplate>
+                                     <li><a href="<%#Item.PageName %>"><%#Item.Caption %></a></li>
+                                 </ItemTemplate>
+                                  <FooterTemplate>
+                             </ul>
+                         </FooterTemplate>
+                             </asp:Repeater>
+                         </ItemTemplate>
+                         <FooterTemplate>
+                             </ul>
+                         </FooterTemplate>
+                     </asp:Repeater>
+                     
+                 </nav>
+             </div>
+             <div class="col-md-10">
+                <asp:ContentPlaceHolder ID="BodyPlaceHolder" runat="server">
+        
+                </asp:ContentPlaceHolder>
+            </div>
+          </div>
+        </div>
+    </form>
+     <asp:ContentPlaceHolder ID="ScriptsPlaceHolder" runat="server">
+        
+     </asp:ContentPlaceHolder>
+</body>
+</html>

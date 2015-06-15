@@ -15,20 +15,6 @@
     <Parameter Name="GalleryID" Parameter="galleryID" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.sp_Pages" Method="sp_Pages">
-    <Parameter Name="iud" Type="System.Int32" DbType="Int" />
-    <Parameter Name="PageID" Parameter="pageID" Type="System.Int32" DbType="Int" Direction="InOut" />
-    <Parameter Name="ParentID" Parameter="parentID" Type="System.Int32" DbType="Int" />
-    <Parameter Name="Title" Parameter="title" Type="System.String" DbType="NVarChar(250)" />
-    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(MAX)" />
-    <Parameter Name="TemplateID" Parameter="templateID" Type="System.Int32" DbType="Int" />
-    <Parameter Name="URL" Parameter="uRL" Type="System.String" DbType="NVarChar(250)" />
-    <Parameter Name="Note" Parameter="note" Type="System.String" DbType="NVarChar(500)" />
-    <Parameter Name="GalleryID" Parameter="galleryID" Type="System.Int32" DbType="Int" />
-    <Parameter Name="LangID" Parameter="langID" Type="System.Int32" DbType="Int" />
-    <Parameter Name="IsVisible" Parameter="isVisible" Type="System.Int32" DbType="Int" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.fn_List_News" Method="fn_List_News" IsComposable="true">
     <Parameter Name="NewsID" Parameter="newsID" Type="System.Int32" DbType="Int" />
     <ElementType Name="fn_List_NewsResult">
@@ -57,5 +43,19 @@
       <Column Name="LangID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="IsVisible" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
     </ElementType>
+  </Function>
+  <Function Name="dbo.sp_Pages" Method="sp_Pages">
+    <Parameter Name="iud" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PageID" Parameter="pageID" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ParentID" Parameter="parentID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Title" Parameter="title" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="TemplateID" Parameter="templateID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="URL" Parameter="uRL" Type="System.String" DbType="NVarChar(250)" />
+    <Parameter Name="Note" Parameter="note" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="GalleryID" Parameter="galleryID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LangID" Parameter="langID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IsVisible" Parameter="isVisible" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
   </Function>
 </Database>
