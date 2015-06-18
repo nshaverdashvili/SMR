@@ -78,78 +78,16 @@ namespace Core.DB
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.fn_List_Gallery", IsComposable=true)]
-		public IQueryable<fn_List_GalleryResult> fn_List_Gallery([global::System.Data.Linq.Mapping.ParameterAttribute(Name="RecordID", DbType="Int")] System.Nullable<int> recordID)
-		{
-			return this.CreateMethodCallQuery<fn_List_GalleryResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), recordID);
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.fn_List_Files", IsComposable=true)]
 		public IQueryable<fn_List_FilesResult> fn_List_Files([global::System.Data.Linq.Mapping.ParameterAttribute(Name="FileID", DbType="Int")] System.Nullable<int> fileID)
 		{
 			return this.CreateMethodCallQuery<fn_List_FilesResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fileID);
 		}
-	}
-	
-	public partial class fn_List_GalleryResult
-	{
 		
-		private string _Title;
-		
-		private string _Description;
-		
-		private int _LangID;
-		
-		public fn_List_GalleryResult()
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.fn_List_Gallery", IsComposable=true)]
+		public IQueryable<fn_List_GalleryResult> fn_List_Gallery([global::System.Data.Linq.Mapping.ParameterAttribute(Name="RecordID", DbType="Int")] System.Nullable<int> recordID)
 		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(200)")]
-		public string Title
-		{
-			get
-			{
-				return this._Title;
-			}
-			set
-			{
-				if ((this._Title != value))
-				{
-					this._Title = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Description", DbType="NVarChar(MAX)")]
-		public string Description
-		{
-			get
-			{
-				return this._Description;
-			}
-			set
-			{
-				if ((this._Description != value))
-				{
-					this._Description = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LangID", DbType="Int NOT NULL")]
-		public int LangID
-		{
-			get
-			{
-				return this._LangID;
-			}
-			set
-			{
-				if ((this._LangID != value))
-				{
-					this._LangID = value;
-				}
-			}
+			return this.CreateMethodCallQuery<fn_List_GalleryResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), recordID);
 		}
 	}
 	
@@ -246,6 +184,86 @@ namespace Core.DB
 				if ((this._TypeID != value))
 				{
 					this._TypeID = value;
+				}
+			}
+		}
+	}
+	
+	public partial class fn_List_GalleryResult
+	{
+		
+		private int _RecordID;
+		
+		private string _Title;
+		
+		private string _Description;
+		
+		private System.Nullable<int> _LangID;
+		
+		public fn_List_GalleryResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RecordID", DbType="Int NOT NULL")]
+		public int RecordID
+		{
+			get
+			{
+				return this._RecordID;
+			}
+			set
+			{
+				if ((this._RecordID != value))
+				{
+					this._RecordID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(200)")]
+		public string Title
+		{
+			get
+			{
+				return this._Title;
+			}
+			set
+			{
+				if ((this._Title != value))
+				{
+					this._Title = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Description", DbType="NVarChar(MAX)")]
+		public string Description
+		{
+			get
+			{
+				return this._Description;
+			}
+			set
+			{
+				if ((this._Description != value))
+				{
+					this._Description = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LangID", DbType="Int")]
+		public System.Nullable<int> LangID
+		{
+			get
+			{
+				return this._LangID;
+			}
+			set
+			{
+				if ((this._LangID != value))
+				{
+					this._LangID = value;
 				}
 			}
 		}

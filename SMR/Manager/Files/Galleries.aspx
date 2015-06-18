@@ -18,7 +18,10 @@
                 <dx:GridViewDataTextColumn FieldName="Description" >
                 </dx:GridViewDataTextColumn>
                 <dx:GridViewDataTextColumn FieldName="LangID" Visible="false">
-                </dx:GridViewDataTextColumn>
+                </dx:GridViewDataTextColumn>       
+                <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="True" ShowNewButton="true" ShowNewButtonInHeader="false" ButtonType="image" Caption=" ">
+                    
+                </dx:GridViewCommandColumn>        
             </Columns>
 
         </dx:ASPxGridView>

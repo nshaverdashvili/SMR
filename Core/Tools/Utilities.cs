@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Web;
+using System.Configuration;
+
 namespace Core.Tools
 {    
     public class LanguageHandler
@@ -34,6 +36,13 @@ namespace Core.Tools
             }
             HttpContext.Current.Response.SetCookie(cookie);
             HttpContext.Current.Response.Redirect(HttpContext.Current.Request.RawUrl);
+        }
+    }
+    public class Utility
+    {
+        public static string GetUploadFolder()
+        {
+            return ConfigurationManager.AppSettings["UploadFolder"];
         }
     }
 }

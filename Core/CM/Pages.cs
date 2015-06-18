@@ -9,7 +9,7 @@ namespace Core.CM
 {
     public class Pages
     {
-        public int PageID { get; set; }
+        public int? PageID { get; set; }
         public int? ParentID { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
@@ -23,14 +23,15 @@ namespace Core.CM
     public class PagesRepository : ObjectBase
     {
         public int? ID { get; set; }
-        public List<Pages> ListPages(int PageID)
+        public List<Pages> ListPages()
         {
-            return TryToReturn(string.Format("Core.CM.PagesRepository.ListPages(PageID = {0})", PageID), () =>
+            return TryToReturn(string.Format("Core.CM.PagesRepository.ListPages()"), () =>
             {
                 using (var db = DB.DBCon.GetCMDataContext())
                 {
-                    return db.fn_List_Pages(PageID).Select(s => new Pages
+                    return db.fn_List_Pages(null).Select(s => new Pages
                     {
+                        PageID=s.PageID,
                         ParentID=s.ParentID,
                         Title=s.Title,
                         Description=s.Description,

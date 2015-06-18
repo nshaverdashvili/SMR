@@ -9,7 +9,7 @@ namespace Core.Files
 {
     public class Gallery
     {
-        public int RecordID { get; set; }
+        public int? RecordID { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
         public int? LangID { get; set; }
@@ -25,6 +25,7 @@ namespace Core.Files
                 {
                     return db.fn_List_Gallery(null).Select(s => new Gallery
                     {
+                        RecordID=s.RecordID,
                         Title=s.Title,
                         Description=s.Description,
                         LangID=s.LangID

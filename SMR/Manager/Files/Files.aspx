@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Manager/AdminPage.Master" AutoEventWireup="true" CodeBehind="Files.aspx.cs" Inherits="SMR.Manager.Files.Files" Theme="DevEx" %>
 
+<%@ Register Assembly="DevExpress.Web.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxUploadControl" TagPrefix="dx" %>
+
 <%@ Register Assembly="DevExpress.Web.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxGridView" TagPrefix="dx" %>
 <%@ Register assembly="DevExpress.Web.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
@@ -17,23 +19,15 @@
                 <dx:GridViewDataTextColumn FieldName="Description" >
                 </dx:GridViewDataTextColumn>
                 <dx:GridViewDataTextColumn FieldName="URL" >
+                    <EditItemTemplate>
+                        <dx:ASPxUploadControl ID="UploadFile" ClientInstanceName="FileUploader" runat="server" UploadMode="Auto" Width="180px" 
+                            OnFilesUploadComplete="UploadFile_FilesUploadComplete">
+                            <ValidationSettings MaxFileSize="4000000" ></ValidationSettings>
+                        </dx:ASPxUploadControl>
+                        <button onclick="OnUploadFile()">Upload</button>
+                    </EditItemTemplate>
                 </dx:GridViewDataTextColumn>
-               <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="True" ShowNewButtonInHeader="false" ButtonType="Image" Caption=" " >
-                <CancelButton Visible="true">
-                    <Image Url="~/Content/images/grid/cancel.png"></Image>
-                </CancelButton>
-                <UpdateButton Visible="true">
-                    <Image Url="~/Content/images/grid/succsses.png"></Image>
-                </UpdateButton>                    
-                <NewButton Visible="true">
-                    <Image Url="~/Content/images/grid/add.png"></Image>
-                </NewButton>
-                <EditButton Visible="true">
-                    <Image Url="~/Content/images/grid/edit.png"></Image>
-                </EditButton>
-                <DeleteButton Visible="true">
-                    <Image Url="~/Content/images/grid/delete.png"></Image>
-                </DeleteButton>
+               <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="True" ShowNewButton="true" ShowNewButtonInHeader="false" ButtonType="Image" Caption=" " >
             </dx:GridViewCommandColumn>
                 <dx:GridViewDataComboBoxColumn FieldName="TypeID" VisibleIndex="3">
                     <PropertiesComboBox DataSourceID="dsTypes" TextField="Caption" ValueField="DictionaryID">
@@ -85,5 +79,10 @@
                 return false;
             });
         });
+
+        function OnUploadFile() {
+            FileUploader.UploadFile();
+            return false;
+        }
     </script>
 </asp:Content>

@@ -28,10 +28,10 @@ namespace SMR.Manager
        { 
            var IncludePlugins= new StringBuilder();
            IncludePlugins.Append(Plugins.bootstrapCSS());
+           IncludePlugins.Append(Plugins.normalizeCSS());
            IncludePlugins.Append(Plugins.jqueryJS());
            IncludePlugins.Append(Plugins.modernizrJS());
-           IncludePlugins.Append(Plugins.bootstrapJS());
-           IncludePlugins.Append(Plugins.normalizeCSS());
+           IncludePlugins.Append(Plugins.bootstrapJS());           
            litPlugins.Text = IncludePlugins.ToString();
        }
        protected void btnLang_Click(object sender, EventArgs e)

@@ -72,6 +72,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\ErrorLog.txt" />
     <Content Include="App_Themes\DevEx\Editors\caChallengeImageBack.png" />
     <Content Include="App_Themes\DevEx\Editors\edtBtnBack.png" />
     <Content Include="App_Themes\DevEx\Editors\edtBtnDisabledBack.png" />
@@ -177,8 +178,10 @@
     <Content Include="App_Themes\DevEx\Web\ucButtonPressedBack.png" />
     <Content Include="App_Themes\DevEx\Web\ucProgressBack.png" />
     <Content Include="App_Themes\DevEx\Web\ucProgressIndicatorBack.png" />
+    <Content Include="Content\css\fonts.css" />
     <Content Include="Content\css\managerStyle.css" />
     <Content Include="Content\css\style.css" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\images\grid\1434315178_Cancel.png" />
     <Content Include="Content\images\grid\add.png" />
     <Content Include="Content\images\grid\cancel.png" />
@@ -193,6 +196,13 @@
     <Content Include="Content\images\grid\lock.png" />
     <Content Include="Content\images\grid\statistics.png" />
     <Content Include="Content\images\grid\succsses.png" />
+    <Content Include="Content\images\icons\icon1.png" />
+    <Content Include="Content\images\icons\icon2.png" />
+    <Content Include="Content\images\icons\icon3.png" />
+    <Content Include="Content\images\logo.png" />
+    <Content Include="Default.aspx" />
+    <Content Include="Manager\CM\News.aspx" />
+    <Content Include="Manager\CM\Pages.aspx" />
     <Content Include="Manager\Default.aspx" />
     <Content Include="Manager\Files\Files.aspx" />
     <Content Include="Manager\Files\Galleries.aspx" />
@@ -302,6 +312,17 @@
     <Content Include="App_Themes\DevEx\ASPxTreeView.skin" />
     <Content Include="App_Themes\DevEx\ASPxUploadControl.skin" />
     <Content Include="App_Themes\DevEx\ASPxValidationSummary.skin" />
+    <Content Include="CMMaster.Master" />
+    <Content Include="Content\fonts\bpg_nino_mtavruli_bold.eot" />
+    <Content Include="Content\fonts\BPG_NINO_MTAVRULI_BOLD.ttf" />
+    <Content Include="Content\fonts\bpg_nino_mtavruli_bold.woff" />
+    <Content Include="Content\fonts\bpg_nino_mtavruli_normal.ttf" />
+    <Content Include="Content\fonts\bpg_rioni_arial.eot" />
+    <Content Include="Content\fonts\bpg_rioni_arial.ttf" />
+    <Content Include="Content\fonts\bpg_rioni_arial.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -320,6 +341,20 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CMMaster.Master.cs">
+      <DependentUpon>CMMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CMMaster.Master.designer.cs">
+      <DependentUpon>CMMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -329,6 +364,20 @@
     </Compile>
     <Compile Include="Manager\AdminPage.Master.designer.cs">
       <DependentUpon>AdminPage.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\CM\News.aspx.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\CM\News.aspx.designer.cs">
+      <DependentUpon>News.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\CM\Pages.aspx.cs">
+      <DependentUpon>Pages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\CM\Pages.aspx.designer.cs">
+      <DependentUpon>Pages.aspx</DependentUpon>
     </Compile>
     <Compile Include="Manager\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -395,10 +444,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Content\images\icons\" />
-    <Folder Include="Manager\CM\" />
     <Folder Include="Popups\" />
+    <Folder Include="Uploads\" />
     <Folder Include="UserControls\" />
   </ItemGroup>
   <ItemGroup>

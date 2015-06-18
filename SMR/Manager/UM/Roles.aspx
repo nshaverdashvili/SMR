@@ -18,24 +18,8 @@
                 </dx:GridViewDataTextColumn>
                 <dx:GridViewDataTextColumn FieldName="Code" >
                 </dx:GridViewDataTextColumn>                
-                <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="True" ShowNewButtonInHeader="false" ButtonType="Image" Caption=" " >                    
-                    <CancelButton Visible="true">
-                        <Image Url="~/Content/images/grid/cancel.png"></Image>
-                    </CancelButton>
-                    <UpdateButton Visible="true">
-                        <Image Url="~/Content/images/grid/succsses.png"></Image>
-                    </UpdateButton>
-                    <NewButton Visible="true">
-                        <Image url="~/Content/images/grid/add.png"></Image>
-                    </NewButton>
-                    <EditButton Visible="true">
-                        <Image Url="~/Content/images/grid/edit.png"></Image>
-                    </EditButton>
-                    <DeleteButton Visible="true">
-                        <Image Url="~/Content/images/grid/delete.png"></Image>
-                    </DeleteButton>
-                    
-                </dx:GridViewCommandColumn>
+                <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="True" ShowNewButton="true" ShowNewButtonInHeader="false" ButtonType="Image" Caption=" " >                    
+                    </dx:GridViewCommandColumn>
             </Columns>
         </dx:ASPxGridView>
         <asp:ObjectDataSource ID="dsRoles" runat="server" DeleteMethod="SP_Roles" InsertMethod="SP_Roles" SelectMethod="ListRoles" TypeName="Core.UM.RolesRepository" UpdateMethod="SP_Roles">

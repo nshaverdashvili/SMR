@@ -9,7 +9,7 @@ namespace Core.CM
 {
     public class News
     {
-        public int NewsID { get; set; }
+        public int? NewsID { get; set; }
         public DateTime? NewsDate { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
@@ -24,14 +24,15 @@ namespace Core.CM
     public class NewsRepository : ObjectBase
     {
         public int? ID { get; set; }
-        public List<News> ListNews(int NewsID)
+        public List<News> ListNews()
         {
-            return TryToReturn(string.Format("Core.CM.NewsRepository.ListNews(NewsID = {0})", NewsID), () =>
+            return TryToReturn(string.Format("Core.CM.NewsRepository.ListNews()"), () =>
             {
                 using (var db = DB.DBCon.GetCMDataContext())
                 {
-                    return db.fn_List_News(NewsID).Select(s => new News
+                    return db.fn_List_News(null).Select(s => new News
                     {                        
+                        NewsID=s.NewsID,
                         NewsDate=s.NewsDate,
                         Title=s.Title,
                         Description=s.Description,

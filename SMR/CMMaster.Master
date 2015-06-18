@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CMMaster.master.cs" Inherits="SMR.CMMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:Literal ID="litPlugins" runat="server"></asp:Literal>
+    <link href="/Content/css/fonts.css" rel="stylesheet" />
+    <link href="/Content/css/style.css" rel="stylesheet" />
+    <script src="/Scripts/frontjs/global.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="wrap">
+        <div class="container-fluid">
+        <div class="row mainGradient" id="nav">
+             <div class="col-md-4 logo">
+                 <span>
+                    <img src="Content/images/logo.png" />
+                 </span>
+                 <span>
+                     <b>შერიგებისა და სამოქალაქო თანასწორობის</b>
+                     <b>საკითხებში საქართველოს სახელმწიფო</b> 
+                     <b>მინისტრის აპარატი</b> 
+                 </span>
+                 
+             </div>
+             <div class="col-md-8">.col-md-1</div>
+        </div>
+        <div class="row" id="header">
+
+        </div>
+        <div class="row" id="body">
+                <asp:ContentPlaceHolder ID="BodyPlaceHolder" runat="server">        
+                </asp:ContentPlaceHolder>
+        </div>
+    </div> 
+        <div id="push"></div>
+    </div>      
+    <div id="footer">
+        <div class="container-fluid mainGradient">
+            <div class="row">asdf</div>
+            <div class="row">asdf</div>
+        </div>
+    </div>
+    </form>
+    <asp:ContentPlaceHolder ID="ScriptsPlaceHolder" runat="server">
+        
+     </asp:ContentPlaceHolder>
+</body>
+</html>

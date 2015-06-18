@@ -18,6 +18,23 @@
         <ProgressBar Height="21" />
     </StylesEditors>
    <SettingsBehavior ConfirmDelete="true" />
-            <SettingsText ConfirmDelete="Are you sure?" /> 
+   <SettingsText ConfirmDelete="Are you sure?" /> 
+   <SettingsCommandButton>
+        <CancelButton ButtonType="Image">
+            <Image Url="~/Content/images/grid/cancel.png"></Image>
+        </CancelButton>
+        <UpdateButton ButtonType="Image">
+            <Image Url="~/Content/images/grid/succsses.png"></Image>
+        </UpdateButton>
+        <NewButton >
+            <Image url="~/Content/images/grid/add.png"></Image>
+        </NewButton>
+        <EditButton >
+            <Image Url="~/Content/images/grid/edit.png"></Image>
+        </EditButton>
+        <DeleteButton >
+            <Image Url="~/Content/images/grid/delete.png"></Image>
+        </DeleteButton>
+   </SettingsCommandButton>
 </dxwgv:ASPxGridView>
 

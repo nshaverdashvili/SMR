@@ -1,0 +1,13 @@
+
+
+------------------------------------
+http://localhost:12175/Manager/CM/News.aspx - 6/17/2015 1:24:37 AM
+Source File - d:\gitProjects\SMR\Core\CM\News.cs
+Line Number - 53
+Core.CM.NewsRepository.ListNews(iud = 0, NewsID=0, NewsDate6/24/2015 12:00:00 AM, Titletitle, Descriptionsssss, FullTexttext, LangID1, CategoryID1, SortVal1, 
+            IsVisibleTrue, VideoURLlinks, GalleryID0 --- The INSERT statement conflicted with the FOREIGN KEY constraint "FK_t_News_t_Gallery". The conflict occurred in database "SMR", table "dbo.t_Gallery", column 'RecordID'.
+The statement has been terminated.
+
+
+------------------------------------
+

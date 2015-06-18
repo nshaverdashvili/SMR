@@ -46,22 +46,7 @@
                 </dx:GridViewDataTextColumn>
                 <dx:GridViewDataCheckColumn FieldName="IsActive" >
                 </dx:GridViewDataCheckColumn>
-                <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="True" ShowNewButtonInHeader="False" ButtonType="Image" Caption=" ">
-                    <CancelButton Visible="true">
-                        <Image Url="~/Content/images/grid/cancel.png"></Image>
-                    </CancelButton>
-                    <UpdateButton Visible="true">
-                        <Image Url="~/Content/images/grid/succsses.png"></Image>
-                    </UpdateButton>                    
-                    <NewButton Visible="true">
-                        <Image Url="~/Content/images/grid/add.png"></Image>
-                    </NewButton>
-                    <EditButton Visible="true">
-                        <Image Url="~/Content/images/grid/edit.png"></Image>
-                    </EditButton>
-                    <DeleteButton Visible="true">
-                        <Image Url="~/Content/images/grid/delete.png"></Image>
-                    </DeleteButton>
+                <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="True" ShowNewButton="true" ShowNewButtonInHeader="False" ButtonType="Image" Caption=" ">                    
                 </dx:GridViewCommandColumn>
             </Columns>
             <SettingsBehavior AllowFocusedRow="true" />

@@ -1,2 +1,46 @@
-﻿body {
+﻿html, body{
+    height: 100%;
+}
+#wrap
+{
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -130px;
+}
+#push,
+#footer{
+    height:130px;
+}
+.mainGradient{
+    background: #009dd2;
+    background: -moz-linear-gradient(left,  #009dd2 0%, #104396 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#009dd2), color-stop(100%,#104396));
+    background: -webkit-linear-gradient(left,  #009dd2 0%,#104396 100%);
+    background: -o-linear-gradient(left,  #009dd2 0%,#104396 100%);
+    background: -ms-linear-gradient(left,  #009dd2 0%,#104396 100%);
+    background: linear-gradient(to right,  #009dd2 0%,#104396 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009dd2', endColorstr='#104396',GradientType=1 );
+}
+#nav.row{
+    height: 75px;
+    line-height: 72px;
+}
+.logo > span > b{
+    font-family:"nino";
+    color:#fff;
+    font-weight: normal;
+    line-height:18px;
+    float:left;
+    font-size:13px;
+}
+.logo > span{
+    float:left;
+}
+.logo > span:nth-child(1n) {
+    width: 130px;
+}
+.logo > span:nth-child(2n) {
+    width: calc(100% - 130px);
+    margin-top:13px;
 }
