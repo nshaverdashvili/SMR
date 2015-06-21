@@ -117,17 +117,50 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Abkhazia" xml:space="preserve">
+    <value>აფხაზეთი</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>კონტაქტი</value>
+  </data>
   <data name="CreateNew" xml:space="preserve">
     <value>ახალი</value>
   </data>
+  <data name="Gallery" xml:space="preserve">
+    <value>გალერეა</value>
+  </data>
+  <data name="ImportantDocs" xml:space="preserve">
+    <value>მნიშვნელოვანი დოკუმენტები</value>
+  </data>
+  <data name="Integration" xml:space="preserve">
+    <value>სამოქალაქო ინტეგრაცია</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>შესვლა</value>
+  </data>
+  <data name="Main" xml:space="preserve">
+    <value>მთავარი</value>
+  </data>
+  <data name="News" xml:space="preserve">
+    <value>სიახლეები</value>
+  </data>
+  <data name="NotificationForms" xml:space="preserve">
+    <value>სანოტიფიკაციო ფორმები</value>
+  </data>
+  <data name="OfficeOfTheMinister" xml:space="preserve">
+    <value>მინისტრის აპარატი</value>
+  </data>
+  <data name="Ossetia" xml:space="preserve">
+    <value>სამხრეთ ოსეთი</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>პაროლი</value>
   </data>
   <data name="RememberMe" xml:space="preserve">
     <value>დამიმახსოვრე</value>
+  </data>
+  <data name="StatusNeutralDocs" xml:space="preserve">
+    <value>სტატუს ნეიტრალური დოკუმენტები</value>
   </data>
   <data name="UserName" xml:space="preserve">
     <value>მომხმარებელი</value>

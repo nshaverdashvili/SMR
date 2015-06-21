@@ -32,11 +32,11 @@ namespace Core.Tools
         }
         public static string bootstrapCSS()
         {
-            return string.Format("<link rel=\"stylesheet\" type=\"text/css\" href=\"/Plugins/bootstrap/css/bootstrap.min.css  \" /> <link rel=\"stylesheet\" type=\"text/css\" href=\"/Plugins/bootstrap/css/bootstrap-theme.min.css\" />");
+            return string.Format("<link rel=\"stylesheet\" type=\"text/css\" href=\"/Plugins/bootstrap/css/bootstrap.min.css  \" /> <link rel=\"stylesheet\" type=\"text/css\" href=\"/Plugins/bootstrap/css/bootstrap-theme.css\" />");
         }
         public static string normalizeCSS()
         {
-            return string.Format("<link rel=\"stylesheet\" type=\"text/css\" href=\"/Plugins/normalize/normalize.css  \" /> <link rel=\"stylesheet\" type=\"text/css\" href=\"/Plugins/bootstrap/css/bootstrap-theme.min.css\" />");
+            return string.Format("<link rel=\"stylesheet\" type=\"text/css\" href=\"/Plugins/normalize/normalize.css  \" />");
         }
         public static string fancyboxJS()
         {
@@ -44,9 +44,12 @@ namespace Core.Tools
         }
         public static string fancyboxCSS()
         {
-            return string.Format("<link rel=\"stylesheet\" type=\"text/css\" href=\"/Plugins/fancybox/jquery.fancybox.css  \" /> <link rel=\"stylesheet\" type=\"text/css\" href=\"/Plugins/bootstrap/css/bootstrap-theme.min.css\" />");
+            return string.Format("<link rel=\"stylesheet\" type=\"text/css\" href=\"/Plugins/fancybox/jquery.fancybox.css  \" />");
         }
-
+        public static string jssorJS()
+        {
+            return string.Format("<script type=\"text/javascript\" src=\"/Plugins/jssor/jquery-1.9.1.min.js\"></script> <script type=\"text/javascript\" src=\"/Plugins/jssor/jssor.slider.mini.js\"></script>");
+        }
     }
 
 }

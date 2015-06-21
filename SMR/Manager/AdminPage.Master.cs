@@ -31,7 +31,8 @@ namespace SMR.Manager
            IncludePlugins.Append(Plugins.normalizeCSS());
            IncludePlugins.Append(Plugins.jqueryJS());
            IncludePlugins.Append(Plugins.modernizrJS());
-           IncludePlugins.Append(Plugins.bootstrapJS());           
+           IncludePlugins.Append(Plugins.bootstrapJS());
+           IncludePlugins.Append(Plugins.jssorJS());
            litPlugins.Text = IncludePlugins.ToString();
        }
        protected void btnLang_Click(object sender, EventArgs e)

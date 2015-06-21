@@ -61,6 +61,24 @@ namespace Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to აფხაზეთი.
+        /// </summary>
+        public static string Abkhazia {
+            get {
+                return ResourceManager.GetString("Abkhazia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to კონტაქტი.
+        /// </summary>
+        public static string Contact {
+            get {
+                return ResourceManager.GetString("Contact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ახალი.
         /// </summary>
         public static string CreateNew {
@@ -70,11 +88,83 @@ namespace Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to გალერეა.
+        /// </summary>
+        public static string Gallery {
+            get {
+                return ResourceManager.GetString("Gallery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to მნიშვნელოვანი დოკუმენტები.
+        /// </summary>
+        public static string ImportantDocs {
+            get {
+                return ResourceManager.GetString("ImportantDocs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to სამოქალაქო ინტეგრაცია.
+        /// </summary>
+        public static string Integration {
+            get {
+                return ResourceManager.GetString("Integration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to შესვლა.
         /// </summary>
         public static string Login {
             get {
                 return ResourceManager.GetString("Login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to მთავარი.
+        /// </summary>
+        public static string Main {
+            get {
+                return ResourceManager.GetString("Main", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to სიახლეები.
+        /// </summary>
+        public static string News {
+            get {
+                return ResourceManager.GetString("News", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to სანოტიფიკაციო ფორმები.
+        /// </summary>
+        public static string NotificationForms {
+            get {
+                return ResourceManager.GetString("NotificationForms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to მინისტრის აპარატი.
+        /// </summary>
+        public static string OfficeOfTheMinister {
+            get {
+                return ResourceManager.GetString("OfficeOfTheMinister", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to სამხრეთ ოსეთი.
+        /// </summary>
+        public static string Ossetia {
+            get {
+                return ResourceManager.GetString("Ossetia", resourceCulture);
             }
         }
         
@@ -93,6 +183,15 @@ namespace Core.Properties {
         public static string RememberMe {
             get {
                 return ResourceManager.GetString("RememberMe", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to სტატუს ნეიტრალური დოკუმენტები.
+        /// </summary>
+        public static string StatusNeutralDocs {
+            get {
+                return ResourceManager.GetString("StatusNeutralDocs", resourceCulture);
             }
         }
         

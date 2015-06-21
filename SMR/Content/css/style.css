@@ -51,6 +51,9 @@ footer {
     height: 75px;
     line-height: 72px;
 }
+.logo{
+    width:450px;
+}
 .logo > span > b{
     font-family:"nino";
     color:#fff;
@@ -112,4 +115,23 @@ footer .ft-cp > div {
 
 .footerCP > b {
     font-weight: normal;
+}
+.newsSlide{
+    height: 200px;
+}
+.manuCon > ul{
+    list-style: none;
+}
+.manuCon{
+    float:left;
+    margin-left: 0px;
+    padding-left: 0px;
+    line-height: 34px;
+}
+.manuCon ul > li > a:hover {
+    color:#ccc;
+    text-decoration:none;
+}
+.navbar{
+    margin-top:18px;
 }

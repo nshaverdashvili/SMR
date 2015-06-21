@@ -17,7 +17,7 @@
      <div class="wrap">
         <div class="container-fluid">
           <div class="row mainGradient" id="nav">
-             <div class="col-md-4 logo">
+             <div class="left logo">
                  <span>
                     <img src="Content/images/logo.png" />
                  </span>
@@ -28,13 +28,72 @@
                  </span>
                  
              </div>
-             <div class="col-md-8">.col-md-1</div>
+             <div class="left">
+                 <nav class="navbar navbar-default">
+                     <div class="container-fluid">
+                         <div class="navbar-header">
+                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" 
+                                 data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                             </button>
+                         </div>
+                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                             <ul class="nav navbar-nav">
+                                 <li>
+                                     <a href="#">მთავარი</a>
+                                 </li>
+                                 <li>
+                                     <a href="#">მინისტრის აპარატი</a>
+                                 </li>
+                                 <li>
+                                     <a href="#">აფხაზეთი</a>
+                                 </li>
+                                 <li>
+                                     <a href="#">სამხრეთ ოსეთი</a>
+                                 </li>
+                                 <li>
+                                     <a href="#">სამოქალაქო ინტეგრაცია</a>
+                                 </li>
+                                 <li>
+                                     <a href="#">ნორმატიული აქტები</a>
+                                 </li>
+                             </ul>
+                         </div>
+                     </div>
+
+                 </nav>
+             </div>
         </div>
           <div class="row" id="header">
 
         </div>
           <div class="row" id="body">
+              <div class=" row newsSlide">
 
+              </div>
+
+              <div class="col-md-4 manuCon">
+                  <ul>
+                      <li>
+                          <a href="#">"ტალიავინის დასკვნა"</a>
+                      </li>
+                      <li>
+                          <a href="#">საჯარო ინფორმაცია</a>
+                      </li>
+                      <li>
+                          <a href="#">გალერეა</a>
+                      </li>
+                      <li>
+                          <a href="#">სასარგებლო ბმულები</a>
+                      </li>
+                      <li>
+                          <a href="#">კონტაქტი</a>
+                      </li>
+                  </ul>
+              </div>
+              <div class="col-md-8"></div>
                 <asp:ContentPlaceHolder ID="BodyPlaceHolder" runat="server">        
                 </asp:ContentPlaceHolder>
         </div>
@@ -78,7 +137,14 @@
     </div>        
     </form>
     <asp:ContentPlaceHolder ID="ScriptsPlaceHolder" runat="server">
-        
+        <script src="jquery.min.js"></script>
+        <script src="jssor.slider.mini.js"></script>
+        <script>
+             jQuery(document).ready(function ($) {
+            var options = { $AutoPlay: true };
+            var jssor_slider1 = new $JssorSlider$('slider1_container', options);
+    });
+</script>
      </asp:ContentPlaceHolder>
 </body>
 </html>
