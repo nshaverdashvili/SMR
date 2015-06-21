@@ -1,16 +1,40 @@
-﻿html, body{
-    height: 100%;
+﻿html, body, form {
+    width:100%;
+    height:100%;
+    margin:0;
+	padding:0;
 }
-#wrap
-{
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin: 0 auto -130px;
+html > body .wrap {
+ height: auto;
+ min-height: 100%;
 }
-#push,
-#footer{
-    height:130px;
+
+* {
+     font-family: "Myriad Pro", rioni;
+}
+.wrap {
+    position:relative;
+    height:100%;
+    padding-bottom:100px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+footer {
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    height:100px;
+ }
+
+.right {
+    float:right;
+}
+
+.left {
+    float:left;
 }
 .mainGradient{
     background: #009dd2;
@@ -21,6 +45,7 @@
     background: -ms-linear-gradient(left,  #009dd2 0%,#104396 100%);
     background: linear-gradient(to right,  #009dd2 0%,#104396 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009dd2', endColorstr='#104396',GradientType=1 );
+    margin-top:0px;
 }
 #nav.row{
     height: 75px;
@@ -43,4 +68,48 @@
 .logo > span:nth-child(2n) {
     width: calc(100% - 130px);
     margin-top:13px;
+}
+
+footer .row.ft-nav {
+    text-align:center;
+}
+
+footer .row.ft-nav ul {
+   padding:0;
+   display:inline-block;
+   list-style:none;
+   margin:0;
+}
+
+footer ul > li {
+    float:left;
+    text-align:center;
+    margin:0 25px;
+}
+
+footer ul > li > a {
+    color:#fff;
+    font-family: "nino";
+    line-height: 46px;
+    float:left;
+}
+
+footer ul > li > a:hover {
+    color:#ccc;
+    text-decoration:none;
+}
+
+footer .ft-cp span  {
+    float:left;
+    font-size:13px;
+    font-size: 9px;
+    color: #fff;
+}
+
+footer .ft-cp > div {
+    height:44px;
+}
+
+.footerCP > b {
+    font-weight: normal;
 }
