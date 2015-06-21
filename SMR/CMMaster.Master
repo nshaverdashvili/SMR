@@ -34,6 +34,7 @@
 
         </div>
           <div class="row" id="body">
+
                 <asp:ContentPlaceHolder ID="BodyPlaceHolder" runat="server">        
                 </asp:ContentPlaceHolder>
         </div>

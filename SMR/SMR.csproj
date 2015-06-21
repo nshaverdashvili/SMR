@@ -338,6 +338,10 @@
     <Content Include="Scripts\frontjs\global.js" />
     <Content Include="Scripts\managerjs\global.js" />
     <Content Include="Manager\Tools\Dictionaries.aspx" />
+    <Content Include="Uploads\News\1.png" />
+    <Content Include="Uploads\News\2.jpg" />
+    <Content Include="Uploads\News\3.png" />
+    <Content Include="Uploads\News\4.png" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -445,7 +449,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Popups\" />
-    <Folder Include="Uploads\" />
     <Folder Include="UserControls\" />
   </ItemGroup>
   <ItemGroup>
