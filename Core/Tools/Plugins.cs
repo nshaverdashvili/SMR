@@ -48,7 +48,7 @@ namespace Core.Tools
         }
         public static string jssorJS()
         {
-            return string.Format("<script type=\"text/javascript\" src=\"/Plugins/jssor/jquery-1.9.1.min.js\"></script> <script type=\"text/javascript\" src=\"/Plugins/jssor/jssor.slider.mini.js\"></script>");
+            return string.Format("<script type=\"text/javascript\" src=\"/Plugins/jssor/jssor.slider.mini.js\"></script>");
         }
     }
 

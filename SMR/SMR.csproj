@@ -200,10 +200,10 @@
     <Content Include="Content\images\icons\icon2.png" />
     <Content Include="Content\images\icons\icon3.png" />
     <Content Include="Content\images\logo.png" />
-    <Content Include="Content\images\slide\slideimg1.png" />
-    <Content Include="Content\images\slide\slideimg2.png" />
-    <Content Include="Content\images\slide\slideimg3.png" />
-    <Content Include="Content\images\slide\slideimg4.png" />
+    <Content Include="Content\images\slide\a11.png" />
+    <Content Include="Content\images\slide\a21.png" />
+    <Content Include="Content\images\slide\b05.png" />
+    <Content Include="Content\images\slide\b21.png" />
     <Content Include="Default.aspx" />
     <Content Include="Manager\CM\News.aspx" />
     <Content Include="Manager\CM\Pages.aspx" />
@@ -236,7 +236,6 @@
     <Content Include="Plugins\fancybox\helpers\jquery.fancybox-thumbs.js" />
     <Content Include="Plugins\fancybox\jquery.fancybox.css" />
     <Content Include="Plugins\fancybox\jquery.fancybox.js" />
-    <Content Include="Plugins\jssor\jquery-1.9.1.min.js" />
     <Content Include="Plugins\jssor\jssor.slider.mini.js" />
     <Content Include="Plugins\jqueryUI\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
     <Content Include="Plugins\jqueryUI\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
