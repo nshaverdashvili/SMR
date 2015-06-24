@@ -196,6 +196,7 @@
     <Content Include="Content\images\grid\lock.png" />
     <Content Include="Content\images\grid\statistics.png" />
     <Content Include="Content\images\grid\succsses.png" />
+    <Content Include="Content\images\icons\manu.png" />
     <Content Include="Content\images\icons\icon1.png" />
     <Content Include="Content\images\icons\icon2.png" />
     <Content Include="Content\images\icons\icon3.png" />
@@ -214,6 +215,7 @@
     <Content Include="Manager\UM\Permissions.aspx" />
     <Content Include="Manager\UM\Roles.aspx" />
     <Content Include="Manager\UM\Users.aspx" />
+    <Content Include="NewsDetails.aspx" />
     <Content Include="Plugins\bootstrap\css\bootstrap-theme.css" />
     <Content Include="Plugins\bootstrap\css\bootstrap-theme.min.css" />
     <Content Include="Plugins\bootstrap\css\bootstrap.css" />
@@ -443,6 +445,13 @@
     </Compile>
     <Compile Include="Models\MasterBase.cs">
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewsDetails.aspx.cs">
+      <DependentUpon>NewsDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewsDetails.aspx.designer.cs">
+      <DependentUpon>NewsDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Polygon.aspx.cs">
       <DependentUpon>Polygon.aspx</DependentUpon>

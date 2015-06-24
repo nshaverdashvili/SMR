@@ -20,6 +20,7 @@ namespace SMR
             var IncludePlugins = new StringBuilder();
             IncludePlugins.Append(Plugins.bootstrapCSS());
             IncludePlugins.Append(Plugins.normalizeCSS());
+            IncludePlugins.Append(Plugins.awesomefontsCSS());
             IncludePlugins.Append(Plugins.jqueryJS());
             IncludePlugins.Append(Plugins.modernizrJS());
             IncludePlugins.Append(Plugins.bootstrapJS());

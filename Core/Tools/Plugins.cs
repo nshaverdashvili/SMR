@@ -50,6 +50,10 @@ namespace Core.Tools
         {
             return string.Format("<script type=\"text/javascript\" src=\"/Plugins/jssor/jssor.slider.mini.js\"></script>");
         }
+        public static string awesomefontsCSS()
+        {
+            return "<link rel=\"stylesheet\" type=\"text/css\" href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css\" />";
+        }
     }
 
 }

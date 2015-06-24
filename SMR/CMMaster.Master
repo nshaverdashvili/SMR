@@ -112,28 +112,29 @@
         </div>
 
           <div class="row" id="body">
-              <div class="col-md-4 manuCon">
+              <div class="left manuCon">
                   <ul>
                       <li>
-                          <a href="#">"ტალიავინის დასკვნა"</a>
+                         <a href="#"><i class="fa fa-share-square-o"></i> ტალიავინის დასკვნა</a>
                       </li>
                       <li>
-                          <a href="#">საჯარო ინფორმაცია</a>
+                          <a href="#"><i class="fa fa-share-square-o"></i> საჯარო ინფორმაცია</a>
                       </li>
                       <li>
-                          <a href="#">გალერეა</a>
+                          <a href="#"><i class="fa fa-share-square-o"></i> გალერეა</a>
                       </li>
                       <li>
-                          <a href="#">სასარგებლო ბმულები</a>
+                          <a href="#"><i class="fa fa-share-square-o" ></i> სასარგებლო ბმულები</a>
                       </li>
                       <li>
-                          <a href="#">კონტაქტი</a>
+                          <a href="#"><i class="fa fa-share-square-o"></i> კონტაქტი</a>
                       </li>
                   </ul>
               </div>
-              <div class="col-md-8"></div>
+              <div class="left" id="content">
                 <asp:ContentPlaceHolder ID="BodyPlaceHolder" runat="server">        
                 </asp:ContentPlaceHolder>
+              </div>
         </div>
         </div> 
 

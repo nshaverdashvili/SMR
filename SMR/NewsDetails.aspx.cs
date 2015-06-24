@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace SMR
 {
-    public partial class Default : Models.PageBase
+    public partial class NewsDetails : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
