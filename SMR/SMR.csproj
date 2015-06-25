@@ -191,6 +191,9 @@
     <Content Include="Content\css\fonts.css" />
     <Content Include="Content\css\managerPopupStyle.css" />
     <Content Include="Content\css\managerStyle.css" />
+    <Content Include="Content\css\admin.css" />
+    <Content Include="Content\css\timeline.css" />
+    <Content Include="Scripts\managerjs\admin.js" />
     <Content Include="Content\css\style.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Content\images\grid\1434315178_Cancel.png" />
@@ -355,6 +358,10 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Plugins\jquery\jquery-1.11.3.min.js" />
+    <Content Include="Plugins\metisMenu\dist\metisMenu.css" />
+    <Content Include="Plugins\metisMenu\dist\metisMenu.js" />
+    <Content Include="Plugins\metisMenu\metisMenu.min.css" />
+    <Content Include="Plugins\metisMenu\metisMenu.min.js" />
     <Content Include="Plugins\modernizr\modernizr.js" />
     <Content Include="Plugins\normalize\normalize.css" />
     <Content Include="Polygon.aspx" />

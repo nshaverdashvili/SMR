@@ -46,10 +46,22 @@ namespace Core.Tools
         {
             return string.Format("<link rel=\"stylesheet\" type=\"text/css\" href=\"/Plugins/fancybox/jquery.fancybox.css  \" />");
         }
+
         public static string jssorJS()
         {
             return string.Format("<script type=\"text/javascript\" src=\"/Plugins/jssor/jssor.slider.mini.js\"></script>");
         }
+
+        public static string metisMenuCSS()
+        {
+            return string.Format("<link rel=\"stylesheet\" type=\"text/css\" href=\"/Plugins/metisMenu/metisMenu.min.css  \" />");
+        }
+
+        public static string metisMenuJS()
+        {
+            return string.Format("<script type=\"text/javascript\" src=\"/Plugins/metisMenu/metisMenu.min.js\"></script>");
+        }
+
         public static string awesomefontsCSS()
         {
             return "<link rel=\"stylesheet\" type=\"text/css\" href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css\" />";
