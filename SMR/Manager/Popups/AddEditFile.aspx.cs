@@ -10,13 +10,13 @@ using System.Web.UI.WebControls;
 
 namespace SMR.Manager.Popups
 {
-    public partial class AddEditFile : System.Web.UI.Page
+    public partial class AddEditFile : Models.PageBase
     {
-        int ID;
+        int _ID;
         FilesRepository fr = new FilesRepository();
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (int.TryParse(Request.QueryString["fid"],out ID) && !IsPostBack)
+            if (int.TryParse(Request.QueryString["fid"],out _ID) && !IsPostBack)
             {
                 LoadData();
             }
@@ -24,18 +24,22 @@ namespace SMR.Manager.Popups
 
         void LoadData()
         {
-            var Item = fr.ListFiles(ID).SingleOrDefault();
-            txtFileName.Text = Item.FileName;
-            txtDesc.Text = Item.Description;
-            hfURL.Value =
-            litUrl.Text = Item.URL;
-            ddFileType.SelectedValue = Item.TypeID.ToString();
+            var item = fr.ListFiles(_ID).SingleOrDefault();
+            if (item != null)
+            {
+                txtFileName.Text = item.FileName;
+                txtDesc.Text = item.Description;
+                hfURL.Value =
+                litUrl.Text = item.URL;
+                ddFileType.SelectedValue = item.TypeID.ToString();
+            }
+           
         }
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
             var FileName = hfURL.Value;
-            var iud = (byte)(ID > 0 ? 1 : 0);
+            var iud = (byte)(_ID > 0 ? 1 : 0);
 
             if (fuURL.HasFile)
             {
@@ -58,7 +62,7 @@ namespace SMR.Manager.Popups
                 }
             }
 
-            fr.SP_Files(iud, ID, txtFileName.Text, txtDesc.Text, FileName, Convert.ToInt32(ddFileType.SelectedValue));
+            fr.SP_Files(iud, _ID, txtFileName.Text, txtDesc.Text, FileName, Convert.ToInt32(ddFileType.SelectedValue));
             if (fr.IsError)
             {
                 litMsg.Text = fr.ErrorMessage;

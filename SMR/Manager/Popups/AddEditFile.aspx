@@ -2,7 +2,12 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <p class="bg-danger"><asp:Literal runat="server" ID ="litMsg"/></p>
+    <div class="alert alert-danger alert-dismissable hidden">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x
+        </button>
+        <asp:Literal runat="server" ID="litMsg" />
+    </div>
+    
     <div class="form-group">
     <label for="txtFileName">File Name</label>
     <asp:TextBox runat="server" CssClass="form-control" ID="txtFileName" ClientIDMode="Static"></asp:TextBox>
@@ -25,7 +30,7 @@
     <p class="text-danger" ><asp:Literal ID="litUrl" runat="server" /></p>
     <asp:HiddenField runat="server" ID="hfURL" ClientIDMode="Static" />
   </div>
-  <asp:Button runat="server" CssClass="btn btn-blobtn-success" ClientIDMode="Static" Text="Save" ID="btnSave" OnClick="btnSave_Click" />
+  <asp:Button runat="server" CssClass="btn btn-lg btn-block btn-success" ClientIDMode="Static" Text="Save" ID="btnSave" OnClick="btnSave_Click" />
 <asp:ObjectDataSource ID="dsFileTypes" runat="server" SelectMethod="ListDictionary" TypeName="Core.Tools.DictionariesRepository">
     <SelectParameters>
         <asp:Parameter DefaultValue="1" Name="Lvl" Type="Int32" />

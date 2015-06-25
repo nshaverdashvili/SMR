@@ -24,13 +24,13 @@ namespace Core.CM
     public class NewsRepository : ObjectBase
     {
         public int? ID { get; set; }
-        public List<News> ListNews()
+        public List<News> ListNews(int? NewsID)
         {
             return TryToReturn(string.Format("Core.CM.NewsRepository.ListNews()"), () =>
             {
                 using (var db = DB.DBCon.GetCMDataContext())
                 {
-                    return db.fn_List_News(null).Select(s => new News
+                    return db.fn_List_News(NewsID).Select(s => new News
                     {                        
                         NewsID=s.NewsID,
                         NewsDate=s.NewsDate,

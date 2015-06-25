@@ -1,4 +1,5 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PopupMaster.master.cs" Inherits="SMR.Manager.Popups.PopupMaster" %>
+﻿
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PopupMaster.master.cs" Inherits="SMR.Manager.Popups.PopupMaster" %>
 
 <!DOCTYPE html>
 
