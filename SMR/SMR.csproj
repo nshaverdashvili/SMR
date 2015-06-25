@@ -193,6 +193,7 @@
     <Content Include="Content\css\managerStyle.css" />
     <Content Include="Content\css\admin.css" />
     <Content Include="Content\css\timeline.css" />
+    <Content Include="Content\images\bg1.jpg" />
     <Content Include="Scripts\managerjs\admin.js" />
     <Content Include="Content\css\style.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
