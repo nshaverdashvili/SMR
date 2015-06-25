@@ -25,7 +25,7 @@
     <p class="text-danger" ><asp:Literal ID="litUrl" runat="server" /></p>
     <asp:HiddenField runat="server" ID="hfURL" ClientIDMode="Static" />
   </div>
-  <asp:Button runat="server" CssClass="btn btn-block btn-success" ClientIDMode="Static" Text="Save" ID="btnSave" OnClick="btnSave_Click" />
+  <asp:Button runat="server" CssClass="btn btn-blobtn-success" ClientIDMode="Static" Text="Save" ID="btnSave" OnClick="btnSave_Click" />
 <asp:ObjectDataSource ID="dsFileTypes" runat="server" SelectMethod="ListDictionary" TypeName="Core.Tools.DictionariesRepository">
     <SelectParameters>
         <asp:Parameter DefaultValue="1" Name="Lvl" Type="Int32" />

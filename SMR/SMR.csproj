@@ -224,6 +224,7 @@
     <Content Include="Manager\Files\Galleries.aspx" />
     <Content Include="Manager\LogIn.aspx" />
     <Content Include="Manager\Popups\AddEditFile.aspx" />
+    <Content Include="Manager\Popups\AddEditGallery.aspx" />
     <Content Include="Manager\Popups\AddEditNews.aspx" />
     <Content Include="Manager\UM\Permissions.aspx" />
     <Content Include="Manager\UM\Roles.aspx" />
@@ -440,6 +441,13 @@
     </Compile>
     <Compile Include="Manager\Popups\AddEditFile.aspx.designer.cs">
       <DependentUpon>AddEditFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Popups\AddEditGallery.aspx.cs">
+      <DependentUpon>AddEditGallery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Popups\AddEditGallery.aspx.designer.cs">
+      <DependentUpon>AddEditGallery.aspx</DependentUpon>
     </Compile>
     <Compile Include="Manager\Popups\AddEditNews.aspx.cs">
       <DependentUpon>AddEditNews.aspx</DependentUpon>

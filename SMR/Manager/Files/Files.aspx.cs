@@ -10,7 +10,7 @@ using DevExpress.Web.ASPxGridView;
 
 namespace SMR.Manager.Files
 {
-    public partial class Files : System.Web.UI.Page
+    public partial class Files : Models.PageBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

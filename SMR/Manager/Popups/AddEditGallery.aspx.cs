@@ -7,14 +7,9 @@ using System.Web.UI.WebControls;
 
 namespace SMR.Manager.Popups
 {
-    public partial class AddEditNews : System.Web.UI.Page
+    public partial class AddEditGallery : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void btnSave_Click(object sender, EventArgs e)
         {
 
         }

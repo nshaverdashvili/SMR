@@ -41,5 +41,14 @@
         <asp:Parameter DefaultValue="" Name="IsVisible" Type="Boolean" />
     </SelectParameters>
     </asp:ObjectDataSource>
-    
+
+    <div class="form-group">
+    <label for="VideoURL">Video URL</label>
+    <asp:FileUpload runat="server" ID="VideoURL" ClientIDMode="Static" />
+    <p class="help-block" >დასაშვები ფაილებია: jpg, png, pdf, doc</p>
+    <p class="text-danger" ><asp:Literal ID="litUrl" runat="server" /></p>
+    <asp:HiddenField runat="server" ID="hfURL" ClientIDMode="Static" />
+  </div>
+<asp:Button runat="server" CssClass="btn btn-blobtn-success" ClientIDMode="Static" Text="Save" ID="btnSave" OnClick="btnSave_Click" />
+
 </asp:Content>

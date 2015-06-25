@@ -3,6 +3,7 @@
 <%@ Register Assembly="DevExpress.Web.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxGridView" TagPrefix="dx" %>
 <%@ Register assembly="DevExpress.Web.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <asp:Literal ID="litHeader" runat="server" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BodyPlaceHolder" runat="server">
     <div class="row">
@@ -79,10 +80,22 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ScriptsPlaceHolder" runat="server">
     <script>
         $(function () {
+
+            InitAction();
+
             $("#btnAddnew").click(function () {
-                gridNews.AddNewRow();
+                ShowPopupPage("/manager/popups/AddEditNews.aspx")
+                return false;
             });
 
         });
+
+        function InitAction() {
+
+            $(".Edit").click(function () {
+                ShowPopupPage("/manager/popups/AddEditNews.aspx?fid=" + $(this).prop("id"));
+                return false;
+            });
+        }
     </script>
 </asp:Content>
