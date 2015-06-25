@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Core.Tools;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,13 +20,13 @@ namespace Core.Files
     public class FilesRepository : ObjectBase
     {
         public int? ID { get; set; }
-        public List<Files> ListFiles()
+        public List<Files> ListFiles(int? FileID=null)
         {
             return TryToReturn(string.Format("Core.Files.FilesRepository.ListFiles()"), () =>
             {
                 using (var db = DB.DBCon.GetFilesDataContext())
                 {
-                    return db.fn_List_Files(null).Select(s => new Files
+                    return db.fn_List_Files(FileID).Select(s => new Files
                     {
                         FileID=s.FileID,
                         FileName = s.FileName,	
@@ -40,6 +42,12 @@ namespace Core.Files
         {
             TryExecute(string.Format(@"Core.Files.FilesRepository.ListFiles(iud = {0}, FileID = {1}, FileName = {2}, Description = {3}, URL = {4}, TypeID = {5})", iud, FileID, FileName, Description, URL, TypeID), () =>
             {
+                var FilePath=string.Format("{0}\\{1}",Utility.GetUploadFolder(), URL);
+                if (File.Exists(FilePath) && iud==2)
+                {
+                    File.Delete(FilePath);
+                }
+
                 using (var db = DB.DBCon.GetFilesDataContext())
                 {
                     int? NewID = FileID;

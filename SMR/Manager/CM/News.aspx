@@ -6,11 +6,18 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BodyPlaceHolder" runat="server">
     <div class="row">
-        <button type="button" class="btn btn-success" id="btnAddnew" ><%=Core.Properties.Resources.CreateNew %> </button>
+        <div class="col-xs-12" style="margin:20px 0;">
+            <button type="button" class="btn btn-success" id="btnAddnew" ><%=Core.Properties.Resources.CreateNew %> </button>
+        </div>
     </div>
     <div class="row">
-        <dx:ASPxGridView ID="gridNews" ClientInstanceName="gridNews" runat="server" AutoGenerateColumns="False" DataSourceID="dsNews" Width="100%" KeyFieldName="NewsID" >
+        <div class="col-xs-12">
+         <dx:ASPxGridView ID="gridNews" ClientInstanceName="gridNews" runat="server" AutoGenerateColumns="False" DataSourceID="dsNews" Width="100%" KeyFieldName="NewsID" >
             <Columns>                
+                <dx:GridViewDataComboBoxColumn FieldName="CategoryID">
+                    <PropertiesComboBox DataSourceID="dsCategories" TextField="Caption" ValueField="DictionaryID">
+                    </PropertiesComboBox>
+                </dx:GridViewDataComboBoxColumn>
                 <dx:GridViewDataDateColumn FieldName="NewsDate" >
                 </dx:GridViewDataDateColumn>
                 <dx:GridViewDataTextColumn FieldName="Title" >
@@ -25,21 +32,25 @@
                 </dx:GridViewDataTextColumn>
                 <dx:GridViewDataCheckColumn FieldName="IsVisible" >
                 </dx:GridViewDataCheckColumn>
-                <dx:GridViewDataTextColumn FieldName="VideoURL" >
-                </dx:GridViewDataTextColumn>
-                <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="True" ShowNewButton="true" ShowNewButtonInHeader="false" ButtonType="image" Caption=" ">
-                </dx:GridViewCommandColumn>
-                <dx:GridViewDataComboBoxColumn FieldName="CategoryID" VisibleIndex="5">
-                    <PropertiesComboBox DataSourceID="dsCategories" TextField="Caption" ValueField="DictionaryID">
-                    </PropertiesComboBox>
-                </dx:GridViewDataComboBoxColumn>
-                <dx:GridViewDataComboBoxColumn FieldName="GalleryID" VisibleIndex="9">
+                <dx:GridViewDataComboBoxColumn FieldName="GalleryID" >
                     <PropertiesComboBox DataSourceID="dsGalleries" TextField="Title" ValueField="RecordID">
                     </PropertiesComboBox>
                 </dx:GridViewDataComboBoxColumn>
+                <dx:GridViewDataTextColumn FieldName="VideoURL" >
+                </dx:GridViewDataTextColumn>
+                <dx:GridViewDataColumn>
+                    <DataItemTemplate>
+                        <a href="#" class="Edit" id="<%#Eval("NewsID") %>"><img src="/Content/images/grid/edit.png" /></a>
+                    </DataItemTemplate>
+                </dx:GridViewDataColumn>
+                <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="false" ShowNewButton="false" ShowNewButtonInHeader="false" ButtonType="image" Caption=" ">
+                </dx:GridViewCommandColumn>
+                
+                
             </Columns>
         </dx:ASPxGridView>
-        <asp:ObjectDataSource ID="dsNews" runat="server" DeleteMethod="SP_News" InsertMethod="SP_News" SelectMethod="ListNews" TypeName="Core.CM.NewsRepository" UpdateMethod="SP_News">
+        </div>
+        <asp:ObjectDataSource ID="dsNews" runat="server" DeleteMethod="SP_News" SelectMethod="ListNews" TypeName="Core.CM.NewsRepository">
             <DeleteParameters>
                 <asp:Parameter Name="iud" Type="Int32" DefaultValue="2" />
                 <asp:Parameter Name="NewsID" Type="Int32" />
@@ -53,35 +64,7 @@
                 <asp:Parameter Name="IsVisible" Type="Boolean" />
                 <asp:Parameter Name="VideoURL" Type="String" />
                 <asp:Parameter Name="GalleryID" Type="Int32" />
-            </DeleteParameters>
-            <InsertParameters>
-                <asp:Parameter Name="iud" Type="Int32" DefaultValue="0" />
-                <asp:Parameter Name="NewsID" Type="Int32" />
-                <asp:Parameter Name="NewsDate" Type="DateTime" />
-                <asp:Parameter Name="Title" Type="String" />
-                <asp:Parameter Name="Description" Type="String" />
-                <asp:Parameter Name="FullText" Type="String" />
-                <asp:Parameter Name="LangID" Type="Int32" />
-                <asp:Parameter Name="CategoryID" Type="Int32" />
-                <asp:Parameter Name="SortVal" Type="Int32" />
-                <asp:Parameter Name="IsVisible" Type="Boolean" />
-                <asp:Parameter Name="VideoURL" Type="String" />
-                <asp:Parameter Name="GalleryID" Type="Int32" />
-            </InsertParameters>
-            <UpdateParameters>
-                <asp:Parameter Name="iud" Type="Int32" DefaultValue="1"/>
-                <asp:Parameter Name="NewsID" Type="Int32" />
-                <asp:Parameter Name="NewsDate" Type="DateTime" />
-                <asp:Parameter Name="Title" Type="String" />
-                <asp:Parameter Name="Description" Type="String" />
-                <asp:Parameter Name="FullText" Type="String" />
-                <asp:Parameter Name="LangID" Type="Int32" />
-                <asp:Parameter Name="CategoryID" Type="Int32" />
-                <asp:Parameter Name="SortVal" Type="Int32" />
-                <asp:Parameter Name="IsVisible" Type="Boolean" />
-                <asp:Parameter Name="VideoURL" Type="String" />
-                <asp:Parameter Name="GalleryID" Type="Int32" />
-            </UpdateParameters>
+            </DeleteParameters>           
         </asp:ObjectDataSource>
         <asp:ObjectDataSource ID="dsCategories" runat="server" SelectMethod="ListDictionary" TypeName="Core.Tools.DictionariesRepository">
             <SelectParameters>

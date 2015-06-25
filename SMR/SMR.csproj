@@ -189,6 +189,7 @@
     <Content Include="App_Themes\DevEx\Web\ucProgressBack.png" />
     <Content Include="App_Themes\DevEx\Web\ucProgressIndicatorBack.png" />
     <Content Include="Content\css\fonts.css" />
+    <Content Include="Content\css\managerPopupStyle.css" />
     <Content Include="Content\css\managerStyle.css" />
     <Content Include="Content\css\style.css" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
@@ -222,6 +223,8 @@
     <Content Include="Manager\Files\Files.aspx" />
     <Content Include="Manager\Files\Galleries.aspx" />
     <Content Include="Manager\LogIn.aspx" />
+    <Content Include="Manager\Popups\AddEditFile.aspx" />
+    <Content Include="Manager\Popups\AddEditNews.aspx" />
     <Content Include="Manager\UM\Permissions.aspx" />
     <Content Include="Manager\UM\Roles.aspx" />
     <Content Include="Manager\UM\Users.aspx" />
@@ -340,6 +343,7 @@
     <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Manager\Popups\PopupMaster.Master" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -429,6 +433,27 @@
     </Compile>
     <Compile Include="Manager\LogIn.aspx.designer.cs">
       <DependentUpon>LogIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Popups\AddEditFile.aspx.cs">
+      <DependentUpon>AddEditFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Popups\AddEditFile.aspx.designer.cs">
+      <DependentUpon>AddEditFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Popups\AddEditNews.aspx.cs">
+      <DependentUpon>AddEditNews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Popups\AddEditNews.aspx.designer.cs">
+      <DependentUpon>AddEditNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Popups\PopupMaster.Master.cs">
+      <DependentUpon>PopupMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Popups\PopupMaster.Master.designer.cs">
+      <DependentUpon>PopupMaster.Master</DependentUpon>
     </Compile>
     <Compile Include="Manager\UM\Permissions.aspx.cs">
       <DependentUpon>Permissions.aspx</DependentUpon>
