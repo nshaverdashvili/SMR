@@ -27,7 +27,7 @@
                 </dx:GridViewDataTextColumn>
                 <dx:GridViewDataTextColumn FieldName="FullText" >
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="LangID" >
+                <dx:GridViewDataTextColumn FieldName="LangID"  Visible="false">
                 </dx:GridViewDataTextColumn>
                 <dx:GridViewDataTextColumn FieldName="SortVal" >
                 </dx:GridViewDataTextColumn>
@@ -52,6 +52,9 @@
         </dx:ASPxGridView>
         </div>
         <asp:ObjectDataSource ID="dsNews" runat="server" DeleteMethod="SP_News" SelectMethod="ListNews" TypeName="Core.CM.NewsRepository">
+            <SelectParameters>
+                <asp:Parameter Name="NewsID" Type="Int32" ConvertEmptyStringToNull="true" />
+            </SelectParameters>
             <DeleteParameters>
                 <asp:Parameter Name="iud" Type="Int32" DefaultValue="2" />
                 <asp:Parameter Name="NewsID" Type="Int32" />
@@ -93,7 +96,7 @@
         function InitAction() {
 
             $(".Edit").click(function () {
-                ShowPopupPage("/manager/popups/AddEditNews.aspx?fid=" + $(this).prop("id"));
+                ShowPopupPage("/manager/popups/AddEditNews.aspx?nid=" + $(this).prop("id"));
                 return false;
             });
         }

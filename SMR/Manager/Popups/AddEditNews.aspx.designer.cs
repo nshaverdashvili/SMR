@@ -13,6 +13,24 @@ namespace SMR.Manager.Popups {
     public partial class AddEditNews {
         
         /// <summary>
+        /// litHead control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal litHead;
+        
+        /// <summary>
+        /// msgPH control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder msgPH;
+        
+        /// <summary>
         /// litMsg control.
         /// </summary>
         /// <remarks>
@@ -22,13 +40,13 @@ namespace SMR.Manager.Popups {
         protected global::System.Web.UI.WebControls.Literal litMsg;
         
         /// <summary>
-        /// DropDownList1 control.
+        /// ddCategoryID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList ddCategoryID;
         
         /// <summary>
         /// txtTitle control.

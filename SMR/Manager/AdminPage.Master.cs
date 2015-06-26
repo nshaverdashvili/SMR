@@ -36,6 +36,7 @@ namespace SMR.Manager
            IncludePlugins.Append(Plugins.bootstrapJS());
            IncludePlugins.Append(Plugins.jssorJS());
            IncludePlugins.Append(Plugins.metisMenuJS());
+
            litPlugins.Text = IncludePlugins.ToString();
        }
        protected void btnLang_Click(object sender, EventArgs e)

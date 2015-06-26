@@ -32,12 +32,14 @@ namespace SMR.Manager.Popups
                 hfURL.Value =
                 litUrl.Text = item.URL;
                 ddFileType.SelectedValue = item.TypeID.ToString();
+                valfuURL.Enabled = false;
             }
            
         }
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
+            msgPH.Visible = true;
             var FileName = hfURL.Value;
             var iud = (byte)(_ID > 0 ? 1 : 0);
 
@@ -65,13 +67,11 @@ namespace SMR.Manager.Popups
             fr.SP_Files(iud, _ID, txtFileName.Text, txtDesc.Text, FileName, Convert.ToInt32(ddFileType.SelectedValue));
             if (fr.IsError)
             {
-                litMsg.Text = fr.ErrorMessage;
+                litMsg.Text = "ოპერაცია არ შესრულდა: "+fr.ErrorMessage;
+                return;
             }
-            else
-            {
                 litMsg.Text = "<script>$(function(){window.parent.gridFiles.Refresh(); window.parent.ClosePopupPage();});</script>";
-            }
-
+            
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Core.CM;
+using Core.Tools;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,6 +19,7 @@ namespace SMR.Manager.Popups
             {
                 LoadData();
             }
+            litHead.Text = Plugins.tinymceJS();
         }
 
         void LoadData()
@@ -26,7 +28,7 @@ namespace SMR.Manager.Popups
             if (item !=null)
             {
                 ddGalleryID.SelectedValue = item.CategoryID.ToString();
-                txtDate.Text = item.NewsDate.ToString();
+                txtDate.Text = string.Format("{0:dd/MM/yyyy}", item.NewsDate);
                 txtTitle.Text = item.Title;
                 txtDesc.Text = item.Description;
                 txtFullText.Text = item.FullText;
@@ -34,11 +36,22 @@ namespace SMR.Manager.Popups
                 ddGalleryID.SelectedValue = item.GalleryID.ToString();
                 txtVideoURL.Text = item.VideoURL;
             }
+
         }
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-
+            msgPH.Visible = true;
+            var iud = (byte)(_ID > 0 ? 1 : 0);
+            Nr.SP_News(iud, _ID, DateTime.Parse(txtDate.Text), txtTitle.Text, txtDesc.Text, txtFullText.Text, 
+                null, int.Parse(ddCategoryID.SelectedValue), null, chkVisible.Checked, txtVideoURL.Text, int.Parse(ddGalleryID.SelectedValue));
+            if (Nr.IsError)
+            {
+                litMsg.Text = "ოპერაცია არ შესრულდა: " + Nr.ErrorMessage;
+                return;
+            }
+            litMsg.Text = "<script>$(function(){window.parent.gridNews.Refresh(); window.parent.ClosePopupPage();});</script>";
+            
         }
     }
 }

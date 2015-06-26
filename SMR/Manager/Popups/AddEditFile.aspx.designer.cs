@@ -13,6 +13,15 @@ namespace SMR.Manager.Popups {
     public partial class AddEditFile {
         
         /// <summary>
+        /// msgPH control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.PlaceHolder msgPH;
+        
+        /// <summary>
         /// litMsg control.
         /// </summary>
         /// <remarks>
@@ -29,6 +38,15 @@ namespace SMR.Manager.Popups {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtFileName;
+        
+        /// <summary>
+        /// valFileName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator valFileName;
         
         /// <summary>
         /// ddFileType control.
@@ -74,6 +92,15 @@ namespace SMR.Manager.Popups {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.HiddenField hfURL;
+        
+        /// <summary>
+        /// valfuURL control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator valfuURL;
         
         /// <summary>
         /// btnSave control.

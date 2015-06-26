@@ -21,9 +21,11 @@ namespace SMR.Manager.Popups
             var IncludePlugins = new StringBuilder();
             IncludePlugins.Append(Plugins.bootstrapCSS());
             IncludePlugins.Append(Plugins.normalizeCSS());
+            IncludePlugins.Append(Plugins.jqueryUICSS());
             IncludePlugins.Append(Plugins.jqueryJS());
             IncludePlugins.Append(Plugins.modernizrJS());
             IncludePlugins.Append(Plugins.bootstrapJS());
+            IncludePlugins.Append(Plugins.jqueryUIJS());
             litPlugins.Text = IncludePlugins.ToString();
         }
     }
