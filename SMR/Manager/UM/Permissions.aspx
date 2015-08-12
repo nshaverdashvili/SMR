@@ -5,10 +5,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BodyPlaceHolder" runat="server">
-    <div class="row">
-        <button type="button" class="btn btn-success" id="btnAddnew"><%=Core.Properties.Resources.CreateNew %></button>
+   <div class="row"> 
+        <div class="col-xs-12" style="margin:20px 0;">
+            <button class="btn btn-success" id="btnAddnew"><%=Core.Properties.Resources.CreateNew %></button>
+        </div>
     </div>
     <div class="row">
+        <div class="col-xs-12">
         <dx:ASPxTreeList ID="tlPermissions" ClientInstanceName="tlPermissions" runat="server" AutoGenerateColumns="False" DataSourceID="dsPermissions"
             KeyFieldName="PermissionID" ParentFieldName="ParentID">
             <Columns>
@@ -49,7 +52,7 @@
             </Columns>
             <SettingsBehavior AllowFocusedNode="true" />
         </dx:ASPxTreeList>
-        
+        </div>
     </div>
     <asp:ObjectDataSource ID="dsPermissions" runat="server" DeleteMethod="SP_Permissions" InsertMethod="SP_Permissions" SelectMethod="ListPermissions" TypeName="Core.UM.PermissionsRepository" UpdateMethod="SP_Permissions">
         <DeleteParameters>

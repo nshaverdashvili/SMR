@@ -1,34 +1,37 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Manager/AdminPage.Master" AutoEventWireup="true" CodeBehind="Dictionaries.aspx.cs" Inherits="SMR.Tools.Dictionaries" Theme="DevEx"%>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Manager/AdminPage.Master" AutoEventWireup="true" CodeBehind="Dictionaries.aspx.cs" Inherits="SMR.Tools.Dictionaries" Theme="DevEx" %>
 
 <%@ Register Assembly="DevExpress.Web.ASPxTreeList.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxTreeList" TagPrefix="dx" %>
-<%@ Register assembly="DevExpress.Web.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxEditors" tagprefix="dx" %>
+<%@ Register Assembly="DevExpress.Web.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BodyPlaceHolder" runat="server">
     <div class="row">
-        <button type="button" class="btn btn-success" id="btnAddnew"><%=Core.Properties.Resources.CreateNew %></button>
+        <div class="col-xs-12" style="margin:20px 0;">
+            <button class="btn btn-success" id="btnAddnew"><%=Core.Properties.Resources.CreateNew %></button>
+        </div>
     </div>
     <div class="row">
-        <dx:ASPxTreeList ID="tlDictionaries" ClientInstanceName="tlDictionaries" runat="server" AutoGenerateColumns="False" 
+        <div class="col-xs-12">
+        <dx:ASPxTreeList ID="tlDictionaries" ClientInstanceName="tlDictionaries" runat="server" AutoGenerateColumns="False"
             DataSourceID="dsDictionaries" KeyFieldName="DictionaryID" ParentFieldName="ParentID">
             <Columns>
                 <dx:TreeListTextColumn FieldName="DictionaryCode">
                 </dx:TreeListTextColumn>
-                <dx:TreeListTextColumn FieldName="Caption" >
+                <dx:TreeListTextColumn FieldName="Caption">
                 </dx:TreeListTextColumn>
-                <dx:TreeListTextColumn FieldName="Caption1" >
+                <dx:TreeListTextColumn FieldName="Caption1">
                 </dx:TreeListTextColumn>
-                <dx:TreeListTextColumn FieldName="CodeVal" >
+                <dx:TreeListTextColumn FieldName="CodeVal">
                 </dx:TreeListTextColumn>
-                <dx:TreeListTextColumn FieldName="StringCode" >
+                <dx:TreeListTextColumn FieldName="StringCode">
                 </dx:TreeListTextColumn>
-                <dx:TreeListCheckColumn FieldName="DefVal" >
+                <dx:TreeListCheckColumn FieldName="DefVal">
                 </dx:TreeListCheckColumn>
-                <dx:TreeListCheckColumn FieldName="Visible" >
+                <dx:TreeListCheckColumn FieldName="Visible">
                 </dx:TreeListCheckColumn>
                 <dx:TreeListTextColumn FieldName="SortVal">
                 </dx:TreeListTextColumn>
-                 <dx:TreeListCommandColumn ButtonType="Image" Caption=" ">
+                <dx:TreeListCommandColumn ButtonType="Image" Caption=" ">
                     <CancelButton Visible="true">
                         <Image Url="~/Content/images/grid/cancel.png"></Image>
                     </CancelButton>
@@ -46,7 +49,7 @@
                     </DeleteButton>
                 </dx:TreeListCommandColumn>
             </Columns>
-            <SettingsBehavior AllowFocusedNode="true"  AllowDragDrop="true" />
+            <SettingsBehavior AllowFocusedNode="true" AllowDragDrop="true" />
 
             <SettingsEditing AllowNodeDragDrop="True" />
 
@@ -81,14 +84,14 @@
                 <asp:Parameter Name="DefVal" Type="Boolean" />
                 <asp:Parameter Name="Visible" Type="Boolean" />
                 <asp:Parameter Name="SortVal" Type="Int32" />
-            </InsertParameters>            
+            </InsertParameters>
             <SelectParameters>
                 <asp:Parameter Name="Lvl" Type="Int32" />
                 <asp:Parameter Name="Code" Type="Int32" />
                 <asp:Parameter Name="IsVisible" Type="Boolean" />
             </SelectParameters>
             <UpdateParameters>
-                <asp:Parameter Name="iud" Type="Int32" DefaultValue="1"/>
+                <asp:Parameter Name="iud" Type="Int32" DefaultValue="1" />
                 <asp:Parameter Name="DictionaryID" Type="Int32" />
                 <asp:Parameter Name="Caption" Type="String" />
                 <asp:Parameter Name="Caption1" Type="String" />
@@ -103,7 +106,8 @@
                 <asp:Parameter Name="SortVal" Type="Int32" />
             </UpdateParameters>
         </asp:ObjectDataSource>
-    </div>
+        </div>
+        </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ScriptsPlaceHolder" runat="server">
     <script>

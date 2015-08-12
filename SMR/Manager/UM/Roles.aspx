@@ -5,10 +5,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BodyPlaceHolder" runat="server">
-<div class="row">
-    <button type="button" class="btn btn-success" id="btnAddnew" ><%=Core.Properties.Resources.CreateNew %> </button>
-</div>
+<div class="row"> 
+        <div class="col-xs-12" style="margin:20px 0;">
+            <button class="btn btn-success" id="btnAddnew"><%=Core.Properties.Resources.CreateNew %></button>
+        </div>
+    </div>
     <div class="row">
+        <div class="col-xs-12">
         <dx:ASPxGridView ID="gridRoles" ClientInstanceName="gridRoles" runat="server" AutoGenerateColumns="False" DataSourceID="dsRoles" Width="100%"
             KeyFieldName="RoleID">
             <Columns>
@@ -42,6 +45,7 @@
                 <asp:Parameter Name="Code" Type="Int32" />
             </UpdateParameters>
         </asp:ObjectDataSource>
+        </div>
     </div>
 </asp:Content>
 

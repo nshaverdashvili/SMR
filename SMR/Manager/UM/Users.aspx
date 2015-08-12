@@ -5,10 +5,13 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BodyPlaceHolder" runat="server">
-    <div class="row">
-        <button class="btn btn-success" id="btnAddnew"><%=Core.Properties.Resources.CreateNew %></button>
+    <div class="row"> 
+        <div class="col-xs-12" style="margin:20px 0;">
+            <button class="btn btn-success" id="btnAddnew"><%=Core.Properties.Resources.CreateNew %></button>
+        </div>
     </div>
     <div class"row">
+            <div class="col-xs-12">
         <dx:ASPxGridView ID="gridUsers" ClientInstanceName="gridUsers" runat="server" AutoGenerateColumns="False" DataSourceID="dsUsers" KeyFieldName="UserID" Width="100%"
             OnRowUpdating="gridUsers_RowUpdating">
             <Columns>
@@ -114,7 +117,8 @@
                 <asp:Parameter Name="IsActive" Type="Boolean" />
             </UpdateParameters>
         </asp:ObjectDataSource>
-
+            </div>
+        </div>
     </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ScriptsPlaceHolder" runat="server">
