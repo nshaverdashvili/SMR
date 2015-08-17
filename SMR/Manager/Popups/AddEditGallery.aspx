@@ -13,13 +13,30 @@
     </asp:PlaceHolder>
 
     <div class="form-group">
-        <label for="txtTitle">Title</label>
-        <asp:TextBox runat="server" CssClass="form-control" ID="txtTitle" ClientIDMode="Static"></asp:TextBox>
+        <label for="txtTitleEN">TitleEN</label>
+        <asp:TextBox runat="server" CssClass="form-control" ID="txtTitleEN" ClientIDMode="Static"></asp:TextBox>
+    </div>
+    <div class="form-group">
+        <label for="txtTitleKA">TitleKA</label>
+        <asp:TextBox runat="server" CssClass="form-control" ID="txtTitleKA" ClientIDMode="Static"></asp:TextBox>
+    </div>
+    <div class="form-group">
+        <label for="txtTitleRU">TitleRU</label>
+        <asp:TextBox runat="server" CssClass="form-control" ID="txtTitleRU" ClientIDMode="Static"></asp:TextBox>
     </div>
 
     <div class="form-group">
-    <label for="txtDesc">Description</label>
-    <asp:TextBox runat="server" CssClass="form-control" ID="txtDesc" ClientIDMode="Static" TextMode="MultiLine" Rows="5"></asp:TextBox>
-   </div>
+        <label for="txtDescEN">DescriptionEN</label>
+        <asp:TextBox runat="server" CssClass="form-control" ID="txtDescEN" ClientIDMode="Static" TextMode="MultiLine" Rows="5"></asp:TextBox>
+    </div>
+    <div class="form-group">
+        <label for="txtDescKA">DescriptionKA</label>
+        <asp:TextBox runat="server" CssClass="form-control" ID="DescriptionKA" ClientIDMode="Static" TextMode="MultiLine" Rows="5"></asp:TextBox>
+    </div>
+    <div class="form-group">
+        <label for="txtDescRU">DescriptionRU</label>
+        <asp:TextBox runat="server" CssClass="form-control" ID="DescriptionRU" ClientIDMode="Static" TextMode="MultiLine" Rows="5"></asp:TextBox>
+    </div>
+
 
 </asp:Content>

@@ -58,13 +58,31 @@ namespace SMR.Manager.Popups {
         protected global::System.Web.UI.WebControls.DropDownList ddFileType;
         
         /// <summary>
-        /// txtDesc control.
+        /// txtDescriptionEN control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDesc;
+        protected global::System.Web.UI.WebControls.TextBox txtDescriptionEN;
+        
+        /// <summary>
+        /// txtDescriptionKA control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDescriptionKA;
+        
+        /// <summary>
+        /// txtDescriptionRU control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDescriptionRU;
         
         /// <summary>
         /// fuURL control.

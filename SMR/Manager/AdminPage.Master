@@ -259,7 +259,7 @@
                                 <!-- /input-group -->
                             </li>
                             <li>
-                                <a href="index.html"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
+                                <a href="/manager"><i class="fa fa-dashboard fa-fw"></i>Dashboard</a>
                             </li>
                             <asp:Repeater runat="server" ID="rptManu" ItemType="Core.UM.Permissions" OnItemDataBound="rptManu_ItemDataBound">
                                 <ItemTemplate>
@@ -292,7 +292,9 @@
 
             <div id="page-wrapper"><div class="row">
                     <div class="col-lg-12">
-                        <h1 class="page-header">Dashboard</h1>
+                        <h1 class="page-header">
+                            <asp:Literal ID="ltPageHeader" runat="server"></asp:Literal>
+                        </h1>
                     </div>
                 </div>
                 <asp:ContentPlaceHolder ID="BodyPlaceHolder" runat="server">

@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace SMR.Manager.UM
 {
-    public partial class Roles : System.Web.UI.Page
+    public partial class Roles : Models.PageBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

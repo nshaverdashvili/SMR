@@ -41,8 +41,16 @@
             </asp:DropDownList>
         </div>
         <div class="form-group">
-            <label for="txtTitle">Title</label>
-            <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control" ID="txtTitle" ClientIDMode="Static"></asp:TextBox>
+            <label for="txtTitleEN">Title EN</label>
+            <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control" ID="txtTitleEN" ClientIDMode="Static"></asp:TextBox>
+        </div>
+        <div class="form-group">
+            <label for="txtTitleKA">Title KA</label>
+            <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control" ID="txtTitleKA" ClientIDMode="Static"></asp:TextBox>
+        </div>
+        <div class="form-groupRU">
+            <label for="txtTitleRU">Title RU</label>
+            <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control" ID="txtTitleRU" ClientIDMode="Static"></asp:TextBox>
         </div>
         <div class="form-group">
             <div class="checkbox">
@@ -73,13 +81,29 @@
 
 
     <div class="col-xs-12 col-md-12">
-        <div class="form-group ">
-            <label  for="txtDesc">Description</label>
-            <asp:TextBox runat="server" CssClass="form-control tinymce" ID="txtDesc" ClientIDMode="Static" TextMode="MultiLine" Rows="5"></asp:TextBox>
+        <div class="form-group">
+            <label for="txtDescEN">Description EN</label>
+            <asp:TextBox runat="server" CssClass="form-control" ID="txtDescEN" ClientIDMode="Static" TextMode="MultiLine" Rows="5"></asp:TextBox>
         </div>
         <div class="form-group">
-            <label for="txtFullText">Full Text</label>
-            <asp:TextBox runat="server" CssClass="form-control tinymce" ID="txtFullText" ClientIDMode="Static" TextMode="MultiLine" Rows="5"></asp:TextBox>
+            <label for="txtDescKA">Description KA</label>
+            <asp:TextBox runat="server" CssClass="form-control" ID="txtDescKA" ClientIDMode="Static" TextMode="MultiLine" Rows="5"></asp:TextBox>
+        </div>
+        <div class="form-group">
+            <label for="txtDescRU">Description RU</label>
+            <asp:TextBox runat="server" CssClass="form-control" ID="txtDescRU" ClientIDMode="Static" TextMode="MultiLine" Rows="5"></asp:TextBox>
+        </div>
+        <div class="form-group">
+            <label for="txtFullTextEN">Full Text</label>
+            <asp:TextBox runat="server" CssClass="form-control tinymce" ID="txtFullTextEN" ClientIDMode="Static" TextMode="MultiLine" Rows="5"></asp:TextBox>
+        </div>
+        <div class="form-group">
+            <label for="txtFullTextKA">Full Text</label>
+            <asp:TextBox runat="server" CssClass="form-control tinymce" ID="txtFullTextKA" ClientIDMode="Static" TextMode="MultiLine" Rows="5"></asp:TextBox>
+        </div>
+        <div class="form-group">
+            <label for="txtFullTextRU">Full Text</label>
+            <asp:TextBox runat="server" CssClass="form-control tinymce" ID="txtFullTextRU" ClientIDMode="Static" TextMode="MultiLine" Rows="5"></asp:TextBox>
         </div>
     </div>
     <asp:Button runat="server" CssClass="btn btn-lg btn-block btn-success" ClientIDMode="Static" Text="Save" ID="btnSave" OnClick="btnSave_Click" />

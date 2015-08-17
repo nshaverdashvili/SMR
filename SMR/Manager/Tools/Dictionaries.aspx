@@ -17,7 +17,11 @@
             <Columns>
                 <dx:TreeListTextColumn FieldName="DictionaryCode">
                 </dx:TreeListTextColumn>
-                <dx:TreeListTextColumn FieldName="Caption">
+                <dx:TreeListTextColumn FieldName="CaptionEN">
+                </dx:TreeListTextColumn>
+                <dx:TreeListTextColumn FieldName="CaptionKA">
+                </dx:TreeListTextColumn>
+                <dx:TreeListTextColumn FieldName="CaptionRU">
                 </dx:TreeListTextColumn>
                 <dx:TreeListTextColumn FieldName="Caption1">
                 </dx:TreeListTextColumn>
@@ -58,7 +62,9 @@
             <DeleteParameters>
                 <asp:Parameter Name="iud" Type="Int32" DefaultValue="2" />
                 <asp:Parameter Name="DictionaryID" Type="Int32" />
-                <asp:Parameter Name="Caption" Type="String" />
+                <asp:Parameter Name="CaptionEN" Type="String" />
+                <asp:Parameter Name="CaptionKA" Type="String" />
+                <asp:Parameter Name="CaptionRU" Type="String" />
                 <asp:Parameter Name="Caption1" Type="String" />
                 <asp:Parameter Name="CodeVal" Type="Int32" />
                 <asp:Parameter Name="ParentID" Type="Int32" />
@@ -73,7 +79,9 @@
             <InsertParameters>
                 <asp:Parameter Name="iud" Type="Int32" DefaultValue="0" />
                 <asp:Parameter Name="DictionaryID" Type="Int32" />
-                <asp:Parameter Name="Caption" Type="String" />
+                <asp:Parameter Name="CaptionEN" Type="String" />
+                <asp:Parameter Name="CaptionKA" Type="String" />
+                <asp:Parameter Name="CaptionRU" Type="String" />
                 <asp:Parameter Name="Caption1" Type="String" />
                 <asp:Parameter Name="CodeVal" Type="Int32" />
                 <asp:Parameter Name="ParentID" Type="Int32" />
@@ -93,7 +101,9 @@
             <UpdateParameters>
                 <asp:Parameter Name="iud" Type="Int32" DefaultValue="1" />
                 <asp:Parameter Name="DictionaryID" Type="Int32" />
-                <asp:Parameter Name="Caption" Type="String" />
+                <asp:Parameter Name="CaptionEN" Type="String" />
+                <asp:Parameter Name="CaptionKA" Type="String" />
+                <asp:Parameter Name="CaptionRU" Type="String" />
                 <asp:Parameter Name="Caption1" Type="String" />
                 <asp:Parameter Name="CodeVal" Type="Int32" />
                 <asp:Parameter Name="ParentID" Type="Int32" />

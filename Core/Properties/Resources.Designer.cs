@@ -196,6 +196,15 @@ namespace Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to შენახვა.
+        /// </summary>
+        public static string TextSave {
+            get {
+                return ResourceManager.GetString("TextSave", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to მომხმარებელი.
         /// </summary>
         public static string UserName {

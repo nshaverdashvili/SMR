@@ -49,13 +49,31 @@ namespace SMR.Manager.Popups {
         protected global::System.Web.UI.WebControls.DropDownList ddCategoryID;
         
         /// <summary>
-        /// txtTitle control.
+        /// txtTitleEN control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTitle;
+        protected global::System.Web.UI.WebControls.TextBox txtTitleEN;
+        
+        /// <summary>
+        /// txtTitleKA control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTitleKA;
+        
+        /// <summary>
+        /// txtTitleRU control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtTitleRU;
         
         /// <summary>
         /// chkVisible control.
@@ -94,22 +112,58 @@ namespace SMR.Manager.Popups {
         protected global::System.Web.UI.WebControls.DropDownList ddGalleryID;
         
         /// <summary>
-        /// txtDesc control.
+        /// txtDescEN control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDesc;
+        protected global::System.Web.UI.WebControls.TextBox txtDescEN;
         
         /// <summary>
-        /// txtFullText control.
+        /// txtDescKA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFullText;
+        protected global::System.Web.UI.WebControls.TextBox txtDescKA;
+        
+        /// <summary>
+        /// txtDescRU control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDescRU;
+        
+        /// <summary>
+        /// txtFullTextEN control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFullTextEN;
+        
+        /// <summary>
+        /// txtFullTextKA control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFullTextKA;
+        
+        /// <summary>
+        /// txtFullTextRU control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFullTextRU;
         
         /// <summary>
         /// btnSave control.

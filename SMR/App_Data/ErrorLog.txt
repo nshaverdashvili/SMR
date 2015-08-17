@@ -37,3 +37,14 @@ The statement has been terminated.
 
 ------------------------------------
 
+
+
+------------------------------------
+http://localhost:12175/manager/um/Permissions.aspx - 17.08.2015 23:11:43
+Source File - d:\gitProjects\SMR\Core\UM\Permissions.cs
+Line Number - 53
+Core.UM.PermissionsRepository.ListPermissions() --- A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The semaphore timeout period has expired.)
+
+
+------------------------------------
+

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using SystemBase;
 
@@ -11,13 +12,46 @@ namespace Core.CM
     {
         public int? PageID { get; set; }
         public int? ParentID { get; set; }
-        public string Title { get; set; }
-        public string Description { get; set; }
+        public string TitleEN { get; set; }
+        public string TitleKA { get; set; }
+        public string TitleRU { get; set; }
+        public string Title
+        {
+            get
+            {
+                if (Thread.CurrentThread.CurrentUICulture.Name == "ka-GE")
+                {
+                    return TitleKA;
+                }
+                else if (Thread.CurrentThread.CurrentUICulture.Name == "ru-RU")
+                {
+                    return TitleRU;
+                }
+                return TitleEN;
+            }
+        }        
+        public string DescriptionKA { get; set; }
+        public string DescriptionRU { get; set; }
+        public string DescriptionEN { get; set; }
+        public string Description
+        {
+            get
+            {
+                if (Thread.CurrentThread.CurrentUICulture.Name == "ka-GE")
+                {
+                    return DescriptionKA;
+                }
+                if (Thread.CurrentThread.CurrentUICulture.Name == "ru-RU")
+                {
+                    return DescriptionRU;
+                }
+                return DescriptionEN;
+            }
+        }
         public int? TemplateID { get; set; }
         public string URL { get; set; }
         public string Note { get; set; }
         public int? GalleryID { get; set; }
-        public int? LangID { get; set; }
         public bool? IsVisible { get; set; }
     }
     public class PagesRepository : ObjectBase
@@ -33,29 +67,32 @@ namespace Core.CM
                     {
                         PageID=s.PageID,
                         ParentID=s.ParentID,
-                        Title=s.Title,
-                        Description=s.Description,
+                        TitleEN = s.TitleEN,
+                        TitleKA = s.TitleKA,
+                        TitleRU = s.TitleRU,
+                        DescriptionEN = s.DescriptionEN,
+                        DescriptionKA = s.DescriptionKA,
+                        DescriptionRU = s.DescriptionRU,
                         TemplateID=s.TemplateID,
                         URL=s.URL,
                         Note=s.Note,	
                         GalleryID=s.GalleryID,	
-                        LangID=s.LangID,
                         IsVisible=s.IsVisible
                     }).ToList();
                 }
             });
         }
-        public void SP_Pages(int? iud, int? PageID = null, int? ParentID = null, string Title = null, string Description = null, int? TemplateID=null,
-                            string URL = null, string Note = null, int? GalleryID = null, int? LangID = null, bool? IsVisible = null)
+        public void SP_Pages(int? iud, int? PageID = null, int? ParentID = null, string TitleEN = null, string TitleKA = null, string TitleRU = null, 
+                            string DescriptionEN = null, string DescriptionKA = null, string DescriptionRU = null, int? TemplateID = null,
+                            string URL = null, string Note = null, int? GalleryID = null, bool? IsVisible = null)
         {
-            TryExecute(string.Format(@"Core.CM.PagesRepository(iud = {0}, PageID = {1},ParentID = {2},Title = {3}, Description = {4},
-            TemplateID = {5}, URL ={6}, Note = {7}, GalleryID = {8}, LangID = {9}, IsVisible = {10})", iud, PageID, ParentID, Title, 
-            Description, TemplateID, URL, Note, GalleryID, LangID, IsVisible), () =>
+            TryExecute(string.Format("SP_Pages(iud = {0}, PageID = {1}, ParentID = {2}, TitleEN = {3}, TitleKA = {4}, TitleRU = {5}, DescriptionEN = {6}, DescriptionKA = {7}, DescriptionRU = {8}, TemplateID = {9}, URL = {10}, Note = {11}, GalleryID = {12}, IsVisible = {13})",
+                iud, PageID, ParentID, TitleEN, TitleKA, TitleRU, DescriptionEN, DescriptionKA, DescriptionRU, TemplateID, URL, Note, GalleryID, IsVisible), () =>
             {
                 using (var db = DB.DBCon.GetCMDataContext())
                 {
                     int? NewID = PageID;
-                    db.sp_Pages(iud, ref NewID, ParentID, Title, Description, TemplateID, URL, Note, GalleryID, LangID, IsVisible);
+                    db.sp_Pages(iud, ref NewID, ParentID, TitleEN, TitleKA, TitleRU, DescriptionEN, DescriptionKA, DescriptionRU, TemplateID, URL, Note, GalleryID, IsVisible);
                     this.ID = NewID;
                 }
             });

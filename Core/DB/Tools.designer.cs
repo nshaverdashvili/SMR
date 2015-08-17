@@ -62,18 +62,18 @@ namespace Core.DB
 			OnCreated();
 		}
 		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_Dictionaries")]
+		public int sp_Dictionaries([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> iud, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DictionaryID", DbType="Int")] ref System.Nullable<int> dictionaryID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CaptionEN", DbType="NVarChar(200)")] string captionEN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CaptionKA", DbType="NVarChar(200)")] string captionKA, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CaptionRU", DbType="NVarChar(200)")] string captionRU, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Caption1", DbType="NVarChar(200)")] string caption1, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CodeVal", DbType="Int")] System.Nullable<int> codeVal, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ParentID", DbType="Int")] System.Nullable<int> parentID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Level", DbType="SmallInt")] System.Nullable<short> level, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Hierarchy", DbType="VarChar(200)")] string hierarchy, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="StringCode", DbType="NVarChar(100)")] string stringCode, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DictionaryCode", DbType="Int")] System.Nullable<int> dictionaryCode, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DefVal", DbType="Bit")] System.Nullable<bool> defVal, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Visible", DbType="Bit")] System.Nullable<bool> visible, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SortVal", DbType="Int")] System.Nullable<int> sortVal)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iud, dictionaryID, captionEN, captionKA, captionRU, caption1, codeVal, parentID, level, hierarchy, stringCode, dictionaryCode, defVal, visible, sortVal);
+			dictionaryID = ((System.Nullable<int>)(result.GetParameterValue(1)));
+			return ((int)(result.ReturnValue));
+		}
+		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.fn_List_Dictionaries", IsComposable=true)]
 		public IQueryable<fn_List_DictionariesResult> fn_List_Dictionaries([global::System.Data.Linq.Mapping.ParameterAttribute(Name="Level", DbType="Int")] System.Nullable<int> level, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DictionaryCode", DbType="Int")] System.Nullable<int> dictionaryCode, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ShowInvisibleItems", DbType="Bit")] System.Nullable<bool> showInvisibleItems)
 		{
 			return this.CreateMethodCallQuery<fn_List_DictionariesResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), level, dictionaryCode, showInvisibleItems);
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_Dictionaries")]
-		public int sp_Dictionaries([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> iud, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DictionaryID", DbType="Int")] ref System.Nullable<int> dictionaryID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Caption", DbType="NVarChar(200)")] string caption, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Caption1", DbType="NVarChar(200)")] string caption1, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CodeVal", DbType="Int")] System.Nullable<int> codeVal, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ParentID", DbType="Int")] System.Nullable<int> parentID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Level", DbType="SmallInt")] System.Nullable<short> level, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Hierarchy", DbType="VarChar(200)")] string hierarchy, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="StringCode", DbType="NVarChar(100)")] string stringCode, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DictionaryCode", DbType="Int")] System.Nullable<int> dictionaryCode, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DefVal", DbType="Bit")] System.Nullable<bool> defVal, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Visible", DbType="Bit")] System.Nullable<bool> visible, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SortVal", DbType="Int")] System.Nullable<int> sortVal)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iud, dictionaryID, caption, caption1, codeVal, parentID, level, hierarchy, stringCode, dictionaryCode, defVal, visible, sortVal);
-			dictionaryID = ((System.Nullable<int>)(result.GetParameterValue(1)));
-			return ((int)(result.ReturnValue));
 		}
 	}
 	
@@ -84,7 +84,11 @@ namespace Core.DB
 		
 		private int _DictionaryID;
 		
-		private string _Caption;
+		private string _CaptionEN;
+		
+		private string _CaptionKA;
+		
+		private string _CaptionRU;
 		
 		private string _Caption1;
 		
@@ -94,11 +98,11 @@ namespace Core.DB
 		
 		private string _StringCode;
 		
-		private short _DictionaryCode;
+		private System.Nullable<short> _DictionaryCode;
 		
 		private System.Nullable<bool> _DefVal;
 		
-		private bool _Visible;
+		private System.Nullable<bool> _Visible;
 		
 		private System.Nullable<int> _SortVal;
 		
@@ -140,18 +144,50 @@ namespace Core.DB
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Caption", DbType="NVarChar(200)")]
-		public string Caption
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CaptionEN", DbType="NVarChar(200)")]
+		public string CaptionEN
 		{
 			get
 			{
-				return this._Caption;
+				return this._CaptionEN;
 			}
 			set
 			{
-				if ((this._Caption != value))
+				if ((this._CaptionEN != value))
 				{
-					this._Caption = value;
+					this._CaptionEN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CaptionKA", DbType="NVarChar(200)")]
+		public string CaptionKA
+		{
+			get
+			{
+				return this._CaptionKA;
+			}
+			set
+			{
+				if ((this._CaptionKA != value))
+				{
+					this._CaptionKA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CaptionRU", DbType="NVarChar(200)")]
+		public string CaptionRU
+		{
+			get
+			{
+				return this._CaptionRU;
+			}
+			set
+			{
+				if ((this._CaptionRU != value))
+				{
+					this._CaptionRU = value;
 				}
 			}
 		}
@@ -220,8 +256,8 @@ namespace Core.DB
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DictionaryCode", DbType="SmallInt NOT NULL")]
-		public short DictionaryCode
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DictionaryCode", DbType="SmallInt")]
+		public System.Nullable<short> DictionaryCode
 		{
 			get
 			{
@@ -252,8 +288,8 @@ namespace Core.DB
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Visible", DbType="Bit NOT NULL")]
-		public bool Visible
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Visible", DbType="Bit")]
+		public System.Nullable<bool> Visible
 		{
 			get
 			{

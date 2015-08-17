@@ -1,16 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SMR" Class="UMDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=server.abs.ge,1443;Initial Catalog=SMR;Persist Security Info=True;User ID=sa" SettingsObjectName="Core.Properties.Settings" SettingsPropertyName="SMRConnectionString" Provider="System.Data.SqlClient" />
-  <Function Name="dbo.sp_Permissions" Method="sp_Permissions">
-    <Parameter Name="iud" Type="System.Byte" DbType="TinyInt" />
-    <Parameter Name="PermissionID" Parameter="permissionID" Type="System.Int32" DbType="Int" Direction="InOut" />
-    <Parameter Name="ParentID" Parameter="parentID" Type="System.Int32" DbType="Int" />
-    <Parameter Name="Caption" Parameter="caption" Type="System.String" DbType="NVarChar(100)" />
-    <Parameter Name="PageName" Parameter="pageName" Type="System.String" DbType="NVarChar(100)" />
-    <Parameter Name="CodeName" Parameter="codeName" Type="System.String" DbType="NVarChar(50)" />
-    <Parameter Name="SortVal" Parameter="sortVal" Type="System.Int32" DbType="Int" />
-    <Parameter Name="isVisible" Type="System.Boolean" DbType="Bit" />
-    <Return Type="System.Int32" />
-  </Function>
   <Function Name="dbo.sp_Roles" Method="sp_Roles">
     <Parameter Name="iud" Type="System.Byte" DbType="TinyInt" />
     <Parameter Name="RoleID" Parameter="roleID" Type="System.Int32" DbType="Int" Direction="InOut" />
@@ -95,39 +84,12 @@
       <Column Name="RoleName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
     </ElementType>
   </Function>
-  <Function Name="dbo.fn_List_AdminMenuItemsForUser" Method="fn_List_AdminMenuItemsForUser" IsComposable="true">
-    <Parameter Name="UserID" Parameter="userID" Type="System.Int64" DbType="BigInt" />
-    <ElementType Name="fn_List_AdminMenuItemsForUserResult">
-      <Column Name="PermissionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="ParentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Caption" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="PageName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="Code" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="SortVal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="isVisible" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.fn_List_PermissionRoles" Method="fn_List_PermissionRoles" IsComposable="true">
     <Parameter Name="PermissionID" Parameter="permissionID" Type="System.Int32" DbType="Int" />
     <ElementType Name="fn_List_PermissionRolesResult">
       <Column Name="RoleID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="Caption" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="Code" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.fn_List_Permissions" Method="fn_List_Permissions" IsComposable="true">
-    <ElementType Name="fn_List_PermissionsResult">
-      <Column Name="PermissionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="ParentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Caption" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="PageName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="CodeName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="[Level]" Member="Level" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
-      <Column Name="Hierarchy" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
-      <Column Name="PermissionCode" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
-      <Column Name="SortVal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="CRTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-      <Column Name="isVisible" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
   <Function Name="dbo.fn_List_PermissionUsers" Method="fn_List_PermissionUsers" IsComposable="true">
@@ -166,16 +128,6 @@
       <Column Name="Fname" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="Lname" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
       <Column Name="FullName" Type="System.String" DbType="NVarChar(201)" CanBeNull="true" />
-    </ElementType>
-  </Function>
-  <Function Name="dbo.fn_List_UserPermissions" Method="fn_List_UserPermissions" IsComposable="true">
-    <Parameter Name="UserID" Parameter="userID" Type="System.Int64" DbType="BigInt" />
-    <ElementType Name="fn_List_UserPermissionsResult">
-      <Column Name="PermissionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Caption" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="PageName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="PermissionCode" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
-      <Column Name="isVisible" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
   <Function Name="dbo.fn_List_UserRoles" Method="fn_List_UserRoles" IsComposable="true">
@@ -224,9 +176,65 @@
     <Parameter Name="Username" Parameter="username" Type="System.String" DbType="VarChar(100)" />
     <Return Type="System.Boolean" />
   </Function>
+  <Function Name="dbo.sp_Permissions" Method="sp_Permissions">
+    <Parameter Name="iud" Type="System.Byte" DbType="TinyInt" />
+    <Parameter Name="PermissionID" Parameter="permissionID" Type="System.Int32" DbType="Int" Direction="InOut" />
+    <Parameter Name="ParentID" Parameter="parentID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="CaptionEN" Parameter="captionEN" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="CaptionKA" Parameter="captionKA" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="CaptionRU" Parameter="captionRU" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="PageName" Parameter="pageName" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="CodeName" Parameter="codeName" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="SortVal" Parameter="sortVal" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IsVisible" Parameter="isVisible" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.fn_List_Permissions" Method="fn_List_Permissions" IsComposable="true">
+    <ElementType Name="fn_List_PermissionsResult">
+      <Column Name="PermissionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CaptionEN" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CaptionKA" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CaptionRU" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PageName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CodeName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Level]" Member="Level" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Hierarchy" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="PermissionCode" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="SortVal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CRTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.fn_List_UserPermissions" Method="fn_List_UserPermissions" IsComposable="true">
+    <Parameter Name="UserID" Parameter="userID" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="fn_List_UserPermissionsResult">
+      <Column Name="PermissionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CaptionEN" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CaptionKA" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CaptionRU" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PageName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PermissionCode" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
   <Function Name="dbo.fn_Authenticate" Method="fn_Authenticate" IsComposable="true">
     <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(100)" />
     <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(100)" />
     <Return Type="System.Xml.Linq.XElement" />
+  </Function>
+  <Function Name="dbo.fn_List_AdminMenuItemsForUser" Method="fn_List_AdminMenuItemsForUser" IsComposable="true">
+    <Parameter Name="UserID" Parameter="userID" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="fn_List_AdminMenuItemsForUserResult">
+      <Column Name="PermissionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CaptionEN" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CaptionKA" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CaptionRU" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PageName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Code" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="SortVal" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="isVisible" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
   </Function>
 </Database>

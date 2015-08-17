@@ -25,10 +25,19 @@
                 DataValueField="DictionaryID" DataTextField="Caption">
             </asp:DropDownList>
         </div>
-        <div class="form-group">
-            <label for="txtDesc">Description</label>
-            <asp:TextBox runat="server" CssClass="form-control" ID="txtDesc" ClientIDMode="Static" TextMode="MultiLine" Rows="5"></asp:TextBox>
+         <div class="form-group">
+            <label for="txtDescEN">DescriptionEN</label>
+            <asp:TextBox runat="server" CssClass="form-control" ID="txtDescriptionEN" ClientIDMode="Static" TextMode="MultiLine" Rows="5"></asp:TextBox>
         </div>
+        <div class="form-group">
+            <label for="txtDescKA">DescriptionKA</label>
+            <asp:TextBox runat="server" CssClass="form-control" ID="txtDescriptionKA" ClientIDMode="Static" TextMode="MultiLine" Rows="5"></asp:TextBox>
+        </div>
+        <div class="form-group">
+            <label for="txtDescRU">DescriptionRU</label>
+            <asp:TextBox runat="server" CssClass="form-control" ID="txtDescriptionRU" ClientIDMode="Static" TextMode="MultiLine" Rows="5"></asp:TextBox>
+        </div>
+
 
         <div class="form-group">
             <label for="fuURL">File input</label>

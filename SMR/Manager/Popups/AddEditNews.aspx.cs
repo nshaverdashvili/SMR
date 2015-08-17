@@ -29,9 +29,12 @@ namespace SMR.Manager.Popups
             {
                 ddGalleryID.SelectedValue = item.CategoryID.ToString();
                 txtDate.Text = string.Format("{0:dd/MM/yyyy}", item.NewsDate);
-                txtTitle.Text = item.Title;
-                txtDesc.Text = item.Description;
-                txtFullText.Text = item.FullText;
+                txtTitleEN.Text = item.Title;
+                txtTitleKA.Text = item.Title;
+                txtTitleRU.Text = item.Title;
+                txtDescEN.Text = item.Description;
+                txtFullTextKA.Text = item.FullText;
+                txtFullTextRU.Text = item.FullText;
                 chkVisible.Checked = item.IsVisible.Value;
                 ddGalleryID.SelectedValue = item.GalleryID.ToString();
                 txtVideoURL.Text = item.VideoURL;
@@ -43,7 +46,7 @@ namespace SMR.Manager.Popups
         {
             msgPH.Visible = true;
             var iud = (byte)(_ID > 0 ? 1 : 0);
-            Nr.SP_News(iud, _ID, DateTime.Parse(txtDate.Text), txtTitle.Text, txtDesc.Text, txtFullText.Text, 
+            Nr.SP_News(iud, _ID, DateTime.Parse(txtDate.Text), txtTitleEN.Text, txtTitleKA.Text, txtTitleRU.Text, txtDescEN.Text, txtDescKA.Text, txtDescRU.Text,  txtFullTextEN.Text, txtFullTextKA.Text, txtFullTextRU.Text,
                 null, int.Parse(ddCategoryID.SelectedValue), null, chkVisible.Checked, txtVideoURL.Text, int.Parse(ddGalleryID.SelectedValue));
             if (Nr.IsError)
             {

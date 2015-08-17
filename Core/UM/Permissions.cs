@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using SystemBase;
+
 
 namespace Core.UM
 {
@@ -12,7 +14,23 @@ namespace Core.UM
         public int PermissionID { get; set; }
         public int? ParentID { get; set; }
         public int? Level { get; set; }
-        public string Caption { get; set; }
+        public string CaptionEN { get; set; }
+        public string CaptionKA { get; set; }
+        public string CaptionRU { get; set; }
+        public string Caption
+        {
+            get {
+                if(Thread.CurrentThread.CurrentUICulture.Name =="ka-GE")
+                {
+                    return CaptionKA;
+                }
+                else if (Thread.CurrentThread.CurrentUICulture.Name=="ru-RU")
+                {
+                    return CaptionRU;
+                }
+                return CaptionEN;
+                }
+        }
         public string PageName { get; set; }
         public string PermissionsCode { get; set; }
         public string CodeName { get; set; }
@@ -41,25 +59,28 @@ namespace Core.UM
                         Level=s.Level,
                         PermissionID=s.PermissionID,
                         ParentID=s.ParentID,
-                        Caption=s.Caption,
+                        CaptionEN = s.CaptionEN,
+                        CaptionKA = s.CaptionKA,
+                        CaptionRU = s.CaptionRU,
                         PageName=s.PageName,
                         CodeName=s.CodeName,
                         SortVal=s.SortVal,
-                        IsVisible=s.isVisible,
+                        IsVisible=s.IsVisible,
                         PermissionsCode=s.PermissionCode
                     }).ToList();
                 }
             });
         }
 
-        public void SP_Permissions(byte? iud, int? PermissionID=null, int? ParentID=null, string Caption=null, string PageName=null, string CodeName=null, int? SortVal=null, bool? IsVisible=null)
+        public void SP_Permissions(byte? iud, int? PermissionID = null, int? ParentID = null, string CaptionEN = null, string CaptionKA = null, string CaptionRU = null, string PageName = null, string CodeName = null, int? SortVal = null, bool? IsVisible = null)
         {
-            TryExecute(string.Format(@"Core.UM.PermissionsRepository(iud = {0}, PermissionID = {1}, ParentID = {2}, Caption = {3}, PageName = {4}, CodeName = {5}, SortVal = {6}, IsVisible = {7} )", iud, PermissionID, ParentID, Caption, PageName, CodeName, SortVal, IsVisible), () =>
+            TryExecute(string.Format("SP_Permissions(iud = {0}, PermissionID = {1}, ParentID = {2}, CaptionEN = {3}, CaptionKA = {4}, CaptionRU = {5}, PageName = {6}, CodeName = {7}, SortVal = {8}, IsVisible = {9})", iud, PermissionID, ParentID, CaptionEN, CaptionKA, CaptionRU, PageName, CodeName, SortVal, IsVisible)
+                , () =>
             {
                 using (var db = DB.DBCon.GetUMDataContext())
                 {
                     int? NewID = PermissionID;
-                    db.sp_Permissions(iud, ref NewID, ParentID, Caption, PageName, CodeName, SortVal, IsVisible);
+                    db.sp_Permissions(iud, ref NewID, ParentID, CaptionEN, CaptionKA, CaptionRU, PageName, CodeName, SortVal, IsVisible);
                     this.ID = NewID;
                 }
             });
@@ -78,10 +99,12 @@ namespace Core.UM
                     return db.fn_List_UserPermissions(UserID).Select(s => new Permissions
                     {
                         PermissionID=s.PermissionID,
-                        Caption=s.Caption,
+                        CaptionEN = s.CaptionEN,
+                        CaptionKA = s.CaptionKA,
+                        CaptionRU = s.CaptionRU,
                         PageName=s.PageName,
                         CodeName=s.PermissionCode,
-                        IsVisible=s.isVisible
+                        IsVisible=s.IsVisible
                     }).ToList();
                 }
             });

@@ -28,7 +28,9 @@ namespace SMR.Manager.Popups
             if (item != null)
             {
                 txtFileName.Text = item.FileName;
-                txtDesc.Text = item.Description;
+                txtDescriptionEN.Text = item.DescriptionEN;
+                txtDescriptionKA.Text = item.DescriptionKA;
+                txtDescriptionRU.Text = item.DescriptionRU;
                 hfURL.Value =
                 litUrl.Text = item.URL;
                 ddFileType.SelectedValue = item.TypeID.ToString();
@@ -64,7 +66,7 @@ namespace SMR.Manager.Popups
                 }
             }
 
-            fr.SP_Files(iud, _ID, txtFileName.Text, txtDesc.Text, FileName, Convert.ToInt32(ddFileType.SelectedValue));
+            fr.SP_Files(iud, _ID, txtFileName.Text, txtDescriptionEN.Text, txtDescriptionKA.Text, txtDescriptionRU.Text, FileName, Convert.ToInt32(ddFileType.SelectedValue));
             if (fr.IsError)
             {
                 litMsg.Text = "ოპერაცია არ შესრულდა: "+fr.ErrorMessage;

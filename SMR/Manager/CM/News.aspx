@@ -21,13 +21,23 @@
                 </dx:GridViewDataComboBoxColumn>
                 <dx:GridViewDataDateColumn FieldName="NewsDate" >
                 </dx:GridViewDataDateColumn>
-                <dx:GridViewDataTextColumn FieldName="Title" >
+                <dx:GridViewDataTextColumn FieldName="TitleEN">
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="Description" >
+                <dx:GridViewDataTextColumn FieldName="TitleKA">
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="FullText" >
+                <dx:GridViewDataTextColumn FieldName="TitleRU">
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="LangID"  Visible="false">
+                <dx:GridViewDataTextColumn FieldName="DescriptionEN">
+                </dx:GridViewDataTextColumn>
+                <dx:GridViewDataTextColumn FieldName="DescriptionKA">
+                </dx:GridViewDataTextColumn>
+                <dx:GridViewDataTextColumn FieldName="DescriptionRU">
+                </dx:GridViewDataTextColumn>
+                <dx:GridViewDataTextColumn FieldName="FullTextEN" >
+                </dx:GridViewDataTextColumn>
+                <dx:GridViewDataTextColumn FieldName="FullTextKA" >
+                </dx:GridViewDataTextColumn>
+                <dx:GridViewDataTextColumn FieldName="FullTextRU" >
                 </dx:GridViewDataTextColumn>
                 <dx:GridViewDataTextColumn FieldName="SortVal" >
                 </dx:GridViewDataTextColumn>
@@ -59,10 +69,15 @@
                 <asp:Parameter Name="iud" Type="Int32" DefaultValue="2" />
                 <asp:Parameter Name="NewsID" Type="Int32" />
                 <asp:Parameter Name="NewsDate" Type="DateTime" />
-                <asp:Parameter Name="Title" Type="String" />
-                <asp:Parameter Name="Description" Type="String" />
-                <asp:Parameter Name="FullText" Type="String" />
-                <asp:Parameter Name="LangID" Type="Int32" />
+                <asp:Parameter Name="TitleEN" Type="String" />
+                <asp:Parameter Name="TitleKA" Type="String" />
+                <asp:Parameter Name="TitleRU" Type="String" />
+                <asp:Parameter Name="DescriptionEN" Type="String" />
+                <asp:Parameter Name="DescriptionKA" Type="String" />
+                <asp:Parameter Name="DescriptionEN" Type="String" />
+                <asp:Parameter Name="FullTextEN" Type="String" />
+                <asp:Parameter Name="FullTextKA" Type="String" />
+                <asp:Parameter Name="FullTextRU" Type="String" />
                 <asp:Parameter Name="CategoryID" Type="Int32" />
                 <asp:Parameter Name="SortVal" Type="Int32" />
                 <asp:Parameter Name="IsVisible" Type="Boolean" />

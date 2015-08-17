@@ -1,28 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="SMR" Class="ToolsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
   <Connection Mode="AppSettings" ConnectionString="Data Source=server.abs.ge,1443;Initial Catalog=SMR;Persist Security Info=True;User ID=sa" SettingsObjectName="Core.Properties.Settings" SettingsPropertyName="SMRConnectionString" Provider="System.Data.SqlClient" />
-  <Function Name="dbo.fn_List_Dictionaries" Method="fn_List_Dictionaries" IsComposable="true">
-    <Parameter Name="Level" Parameter="level" Type="System.Int32" DbType="Int" />
-    <Parameter Name="DictionaryCode" Parameter="dictionaryCode" Type="System.Int32" DbType="Int" />
-    <Parameter Name="ShowInvisibleItems" Parameter="showInvisibleItems" Type="System.Boolean" DbType="Bit" />
-    <ElementType Name="fn_List_DictionariesResult">
-      <Column Name="RowNum" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
-      <Column Name="DictionaryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="Caption" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="Caption1" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="CodeVal" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="ParentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="StringCode" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="DictionaryCode" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
-      <Column Name="DefVal" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="Visible" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Column Name="SortVal" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="CRTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.sp_Dictionaries" Method="sp_Dictionaries">
     <Parameter Name="iud" Type="System.Int32" DbType="Int" />
     <Parameter Name="DictionaryID" Parameter="dictionaryID" Type="System.Int32" DbType="Int" Direction="InOut" />
-    <Parameter Name="Caption" Parameter="caption" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="CaptionEN" Parameter="captionEN" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="CaptionKA" Parameter="captionKA" Type="System.String" DbType="NVarChar(200)" />
+    <Parameter Name="CaptionRU" Parameter="captionRU" Type="System.String" DbType="NVarChar(200)" />
     <Parameter Name="Caption1" Parameter="caption1" Type="System.String" DbType="NVarChar(200)" />
     <Parameter Name="CodeVal" Parameter="codeVal" Type="System.Int32" DbType="Int" />
     <Parameter Name="ParentID" Parameter="parentID" Type="System.Int32" DbType="Int" />
@@ -34,5 +17,26 @@
     <Parameter Name="Visible" Parameter="visible" Type="System.Boolean" DbType="Bit" />
     <Parameter Name="SortVal" Parameter="sortVal" Type="System.Int32" DbType="Int" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.fn_List_Dictionaries" Method="fn_List_Dictionaries" IsComposable="true">
+    <Parameter Name="Level" Parameter="level" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DictionaryCode" Parameter="dictionaryCode" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ShowInvisibleItems" Parameter="showInvisibleItems" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="fn_List_DictionariesResult">
+      <Column Name="RowNum" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="DictionaryID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CaptionEN" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CaptionKA" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CaptionRU" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Caption1" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="CodeVal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StringCode" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DictionaryCode" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="DefVal" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Visible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SortVal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CRTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </ElementType>
   </Function>
 </Database>

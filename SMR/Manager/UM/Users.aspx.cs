@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace SMR.Manager.UM
 {
-    public partial class Users : System.Web.UI.Page
+    public partial class Users : Models.PageBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

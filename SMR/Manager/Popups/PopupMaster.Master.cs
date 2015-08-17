@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace SMR.Manager.Popups
 {
-    public partial class PopupMaster : Models.AdminMasterBase
+    public partial class PopupMaster : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

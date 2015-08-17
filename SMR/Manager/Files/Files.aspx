@@ -22,8 +22,12 @@
             <Columns>                
                 <dx:GridViewDataTextColumn FieldName="FileName" >
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="Description" >
-                </dx:GridViewDataTextColumn>
+                <dx:GridViewDataTextColumn FieldName="DescriptionEN">
+                    </dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="DescriptionKA">
+                    </dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="DescriptionRU">
+                    </dx:GridViewDataTextColumn>
                 <dx:GridViewDataTextColumn FieldName="URL" >
                 </dx:GridViewDataTextColumn>
                  <dx:GridViewDataComboBoxColumn FieldName="TypeID">
@@ -45,7 +49,9 @@
                 <asp:Parameter Name="iud" Type="Int32"  DefaultValue="2"/>
                 <asp:Parameter Name="FileID" Type="Int32" />
                 <asp:Parameter Name="FileName" Type="String" />
-                <asp:Parameter Name="Description" Type="String" />
+                <asp:Parameter Name="DescriptionEN" Type="String" />
+                <asp:Parameter Name="DescriptionKA" Type="String" />
+                <asp:Parameter Name="DescriptionEN" Type="String" />
                 <asp:Parameter Name="URL" Type="String" />
                 <asp:Parameter Name="TypeID" Type="Int32" />
             </DeleteParameters>

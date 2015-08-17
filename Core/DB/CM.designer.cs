@@ -63,25 +63,36 @@ namespace Core.DB
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_News")]
-		public int sp_News([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> iud, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NewsID", DbType="Int")] ref System.Nullable<int> newsID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="NewsDate", DbType="DateTime")] System.Nullable<System.DateTime> newsDate, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Title", DbType="NVarChar(200)")] string title, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Description", DbType="NVarChar(MAX)")] string description, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FullText", DbType="NVarChar(MAX)")] string fullText, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="LangID", DbType="Int")] System.Nullable<int> langID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="CategoryID", DbType="Int")] System.Nullable<int> categoryID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="SortVal", DbType="Int")] System.Nullable<int> sortVal, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IsVisible", DbType="Bit")] System.Nullable<bool> isVisible, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="VideoURL", DbType="NVarChar(300)")] string videoURL, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="GalleryID", DbType="Int")] System.Nullable<int> galleryID)
+		public int sp_News(
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> iud, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="NewsID", DbType="Int")] ref System.Nullable<int> newsID, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="NewsDate", DbType="DateTime")] System.Nullable<System.DateTime> newsDate, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="TitleEN", DbType="NVarChar(200)")] string titleEN, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="TitleKA", DbType="NVarChar(200)")] string titleKA, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="TitleRU", DbType="NVarChar(200)")] string titleRU, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="DescriptionEN", DbType="NVarChar(MAX)")] string descriptionEN, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="DescriptionKA", DbType="NVarChar(MAX)")] string descriptionKA, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="DescriptionRU", DbType="NVarChar(MAX)")] string descriptionRU, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="FullTextEN", DbType="NVarChar(MAX)")] string fullTextEN, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="FullTextKA", DbType="NVarChar(MAX)")] string fullTextKA, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="FullTextRU", DbType="NVarChar(MAX)")] string fullTextRU, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="CategoryID", DbType="Int")] System.Nullable<int> categoryID, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="SortVal", DbType="Int")] System.Nullable<int> sortVal, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="IsVisible", DbType="Bit")] System.Nullable<bool> isVisible, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="VideoURL", DbType="NVarChar(300)")] string videoURL, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="GalleryID", DbType="Int")] System.Nullable<int> galleryID)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iud, newsID, newsDate, title, description, fullText, langID, categoryID, sortVal, isVisible, videoURL, galleryID);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iud, newsID, newsDate, titleEN, titleKA, titleRU, descriptionEN, descriptionKA, descriptionRU, fullTextEN, fullTextKA, fullTextRU, categoryID, sortVal, isVisible, videoURL, galleryID);
 			newsID = ((System.Nullable<int>)(result.GetParameterValue(1)));
 			return ((int)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_Pages")]
-		public int sp_Pages([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> iud, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PageID", DbType="Int")] ref System.Nullable<int> pageID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ParentID", DbType="Int")] System.Nullable<int> parentID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Title", DbType="NVarChar(250)")] string title, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Description", DbType="NVarChar(MAX)")] string description, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TemplateID", DbType="Int")] System.Nullable<int> templateID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="URL", DbType="NVarChar(250)")] string uRL, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Note", DbType="NVarChar(500)")] string note, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="GalleryID", DbType="Int")] System.Nullable<int> galleryID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="LangID", DbType="Int")] System.Nullable<int> langID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IsVisible", DbType="Bit")] System.Nullable<bool> isVisible)
+		public int sp_Pages([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> iud, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="PageID", DbType="Int")] ref System.Nullable<int> pageID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="ParentID", DbType="Int")] System.Nullable<int> parentID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TitleEN", DbType="NVarChar(200)")] string titleEN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TitleKA", DbType="NVarChar(200)")] string titleKA, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TitleRU", DbType="NVarChar(200)")] string titleRU, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DescriptionEN", DbType="NVarChar(MAX)")] string descriptionEN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DescriptionKA", DbType="NVarChar(MAX)")] string descriptionKA, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DescriptionRU", DbType="NVarChar(200)")] string descriptionRU, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TemplateID", DbType="Int")] System.Nullable<int> templateID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="URL", DbType="NVarChar(250)")] string uRL, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="Note", DbType="NVarChar(500)")] string note, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="GalleryID", DbType="Int")] System.Nullable<int> galleryID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IsVisible", DbType="Bit")] System.Nullable<bool> isVisible)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iud, pageID, parentID, title, description, templateID, uRL, note, galleryID, langID, isVisible);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iud, pageID, parentID, titleEN, titleKA, titleRU, descriptionEN, descriptionKA, descriptionRU, templateID, uRL, note, galleryID, isVisible);
 			pageID = ((System.Nullable<int>)(result.GetParameterValue(1)));
 			return ((int)(result.ReturnValue));
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.fn_List_Pages", IsComposable=true)]
-		public IQueryable<fn_List_PagesResult> fn_List_Pages([global::System.Data.Linq.Mapping.ParameterAttribute(Name="PageID", DbType="Int")] System.Nullable<int> pageID)
-		{
-			return this.CreateMethodCallQuery<fn_List_PagesResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), pageID);
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.fn_List_News", IsComposable=true)]
@@ -89,193 +100,11 @@ namespace Core.DB
 		{
 			return this.CreateMethodCallQuery<fn_List_NewsResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), newsID);
 		}
-	}
-	
-	public partial class fn_List_PagesResult
-	{
 		
-		private int _PageID;
-		
-		private int _ParentID;
-		
-		private string _Title;
-		
-		private string _Description;
-		
-		private System.Nullable<int> _TemplateID;
-		
-		private string _URL;
-		
-		private string _Note;
-		
-		private System.Nullable<int> _GalleryID;
-		
-		private int _LangID;
-		
-		private bool _IsVisible;
-		
-		public fn_List_PagesResult()
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.fn_List_Pages", IsComposable=true)]
+		public IQueryable<fn_List_PagesResult> fn_List_Pages([global::System.Data.Linq.Mapping.ParameterAttribute(Name="PageID", DbType="Int")] System.Nullable<int> pageID)
 		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PageID", DbType="Int NOT NULL")]
-		public int PageID
-		{
-			get
-			{
-				return this._PageID;
-			}
-			set
-			{
-				if ((this._PageID != value))
-				{
-					this._PageID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ParentID", DbType="Int NOT NULL")]
-		public int ParentID
-		{
-			get
-			{
-				return this._ParentID;
-			}
-			set
-			{
-				if ((this._ParentID != value))
-				{
-					this._ParentID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(250) NOT NULL", CanBeNull=false)]
-		public string Title
-		{
-			get
-			{
-				return this._Title;
-			}
-			set
-			{
-				if ((this._Title != value))
-				{
-					this._Title = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Description", DbType="NVarChar(MAX)")]
-		public string Description
-		{
-			get
-			{
-				return this._Description;
-			}
-			set
-			{
-				if ((this._Description != value))
-				{
-					this._Description = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TemplateID", DbType="Int")]
-		public System.Nullable<int> TemplateID
-		{
-			get
-			{
-				return this._TemplateID;
-			}
-			set
-			{
-				if ((this._TemplateID != value))
-				{
-					this._TemplateID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_URL", DbType="NVarChar(250)")]
-		public string URL
-		{
-			get
-			{
-				return this._URL;
-			}
-			set
-			{
-				if ((this._URL != value))
-				{
-					this._URL = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Note", DbType="NVarChar(500)")]
-		public string Note
-		{
-			get
-			{
-				return this._Note;
-			}
-			set
-			{
-				if ((this._Note != value))
-				{
-					this._Note = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GalleryID", DbType="Int")]
-		public System.Nullable<int> GalleryID
-		{
-			get
-			{
-				return this._GalleryID;
-			}
-			set
-			{
-				if ((this._GalleryID != value))
-				{
-					this._GalleryID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LangID", DbType="Int NOT NULL")]
-		public int LangID
-		{
-			get
-			{
-				return this._LangID;
-			}
-			set
-			{
-				if ((this._LangID != value))
-				{
-					this._LangID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsVisible", DbType="Bit NOT NULL")]
-		public bool IsVisible
-		{
-			get
-			{
-				return this._IsVisible;
-			}
-			set
-			{
-				if ((this._IsVisible != value))
-				{
-					this._IsVisible = value;
-				}
-			}
+			return this.CreateMethodCallQuery<fn_List_PagesResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), pageID);
 		}
 	}
 	
@@ -286,13 +115,23 @@ namespace Core.DB
 		
 		private System.Nullable<System.DateTime> _NewsDate;
 		
-		private string _Title;
+		private string _TitleEN;
 		
-		private string _Description;
+		private string _TitleKA;
 		
-		private string _FullText;
+		private string _TitleRU;
 		
-		private System.Nullable<int> _LangID;
+		private string _DescriptionEN;
+		
+		private string _DescriptionKA;
+		
+		private string _DescriptionRU;
+		
+		private string _FullTextEN;
+		
+		private string _FullTextKA;
+		
+		private string _FullTextRU;
 		
 		private System.Nullable<int> _CategoryID;
 		
@@ -340,66 +179,146 @@ namespace Core.DB
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Title", DbType="NVarChar(200) NOT NULL", CanBeNull=false)]
-		public string Title
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TitleEN", DbType="NVarChar(200)")]
+		public string TitleEN
 		{
 			get
 			{
-				return this._Title;
+				return this._TitleEN;
 			}
 			set
 			{
-				if ((this._Title != value))
+				if ((this._TitleEN != value))
 				{
-					this._Title = value;
+					this._TitleEN = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Description", DbType="NVarChar(300) NOT NULL", CanBeNull=false)]
-		public string Description
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TitleKA", DbType="NVarChar(200)")]
+		public string TitleKA
 		{
 			get
 			{
-				return this._Description;
+				return this._TitleKA;
 			}
 			set
 			{
-				if ((this._Description != value))
+				if ((this._TitleKA != value))
 				{
-					this._Description = value;
+					this._TitleKA = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FullText", DbType="NVarChar(MAX)")]
-		public string FullText
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TitleRU", DbType="NVarChar(200)")]
+		public string TitleRU
 		{
 			get
 			{
-				return this._FullText;
+				return this._TitleRU;
 			}
 			set
 			{
-				if ((this._FullText != value))
+				if ((this._TitleRU != value))
 				{
-					this._FullText = value;
+					this._TitleRU = value;
 				}
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LangID", DbType="Int")]
-		public System.Nullable<int> LangID
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DescriptionEN", DbType="NVarChar(300)")]
+		public string DescriptionEN
 		{
 			get
 			{
-				return this._LangID;
+				return this._DescriptionEN;
 			}
 			set
 			{
-				if ((this._LangID != value))
+				if ((this._DescriptionEN != value))
 				{
-					this._LangID = value;
+					this._DescriptionEN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DescriptionKA", DbType="NVarChar(300)")]
+		public string DescriptionKA
+		{
+			get
+			{
+				return this._DescriptionKA;
+			}
+			set
+			{
+				if ((this._DescriptionKA != value))
+				{
+					this._DescriptionKA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DescriptionRU", DbType="NVarChar(300)")]
+		public string DescriptionRU
+		{
+			get
+			{
+				return this._DescriptionRU;
+			}
+			set
+			{
+				if ((this._DescriptionRU != value))
+				{
+					this._DescriptionRU = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FullTextEN", DbType="NVarChar(MAX)")]
+		public string FullTextEN
+		{
+			get
+			{
+				return this._FullTextEN;
+			}
+			set
+			{
+				if ((this._FullTextEN != value))
+				{
+					this._FullTextEN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FullTextKA", DbType="NVarChar(MAX)")]
+		public string FullTextKA
+		{
+			get
+			{
+				return this._FullTextKA;
+			}
+			set
+			{
+				if ((this._FullTextKA != value))
+				{
+					this._FullTextKA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FullTextRU", DbType="NVarChar(MAX)")]
+		public string FullTextRU
+		{
+			get
+			{
+				return this._FullTextRU;
+			}
+			set
+			{
+				if ((this._FullTextRU != value))
+				{
+					this._FullTextRU = value;
 				}
 			}
 		}
@@ -480,6 +399,248 @@ namespace Core.DB
 				if ((this._GalleryID != value))
 				{
 					this._GalleryID = value;
+				}
+			}
+		}
+	}
+	
+	public partial class fn_List_PagesResult
+	{
+		
+		private int _PageID;
+		
+		private int _ParentID;
+		
+		private string _TitleEN;
+		
+		private string _TitleKA;
+		
+		private string _TitleRU;
+		
+		private string _DescriptionEN;
+		
+		private string _DescriptionKA;
+		
+		private string _DescriptionRU;
+		
+		private System.Nullable<int> _TemplateID;
+		
+		private string _URL;
+		
+		private string _Note;
+		
+		private System.Nullable<int> _GalleryID;
+		
+		private bool _IsVisible;
+		
+		public fn_List_PagesResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PageID", DbType="Int NOT NULL")]
+		public int PageID
+		{
+			get
+			{
+				return this._PageID;
+			}
+			set
+			{
+				if ((this._PageID != value))
+				{
+					this._PageID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ParentID", DbType="Int NOT NULL")]
+		public int ParentID
+		{
+			get
+			{
+				return this._ParentID;
+			}
+			set
+			{
+				if ((this._ParentID != value))
+				{
+					this._ParentID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TitleEN", DbType="NVarChar(200) NOT NULL", CanBeNull=false)]
+		public string TitleEN
+		{
+			get
+			{
+				return this._TitleEN;
+			}
+			set
+			{
+				if ((this._TitleEN != value))
+				{
+					this._TitleEN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TitleKA", DbType="NVarChar(200)")]
+		public string TitleKA
+		{
+			get
+			{
+				return this._TitleKA;
+			}
+			set
+			{
+				if ((this._TitleKA != value))
+				{
+					this._TitleKA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TitleRU", DbType="NVarChar(200)")]
+		public string TitleRU
+		{
+			get
+			{
+				return this._TitleRU;
+			}
+			set
+			{
+				if ((this._TitleRU != value))
+				{
+					this._TitleRU = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DescriptionEN", DbType="NVarChar(200)")]
+		public string DescriptionEN
+		{
+			get
+			{
+				return this._DescriptionEN;
+			}
+			set
+			{
+				if ((this._DescriptionEN != value))
+				{
+					this._DescriptionEN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DescriptionKA", DbType="NVarChar(200)")]
+		public string DescriptionKA
+		{
+			get
+			{
+				return this._DescriptionKA;
+			}
+			set
+			{
+				if ((this._DescriptionKA != value))
+				{
+					this._DescriptionKA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DescriptionRU", DbType="NVarChar(200)")]
+		public string DescriptionRU
+		{
+			get
+			{
+				return this._DescriptionRU;
+			}
+			set
+			{
+				if ((this._DescriptionRU != value))
+				{
+					this._DescriptionRU = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TemplateID", DbType="Int")]
+		public System.Nullable<int> TemplateID
+		{
+			get
+			{
+				return this._TemplateID;
+			}
+			set
+			{
+				if ((this._TemplateID != value))
+				{
+					this._TemplateID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_URL", DbType="NVarChar(250)")]
+		public string URL
+		{
+			get
+			{
+				return this._URL;
+			}
+			set
+			{
+				if ((this._URL != value))
+				{
+					this._URL = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Note", DbType="NVarChar(500)")]
+		public string Note
+		{
+			get
+			{
+				return this._Note;
+			}
+			set
+			{
+				if ((this._Note != value))
+				{
+					this._Note = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GalleryID", DbType="Int")]
+		public System.Nullable<int> GalleryID
+		{
+			get
+			{
+				return this._GalleryID;
+			}
+			set
+			{
+				if ((this._GalleryID != value))
+				{
+					this._GalleryID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsVisible", DbType="Bit NOT NULL")]
+		public bool IsVisible
+		{
+			get
+			{
+				return this._IsVisible;
+			}
+			set
+			{
+				if ((this._IsVisible != value))
+				{
+					this._IsVisible = value;
 				}
 			}
 		}

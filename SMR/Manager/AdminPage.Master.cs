@@ -20,6 +20,7 @@ namespace SMR.Manager
             PList = Pr.ListPermissions().Where(w => w.CodeName == "2" && w.IsVisible == true).ToList();
             rptManu.DataSource = PList.Where(w => w.Level == 1).ToList();
             rptManu.DataBind();
+            SetPageTitle();
 
 
         }
@@ -58,6 +59,14 @@ namespace SMR.Manager
                }
               
            }
+       }
+
+       private void SetPageTitle() 
+       {
+           var PageName = Request.RawUrl;
+           var SinglePage=PList.SingleOrDefault(w=>w.PageName.ToLower()==PageName.ToLower());
+           if (SinglePage != null)
+               ltPageHeader.Text = SinglePage.Caption;
        }
     }
 }

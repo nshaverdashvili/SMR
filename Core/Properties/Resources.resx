@@ -168,4 +168,7 @@
   <data name="WorningWrongPassword" xml:space="preserve">
     <value>მომხმარებელი ან პაროლი არასწორია</value>
   </data>
+  <data name="TextSave" xml:space="preserve">
+    <value>შენახვა</value>
+  </data>
 </root>

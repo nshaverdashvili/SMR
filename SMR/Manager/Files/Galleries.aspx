@@ -16,11 +16,17 @@
                 <Columns>
                     <dx:GridViewDataTextColumn FieldName="RecordID" Visible="false">
                     </dx:GridViewDataTextColumn>
-                    <dx:GridViewDataTextColumn FieldName="Title">
+                    <dx:GridViewDataTextColumn FieldName="TitleEN">
                     </dx:GridViewDataTextColumn>
-                    <dx:GridViewDataTextColumn FieldName="Description">
+                    <dx:GridViewDataTextColumn FieldName="TitleKA">
                     </dx:GridViewDataTextColumn>
-                    <dx:GridViewDataTextColumn FieldName="LangID" Visible="false">
+                    <dx:GridViewDataTextColumn FieldName="TitleRU">
+                    </dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="DescriptionEN">
+                    </dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="DescriptionKA">
+                    </dx:GridViewDataTextColumn>
+                    <dx:GridViewDataTextColumn FieldName="DescriptionRU">
                     </dx:GridViewDataTextColumn>
                     <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="True" ShowNewButton="false" ShowNewButtonInHeader="false" ButtonType="image" Caption=" " Width="60">
                     </dx:GridViewCommandColumn>
@@ -33,23 +39,32 @@
             <DeleteParameters>
                 <asp:Parameter Name="iud" Type="Byte" DefaultValue="2" />
                 <asp:Parameter Name="RecordID" Type="Int32" />
-                <asp:Parameter Name="Title" Type="String" />
-                <asp:Parameter Name="Description" Type="String" />
-                <asp:Parameter Name="LangID" Type="Int32" />
+                <asp:Parameter Name="TitleEN" Type="String" />
+                <asp:Parameter Name="TitleKA" Type="String" />
+                <asp:Parameter Name="TitleRU" Type="String" />
+                <asp:Parameter Name="DescriptionEN" Type="String" />
+                <asp:Parameter Name="DescriptionKA" Type="String" />
+                <asp:Parameter Name="DescriptionEN" Type="String" />
             </DeleteParameters>
             <InsertParameters>
                 <asp:Parameter Name="iud" Type="Byte" DefaultValue="0" />
                 <asp:Parameter Name="RecordID" Type="Int32" />
-                <asp:Parameter Name="Title" Type="String" />
-                <asp:Parameter Name="Description" Type="String" />
-                <asp:Parameter Name="LangID" Type="Int32" />
+                <asp:Parameter Name="TitleEN" Type="String" />
+                <asp:Parameter Name="TitleKA" Type="String" />
+                <asp:Parameter Name="TitleRU" Type="String" />
+                <asp:Parameter Name="DescriptionEN" Type="String" />
+                <asp:Parameter Name="DescriptionKA" Type="String" />
+                <asp:Parameter Name="DescriptionEN" Type="String" />
             </InsertParameters>
             <UpdateParameters>
                 <asp:Parameter Name="iud" Type="Byte" DefaultValue="1" />
                 <asp:Parameter Name="RecordID" Type="Int32" />
-                <asp:Parameter Name="Title" Type="String" />
-                <asp:Parameter Name="Description" Type="String" />
-                <asp:Parameter Name="LangID" Type="Int32" />
+                <asp:Parameter Name="TitleEN" Type="String" />
+                <asp:Parameter Name="TitleKA" Type="String" />
+                <asp:Parameter Name="TitleRU" Type="String" />
+                <asp:Parameter Name="DescriptionEN" Type="String" />
+                <asp:Parameter Name="DescriptionKA" Type="String" />
+                <asp:Parameter Name="DescriptionEN" Type="String" />
             </UpdateParameters>
         </asp:ObjectDataSource>
     </div>

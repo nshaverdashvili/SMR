@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace SMR.Tools
 {
-    public partial class Dictionaries : System.Web.UI.Page
+    public partial class Dictionaries : Models.PageBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {
