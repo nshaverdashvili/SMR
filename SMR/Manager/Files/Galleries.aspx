@@ -44,7 +44,7 @@
                 <asp:Parameter Name="TitleRU" Type="String" />
                 <asp:Parameter Name="DescriptionEN" Type="String" />
                 <asp:Parameter Name="DescriptionKA" Type="String" />
-                <asp:Parameter Name="DescriptionEN" Type="String" />
+                <asp:Parameter Name="DescriptionRU" Type="String" />
             </DeleteParameters>
             <InsertParameters>
                 <asp:Parameter Name="iud" Type="Byte" DefaultValue="0" />
@@ -54,7 +54,7 @@
                 <asp:Parameter Name="TitleRU" Type="String" />
                 <asp:Parameter Name="DescriptionEN" Type="String" />
                 <asp:Parameter Name="DescriptionKA" Type="String" />
-                <asp:Parameter Name="DescriptionEN" Type="String" />
+                <asp:Parameter Name="DescriptionRU" Type="String" />
             </InsertParameters>
             <UpdateParameters>
                 <asp:Parameter Name="iud" Type="Byte" DefaultValue="1" />
@@ -64,7 +64,7 @@
                 <asp:Parameter Name="TitleRU" Type="String" />
                 <asp:Parameter Name="DescriptionEN" Type="String" />
                 <asp:Parameter Name="DescriptionKA" Type="String" />
-                <asp:Parameter Name="DescriptionEN" Type="String" />
+                <asp:Parameter Name="DescriptionRU" Type="String" />
             </UpdateParameters>
         </asp:ObjectDataSource>
     </div>
