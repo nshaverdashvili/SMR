@@ -14,18 +14,27 @@
         <div class="col-xs-12">
             <dx:ASPxGridView ID="gridPages" ClientInstanceName="gridPages" runat="server" AutoGenerateColumns="False" DataSourceID="dsPages" KeyFieldName="PageID" Width="100%">
                 <Columns>
-                    <dx:GridViewDataTextColumn FieldName="TitleEN">
-                    </dx:GridViewDataTextColumn>
-                    <dx:GridViewDataTextColumn FieldName="TitleKA">
-                    </dx:GridViewDataTextColumn>
-                    <dx:GridViewDataTextColumn FieldName="TitleRU">
-                    </dx:GridViewDataTextColumn>
-                    <dx:GridViewDataTextColumn FieldName="DescriptionEN">
-                    </dx:GridViewDataTextColumn>
-                    <dx:GridViewDataTextColumn FieldName="DescriptionKA">
-                    </dx:GridViewDataTextColumn>
-                    <dx:GridViewDataTextColumn FieldName="DescriptionRU">
-                    </dx:GridViewDataTextColumn>
+
+                    <dx:GridViewBandColumn Caption="Title">
+                    <Columns>
+                <dx:GridViewDataTextColumn FieldName="TitleEN" Caption="English">
+                </dx:GridViewDataTextColumn>
+                <dx:GridViewDataTextColumn FieldName="TitleKA" Caption="ქართული">
+                </dx:GridViewDataTextColumn>
+                <dx:GridViewDataTextColumn FieldName="TitleRU" Caption="Русский">
+                </dx:GridViewDataTextColumn>
+                    </Columns>
+                </dx:GridViewBandColumn>
+                    <dx:GridViewBandColumn Caption="Description">
+                    <Columns>
+                <dx:GridViewDataTextColumn FieldName="DescriptionEN" Caption="English">
+                </dx:GridViewDataTextColumn>
+                <dx:GridViewDataTextColumn FieldName="DescriptionKA" Caption="ქართული">
+                </dx:GridViewDataTextColumn>
+                <dx:GridViewDataTextColumn FieldName="DescriptionRU" Caption="Русский">
+                </dx:GridViewDataTextColumn>
+                         </Columns>
+                </dx:GridViewBandColumn>
                     <dx:GridViewDataTextColumn FieldName="URL">
                     </dx:GridViewDataTextColumn>
                     <dx:GridViewDataTextColumn FieldName="Note">
@@ -55,7 +64,7 @@
                 <asp:Parameter Name="TitleRU" Type="String" />
                 <asp:Parameter Name="DescriptionEN" Type="String" />
                 <asp:Parameter Name="DescriptionKA" Type="String" />
-                <asp:Parameter Name="DescriptionEN" Type="String" />
+                <asp:Parameter Name="DescriptionRU" Type="String" />
                 <asp:Parameter Name="TemplateID" Type="Int32" />
                 <asp:Parameter Name="URL" Type="String" />
                 <asp:Parameter Name="Note" Type="String" />
@@ -71,7 +80,7 @@
                 <asp:Parameter Name="TitleRU" Type="String" />
                 <asp:Parameter Name="DescriptionEN" Type="String" />
                 <asp:Parameter Name="DescriptionKA" Type="String" />
-                <asp:Parameter Name="DescriptionEN" Type="String" />
+                <asp:Parameter Name="DescriptionRU" Type="String" />
                 <asp:Parameter Name="TemplateID" Type="Int32" />
                 <asp:Parameter Name="URL" Type="String" />
                 <asp:Parameter Name="Note" Type="String" />
@@ -87,7 +96,7 @@
                 <asp:Parameter Name="TitleRU" Type="String" />
                 <asp:Parameter Name="DescriptionEN" Type="String" />
                 <asp:Parameter Name="DescriptionKA" Type="String" />
-                <asp:Parameter Name="DescriptionEN" Type="String" />
+                <asp:Parameter Name="DescriptionRU" Type="String" />
                 <asp:Parameter Name="TemplateID" Type="Int32" />
                 <asp:Parameter Name="URL" Type="String" />
                 <asp:Parameter Name="Note" Type="String" />

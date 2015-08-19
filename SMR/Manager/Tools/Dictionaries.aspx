@@ -15,8 +15,6 @@
         <dx:ASPxTreeList ID="tlDictionaries" ClientInstanceName="tlDictionaries" runat="server" AutoGenerateColumns="False"
             DataSourceID="dsDictionaries" KeyFieldName="DictionaryID" ParentFieldName="ParentID">
             <Columns>
-                <dx:TreeListTextColumn FieldName="DictionaryCode">
-                </dx:TreeListTextColumn>
                 <dx:TreeListTextColumn FieldName="CaptionEN">
                 </dx:TreeListTextColumn>
                 <dx:TreeListTextColumn FieldName="CaptionKA">
@@ -35,6 +33,9 @@
                 </dx:TreeListCheckColumn>
                 <dx:TreeListTextColumn FieldName="SortVal">
                 </dx:TreeListTextColumn>
+                <dx:TreeListTextColumn FieldName="DictionaryCode">
+                </dx:TreeListTextColumn>
+                
                 <dx:TreeListCommandColumn ButtonType="Image" Caption=" ">
                     <CancelButton Visible="true">
                         <Image Url="~/Content/images/grid/cancel.png"></Image>

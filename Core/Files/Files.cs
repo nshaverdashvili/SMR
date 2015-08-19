@@ -102,7 +102,7 @@ namespace Core.Files
         }
         public void SP_GalleryFiles(int? iud, int? RecordID, int? GalleryID, int? FileID, bool? IsDefault)
         {
-            TryExecute(string.Format("SP_GalleryFiles(iud = {0},  RecordID = {1} GalleryID = {2}, FileID = {3}, IsDefault = {4})", iud, GalleryID, FileID, IsDefault), () =>
+            TryExecute(string.Format("SP_GalleryFiles(iud = {0},  RecordID = {1} , GalleryID = {2}, FileID = {3}, IsDefault = {4})", iud, RecordID, GalleryID, FileID, IsDefault), () =>
             {
                 using (var db = DB.DBCon.GetFilesDataContext())
                 {

@@ -48,3 +48,39 @@ Core.UM.PermissionsRepository.ListPermissions() --- A transport-level error has 
 
 ------------------------------------
 
+
+
+------------------------------------
+http://localhost:12175/manager/CM/Pages.aspx - 19.08.2015 22:31:25
+Source File - d:\gitProjects\SMR\Core\CM\Pages.cs
+Line Number - 89
+SP_Pages(iud = 0, PageID = , ParentID = , TitleEN = en, TitleKA = ka, TitleRU = russ, DescriptionEN = ens, DescriptionKA = kas, DescriptionRU = russss, TemplateID = 7, URL = links, Note = 11111111111, GalleryID = 2, IsVisible = True) --- Cannot insert the value NULL into column 'ParentID', table 'SMR.dbo.t_Pages'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+
+
+------------------------------------
+
+
+
+------------------------------------
+http://localhost:12175/manager/Files/Galleries.aspx - 8/20/2015 1:52:30 AM
+Source File - d:\gitProjects\SMR\Core\Files\Files.cs
+Line Number - 105
+SP_GalleryFiles(iud = 0,  RecordID =  , GalleryID = 2, FileID = 4, IsDefault = ) --- Cannot insert the value NULL into column 'IsDefault', table 'SMR.dbo.t_GalleryFiles'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+
+
+------------------------------------
+
+
+
+------------------------------------
+http://localhost:12175/manager/Files/Galleries.aspx - 8/20/2015 1:53:26 AM
+Source File - d:\gitProjects\SMR\Core\Files\Files.cs
+Line Number - 105
+SP_GalleryFiles(iud = 0,  RecordID =  , GalleryID = 1, FileID = 4, IsDefault = ) --- Cannot insert the value NULL into column 'IsDefault', table 'SMR.dbo.t_GalleryFiles'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+
+
+------------------------------------
+

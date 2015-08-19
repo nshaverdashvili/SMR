@@ -22,12 +22,16 @@
             <Columns>                
                 <dx:GridViewDataTextColumn FieldName="FileName" >
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="DescriptionEN">
-                    </dx:GridViewDataTextColumn>
-                    <dx:GridViewDataTextColumn FieldName="DescriptionKA">
-                    </dx:GridViewDataTextColumn>
-                    <dx:GridViewDataTextColumn FieldName="DescriptionRU">
-                    </dx:GridViewDataTextColumn>
+                <dx:GridViewBandColumn Caption="Description">
+                    <Columns>
+                <dx:GridViewDataTextColumn FieldName="DescriptionEN" Caption="English">
+                </dx:GridViewDataTextColumn>
+                <dx:GridViewDataTextColumn FieldName="DescriptionKA" Caption="ქართული">
+                </dx:GridViewDataTextColumn>
+                <dx:GridViewDataTextColumn FieldName="DescriptionRU" Caption="Русский">
+                </dx:GridViewDataTextColumn>
+                    </Columns>
+                </dx:GridViewBandColumn>
                 <dx:GridViewDataTextColumn FieldName="URL" >
                 </dx:GridViewDataTextColumn>
                  <dx:GridViewDataComboBoxColumn FieldName="TypeID">
@@ -42,7 +46,6 @@
                <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="false" ShowNewButton="false" ShowNewButtonInHeader="false" ButtonType="Image" Caption=" " Width="40px" >
                </dx:GridViewCommandColumn>
             </Columns>
-            
         </dx:ASPxGridView>
         <asp:ObjectDataSource ID="dsFiles" runat="server" DeleteMethod="SP_Files" SelectMethod="ListFiles" TypeName="Core.Files.FilesRepository">
             <DeleteParameters>
@@ -51,7 +54,7 @@
                 <asp:Parameter Name="FileName" Type="String" />
                 <asp:Parameter Name="DescriptionEN" Type="String" />
                 <asp:Parameter Name="DescriptionKA" Type="String" />
-                <asp:Parameter Name="DescriptionEN" Type="String" />
+                <asp:Parameter Name="DescriptionRU" Type="String" />
                 <asp:Parameter Name="URL" Type="String" />
                 <asp:Parameter Name="TypeID" Type="Int32" />
             </DeleteParameters>

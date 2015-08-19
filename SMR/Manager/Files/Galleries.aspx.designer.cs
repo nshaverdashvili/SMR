@@ -22,6 +22,33 @@ namespace SMR.Manager.Files {
         protected global::DevExpress.Web.ASPxGridView.ASPxGridView gridGallery;
         
         /// <summary>
+        /// dsFiles control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource dsFiles;
+        
+        /// <summary>
+        /// dsGalleryFiles control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource dsGalleryFiles;
+        
+        /// <summary>
+        /// dsFileType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource dsFileType;
+        
+        /// <summary>
         /// dsGallery control.
         /// </summary>
         /// <remarks>

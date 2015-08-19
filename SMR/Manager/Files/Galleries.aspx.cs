@@ -13,5 +13,26 @@ namespace SMR.Manager.Files
         {
 
         }
+
+        protected void GridGalleryFiles_RowInserting(object sender, DevExpress.Web.Data.ASPxDataInsertingEventArgs e)
+        {
+            var grid=(DevExpress.Web.ASPxGridView.ASPxGridView)sender;
+            var keyValue=grid.GetMasterRowKeyValue();
+            dsGalleryFiles.InsertParameters["GalleryID"].DefaultValue = keyValue.ToString();
+        }
+
+        protected void GridGalleryFiles_RowUpdated(object sender, DevExpress.Web.Data.ASPxDataUpdatedEventArgs e)
+        {
+            var grid = (DevExpress.Web.ASPxGridView.ASPxGridView)sender;
+            var keyValue = grid.GetMasterRowKeyValue();
+            dsGalleryFiles.UpdateParameters["GalleryID"].DefaultValue = keyValue.ToString();
+        }
+
+        protected void GridGalleryFiles_BeforePerformDataSelect(object sender, EventArgs e)
+        {
+            var grid = (DevExpress.Web.ASPxGridView.ASPxGridView)sender;
+            var keyValue = grid.GetMasterRowKeyValue();
+            dsGalleryFiles.SelectParameters["GalleryID"].DefaultValue = keyValue.ToString();
+        }
     }
 }
