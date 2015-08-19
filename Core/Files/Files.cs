@@ -13,6 +13,7 @@ namespace Core.Files
     public class Files
     {
         public int? FileID { get; set; }
+        public int? RecordID { get; set; }
         public string FileName { get; set; }
         public string DescriptionEN { get; set; }
         public string DescriptionKA { get; set; }
@@ -34,6 +35,7 @@ namespace Core.Files
         }
         public string URL { get; set; }
         public int? TypeID { get; set; }
+        public bool? IsDefault { get; set; }
     }
     public class FilesRepository : ObjectBase
     {
@@ -76,7 +78,40 @@ namespace Core.Files
                 }
             });
         }
+        public List<Files> ListGalleryFiles(int? GalleryID)
+        {
+            return TryToReturn(string.Format("ListGalleryFiles(GalleryID={0})", GalleryID), () =>
+            {
+                using (var db = DB.DBCon.GetFilesDataContext())
+                {
+                    return db.fn_List_GalleryFiles(GalleryID).Select(s => new Files
+                    {
+                        RecordID=s.RecordID,
+                        FileID = s.FileID,
+                        FileName = s.FileName,
+                        DescriptionEN = s.DescriptionEN,
+                        DescriptionKA = s.DescriptionKA,
+                        DescriptionRU = s.DescriptionRU,
+                        URL = s.URL,
+                        TypeID = s.TypeID,
+                        IsDefault = s.IsDefault
+                    }).ToList();
+                }
+            });
 
-
+        }
+        public void SP_GalleryFiles(int? iud, int? RecordID, int? GalleryID, int? FileID, bool? IsDefault)
+        {
+            TryExecute(string.Format("SP_GalleryFiles(iud = {0},  RecordID = {1} GalleryID = {2}, FileID = {3}, IsDefault = {4})", iud, GalleryID, FileID, IsDefault), () =>
+            {
+                using (var db = DB.DBCon.GetFilesDataContext())
+                {
+                    int? NewID = RecordID;
+                    db.sp_GalleryFiles(iud, ref NewID, GalleryID, FileID, IsDefault);
+                    this.ID = NewID;
+                }
+            });
+        }
     }
+    
 }

@@ -14,25 +14,40 @@
     <div class="row">
         <div class="col-xs-12">
          <dx:ASPxGridView ID="gridNews" ClientInstanceName="gridNews" runat="server" AutoGenerateColumns="False" DataSourceID="dsNews" Width="100%" KeyFieldName="NewsID" >
-            <Columns>                
+            <Columns>   
+                  <dx:GridViewDataColumn Width="40" FixedStyle="Left">
+                    <DataItemTemplate>
+                        <a href="#" class="Edit" id="<%#Eval("NewsID") %>"><img src="/Content/images/grid/edit.png" /></a>
+                    </DataItemTemplate>
+                </dx:GridViewDataColumn>
+                <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="false" ShowNewButton="false" ShowNewButtonInHeader="false" ButtonType="image" Caption=" " Width="40" FixedStyle="Left">
+                </dx:GridViewCommandColumn>                 
                 <dx:GridViewDataComboBoxColumn FieldName="CategoryID">
                     <PropertiesComboBox DataSourceID="dsCategories" TextField="Caption" ValueField="DictionaryID">
                     </PropertiesComboBox>
                 </dx:GridViewDataComboBoxColumn>
                 <dx:GridViewDataDateColumn FieldName="NewsDate" >
                 </dx:GridViewDataDateColumn>
-                <dx:GridViewDataTextColumn FieldName="TitleEN">
+                <dx:GridViewBandColumn Caption="Title">
+                    <Columns>
+                <dx:GridViewDataTextColumn FieldName="TitleEN" Caption="English">
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="TitleKA">
+                <dx:GridViewDataTextColumn FieldName="TitleKA" Caption="ქართული">
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="TitleRU">
+                <dx:GridViewDataTextColumn FieldName="TitleRU" Caption="Русский">
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="DescriptionEN">
+                    </Columns>
+                </dx:GridViewBandColumn>
+                 <dx:GridViewBandColumn Caption="Description">
+                    <Columns>
+                <dx:GridViewDataTextColumn FieldName="DescriptionEN" Caption="English">
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="DescriptionKA">
+                <dx:GridViewDataTextColumn FieldName="DescriptionKA" Caption="ქართული">
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="DescriptionRU">
+                <dx:GridViewDataTextColumn FieldName="DescriptionRU" Caption="Русский">
                 </dx:GridViewDataTextColumn>
+                         </Columns>
+                </dx:GridViewBandColumn>
                 <dx:GridViewDataTextColumn FieldName="FullTextEN" >
                 </dx:GridViewDataTextColumn>
                 <dx:GridViewDataTextColumn FieldName="FullTextKA" >
@@ -48,17 +63,9 @@
                     </PropertiesComboBox>
                 </dx:GridViewDataComboBoxColumn>
                 <dx:GridViewDataTextColumn FieldName="VideoURL" >
-                </dx:GridViewDataTextColumn>
-                <dx:GridViewDataColumn>
-                    <DataItemTemplate>
-                        <a href="#" class="Edit" id="<%#Eval("NewsID") %>"><img src="/Content/images/grid/edit.png" /></a>
-                    </DataItemTemplate>
-                </dx:GridViewDataColumn>
-                <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="false" ShowNewButton="false" ShowNewButtonInHeader="false" ButtonType="image" Caption=" ">
-                </dx:GridViewCommandColumn>
-                
-                
+                </dx:GridViewDataTextColumn>           
             </Columns>
+             <Settings HorizontalScrollBarMode="Auto" />
         </dx:ASPxGridView>
         </div>
         <asp:ObjectDataSource ID="dsNews" runat="server" DeleteMethod="SP_News" SelectMethod="ListNews" TypeName="Core.CM.NewsRepository">
