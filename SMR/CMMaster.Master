@@ -14,166 +14,147 @@
 </head>
 <body>
     <form id="form1" runat="server">
-     <div class="wrap">
-        <div class="container-fluid">
-          <div class="row mainGradient" id="nav">
-             <div class="left logo">
-                 <span>
-                    <img src="Content/images/logo.png" />
-                 </span>
-                 <span>
-                     <b>შერიგებისა და სამოქალაქო თანასწორობის</b>
-                     <b>საკითხებში საქართველოს სახელმწიფო</b> 
-                     <b>მინისტრის აპარატი</b> 
-                 </span>
-                 
-             </div>
-             <div class="left">
-                 <nav class="navbar navbar-default">
-                     <div class="container-fluid">
-                         <div class="navbar-header">
-                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" 
-                                 data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                             </button>
-                         </div>
-                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                             <ul class="nav navbar-nav">
-                                 <li>
-                                     <a href="#">მთავარი</a>
-                                 </li>
-                                 <li>
-                                     <a href="#">მინისტრის აპარატი</a>
-                                 </li>
-                                 <li>
-                                     <a href="#">აფხაზეთი</a>
-                                 </li>
-                                 <li>
-                                     <a href="#">სამხრეთ ოსეთი</a>
-                                 </li>
-                                 <li>
-                                     <a href="#">სამოქალაქო ინტეგრაცია</a>
-                                 </li>
-                                 <li>
-                                     <a href="#">ნორმატიული აქტები</a>
-                                 </li>
-                             </ul>
-                         </div>
-                     </div>
-
-                 </nav>
-             </div>
-        </div>
-          <div class="row" id="header">
-              <div class="conteiner-fluid">
-                  <div class="col-md-5" style="width:550px; padding:0;">
-                     <div id="slider_container" style="display: none; position: relative; margin: 0 auto; width: 550px; height: 250px; overflow: hidden;">
-
-                          <div u="loading" style="position: absolute; top: 0px; left: 0px;">
-                            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;background-color: #000; top: 0px; left: 0px;width: 100%; height:100%;">
-                            </div>
-                            <div style="position: absolute; display: block; background: url(/Content/images/slide/loading.gif) no-repeat center center; top: 0px; left: 0px;width: 100%;height:100%;">
-                            </div>
-                          </div>
-
-                         <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 550px; height: 250px; overflow: hidden;">
-                                <div>
-                                    <img u="image" src2="/uploads/news/1.png"  />
-                                </div>
-                                <div>
-                                    <img u="image" src2="/uploads/news/2.jpg"  />
-                                </div>
-                                <div>
-                                    <img u="image" src2="/uploads/news/3.png" />
-                                </div>
-                                <div>
-                                    <img u="image" src2="/uploads/news/4.png"/>
-                                </div>
-                         </div>
-                          <div u="navigator" class="jssorb05" style="bottom: 16px; right: 6px;">
-                                <div u="prototype"></div>
-                          </div>
-                          <span u="arrowleft" class="jssora11l" style="top: 123px; left: 8px;">
-                          </span>
-                          <span u="arrowright" class="jssora11r" style="top: 123px; right: 8px;">
-                          </span>
-                     </div>
-                  </div>
-                  <div class="col-md-7">
-                      <div class="Newsfeed">
-                          <h3>ქეთევან ციხელაშვილმა ბათუმში მიმდინარე კონფერენციაზე სამშვიდობო პროცესში ევროკავშირის ჩართულობის მნიშვნელობაზე ისაუბრა</h3>
-                          <span>15/06/2015</span>
-                          <p>შერიგებისა და სამოქალაქო თანასწორობის საკითხებში სახელმწიფო მინისტრის პირველმა მოადგილემ ქეთევან ციხელაშვილმა ბათუმში მიმდინარე კონფერენციაზე ვიშეგრადის ჯგუფის ქვეყნების წარმომადგენლებს სამშვიდობო პროცესში ევროკავშირის ჩართულობის მნიშვნელობაზე მიაწოდა ინფორმაცია.</p>
-                      </div>
-                  </div>
-              </div>
-        </div>
-
-          <div class="row" id="body">
-              <div class="left manuCon">
-                  <ul>
-                      <li>
-                         <a href="#"><i class="fa fa-share-square-o"></i> ტალიავინის დასკვნა</a>
-                      </li>
-                      <li>
-                          <a href="#"><i class="fa fa-share-square-o"></i> საჯარო ინფორმაცია</a>
-                      </li>
-                      <li>
-                          <a href="#"><i class="fa fa-share-square-o"></i> გალერეა</a>
-                      </li>
-                      <li>
-                          <a href="#"><i class="fa fa-share-square-o" ></i> სასარგებლო ბმულები</a>
-                      </li>
-                      <li>
-                          <a href="#"><i class="fa fa-share-square-o"></i> კონტაქტი</a>
-                      </li>
-                  </ul>
-              </div>
-              <div class="left" id="content">
-                <asp:ContentPlaceHolder ID="BodyPlaceHolder" runat="server">        
-                </asp:ContentPlaceHolder>
-              </div>
-        </div>
-        </div> 
-
-        <footer class="mainGradient">
-            <div class="container">
-                <div class="row ft-nav">
-                    <ul>
-                        <li>
-                            <a href="#">მთავარი</a>
-                        </li>
-                         <li>
-                            <a href="#">მთავარი</a>
-                        </li>
-                         <li>
-                            <a href="#">მთავარი</a>
-                        </li>
-                         <li>
-                            <a href="#">მთავარი</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="row ft-cp">
-                    <div class="col-md-6">
-                        <span class="footerCP">
-                            <b>Copyright © 2009-2015 შერიგებისა და სამოქალაქო </b>
-                            <br />
-                            <b>თანასწორობის საკითხებში საქართველოს სახელმწიფო მინისტრის აპარატი.</b> 
-                            <br />
-                            <b> ყველა უფლება დაცულია.</b>
+        <div class="wrap">
+            <div class="container-fluid">
+                <div class="row mainGradient" id="nav">
+                    <div class="left logo">
+                        <span>
+                            <img src="Content/images/logo.png" />
                         </span>
+                        <span>
+                            <b>შერიგებისა და სამოქალაქო თანასწორობის</b>
+                            <b>საკითხებში საქართველოს სახელმწიფო</b>
+                            <b>მინისტრის აპარატი</b>
+                        </span>
+
                     </div>
-                    <div class="col-md-6">
-                        <img src="Content/images/icons/icon1.png" class="right"/>
-                        <img src="Content/images/icons/icon3.png" class="right"/>
+                    <div class="left">
+                        <nav class="navbar navbar-default">
+                            <div class="container-fluid">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+                                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                    <ul class="nav navbar-nav">
+                                        <asp:Repeater runat="server" ID="rptMainManu" ItemType="Core.UM.Permissions">
+                                            <ItemTemplate>
+                                                <li>
+                                                    <a href="<%#Item.PageName %>"><%#Item.Caption %></a>
+                                                </li>
+                                            </ItemTemplate>
+                                        </asp:Repeater>
+                                    </ul>
+
+                                </div>
+                            </div>
+
+                        </nav>
+                    </div>
+                </div>
+                <div class="row" id="header">
+                    <div class="conteiner-fluid">
+                        <div class="col-md-5" style="width: 550px; padding: 0;">
+                            <div id="slider_container" style="display: none; position: relative; margin: 0 auto; width: 550px; height: 250px; overflow: hidden;">
+
+                                <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+                                    <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; background-color: #000; top: 0px; left: 0px; width: 100%; height: 100%;">
+                                    </div>
+                                    <div style="position: absolute; display: block; background: url(/Content/images/slide/loading.gif) no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;">
+                                    </div>
+                                </div>
+
+                                <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 550px; height: 250px; overflow: hidden;">
+                                    <div>
+                                        <img u="image" src2="/uploads/news/1.png" />
+                                    </div>
+                                    <div>
+                                        <img u="image" src2="/uploads/news/2.jpg" />
+                                    </div>
+                                    <div>
+                                        <img u="image" src2="/uploads/news/3.png" />
+                                    </div>
+                                    <div>
+                                        <img u="image" src2="/uploads/news/4.png" />
+                                    </div>
+                                </div>
+                                <div u="navigator" class="jssorb05" style="bottom: 16px; right: 6px;">
+                                    <div u="prototype"></div>
+                                </div>
+                                <span u="arrowleft" class="jssora11l" style="top: 123px; left: 8px;"></span>
+                                <span u="arrowright" class="jssora11r" style="top: 123px; right: 8px;"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="Newsfeed">
+                                <h3>ქეთევან ციხელაშვილმა ბათუმში მიმდინარე კონფერენციაზე სამშვიდობო პროცესში ევროკავშირის ჩართულობის მნიშვნელობაზე ისაუბრა</h3>
+                                <span>15/06/2015</span>
+                                <p>შერიგებისა და სამოქალაქო თანასწორობის საკითხებში სახელმწიფო მინისტრის პირველმა მოადგილემ ქეთევან ციხელაშვილმა ბათუმში მიმდინარე კონფერენციაზე ვიშეგრადის ჯგუფის ქვეყნების წარმომადგენლებს სამშვიდობო პროცესში ევროკავშირის ჩართულობის მნიშვნელობაზე მიაწოდა ინფორმაცია.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row" id="body">
+                    <div class="left manuCon">
+                        <ul>
+                            <asp:Repeater runat="server" ID="rptLeftManu" ItemType="Core.UM.Permissions">
+                                <ItemTemplate>
+                                    <li>
+                                        <a href="<%#Item.PageName %>"><i class="fa fa-share-square-o"></i><%#Item.Caption %></a>
+                                    </li>
+                                </ItemTemplate>
+                            </asp:Repeater>
+
+                        </ul>
+                    </div>
+                    <div class="left" id="content">
+                        <asp:ContentPlaceHolder ID="BodyPlaceHolder" runat="server">
+                        </asp:ContentPlaceHolder>
                     </div>
                 </div>
             </div>
-       </footer>
-    </div>        
+
+            <footer class="mainGradient">
+                <div class="container">
+                    <div class="row ft-nav">
+                        <ul>
+                            <li>
+                                <a href="#">მთავარი</a>
+                            </li>
+                            <li>
+                                <a href="#">მთავარი</a>
+                            </li>
+                            <li>
+                                <a href="#">მთავარი</a>
+                            </li>
+                            <li>
+                                <a href="#">მთავარი</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row ft-cp">
+                        <div class="col-md-6">
+                            <span class="footerCP">
+                                <b>Copyright © 2009-2015 შერიგებისა და სამოქალაქო </b>
+                                <br />
+                                <b>თანასწორობის საკითხებში საქართველოს სახელმწიფო მინისტრის აპარატი.</b>
+                                <br />
+                                <b>ყველა უფლება დაცულია.</b>
+                            </span>
+                        </div>
+                        <div class="col-md-6">
+                            <img src="Content/images/icons/icon1.png" class="right" />
+                            <img src="Content/images/icons/icon3.png" class="right" />
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
     </form>
     <script>
         jQuery(document).ready(function ($) {
@@ -220,10 +201,10 @@
             //Make the element 'slider1_container' visible before initialize jssor slider.
             $("#slider_container").css("display", "block");
             var jssor_slider = new $JssorSlider$("slider_container", options);
-          
+
         });
     </script>
     <asp:ContentPlaceHolder ID="ScriptsPlaceHolder" runat="server">
-     </asp:ContentPlaceHolder>
+    </asp:ContentPlaceHolder>
 </body>
 </html>

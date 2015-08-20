@@ -40,6 +40,24 @@ namespace SMR {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
+        /// rptMainManu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptMainManu;
+        
+        /// <summary>
+        /// rptLeftManu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptLeftManu;
+        
+        /// <summary>
         /// BodyPlaceHolder control.
         /// </summary>
         /// <remarks>

@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Text;
 using Core.Tools;
+using Core.UM;
 
 namespace SMR
 {
@@ -13,9 +14,10 @@ namespace SMR
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            InitStartup();
             LoadPlugins();
         }
-        public void LoadPlugins()
+        private void LoadPlugins()
         {
             var IncludePlugins = new StringBuilder();
             IncludePlugins.Append(Plugins.bootstrapCSS());
@@ -26,6 +28,14 @@ namespace SMR
             IncludePlugins.Append(Plugins.bootstrapJS());
             IncludePlugins.Append(Plugins.jssorJS());
             litPlugins.Text = IncludePlugins.ToString();
+        }
+        private void InitStartup()
+        {
+            var p = new PermissionsRepository();
+            rptMainManu.DataSource = p.ListPermissions().Where(w=>w.Level==1 && w.CodeName=="1");
+            rptMainManu.DataBind();
+            rptLeftManu.DataSource = p.ListPermissions().Where(w => w.Level == 1 && w.CodeName == "3");
+            rptLeftManu.DataBind();
         }
     }
 }
