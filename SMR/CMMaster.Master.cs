@@ -36,6 +36,17 @@ namespace SMR
             rptMainManu.DataBind();
             rptLeftManu.DataSource = p.ListPermissions().Where(w => w.Level == 1 && w.CodeName == "3");
             rptLeftManu.DataBind();
+            rptFooterManu.DataSource = p.ListPermissions().Where(w => w.Level == 1 && w.CodeName == "1");
+            rptFooterManu.DataBind();
+
+            int ParentID;
+            if (int.TryParse(Request.QueryString["mnuid"], out ParentID))
+            {
+                rptSubMnu.DataSource = p.ListChildPermissions(ParentID);
+                rptSubMnu.DataBind();
+            }
+            
+
         }
     }
 }

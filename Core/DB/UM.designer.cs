@@ -224,6 +224,12 @@ namespace Core.DB
 		{
 			return this.CreateMethodCallQuery<fn_List_AdminMenuItemsForUserResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), userID);
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.fn_ListChildPermissions", IsComposable=true)]
+		public IQueryable<fn_ListChildPermissionsResult> fn_ListChildPermissions([global::System.Data.Linq.Mapping.ParameterAttribute(Name="ParentID", DbType="Int")] System.Nullable<int> parentID)
+		{
+			return this.CreateMethodCallQuery<fn_ListChildPermissionsResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), parentID);
+		}
 	}
 	
 	public partial class fn_GetSingleUserResult
@@ -2073,6 +2079,248 @@ namespace Core.DB
 				if ((this._isVisible != value))
 				{
 					this._isVisible = value;
+				}
+			}
+		}
+	}
+	
+	public partial class fn_ListChildPermissionsResult
+	{
+		
+		private int _PermissionID;
+		
+		private System.Nullable<int> _ParentID;
+		
+		private string _CaptionEN;
+		
+		private string _CaptionKA;
+		
+		private string _CaptionRU;
+		
+		private string _PageName;
+		
+		private string _CodeName;
+		
+		private System.Nullable<short> _Level;
+		
+		private string _Hierarchy;
+		
+		private string _PermissionCode;
+		
+		private System.Nullable<int> _SortVal;
+		
+		private System.Nullable<bool> _IsVisible;
+		
+		private System.DateTime _CRTime;
+		
+		public fn_ListChildPermissionsResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PermissionID", DbType="Int NOT NULL")]
+		public int PermissionID
+		{
+			get
+			{
+				return this._PermissionID;
+			}
+			set
+			{
+				if ((this._PermissionID != value))
+				{
+					this._PermissionID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ParentID", DbType="Int")]
+		public System.Nullable<int> ParentID
+		{
+			get
+			{
+				return this._ParentID;
+			}
+			set
+			{
+				if ((this._ParentID != value))
+				{
+					this._ParentID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CaptionEN", DbType="NVarChar(100)")]
+		public string CaptionEN
+		{
+			get
+			{
+				return this._CaptionEN;
+			}
+			set
+			{
+				if ((this._CaptionEN != value))
+				{
+					this._CaptionEN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CaptionKA", DbType="NVarChar(100)")]
+		public string CaptionKA
+		{
+			get
+			{
+				return this._CaptionKA;
+			}
+			set
+			{
+				if ((this._CaptionKA != value))
+				{
+					this._CaptionKA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CaptionRU", DbType="NVarChar(100)")]
+		public string CaptionRU
+		{
+			get
+			{
+				return this._CaptionRU;
+			}
+			set
+			{
+				if ((this._CaptionRU != value))
+				{
+					this._CaptionRU = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PageName", DbType="NVarChar(100)")]
+		public string PageName
+		{
+			get
+			{
+				return this._PageName;
+			}
+			set
+			{
+				if ((this._PageName != value))
+				{
+					this._PageName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CodeName", DbType="NVarChar(50)")]
+		public string CodeName
+		{
+			get
+			{
+				return this._CodeName;
+			}
+			set
+			{
+				if ((this._CodeName != value))
+				{
+					this._CodeName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Name="[Level]", Storage="_Level", DbType="SmallInt")]
+		public System.Nullable<short> Level
+		{
+			get
+			{
+				return this._Level;
+			}
+			set
+			{
+				if ((this._Level != value))
+				{
+					this._Level = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Hierarchy", DbType="VarChar(120)")]
+		public string Hierarchy
+		{
+			get
+			{
+				return this._Hierarchy;
+			}
+			set
+			{
+				if ((this._Hierarchy != value))
+				{
+					this._Hierarchy = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PermissionCode", DbType="VarChar(40) NOT NULL", CanBeNull=false)]
+		public string PermissionCode
+		{
+			get
+			{
+				return this._PermissionCode;
+			}
+			set
+			{
+				if ((this._PermissionCode != value))
+				{
+					this._PermissionCode = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SortVal", DbType="Int")]
+		public System.Nullable<int> SortVal
+		{
+			get
+			{
+				return this._SortVal;
+			}
+			set
+			{
+				if ((this._SortVal != value))
+				{
+					this._SortVal = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsVisible", DbType="Bit")]
+		public System.Nullable<bool> IsVisible
+		{
+			get
+			{
+				return this._IsVisible;
+			}
+			set
+			{
+				if ((this._IsVisible != value))
+				{
+					this._IsVisible = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CRTime", DbType="DateTime NOT NULL")]
+		public System.DateTime CRTime
+		{
+			get
+			{
+				return this._CRTime;
+			}
+			set
+			{
+				if ((this._CRTime != value))
+				{
+					this._CRTime = value;
 				}
 			}
 		}

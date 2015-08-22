@@ -4,6 +4,11 @@
     margin:0;
     padding:0;
 }
+html {
+     -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 html > body .wrap {
  height: auto;
  min-height: 100%;
@@ -15,6 +20,13 @@ body{
 * {
      font-family: "Myriad Pro", rioni;
 }
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
+
 .wrap {
     background: #fff;
     position:relative;
@@ -77,6 +89,7 @@ footer {
 }
 .logo > span:nth-child(1n) {
     width: 130px;
+    text-align:center;
 }
 .logo > span:nth-child(2n) {
     width: calc(100% - 130px);
@@ -203,32 +216,46 @@ footer .ft-cp > div {
 
 
 .manuCon > ul > li {
-    line-height: 25px;
+    line-height: 21px;  
+}
+
+.manuCon > ul > li > a {
+    font-family: "nino";
+    display:block;
+    padding:10px 15px 4px 15px;
     background-color: #E2EAED;
     width: 260px;
     margin-top: 5px;
     margin-left:5px;
     border-radius: 3px;
-    padding-left: 10px;
-    padding-top: 4px;
-    
 }
 
-.manuCon > ul > li > a {
-    line-height: 25px;
-    font-family: "nino";
-    display:block;
-}
 
 .manuCon ul > li > a:hover {
-    color:#999;
+    color:#fff;
     text-decoration:none;
-}
-.manuCon > ul > li > a > i{
-    line-height: 25px;
-    color:#999;
+    background:#5bc0de;
 }
 
+.manuCon .submanu {
+    margin-left:5px;
+    margin-top:5px;
+}
+
+.manuCon .submanu > a {
+    font-family: "nino";
+    display:block;
+    line-height:35px;
+    border-bottom: 1px solid #eee;
+    padding:6px 15px 2px 15px;
+    width:260px;
+}
+
+.manuCon .submanu > a:hover {
+        color:#fff;
+    text-decoration:none;
+    background:#337ab7;
+}
 #content {
     width:calc(100% - 270px);
 }

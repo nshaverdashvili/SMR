@@ -72,6 +72,29 @@ namespace Core.UM
             });
         }
 
+        public List<Permissions> ListChildPermissions(int? ParentID)
+        {
+            return TryToReturn(string.Format("Core.UM.PermissionsRepository.ListChildPermissions(ParentID)"), () =>
+            {
+                using (var db = DB.DBCon.GetUMDataContext())
+                {
+                    return db.fn_ListChildPermissions(ParentID).Select(s => new Permissions
+                    {
+                        Level = s.Level,
+                        PermissionID = s.PermissionID,
+                        CaptionEN = s.CaptionEN,
+                        CaptionKA = s.CaptionKA,
+                        CaptionRU = s.CaptionRU,
+                        PageName = s.PageName,
+                        CodeName = s.CodeName,
+                        SortVal = s.SortVal,
+                        IsVisible = s.IsVisible,
+                        PermissionsCode = s.PermissionCode
+                    }).ToList();
+                }
+            });
+        }
+
         public void SP_Permissions(byte? iud, int? PermissionID = null, int? ParentID = null, string CaptionEN = null, string CaptionKA = null, string CaptionRU = null, string PageName = null, string CodeName = null, int? SortVal = null, bool? IsVisible = null)
         {
             TryExecute(string.Format("SP_Permissions(iud = {0}, PermissionID = {1}, ParentID = {2}, CaptionEN = {3}, CaptionKA = {4}, CaptionRU = {5}, PageName = {6}, CodeName = {7}, SortVal = {8}, IsVisible = {9})", iud, PermissionID, ParentID, CaptionEN, CaptionKA, CaptionRU, PageName, CodeName, SortVal, IsVisible)
@@ -123,7 +146,5 @@ namespace Core.UM
                 }
             });
         }
-
-
     }
 }

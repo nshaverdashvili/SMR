@@ -44,7 +44,7 @@
                                         <asp:Repeater runat="server" ID="rptMainManu" ItemType="Core.UM.Permissions">
                                             <ItemTemplate>
                                                 <li>
-                                                    <a href="<%#Item.PageName %>"><%#Item.Caption %></a>
+                                                    <a href="<%#Item.PageName %>?mnuid=<%#Item.PermissionID %>"><%#Item.Caption %></a>
                                                 </li>
                                             </ItemTemplate>
                                         </asp:Repeater>
@@ -52,7 +52,6 @@
 
                                 </div>
                             </div>
-
                         </nav>
                     </div>
                 </div>
@@ -101,11 +100,19 @@
 
                 <div class="row" id="body">
                     <div class="left manuCon">
+                        <div class="submanu">
+                            <asp:Repeater runat="server" ID="rptSubMnu" ItemType="Core.UM.Permissions">
+                                <ItemTemplate>
+                                    <a href="<%#Item.PageName %>"> <%#Item.Caption %></a>
+                                </ItemTemplate>
+                            </asp:Repeater>
+                            
+                        </div>
                         <ul>
                             <asp:Repeater runat="server" ID="rptLeftManu" ItemType="Core.UM.Permissions">
                                 <ItemTemplate>
                                     <li>
-                                        <a href="<%#Item.PageName %>"><i class="fa fa-share-square-o"></i><%#Item.Caption %></a>
+                                        <a href="<%#Item.PageName %>"><%#Item.Caption %></a>
                                     </li>
                                 </ItemTemplate>
                             </asp:Repeater>
@@ -123,18 +130,13 @@
                 <div class="container">
                     <div class="row ft-nav">
                         <ul>
-                            <li>
-                                <a href="#">მთავარი</a>
-                            </li>
-                            <li>
-                                <a href="#">მთავარი</a>
-                            </li>
-                            <li>
-                                <a href="#">მთავარი</a>
-                            </li>
-                            <li>
-                                <a href="#">მთავარი</a>
-                            </li>
+                            <asp:Repeater runat="server" ID="rptFooterManu" ItemType="Core.UM.Permissions">
+                                <ItemTemplate>
+                                    <li>
+                                        <a href="<%#Item.PageName %>"><%#Item.Caption %></a>
+                                    </li>
+                                </ItemTemplate>
+                            </asp:Repeater>
                         </ul>
                     </div>
                     <div class="row ft-cp">

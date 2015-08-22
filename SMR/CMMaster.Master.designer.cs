@@ -49,6 +49,15 @@ namespace SMR {
         protected global::System.Web.UI.WebControls.Repeater rptMainManu;
         
         /// <summary>
+        /// rptSubMnu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptSubMnu;
+        
+        /// <summary>
         /// rptLeftManu control.
         /// </summary>
         /// <remarks>
@@ -65,6 +74,15 @@ namespace SMR {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder BodyPlaceHolder;
+        
+        /// <summary>
+        /// rptFooterManu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptFooterManu;
         
         /// <summary>
         /// ScriptsPlaceHolder control.

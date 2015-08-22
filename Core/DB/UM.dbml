@@ -237,4 +237,22 @@
       <Column Name="isVisible" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
+  <Function Name="dbo.fn_ListChildPermissions" Method="fn_ListChildPermissions" IsComposable="true">
+    <Parameter Name="ParentID" Parameter="parentID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="fn_ListChildPermissionsResult">
+      <Column Name="PermissionID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="CaptionEN" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CaptionKA" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CaptionRU" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="PageName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CodeName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="[Level]" Member="Level" Type="System.Int16" DbType="SmallInt" CanBeNull="true" />
+      <Column Name="Hierarchy" Type="System.String" DbType="VarChar(120)" CanBeNull="true" />
+      <Column Name="PermissionCode" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="SortVal" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CRTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
 </Database>
