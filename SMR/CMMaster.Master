@@ -41,10 +41,17 @@
                                 </div>
                                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                                     <ul class="nav navbar-nav">
-                                        <asp:Repeater runat="server" ID="rptMainManu" ItemType="Core.UM.Permissions">
+                                        <asp:Repeater runat="server" ID="rptMainManu" ItemType="Core.UM.Permissions" OnItemDataBound="rptMainManu_ItemDataBound">
                                             <ItemTemplate>
                                                 <li>
                                                     <a href="<%#Item.PageName %>?mnuid=<%#Item.PermissionID %>"><%#Item.Caption %></a>
+                                                    <div class="submanu hidden">
+                                                        <asp:Repeater runat="server" ID="rptSubMnu" ItemType="Core.UM.Permissions">
+                                                            <ItemTemplate>
+                                                                <a href="<%#Item.PageName %>"><%#Item.Caption %></a>
+                                                            </ItemTemplate>
+                                                        </asp:Repeater>
+                                                    </div>
                                                 </li>
                                             </ItemTemplate>
                                         </asp:Repeater>
@@ -100,14 +107,6 @@
 
                 <div class="row" id="body">
                     <div class="left manuCon">
-                        <div class="submanu">
-                            <asp:Repeater runat="server" ID="rptSubMnu" ItemType="Core.UM.Permissions">
-                                <ItemTemplate>
-                                    <a href="<%#Item.PageName %>"> <%#Item.Caption %></a>
-                                </ItemTemplate>
-                            </asp:Repeater>
-                            
-                        </div>
                         <ul>
                             <asp:Repeater runat="server" ID="rptLeftManu" ItemType="Core.UM.Permissions">
                                 <ItemTemplate>
@@ -159,7 +158,7 @@
         </div>
     </form>
     <script>
-        jQuery(document).ready(function ($) {
+       $(function() {
             var options = {
                 $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
                 $AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1
@@ -204,6 +203,14 @@
             $("#slider_container").css("display", "block");
             var jssor_slider = new $JssorSlider$("slider_container", options);
 
+            $(".navbar-nav li").mouseover(function () {
+                $(".navbar-nav li").children(".submanu").addClass("hidden");
+                $(this).children(".submanu").removeClass("hidden");
+            });
+
+            $("#header").mouseover(function () {
+                $(".navbar-nav li").children(".submanu").addClass("hidden");
+            });
         });
     </script>
     <asp:ContentPlaceHolder ID="ScriptsPlaceHolder" runat="server">

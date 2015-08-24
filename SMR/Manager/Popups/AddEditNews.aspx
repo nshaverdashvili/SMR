@@ -19,6 +19,20 @@
         $(function () {
             $("#txtDate").datepicker({ dateFormat: 'dd/mm/yy' });
             $("#txtDate").prop("readonly", true);
+
+            $(".nav-tabs a").click(function () {
+
+                $(".nav-tabs a").parent().removeClass("active");
+                $(this).parent().addClass("active");
+
+                var tabClass = $(this).parent().parent().data("tabclass");
+                var id = $(this).attr("href");
+
+                $(tabClass).addClass("hidden");
+                $(id).removeClass("hidden");
+
+                return false;
+            });
         });
     </script>
 </asp:Content>
@@ -40,16 +54,21 @@
                 DataValueField="DictionaryID" DataTextField="Caption">
             </asp:DropDownList>
         </div>
-        <div class="form-group">
-            <label for="txtTitleEN">Title EN</label>
+        <ul class="nav nav-tabs" data-tabclass=".titlegroup">
+          <li role="presentation" class="active"><a href="#groupTitleEN">Title EN</a></li>
+          <li role="presentation"><a href="#groupTitleKA">Title KA</a></li>
+          <li role="presentation"><a href="#groupTitleRU">Title RU</a></li>
+        </ul>
+        <div class="form-group titlegroup" id="groupTitleEN" >
+            <label for="txtTitleEN"></label>
             <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control" ID="txtTitleEN" ClientIDMode="Static"></asp:TextBox>
         </div>
-        <div class="form-group">
-            <label for="txtTitleKA">Title KA</label>
+        <div class="form-group titlegroup hidden" id="groupTitleKA">
+            <label for="txtTitleKA"></label>
             <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control" ID="txtTitleKA" ClientIDMode="Static"></asp:TextBox>
         </div>
-        <div class="form-groupRU">
-            <label for="txtTitleRU">Title RU</label>
+        <div class="form-group titlegroup hidden" id="groupTitleRU">
+            <label for="txtTitleRU"></label>
             <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control" ID="txtTitleRU" ClientIDMode="Static"></asp:TextBox>
         </div>
         <div class="form-group">

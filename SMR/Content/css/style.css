@@ -237,12 +237,15 @@ footer .ft-cp > div {
     background:#5bc0de;
 }
 
-.manuCon .submanu {
-    margin-left:5px;
-    margin-top:5px;
+.submanu {
+  position:absolute;
+  background:#fff;
+  z-index:100;
+  top: 57px;
+  left: 10px;
 }
 
-.manuCon .submanu > a {
+.submanu > a {
     font-family: "nino";
     display:block;
     line-height:35px;
@@ -251,8 +254,8 @@ footer .ft-cp > div {
     width:260px;
 }
 
-.manuCon .submanu > a:hover {
-        color:#fff;
+.submanu > a:hover {
+    color:#fff;
     text-decoration:none;
     background:#337ab7;
 }
@@ -344,4 +347,12 @@ footer .ft-cp > div {
     text-align: justify;
 }
 
+.navbar-nav {
+    height:57px;
+}
+
+
+.navbar-nav li {
+    position:relative;
+}
 
