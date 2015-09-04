@@ -14,6 +14,7 @@
     <div class="row">
         <div class="col-xs-12">
          <dx:ASPxGridView ID="gridNews" ClientInstanceName="gridNews" runat="server" AutoGenerateColumns="False" DataSourceID="dsNews" Width="100%" KeyFieldName="NewsID" >
+             <ClientSideEvents EndCallback="function(){ InitAction(); }" />
             <Columns>   
                   <dx:GridViewDataColumn Width="40" FixedStyle="Left">
                     <DataItemTemplate>
@@ -21,14 +22,19 @@
                     </DataItemTemplate>
                 </dx:GridViewDataColumn>
                 <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="false" ShowNewButton="false" ShowNewButtonInHeader="false" ButtonType="image" Caption=" " Width="40" FixedStyle="Left">
-                </dx:GridViewCommandColumn>                 
+                </dx:GridViewCommandColumn>              
+                <dx:GridViewDataColumn Caption ="Image" Width="110"> 
+                    <DataItemTemplate>
+                        <img src="/uploads/<%#Eval("ImgURL") %>?h=100" />
+                    </DataItemTemplate>
+                </dx:GridViewDataColumn>   
                 <dx:GridViewDataComboBoxColumn FieldName="CategoryID">
                     <PropertiesComboBox DataSourceID="dsCategories" TextField="Caption" ValueField="DictionaryID">
                     </PropertiesComboBox>
                 </dx:GridViewDataComboBoxColumn>
                 <dx:GridViewDataDateColumn FieldName="NewsDate" >
                 </dx:GridViewDataDateColumn>
-                <dx:GridViewBandColumn Caption="Title">
+                <dx:GridViewBandColumn Caption="Title" Visible="false">
                     <Columns>
                 <dx:GridViewDataTextColumn FieldName="TitleEN" Caption="English">
                 </dx:GridViewDataTextColumn>
@@ -38,7 +44,7 @@
                 </dx:GridViewDataTextColumn>
                     </Columns>
                 </dx:GridViewBandColumn>
-                 <dx:GridViewBandColumn Caption="Description">
+                 <dx:GridViewBandColumn Caption="Description" Visible="false">
                     <Columns>
                 <dx:GridViewDataTextColumn FieldName="DescriptionEN" Caption="English">
                 </dx:GridViewDataTextColumn>
@@ -48,12 +54,16 @@
                 </dx:GridViewDataTextColumn>
                          </Columns>
                 </dx:GridViewBandColumn>
+                <dx:GridViewBandColumn Caption="Full Text" Visible="false">
+                    <Columns>
                 <dx:GridViewDataTextColumn FieldName="FullTextEN" >
                 </dx:GridViewDataTextColumn>
                 <dx:GridViewDataTextColumn FieldName="FullTextKA" >
                 </dx:GridViewDataTextColumn>
                 <dx:GridViewDataTextColumn FieldName="FullTextRU" >
                 </dx:GridViewDataTextColumn>
+                         </Columns>
+                </dx:GridViewBandColumn>
                 <dx:GridViewDataTextColumn FieldName="SortVal" >
                 </dx:GridViewDataTextColumn>
                 <dx:GridViewDataCheckColumn FieldName="IsVisible" >
@@ -65,7 +75,17 @@
                 <dx:GridViewDataTextColumn FieldName="VideoURL" >
                 </dx:GridViewDataTextColumn>           
             </Columns>
-             <Settings HorizontalScrollBarMode="Auto" />
+             <Templates>
+                 <PreviewRow>
+                     <b>Description EN</b>
+                     <p><%#Eval("DescriptionEN") %></p>
+                      <b>Description KA</b>
+                     <p><%#Eval("DescriptionKA") %></p>
+                      <b>Description RU</b>
+                     <p><%#Eval("DescriptionRU") %></p>
+                 </PreviewRow>
+             </Templates>
+             <Settings ShowPreview="true" />
         </dx:ASPxGridView>
         </div>
         <asp:ObjectDataSource ID="dsNews" runat="server" DeleteMethod="SP_News" SelectMethod="ListNews" TypeName="Core.CM.NewsRepository">
@@ -81,7 +101,7 @@
                 <asp:Parameter Name="TitleRU" Type="String" />
                 <asp:Parameter Name="DescriptionEN" Type="String" />
                 <asp:Parameter Name="DescriptionKA" Type="String" />
-                <asp:Parameter Name="DescriptionEN" Type="String" />
+                <asp:Parameter Name="DescriptionRU" Type="String" />
                 <asp:Parameter Name="FullTextEN" Type="String" />
                 <asp:Parameter Name="FullTextKA" Type="String" />
                 <asp:Parameter Name="FullTextRU" Type="String" />

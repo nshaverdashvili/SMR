@@ -1,5 +1,5 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CMMaster.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="SMR.Default" %>
-
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CMMaster.Master" AutoEventWireup="true" CodeBehind="NewsList.aspx.cs" Inherits="SMR.NewsList" %>
+<%@ MasterType TypeName="SMR.CMMaster" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BodyPlaceHolder" runat="server">

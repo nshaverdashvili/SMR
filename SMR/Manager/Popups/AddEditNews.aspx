@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Manager/Popups/PopupMaster.Master" AutoEventWireup="true" CodeBehind="AddEditNews.aspx.cs" Inherits="SMR.Manager.Popups.AddEditNews" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Manager/Popups/PopupMaster.Master" AutoEventWireup="true" CodeBehind="AddEditNews.aspx.cs" ValidateRequest="false" Inherits="SMR.Manager.Popups.AddEditNews" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <asp:Literal runat="server" ID="litHead"></asp:Literal>
@@ -21,8 +21,10 @@
             $("#txtDate").prop("readonly", true);
 
             $(".nav-tabs a").click(function () {
+                var tabgroup = $(this).data("tabgroup");
 
-                $(".nav-tabs a").parent().removeClass("active");
+
+                $(".nav-tabs a[data-tabgroup='" + tabgroup + "']").parent().removeClass("active");
                 $(this).parent().addClass("active");
 
                 var tabClass = $(this).parent().parent().data("tabclass");
@@ -55,9 +57,9 @@
             </asp:DropDownList>
         </div>
         <ul class="nav nav-tabs" data-tabclass=".titlegroup">
-          <li role="presentation" class="active"><a href="#groupTitleEN">Title EN</a></li>
-          <li role="presentation"><a href="#groupTitleKA">Title KA</a></li>
-          <li role="presentation"><a href="#groupTitleRU">Title RU</a></li>
+          <li role="presentation"  class="active"><a href="#groupTitleEN" data-tabgroup="title" >Title EN</a></li>
+          <li role="presentation"><a href="#groupTitleKA" data-tabgroup="title">Title KA</a></li>
+          <li role="presentation"><a href="#groupTitleRU" data-tabgroup="title">Title RU</a></li>
         </ul>
         <div class="form-group titlegroup" id="groupTitleEN" >
             <label for="txtTitleEN"></label>
@@ -84,6 +86,7 @@
         <div class="form-group ">
             <label for="txtDate">Date</label>
             <asp:TextBox runat="server" CssClass="form-control" ID="txtDate" ClientIDMode="Static"></asp:TextBox>
+            <asp:RequiredFieldValidator ErrorMessage="This field is required" ControlToValidate="txtDate" runat="server" ValidationGroup="vg"/>
         </div>
         <div class="form-group ">
             <label for="txtVideoURL">Video URL</label>
@@ -97,36 +100,48 @@
            
         </div>
     </div>
-
-
-    <div class="col-xs-12 col-md-12">
-        <div class="form-group">
-            <label for="txtDescEN">Description EN</label>
-            <asp:TextBox runat="server" CssClass="form-control" ID="txtDescEN" ClientIDMode="Static" TextMode="MultiLine" Rows="5"></asp:TextBox>
-        </div>
-        <div class="form-group">
-            <label for="txtDescKA">Description KA</label>
-            <asp:TextBox runat="server" CssClass="form-control" ID="txtDescKA" ClientIDMode="Static" TextMode="MultiLine" Rows="5"></asp:TextBox>
-        </div>
-        <div class="form-group">
-            <label for="txtDescRU">Description RU</label>
-            <asp:TextBox runat="server" CssClass="form-control" ID="txtDescRU" ClientIDMode="Static" TextMode="MultiLine" Rows="5"></asp:TextBox>
-        </div>
-        <div class="form-group">
-            <label for="txtFullTextEN">Full Text</label>
-            <asp:TextBox runat="server" CssClass="form-control tinymce" ID="txtFullTextEN" ClientIDMode="Static" TextMode="MultiLine" Rows="5"></asp:TextBox>
-        </div>
-        <div class="form-group">
-            <label for="txtFullTextKA">Full Text</label>
-            <asp:TextBox runat="server" CssClass="form-control tinymce" ID="txtFullTextKA" ClientIDMode="Static" TextMode="MultiLine" Rows="5"></asp:TextBox>
-        </div>
-        <div class="form-group">
-            <label for="txtFullTextRU">Full Text</label>
-            <asp:TextBox runat="server" CssClass="form-control tinymce" ID="txtFullTextRU" ClientIDMode="Static" TextMode="MultiLine" Rows="5"></asp:TextBox>
-        </div>
-    </div>
-    <asp:Button runat="server" CssClass="btn btn-lg btn-block btn-success" ClientIDMode="Static" Text="Save" ID="btnSave" OnClick="btnSave_Click" />
     
+    <div class="col-xs-12 col-md-12" style="margin-bottom:50px;">
+        <ul class="nav nav-tabs" data-tabclass=".descgroup">
+          <li role="presentation" class="active"><a href="#groupDescEN" data-tabgroup="desc">Description EN</a></li>
+          <li role="presentation"><a href="#groupDescKA" data-tabgroup="desc">Description KA</a></li>
+          <li role="presentation"><a href="#groupDescRU" data-tabgroup="desc">Description RU</a></li>
+        </ul>
+        <div class="form-group descgroup" id="groupDescEN" >
+            <label for="txtDescEN"></label>
+            <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control" ID="txtDescEN" ClientIDMode="Static"></asp:TextBox>
+        </div>
+        <div class="form-group descgroup hidden" id="groupDescKA">
+            <label for="txtDescKA"></label>
+            <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control" ID="txtDescKA" ClientIDMode="Static"></asp:TextBox>
+        </div>
+        <div class="form-group descgroup hidden" id="groupDescRU">
+            <label for="txtDescRU"></label>
+            <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control" ID="txtDescRU" ClientIDMode="Static"></asp:TextBox>
+        </div>
+
+        <!-- Full Text -->
+        <ul class="nav nav-tabs" data-tabclass=".fulltxtgroup">
+          <li role="presentation" class="active"><a href="#groupFulltxtEN" data-tabgroup="fulltxt">Full Text EN</a></li>
+          <li role="presentation"><a href="#groupFulltxtKA" data-tabgroup="fulltxt">Full Text KA</a></li>
+          <li role="presentation"><a href="#groupFulltxtRU" data-tabgroup="fulltxt">Full Text RU</a></li>
+        </ul>
+        <div class="form-group fulltxtgroup" id="groupFulltxtEN" >
+            <label for="txtFulltxtEN"></label>
+            <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control tinymce" ID="txtFulltxtEN" ClientIDMode="Static"></asp:TextBox>
+        </div>
+        <div class="form-group fulltxtgroup hidden" id="groupFulltxtKA" >
+            <label for="txtFullTextKA"></label>
+            <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control tinymce" ID="txtFullTextKA" ClientIDMode="Static"></asp:TextBox>
+        </div>
+        <div class="form-group fulltxtgroup hidden" id="groupFulltxtRU">
+            <label for="txtFullTextRU"></label>
+            <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control tinymce" ID="txtFullTextRU" ClientIDMode="Static"></asp:TextBox>
+        </div>        
+    </div>
+    <div class="col-xs-12 col-md-12" style="position:fixed; bottom:1px;">
+    <asp:Button runat="server" CssClass="btn btn-lg btn-block btn-success" ClientIDMode="Static" Text="Save" ID="btnSave" OnClick="btnSave_Click" ValidationGroup="vg" />
+    </div>
     <asp:ObjectDataSource ID="dsGallery" runat="server" SelectMethod="ListGallery" TypeName="Core.Files.GalleryRepository"></asp:ObjectDataSource>
         <asp:ObjectDataSource ID="dsCategory" runat="server" SelectMethod="ListDictionary" TypeName="Core.Tools.DictionariesRepository">
         <SelectParameters>

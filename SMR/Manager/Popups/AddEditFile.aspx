@@ -1,6 +1,27 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Manager/Popups/PopupMaster.Master" AutoEventWireup="true" CodeBehind="AddEditFile.aspx.cs" Inherits="SMR.Manager.Popups.AddEditFile" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <asp:Literal runat="server" ID="litHead"></asp:Literal>
+    <script>
+        $(function () {
+            $(".nav-tabs a").click(function () {
+
+                $(".nav-tabs a").parent().removeClass("active");
+                $(this).parent().addClass("active");
+
+                var tabClass = $(this).parent().parent().data("tabclass");
+                var id = $(this).attr("href");
+
+                $(tabClass).addClass("hidden");
+                $(id).removeClass("hidden");
+
+                return false;
+            });
+        });
+    </script>
+
+
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:PlaceHolder runat="server" ID="msgPH" Visible="false">
@@ -25,18 +46,39 @@
                 DataValueField="DictionaryID" DataTextField="Caption">
             </asp:DropDownList>
         </div>
-         <div class="form-group">
-            <label for="txtDescEN">DescriptionEN</label>
-            <asp:TextBox runat="server" CssClass="form-control" ID="txtDescriptionEN" ClientIDMode="Static" TextMode="MultiLine" Rows="5"></asp:TextBox>
+
+        <!--NINA-->
+
+        <ul class="nav nav-tabs" data-tabclass=".descgroup">
+          <li role="presentation" class="active"><a href="#groupDescEN">Description EN</a></li>
+          <li role="presentation"><a href="#groupDescKA">Description KA</a></li>
+          <li role="presentation"><a href="#groupDescRU">Description RU</a></li>
+        </ul>
+        <div class="form-group descgroup" id="groupDescEN" >
+            <label for="txtDescriptionEN"></label>
+            <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control" ID="txtDescriptionEN" ClientIDMode="Static"></asp:TextBox>
         </div>
-        <div class="form-group">
-            <label for="txtDescKA">DescriptionKA</label>
-            <asp:TextBox runat="server" CssClass="form-control" ID="txtDescriptionKA" ClientIDMode="Static" TextMode="MultiLine" Rows="5"></asp:TextBox>
+        <div class="form-group descgroup hidden" id="groupDescKA">
+            <label for="txtDescriptionKA"></label>
+            <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control" ID="txtDescriptionKA" ClientIDMode="Static"></asp:TextBox>
         </div>
-        <div class="form-group">
-            <label for="txtDescRU">DescriptionRU</label>
-            <asp:TextBox runat="server" CssClass="form-control" ID="txtDescriptionRU" ClientIDMode="Static" TextMode="MultiLine" Rows="5"></asp:TextBox>
+        <div class="form-group descgroup hidden" id="groupDescRU">
+            <label for="txtDescriptionRU"></label>
+            <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control" ID="txtDescriptionRU" ClientIDMode="Static"></asp:TextBox>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+         
 
 
         <div class="form-group">

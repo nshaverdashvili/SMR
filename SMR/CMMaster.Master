@@ -106,7 +106,12 @@
                 </div>
 
                 <div class="row" id="body">
-                    <div class="left manuCon">
+                      <div class="left manuCon">
+                           <asp:PlaceHolder runat="server" id="phCalendar" Visible="false">
+                        <div class="phCalendar">
+                            <div class ="Calendar"></div>
+                        </div>
+                    </asp:PlaceHolder>
                         <ul>
                             <asp:Repeater runat="server" ID="rptLeftManu" ItemType="Core.UM.Permissions">
                                 <ItemTemplate>
@@ -158,7 +163,9 @@
         </div>
     </form>
     <script>
-       $(function() {
+        $(function () {
+            $(".Calendar").datepicker();
+
             var options = {
                 $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
                 $AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1

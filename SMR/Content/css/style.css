@@ -201,6 +201,9 @@ footer .ft-cp > div {
     line-height:25px;
     color: #999;
 }
+.phCalendar{
+    padding: 10px 5px;
+}
 
 .manuCon{
     float:left;
@@ -260,7 +263,7 @@ footer .ft-cp > div {
     background:#337ab7;
 }
 #content {
-    width:calc(100% - 270px);
+    width:calc(100% - 280px);
 }
 
 .main {

@@ -95,312 +95,16 @@ namespace Core.DB
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.fn_List_News", IsComposable=true)]
-		public IQueryable<fn_List_NewsResult> fn_List_News([global::System.Data.Linq.Mapping.ParameterAttribute(Name="NewsID", DbType="Int")] System.Nullable<int> newsID)
-		{
-			return this.CreateMethodCallQuery<fn_List_NewsResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), newsID);
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.fn_List_Pages", IsComposable=true)]
 		public IQueryable<fn_List_PagesResult> fn_List_Pages([global::System.Data.Linq.Mapping.ParameterAttribute(Name="PageID", DbType="Int")] System.Nullable<int> pageID)
 		{
 			return this.CreateMethodCallQuery<fn_List_PagesResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), pageID);
 		}
-	}
-	
-	public partial class fn_List_NewsResult
-	{
 		
-		private int _NewsID;
-		
-		private System.Nullable<System.DateTime> _NewsDate;
-		
-		private string _TitleEN;
-		
-		private string _TitleKA;
-		
-		private string _TitleRU;
-		
-		private string _DescriptionEN;
-		
-		private string _DescriptionKA;
-		
-		private string _DescriptionRU;
-		
-		private string _FullTextEN;
-		
-		private string _FullTextKA;
-		
-		private string _FullTextRU;
-		
-		private System.Nullable<int> _CategoryID;
-		
-		private System.Nullable<int> _SortVal;
-		
-		private bool _IsVisible;
-		
-		private string _VideoURL;
-		
-		private System.Nullable<int> _GalleryID;
-		
-		public fn_List_NewsResult()
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.fn_List_News", IsComposable=true)]
+		public IQueryable<fn_List_NewsResult> fn_List_News([global::System.Data.Linq.Mapping.ParameterAttribute(Name="NewsID", DbType="Int")] System.Nullable<int> newsID)
 		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NewsID", DbType="Int NOT NULL")]
-		public int NewsID
-		{
-			get
-			{
-				return this._NewsID;
-			}
-			set
-			{
-				if ((this._NewsID != value))
-				{
-					this._NewsID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NewsDate", DbType="Date")]
-		public System.Nullable<System.DateTime> NewsDate
-		{
-			get
-			{
-				return this._NewsDate;
-			}
-			set
-			{
-				if ((this._NewsDate != value))
-				{
-					this._NewsDate = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TitleEN", DbType="NVarChar(200)")]
-		public string TitleEN
-		{
-			get
-			{
-				return this._TitleEN;
-			}
-			set
-			{
-				if ((this._TitleEN != value))
-				{
-					this._TitleEN = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TitleKA", DbType="NVarChar(200)")]
-		public string TitleKA
-		{
-			get
-			{
-				return this._TitleKA;
-			}
-			set
-			{
-				if ((this._TitleKA != value))
-				{
-					this._TitleKA = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TitleRU", DbType="NVarChar(200)")]
-		public string TitleRU
-		{
-			get
-			{
-				return this._TitleRU;
-			}
-			set
-			{
-				if ((this._TitleRU != value))
-				{
-					this._TitleRU = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DescriptionEN", DbType="NVarChar(300)")]
-		public string DescriptionEN
-		{
-			get
-			{
-				return this._DescriptionEN;
-			}
-			set
-			{
-				if ((this._DescriptionEN != value))
-				{
-					this._DescriptionEN = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DescriptionKA", DbType="NVarChar(300)")]
-		public string DescriptionKA
-		{
-			get
-			{
-				return this._DescriptionKA;
-			}
-			set
-			{
-				if ((this._DescriptionKA != value))
-				{
-					this._DescriptionKA = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DescriptionRU", DbType="NVarChar(300)")]
-		public string DescriptionRU
-		{
-			get
-			{
-				return this._DescriptionRU;
-			}
-			set
-			{
-				if ((this._DescriptionRU != value))
-				{
-					this._DescriptionRU = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FullTextEN", DbType="NVarChar(MAX)")]
-		public string FullTextEN
-		{
-			get
-			{
-				return this._FullTextEN;
-			}
-			set
-			{
-				if ((this._FullTextEN != value))
-				{
-					this._FullTextEN = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FullTextKA", DbType="NVarChar(MAX)")]
-		public string FullTextKA
-		{
-			get
-			{
-				return this._FullTextKA;
-			}
-			set
-			{
-				if ((this._FullTextKA != value))
-				{
-					this._FullTextKA = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FullTextRU", DbType="NVarChar(MAX)")]
-		public string FullTextRU
-		{
-			get
-			{
-				return this._FullTextRU;
-			}
-			set
-			{
-				if ((this._FullTextRU != value))
-				{
-					this._FullTextRU = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CategoryID", DbType="Int")]
-		public System.Nullable<int> CategoryID
-		{
-			get
-			{
-				return this._CategoryID;
-			}
-			set
-			{
-				if ((this._CategoryID != value))
-				{
-					this._CategoryID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SortVal", DbType="Int")]
-		public System.Nullable<int> SortVal
-		{
-			get
-			{
-				return this._SortVal;
-			}
-			set
-			{
-				if ((this._SortVal != value))
-				{
-					this._SortVal = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsVisible", DbType="Bit NOT NULL")]
-		public bool IsVisible
-		{
-			get
-			{
-				return this._IsVisible;
-			}
-			set
-			{
-				if ((this._IsVisible != value))
-				{
-					this._IsVisible = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VideoURL", DbType="NVarChar(300)")]
-		public string VideoURL
-		{
-			get
-			{
-				return this._VideoURL;
-			}
-			set
-			{
-				if ((this._VideoURL != value))
-				{
-					this._VideoURL = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GalleryID", DbType="Int")]
-		public System.Nullable<int> GalleryID
-		{
-			get
-			{
-				return this._GalleryID;
-			}
-			set
-			{
-				if ((this._GalleryID != value))
-				{
-					this._GalleryID = value;
-				}
-			}
+			return this.CreateMethodCallQuery<fn_List_NewsResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), newsID);
 		}
 	}
 	
@@ -641,6 +345,320 @@ namespace Core.DB
 				if ((this._IsVisible != value))
 				{
 					this._IsVisible = value;
+				}
+			}
+		}
+	}
+	
+	public partial class fn_List_NewsResult
+	{
+		
+		private int _NewsID;
+		
+		private System.Nullable<System.DateTime> _NewsDate;
+		
+		private string _TitleEN;
+		
+		private string _TitleKA;
+		
+		private string _TitleRU;
+		
+		private string _DescriptionEN;
+		
+		private string _DescriptionKA;
+		
+		private string _DescriptionRU;
+		
+		private string _FullTextEN;
+		
+		private string _FullTextKA;
+		
+		private string _FullTextRU;
+		
+		private System.Nullable<int> _CategoryID;
+		
+		private System.Nullable<int> _SortVal;
+		
+		private bool _IsVisible;
+		
+		private string _VideoURL;
+		
+		private System.Nullable<int> _GalleryID;
+		
+		private string _URL;
+		
+		public fn_List_NewsResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NewsID", DbType="Int NOT NULL")]
+		public int NewsID
+		{
+			get
+			{
+				return this._NewsID;
+			}
+			set
+			{
+				if ((this._NewsID != value))
+				{
+					this._NewsID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NewsDate", DbType="Date")]
+		public System.Nullable<System.DateTime> NewsDate
+		{
+			get
+			{
+				return this._NewsDate;
+			}
+			set
+			{
+				if ((this._NewsDate != value))
+				{
+					this._NewsDate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TitleEN", DbType="NVarChar(MAX)")]
+		public string TitleEN
+		{
+			get
+			{
+				return this._TitleEN;
+			}
+			set
+			{
+				if ((this._TitleEN != value))
+				{
+					this._TitleEN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TitleKA", DbType="NVarChar(MAX)")]
+		public string TitleKA
+		{
+			get
+			{
+				return this._TitleKA;
+			}
+			set
+			{
+				if ((this._TitleKA != value))
+				{
+					this._TitleKA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TitleRU", DbType="NVarChar(MAX)")]
+		public string TitleRU
+		{
+			get
+			{
+				return this._TitleRU;
+			}
+			set
+			{
+				if ((this._TitleRU != value))
+				{
+					this._TitleRU = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DescriptionEN", DbType="NVarChar(MAX)")]
+		public string DescriptionEN
+		{
+			get
+			{
+				return this._DescriptionEN;
+			}
+			set
+			{
+				if ((this._DescriptionEN != value))
+				{
+					this._DescriptionEN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DescriptionKA", DbType="NVarChar(MAX)")]
+		public string DescriptionKA
+		{
+			get
+			{
+				return this._DescriptionKA;
+			}
+			set
+			{
+				if ((this._DescriptionKA != value))
+				{
+					this._DescriptionKA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DescriptionRU", DbType="NVarChar(MAX)")]
+		public string DescriptionRU
+		{
+			get
+			{
+				return this._DescriptionRU;
+			}
+			set
+			{
+				if ((this._DescriptionRU != value))
+				{
+					this._DescriptionRU = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FullTextEN", DbType="NVarChar(MAX)")]
+		public string FullTextEN
+		{
+			get
+			{
+				return this._FullTextEN;
+			}
+			set
+			{
+				if ((this._FullTextEN != value))
+				{
+					this._FullTextEN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FullTextKA", DbType="NVarChar(MAX)")]
+		public string FullTextKA
+		{
+			get
+			{
+				return this._FullTextKA;
+			}
+			set
+			{
+				if ((this._FullTextKA != value))
+				{
+					this._FullTextKA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FullTextRU", DbType="NVarChar(MAX)")]
+		public string FullTextRU
+		{
+			get
+			{
+				return this._FullTextRU;
+			}
+			set
+			{
+				if ((this._FullTextRU != value))
+				{
+					this._FullTextRU = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_CategoryID", DbType="Int")]
+		public System.Nullable<int> CategoryID
+		{
+			get
+			{
+				return this._CategoryID;
+			}
+			set
+			{
+				if ((this._CategoryID != value))
+				{
+					this._CategoryID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SortVal", DbType="Int")]
+		public System.Nullable<int> SortVal
+		{
+			get
+			{
+				return this._SortVal;
+			}
+			set
+			{
+				if ((this._SortVal != value))
+				{
+					this._SortVal = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsVisible", DbType="Bit NOT NULL")]
+		public bool IsVisible
+		{
+			get
+			{
+				return this._IsVisible;
+			}
+			set
+			{
+				if ((this._IsVisible != value))
+				{
+					this._IsVisible = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VideoURL", DbType="NVarChar(300)")]
+		public string VideoURL
+		{
+			get
+			{
+				return this._VideoURL;
+			}
+			set
+			{
+				if ((this._VideoURL != value))
+				{
+					this._VideoURL = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GalleryID", DbType="Int")]
+		public System.Nullable<int> GalleryID
+		{
+			get
+			{
+				return this._GalleryID;
+			}
+			set
+			{
+				if ((this._GalleryID != value))
+				{
+					this._GalleryID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_URL", DbType="NVarChar(250)")]
+		public string URL
+		{
+			get
+			{
+				return this._URL;
+			}
+			set
+			{
+				if ((this._URL != value))
+				{
+					this._URL = value;
 				}
 			}
 		}

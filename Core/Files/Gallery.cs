@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using SystemBase;
 
@@ -13,11 +14,39 @@ namespace Core.Files
         public string TitleEN { get; set; }
         public string TitleKA { get; set; }
         public string TitleRU { get; set; }
-        public string Title { get; set; }
+        public string Title
+        {
+            get
+            {
+                if (Thread.CurrentThread.CurrentUICulture.Name == "ka-GE")
+                {
+                    return TitleKA;
+                }
+                else if (Thread.CurrentThread.CurrentUICulture.Name == "ru-RU")
+                {
+                    return TitleRU;
+                }
+                return TitleEN;
+            }
+        }        
         public string DescriptionEN { get; set; }
         public string DescriptionKA { get; set; }
         public string DescriptionRU { get; set; }
-        public string Description { get; set; }
+        public string Description
+        {
+            get
+            {
+                if (Thread.CurrentThread.CurrentUICulture.Name == "ka-GE")
+                {
+                    return DescriptionKA;
+                }
+                if (Thread.CurrentThread.CurrentUICulture.Name == "ru-RU")
+                {
+                    return DescriptionRU;
+                }
+                return DescriptionEN;
+            }
+        }
         public int? LangID { get; set; }
     }
     public class GalleryRepository : ObjectBase

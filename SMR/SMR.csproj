@@ -197,6 +197,7 @@
     <Content Include="Content\css\admin.css" />
     <Content Include="Content\css\timeline.css" />
     <Content Include="Content\images\bg1.jpg" />
+    <Content Include="NewsList.aspx" />
     <Content Include="Plugins\tinymce\license.txt" />
     <Content Include="Plugins\tinymce\plugins\advlist\plugin.min.js" />
     <Content Include="Plugins\tinymce\plugins\anchor\plugin.min.js" />
@@ -588,6 +589,13 @@
     </Compile>
     <Compile Include="NewsDetails.aspx.designer.cs">
       <DependentUpon>NewsDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NewsList.aspx.cs">
+      <DependentUpon>NewsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewsList.aspx.designer.cs">
+      <DependentUpon>NewsList.aspx</DependentUpon>
     </Compile>
     <Compile Include="Polygon.aspx.cs">
       <DependentUpon>Polygon.aspx</DependentUpon>

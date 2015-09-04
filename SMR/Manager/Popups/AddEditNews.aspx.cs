@@ -29,14 +29,18 @@ namespace SMR.Manager.Popups
             {
                 ddGalleryID.SelectedValue = item.CategoryID.ToString();
                 txtDate.Text = string.Format("{0:dd/MM/yyyy}", item.NewsDate);
-                txtTitleEN.Text = item.Title;
-                txtTitleKA.Text = item.Title;
-                txtTitleRU.Text = item.Title;
-                txtDescEN.Text = item.Description;
-                txtFullTextKA.Text = item.FullText;
-                txtFullTextRU.Text = item.FullText;
+                txtTitleEN.Text = item.TitleEN;
+                txtTitleKA.Text = item.TitleKA;
+                txtTitleRU.Text = item.TitleRU;
+                txtDescEN.Text = item.DescriptionEN;
+                txtDescKA.Text = item.DescriptionKA;
+                txtDescRU.Text = item.DescriptionRU;
+                txtFulltxtEN.Text = item.FullTextEN;
+                txtFullTextKA.Text = item.FullTextKA;
+                txtFullTextRU.Text = item.FullTextRU;
                 chkVisible.Checked = item.IsVisible.Value;
-                ddGalleryID.SelectedValue = item.GalleryID.ToString();
+                if (item.GalleryID != null)
+                    ddGalleryID.SelectedValue = item.GalleryID.ToString();
                 txtVideoURL.Text = item.VideoURL;
             }
 
@@ -46,8 +50,10 @@ namespace SMR.Manager.Popups
         {
             msgPH.Visible = true;
             var iud = (byte)(_ID > 0 ? 1 : 0);
-            Nr.SP_News(iud, _ID, DateTime.Parse(txtDate.Text), txtTitleEN.Text, txtTitleKA.Text, txtTitleRU.Text, txtDescEN.Text, txtDescKA.Text, txtDescRU.Text,  txtFullTextEN.Text, txtFullTextKA.Text, txtFullTextRU.Text,
-                null, int.Parse(ddCategoryID.SelectedValue), null, chkVisible.Checked, txtVideoURL.Text, int.Parse(ddGalleryID.SelectedValue));
+            Nr.SP_News(iud, _ID, DateTime.Parse(txtDate.Text), txtTitleEN.Text, txtTitleKA.Text, txtTitleRU.Text, txtDescEN.Text, txtDescKA.Text, txtDescRU.Text, 
+                txtFulltxtEN.Text, txtFullTextKA.Text, txtFullTextRU.Text,
+               int.Parse(ddCategoryID.SelectedValue), null, chkVisible.Checked, txtVideoURL.Text, int.Parse(ddGalleryID.SelectedValue)
+               );
             if (Nr.IsError)
             {
                 litMsg.Text = "ოპერაცია არ შესრულდა: " + Nr.ErrorMessage;
