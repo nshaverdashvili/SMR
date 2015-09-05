@@ -197,7 +197,9 @@
     <Content Include="Content\css\admin.css" />
     <Content Include="Content\css\timeline.css" />
     <Content Include="Content\images\bg1.jpg" />
+    <Content Include="Manager\Popups\AddEditPages.aspx" />
     <Content Include="NewsList.aspx" />
+    <Content Include="Plugins\jqueryUI\datepicker-ka.js" />
     <Content Include="Plugins\tinymce\license.txt" />
     <Content Include="Plugins\tinymce\plugins\advlist\plugin.min.js" />
     <Content Include="Plugins\tinymce\plugins\anchor\plugin.min.js" />
@@ -548,6 +550,13 @@
     </Compile>
     <Compile Include="Manager\Popups\AddEditNews.aspx.designer.cs">
       <DependentUpon>AddEditNews.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\Popups\AddEditPages.aspx.cs">
+      <DependentUpon>AddEditPages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manager\Popups\AddEditPages.aspx.designer.cs">
+      <DependentUpon>AddEditPages.aspx</DependentUpon>
     </Compile>
     <Compile Include="Manager\Popups\PopupMaster.Master.cs">
       <DependentUpon>PopupMaster.Master</DependentUpon>

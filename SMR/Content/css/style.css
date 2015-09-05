@@ -359,3 +359,11 @@ footer .ft-cp > div {
     position:relative;
 }
 
+label.chckbox {
+    font-family:"nino";
+    font-size:14px;
+}
+
+.ui-datepicker * {
+    font-family:"nino";
+}

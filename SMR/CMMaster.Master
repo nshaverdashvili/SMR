@@ -8,7 +8,7 @@
     <asp:Literal ID="litPlugins" runat="server"></asp:Literal>
     <link href="/Content/css/fonts.css" rel="stylesheet" />
     <link href="/Content/css/style.css" rel="stylesheet" />
-    <script src="/Scripts/frontjs/global.js"></script>
+    <script src="/Scripts/frontjs/global.js?<%=Guid.NewGuid() %>"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -106,12 +106,7 @@
                 </div>
 
                 <div class="row" id="body">
-                      <div class="left manuCon">
-                           <asp:PlaceHolder runat="server" id="phCalendar" Visible="false">
-                        <div class="phCalendar">
-                            <div class ="Calendar"></div>
-                        </div>
-                    </asp:PlaceHolder>
+                    <div class="left manuCon">
                         <ul>
                             <asp:Repeater runat="server" ID="rptLeftManu" ItemType="Core.UM.Permissions">
                                 <ItemTemplate>
@@ -122,6 +117,15 @@
                             </asp:Repeater>
 
                         </ul>
+                        <asp:PlaceHolder runat="server" ID="phCalendar" Visible="true">
+                            <div class="phCalendar">
+                                <label class="chckbox">
+                                    <input type="checkbox" id="IsMonth"/>
+                                    თვის ამბები
+                                </label>
+                                <div class="Calendar"></div>
+                            </div>
+                        </asp:PlaceHolder>
                     </div>
                     <div class="left" id="content">
                         <asp:ContentPlaceHolder ID="BodyPlaceHolder" runat="server">
@@ -162,9 +166,32 @@
             </footer>
         </div>
     </form>
+    <script src="/Plugins/jqueryUI/datepicker-ka.js"></script>
     <script>
         $(function () {
-            $(".Calendar").datepicker();
+            var currentDate = new Date();
+
+            if (gup("d") != "") {
+                currentDate = new Date(gup("d"));
+            }
+
+            if (gup("im") != "") {
+                $("#IsMonth").prop('checked', gup("im") != "false");
+            }
+
+            $(".Calendar").datepicker({
+                dateFormat: "yy-mm-dd",
+                defaultDate: currentDate,
+                onSelect: function (date) {
+                    window.location = "NewsList.aspx?d=" + date + "&im=" + $("#IsMonth").prop('checked');
+                },
+                onChangeMonthYear: function (year, month) {
+                    if ($("#IsMonth").prop('checked')) {
+                        date = year + "-" + (month) + "-01";
+                        window.location = "NewsList.aspx?d=" + date + "&im=" + $("#IsMonth").prop('checked');
+                    }
+                }
+            }, $.datepicker.regional["ka"]);
 
             var options = {
                 $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
