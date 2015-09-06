@@ -3,6 +3,7 @@
 <%@ Register Assembly="DevExpress.Web.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxGridView" TagPrefix="dx" %>
 <%@ Register Assembly="DevExpress.Web.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Namespace="DevExpress.Web.ASPxEditors" TagPrefix="dx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <asp:Literal ID="litHeader" runat="server" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="BodyPlaceHolder" runat="server">
     <div class="row">
@@ -14,35 +15,30 @@
         <div class="col-xs-12">
             <dx:ASPxGridView ID="gridPages" ClientInstanceName="gridPages" runat="server" AutoGenerateColumns="False" DataSourceID="dsPages" KeyFieldName="PageID" Width="100%">
                 <Columns>
-
+                    <dx:GridViewDataColumn Width="40" FixedStyle="Left">
+                        <DataItemTemplate>
+                            <a href="#" class="Edit" id="<%#Eval("PageID") %>">
+                                <img src="/Content/images/grid/edit.png" /></a>
+                        </DataItemTemplate>
+                    </dx:GridViewDataColumn>
+                    <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="false" ShowNewButton="false" ShowNewButtonInHeader="false" ButtonType="image" Caption=" ">
+                    </dx:GridViewCommandColumn>
                     <dx:GridViewBandColumn Caption="Title">
-                    <Columns>
-                <dx:GridViewDataTextColumn FieldName="TitleEN" Caption="English">
-                </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="TitleKA" Caption="ქართული">
-                </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="TitleRU" Caption="Русский">
-                </dx:GridViewDataTextColumn>
-                    </Columns>
-                </dx:GridViewBandColumn>
-                    <dx:GridViewBandColumn Caption="Description">
-                    <Columns>
-                <dx:GridViewDataTextColumn FieldName="DescriptionEN" Caption="English">
-                </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="DescriptionKA" Caption="ქართული">
-                </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="DescriptionRU" Caption="Русский">
-                </dx:GridViewDataTextColumn>
-                         </Columns>
-                </dx:GridViewBandColumn>
+                        <Columns>
+                            <dx:GridViewDataTextColumn FieldName="TitleEN" Caption="English">
+                            </dx:GridViewDataTextColumn>
+                            <dx:GridViewDataTextColumn FieldName="TitleKA" Caption="ქართული">
+                            </dx:GridViewDataTextColumn>
+                            <dx:GridViewDataTextColumn FieldName="TitleRU" Caption="Русский">
+                            </dx:GridViewDataTextColumn>
+                        </Columns>
+                    </dx:GridViewBandColumn>
                     <dx:GridViewDataTextColumn FieldName="URL">
                     </dx:GridViewDataTextColumn>
                     <dx:GridViewDataTextColumn FieldName="Note">
                     </dx:GridViewDataTextColumn>
                     <dx:GridViewDataCheckColumn FieldName="IsVisible">
                     </dx:GridViewDataCheckColumn>
-                    <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="True" ShowNewButton="true" ShowNewButtonInHeader="false" ButtonType="image" Caption=" ">
-                    </dx:GridViewCommandColumn>
                     <dx:GridViewDataComboBoxColumn FieldName="TemplateID" VisibleIndex="3">
                         <PropertiesComboBox DataSourceID="dsTemplates" TextField="Caption" ValueField="DictionaryID">
                         </PropertiesComboBox>
@@ -54,7 +50,7 @@
                 </Columns>
             </dx:ASPxGridView>
         </div>
-        <asp:ObjectDataSource ID="dsPages" runat="server" DeleteMethod="SP_Pages" InsertMethod="SP_Pages" SelectMethod="ListPages" TypeName="Core.CM.PagesRepository" UpdateMethod="SP_Pages">
+        <asp:ObjectDataSource ID="dsPages" runat="server" DeleteMethod="SP_Pages" SelectMethod="ListPages" TypeName="Core.CM.PagesRepository">
             <DeleteParameters>
                 <asp:Parameter Name="iud" Type="Int32" DefaultValue="2" />
                 <asp:Parameter Name="PageID" Type="Int32" />
@@ -71,38 +67,9 @@
                 <asp:Parameter Name="GalleryID" Type="Int32" />
                 <asp:Parameter Name="IsVisible" Type="Boolean" />
             </DeleteParameters>
-            <InsertParameters>
-                <asp:Parameter Name="iud" Type="Int32" DefaultValue="0" />
-                <asp:Parameter Name="PageID" Type="Int32" />
-                <asp:Parameter Name="ParentID" Type="Int32" />
-                <asp:Parameter Name="TitleEN" Type="String" />
-                <asp:Parameter Name="TitleKA" Type="String" />
-                <asp:Parameter Name="TitleRU" Type="String" />
-                <asp:Parameter Name="DescriptionEN" Type="String" />
-                <asp:Parameter Name="DescriptionKA" Type="String" />
-                <asp:Parameter Name="DescriptionRU" Type="String" />
-                <asp:Parameter Name="TemplateID" Type="Int32" />
-                <asp:Parameter Name="URL" Type="String" />
-                <asp:Parameter Name="Note" Type="String" />
-                <asp:Parameter Name="GalleryID" Type="Int32" />
-                <asp:Parameter Name="IsVisible" Type="Boolean" />
-            </InsertParameters>
-            <UpdateParameters>
-                <asp:Parameter Name="iud" Type="Int32" DefaultValue="1" />
-                <asp:Parameter Name="PageID" Type="Int32" />
-                <asp:Parameter Name="ParentID" Type="Int32" />
-                <asp:Parameter Name="TitleEN" Type="String" />
-                <asp:Parameter Name="TitleKA" Type="String" />
-                <asp:Parameter Name="TitleRU" Type="String" />
-                <asp:Parameter Name="DescriptionEN" Type="String" />
-                <asp:Parameter Name="DescriptionKA" Type="String" />
-                <asp:Parameter Name="DescriptionRU" Type="String" />
-                <asp:Parameter Name="TemplateID" Type="Int32" />
-                <asp:Parameter Name="URL" Type="String" />
-                <asp:Parameter Name="Note" Type="String" />
-                <asp:Parameter Name="GalleryID" Type="Int32" />
-                <asp:Parameter Name="IsVisible" Type="Boolean" />
-            </UpdateParameters>
+            <SelectParameters>
+                <asp:Parameter Name="ID" Type="Int32" />
+            </SelectParameters>
         </asp:ObjectDataSource>
         <asp:ObjectDataSource ID="dsTemplates" runat="server" SelectMethod="ListDictionary" TypeName="Core.Tools.DictionariesRepository">
             <SelectParameters>
@@ -117,10 +84,22 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ScriptsPlaceHolder" runat="server">
     <script>
         $(function () {
+
+            InitAction();
+
             $("#btnAddnew").click(function () {
-                gridPages.AddNewRow();
+                ShowPopupPage("/manager/popups/AddEditPages.aspx")
+                return false;
             });
 
         });
+
+        function InitAction() {
+
+            $(".Edit").click(function () {
+                ShowPopupPage("/manager/popups/AddEditPages.aspx?id=" + $(this).prop("id"));
+                return false;
+            });
+        }
     </script>
 </asp:Content>

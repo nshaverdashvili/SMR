@@ -57,13 +57,13 @@ namespace Core.CM
     public class PagesRepository : ObjectBase
     {
         public int? ID { get; set; }
-        public List<Pages> ListPages()
+        public List<Pages> ListPages(int? ID=null)
         {
             return TryToReturn(string.Format("Core.CM.PagesRepository.ListPages()"), () =>
             {
                 using (var db = DB.DBCon.GetCMDataContext())
                 {
-                    return db.fn_List_Pages(null).Select(s => new Pages
+                    return db.fn_List_Pages(ID).Select(s => new Pages
                     {
                         PageID=s.PageID,
                         ParentID=s.ParentID,

@@ -1,0 +1,12 @@
+
+
+------------------------------------
+http://localhost:12175/manager/popups/AddEditPages.aspx - 9/6/2015 3:34:35 PM
+Source File - d:\gitProjects\SMR\Core\CM\Pages.cs
+Line Number - 89
+SP_Pages(iud = 0, PageID = 0, ParentID = , TitleEN = zxczxczxczxc, TitleKA = zxczxczxczxczxz zzzxz, TitleRU = ваывафывфывфыв, DescriptionEN = asdasdasdasd, DescriptionKA = დსფსდასდფასდასდასდასდ, DescriptionRU = ываываываыва, TemplateID = 7, URL = фыфывф, Note = sadsdasdasdas, GalleryID = 4, IsVisible = True) --- Cannot insert the value NULL into column 'ParentID', table 'SMR.dbo.t_Pages'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+
+
+------------------------------------
+

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Core.Tools;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,7 +12,8 @@ namespace SMR.Manager.CM
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            litHeader.Text += Plugins.fancyboxCSS();
+            litHeader.Text += Plugins.fancyboxJS();
         }
     }
 }
