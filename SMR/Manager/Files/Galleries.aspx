@@ -56,7 +56,11 @@
                                     </DataItemTemplate>
                                 </dx:GridViewDataTextColumn>
                                 <dx:GridViewDataComboBoxColumn FieldName="FileID" Width="200" Caption="File Name">
-                                    <PropertiesComboBox DataSourceID="dsFiles" TextField="FileName" ValueField="FileID">
+                                    <PropertiesComboBox DataSourceID="dsFiles" ValueField="FileID" TextFormatString="{0}">
+                                        <Columns>
+                                            <dx:ListBoxColumn FieldName="FileName" />
+                                            <dx:ListBoxColumn FieldName="Description" />
+                                        </Columns>
                                     </PropertiesComboBox>
                                 </dx:GridViewDataComboBoxColumn>
                                 <dx:GridViewDataCheckColumn FieldName="IsDefault" Width="100">

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Manager/Popups/PopupMaster.Master" AutoEventWireup="true" CodeBehind="AddEditPages.aspx.cs" Inherits="SMR.Manager.Popups.AddEditPages" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Manager/Popups/PopupMaster.Master" AutoEventWireup="true" CodeBehind="AddEditPages.aspx.cs" Inherits="SMR.Manager.Popups.AddEditPages" ValidateRequest="false" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <asp:Literal runat="server" ID="litHead"></asp:Literal>
