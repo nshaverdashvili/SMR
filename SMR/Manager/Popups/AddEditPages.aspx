@@ -96,15 +96,15 @@
         </ul>
         <div class="form-group descgroup" id="groupDescEN">
             <label for="txtDescEN"></label>
-            <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control tinymce" ID="txtDescEN" ClientIDMode="Static"></asp:TextBox>
+            <asp:TextBox runat="server" TextMode="MultiLine" Rows="8" CssClass="form-control tinymce" ID="txtDescEN" ClientIDMode="Static"></asp:TextBox>
         </div>
         <div class="form-group descgroup hidden" id="groupDescKA">
             <label for="txtDescKA"></label>
-            <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control tinymce" ID="txtDescKA" ClientIDMode="Static"></asp:TextBox>
+            <asp:TextBox runat="server" TextMode="MultiLine" Rows="8" CssClass="form-control tinymce" ID="txtDescKA" ClientIDMode="Static"></asp:TextBox>
         </div>
         <div class="form-group descgroup hidden" id="groupDescRU">
             <label for="txtDescRU"></label>
-            <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control tinymce" ID="txtDescRU" ClientIDMode="Static"></asp:TextBox>
+            <asp:TextBox runat="server" TextMode="MultiLine" Rows="8" CssClass="form-control tinymce" ID="txtDescRU" ClientIDMode="Static"></asp:TextBox>
         </div>
         <div class="form-group">
             <div class="checkbox">

@@ -49,12 +49,10 @@ namespace SMR
         private void InitStartup()
         {
 
-            rptMainManu.DataSource = p.ListPermissions().Where(w => w.Level == 1 && w.CodeName == "1");
+            rptMainManu.DataSource = p.ListPermissions().Where(w => w.Level == 1 && w.CodeName == "1" && w.Caption != " ");
             rptMainManu.DataBind();
-            rptLeftManu.DataSource = p.ListPermissions().Where(w => w.Level == 1 && w.CodeName == "3");
+            rptLeftManu.DataSource = p.ListPermissions().Where(w => w.Level == 1 && w.CodeName == "3" && w.Caption != " ");
             rptLeftManu.DataBind();
-            rptFooterManu.DataSource = p.ListPermissions().Where(w => w.Level == 1 && w.CodeName == "1");
-            rptFooterManu.DataBind();
 
         }
 
@@ -72,6 +70,24 @@ namespace SMR
 
                 }
             }
+        }
+
+        protected void LangChange_OnClick(object sender, EventArgs e)
+        {
+            var Culture = CultureHelper.GetImplementedCulture(((LinkButton)sender).ToolTip);
+            var cookie = Request.Cookies["CurrentLanguage"];
+            if (cookie!= null)
+            {
+                cookie.Value = Culture;
+            }
+            else
+            {
+                cookie = new HttpCookie("CurrentLanguage");
+                cookie.Value = Culture;
+                cookie.Expires = DateTime.Now.AddYears(1);
+            }
+            Response.Cookies.Add(cookie);
+            Response.Redirect(Request.Url.OriginalString);
         }
     }
 }

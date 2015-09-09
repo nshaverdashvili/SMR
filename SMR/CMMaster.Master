@@ -28,6 +28,11 @@
                         </span>
 
                     </div>
+                    <div class="language">                        
+                        <asp:LinkButton Text="EN" runat="server" ID="btnEn" OnClick="LangChange_OnClick" ToolTip="en-US" />
+                        <asp:LinkButton Text="RU" runat="server" ID="btnRU" OnClick="LangChange_OnClick" ToolTip="ru-RU"/>
+                        <asp:LinkButton Text="GE" runat="server" ID="btnGe" OnClick="LangChange_OnClick" ToolTip="ka-GE"/>
+                    </div>
                     <div class="left">
                         <nav class="navbar navbar-default">
                             <div class="container-fluid">
