@@ -10,7 +10,7 @@ using System.Web.UI.WebControls;
 
 namespace SMR.Manager.Popups
 {
-    public partial class AddEditPages : System.Web.UI.Page
+    public partial class AddEditPages : Models.PageBase // System.Web.UI.Page
     {
         int _ID;
         PagesRepository pr = new PagesRepository();

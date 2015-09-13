@@ -38,8 +38,12 @@ namespace SMR.Manager.Popups
                 txtFulltxtEN.Text = item.FullTextEN;
                 txtFullTextKA.Text = item.FullTextKA;
                 txtFullTextRU.Text = item.FullTextRU;
+                txtSortVal.Text = string.Format("{0}", item.SortVal);
                 chkVisible.Checked = item.IsVisible.Value;
-                if (item.GalleryID != null)
+                chkVisibleSliderEN.Checked = item.IsVisibleSliderEN.Value;
+                chkVisibleSliderKA.Checked = item.IsVisibleSliderKA.Value;
+                chkVisibleSliderRU.Checked = item.IsVisibleSliderRU.Value;
+                    if (item.GalleryID != null)
                     ddGalleryID.SelectedValue = item.GalleryID.ToString();
                 txtVideoURL.Text = item.VideoURL;
             }
@@ -52,7 +56,7 @@ namespace SMR.Manager.Popups
             var iud = (byte)(_ID > 0 ? 1 : 0);
             Nr.SP_News(iud, _ID, DateTime.Parse(txtDate.Text), txtTitleEN.Text, txtTitleKA.Text, txtTitleRU.Text, txtDescEN.Text, txtDescKA.Text, txtDescRU.Text, 
                 txtFulltxtEN.Text, txtFullTextKA.Text, txtFullTextRU.Text,
-               int.Parse(ddCategoryID.SelectedValue), null, chkVisible.Checked, txtVideoURL.Text, int.Parse(ddGalleryID.SelectedValue)
+               int.Parse(ddCategoryID.SelectedValue), int.Parse(string.IsNullOrEmpty(txtSortVal.Text) ? "0" : txtSortVal.Text), chkVisible.Checked, chkVisibleSliderEN.Checked, chkVisibleSliderKA.Checked, chkVisibleSliderRU.Checked, txtVideoURL.Text, int.Parse(ddGalleryID.SelectedValue)
                );
             if (Nr.IsError)
             {

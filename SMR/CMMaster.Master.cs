@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Text;
 using Core.Tools;
 using Core.UM;
+using Core.CM;
 
 namespace SMR
 {
@@ -23,6 +24,10 @@ namespace SMR
                 phCalendar.Visible = value;
             }
         }
+
+        public string PageUrl;
+        public string PageTitle;
+        public string Description;
         PermissionsRepository p = new PermissionsRepository();
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -33,6 +38,11 @@ namespace SMR
         private void LoadPlugins()
         {
             var IncludePlugins = new StringBuilder();
+            IncludePlugins.AppendFormat("<meta property=\"og:url\" content=\"{0}\" />",Request.Url.OriginalString);
+            IncludePlugins.Append("<meta property=\"og:type\" content=\"wesite\" />");
+           // IncludePlugins.AppendFormat("<meta property=\"og:title\" content=\"{0}\" />", Page.Title);
+           // IncludePlugins.AppendFormat("<meta property=\"og:description\" content=\"{0}\" />",  Description);
+           // IncludePlugins.Append("<meta property=\"og:image\" content=\"http://www.your-domain.com/path/image.jpg \" />");
 
             IncludePlugins.Append(Plugins.bootstrapCSS());
             IncludePlugins.Append(Plugins.normalizeCSS());
@@ -53,6 +63,11 @@ namespace SMR
             rptMainManu.DataBind();
             rptLeftManu.DataSource = p.ListPermissions().Where(w => w.Level == 1 && w.CodeName == "3" && w.Caption != " ");
             rptLeftManu.DataBind();
+            var Slider = new NewsRepository().ListNewsSlider(CultureHelper.GetCurrentCulture()).Where(w => w.IsVisible.Value).Take(5);
+            rptSlider.DataSource = Slider;
+            rptSlider.DataBind();
+            rptSliderText.DataSource = Slider;
+            rptSliderText.DataBind();
 
         }
 
