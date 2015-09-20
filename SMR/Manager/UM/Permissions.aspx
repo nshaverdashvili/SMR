@@ -54,7 +54,8 @@
                     </DeleteButton>
                 </dx:TreeListCommandColumn>
             </Columns>
-            <SettingsBehavior AllowFocusedNode="true" />
+            <SettingsBehavior AllowFocusedNode="true" AllowDragDrop="true" />
+            <SettingsEditing AllowNodeDragDrop="True" />
         </dx:ASPxTreeList>
         </div>
     </div>

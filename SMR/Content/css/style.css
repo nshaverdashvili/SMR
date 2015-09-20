@@ -41,6 +41,9 @@ body {
     width: 1321px;
     margin: 0 auto;
 }
+.hidden {
+    display:none;
+}
 
 #header.row {
     background: #dde9ef;
@@ -449,3 +452,38 @@ label.chckbox {
 .ui-datepicker * {
     font-family: "nino";
 }
+.files .item{
+    margin-top:10px;
+}
+.files .item >a{
+    display:block;
+    line-height:21px;
+    font-family:'nino';
+    background:#337ab7;
+    padding:10px 10px 5px 10px;
+    border-radius:3px;
+    color:#fff;
+}
+.files .item > a:hover {
+    background:#2e6da4;
+}
+.files .item>.file{
+    padding:10px;
+    background:#f0f0f0;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -17,24 +17,6 @@
     <Parameter Name="IsVisible" Parameter="isVisible" Type="System.Boolean" DbType="Bit" />
     <Return Type="System.Int32" />
   </Function>
-  <Function Name="dbo.fn_List_Pages" Method="fn_List_Pages" IsComposable="true">
-    <Parameter Name="PageID" Parameter="pageID" Type="System.Int32" DbType="Int" />
-    <ElementType Name="fn_List_PagesResult">
-      <Column Name="PageID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="ParentID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="TitleEN" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
-      <Column Name="TitleKA" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="TitleRU" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="DescriptionEN" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="DescriptionKA" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="DescriptionRU" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="TemplateID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="URL" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
-      <Column Name="Note" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
-      <Column Name="GalleryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.sp_News" Method="sp_News">
     <Parameter Name="iud" Type="System.Int32" DbType="Int" />
     <Parameter Name="NewsID" Parameter="newsID" Type="System.Int32" DbType="Int" Direction="InOut" />
@@ -106,6 +88,25 @@
       <Column Name="VideoURL" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
       <Column Name="GalleryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="URL" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.fn_List_Pages" Method="fn_List_Pages" IsComposable="true">
+    <Parameter Name="PageID" Parameter="pageID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="fn_List_PagesResult">
+      <Column Name="PageID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ParentID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="TitleEN" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TitleKA" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TitleRU" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="DescriptionEN" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DescriptionKA" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DescriptionRU" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TemplateID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="URL" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="GalleryID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="FileUrl" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
     </ElementType>
   </Function>
 </Database>

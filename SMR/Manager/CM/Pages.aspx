@@ -23,6 +23,8 @@
                     </dx:GridViewDataColumn>
                     <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="false" ShowNewButton="false" ShowNewButtonInHeader="false" ButtonType="image" Caption=" ">
                     </dx:GridViewCommandColumn>
+                    <dx:GridViewDataTextColumn FieldName="PageID" Caption="ID">
+                    </dx:GridViewDataTextColumn>
                     <dx:GridViewBandColumn Caption="Title">
                         <Columns>
                             <dx:GridViewDataTextColumn FieldName="TitleEN" Caption="English">

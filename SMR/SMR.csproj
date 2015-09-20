@@ -197,6 +197,8 @@
     <Content Include="Content\css\admin.css" />
     <Content Include="Content\css\timeline.css" />
     <Content Include="Content\images\bg1.jpg" />
+    <Content Include="detailsPage.aspx" />
+    <Content Include="FilePage.aspx" />
     <Content Include="Manager\Popups\AddEditPages.aspx" />
     <Content Include="NewsList.aspx" />
     <Content Include="Plugins\jqueryUI\datepicker-ka.js" />
@@ -476,6 +478,20 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="detailsPage.aspx.cs">
+      <DependentUpon>detailsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="detailsPage.aspx.designer.cs">
+      <DependentUpon>detailsPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FilePage.aspx.cs">
+      <DependentUpon>FilePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FilePage.aspx.designer.cs">
+      <DependentUpon>FilePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

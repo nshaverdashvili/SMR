@@ -70,12 +70,6 @@ namespace Core.DB
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.fn_List_Pages", IsComposable=true)]
-		public IQueryable<fn_List_PagesResult> fn_List_Pages([global::System.Data.Linq.Mapping.ParameterAttribute(Name="PageID", DbType="Int")] System.Nullable<int> pageID)
-		{
-			return this.CreateMethodCallQuery<fn_List_PagesResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), pageID);
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_News")]
 		public int sp_News(
 					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> iud, 
@@ -115,247 +109,11 @@ namespace Core.DB
 		{
 			return this.CreateMethodCallQuery<fn_List_NewsForSliderResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), isVisibleSlider);
 		}
-	}
-	
-	public partial class fn_List_PagesResult
-	{
 		
-		private int _PageID;
-		
-		private int _ParentID;
-		
-		private string _TitleEN;
-		
-		private string _TitleKA;
-		
-		private string _TitleRU;
-		
-		private string _DescriptionEN;
-		
-		private string _DescriptionKA;
-		
-		private string _DescriptionRU;
-		
-		private System.Nullable<int> _TemplateID;
-		
-		private string _URL;
-		
-		private string _Note;
-		
-		private System.Nullable<int> _GalleryID;
-		
-		private bool _IsVisible;
-		
-		public fn_List_PagesResult()
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.fn_List_Pages", IsComposable=true)]
+		public IQueryable<fn_List_PagesResult> fn_List_Pages([global::System.Data.Linq.Mapping.ParameterAttribute(Name="PageID", DbType="Int")] System.Nullable<int> pageID)
 		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PageID", DbType="Int NOT NULL")]
-		public int PageID
-		{
-			get
-			{
-				return this._PageID;
-			}
-			set
-			{
-				if ((this._PageID != value))
-				{
-					this._PageID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ParentID", DbType="Int NOT NULL")]
-		public int ParentID
-		{
-			get
-			{
-				return this._ParentID;
-			}
-			set
-			{
-				if ((this._ParentID != value))
-				{
-					this._ParentID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TitleEN", DbType="NVarChar(200) NOT NULL", CanBeNull=false)]
-		public string TitleEN
-		{
-			get
-			{
-				return this._TitleEN;
-			}
-			set
-			{
-				if ((this._TitleEN != value))
-				{
-					this._TitleEN = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TitleKA", DbType="NVarChar(200)")]
-		public string TitleKA
-		{
-			get
-			{
-				return this._TitleKA;
-			}
-			set
-			{
-				if ((this._TitleKA != value))
-				{
-					this._TitleKA = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TitleRU", DbType="NVarChar(200)")]
-		public string TitleRU
-		{
-			get
-			{
-				return this._TitleRU;
-			}
-			set
-			{
-				if ((this._TitleRU != value))
-				{
-					this._TitleRU = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DescriptionEN", DbType="NVarChar(200)")]
-		public string DescriptionEN
-		{
-			get
-			{
-				return this._DescriptionEN;
-			}
-			set
-			{
-				if ((this._DescriptionEN != value))
-				{
-					this._DescriptionEN = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DescriptionKA", DbType="NVarChar(200)")]
-		public string DescriptionKA
-		{
-			get
-			{
-				return this._DescriptionKA;
-			}
-			set
-			{
-				if ((this._DescriptionKA != value))
-				{
-					this._DescriptionKA = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DescriptionRU", DbType="NVarChar(200)")]
-		public string DescriptionRU
-		{
-			get
-			{
-				return this._DescriptionRU;
-			}
-			set
-			{
-				if ((this._DescriptionRU != value))
-				{
-					this._DescriptionRU = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TemplateID", DbType="Int")]
-		public System.Nullable<int> TemplateID
-		{
-			get
-			{
-				return this._TemplateID;
-			}
-			set
-			{
-				if ((this._TemplateID != value))
-				{
-					this._TemplateID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_URL", DbType="NVarChar(250)")]
-		public string URL
-		{
-			get
-			{
-				return this._URL;
-			}
-			set
-			{
-				if ((this._URL != value))
-				{
-					this._URL = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Note", DbType="NVarChar(500)")]
-		public string Note
-		{
-			get
-			{
-				return this._Note;
-			}
-			set
-			{
-				if ((this._Note != value))
-				{
-					this._Note = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GalleryID", DbType="Int")]
-		public System.Nullable<int> GalleryID
-		{
-			get
-			{
-				return this._GalleryID;
-			}
-			set
-			{
-				if ((this._GalleryID != value))
-				{
-					this._GalleryID = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsVisible", DbType="Bit NOT NULL")]
-		public bool IsVisible
-		{
-			get
-			{
-				return this._IsVisible;
-			}
-			set
-			{
-				if ((this._IsVisible != value))
-				{
-					this._IsVisible = value;
-				}
-			}
+			return this.CreateMethodCallQuery<fn_List_PagesResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), pageID);
 		}
 	}
 	
@@ -1090,6 +848,266 @@ namespace Core.DB
 				if ((this._URL != value))
 				{
 					this._URL = value;
+				}
+			}
+		}
+	}
+	
+	public partial class fn_List_PagesResult
+	{
+		
+		private int _PageID;
+		
+		private System.Nullable<int> _ParentID;
+		
+		private string _TitleEN;
+		
+		private string _TitleKA;
+		
+		private string _TitleRU;
+		
+		private string _DescriptionEN;
+		
+		private string _DescriptionKA;
+		
+		private string _DescriptionRU;
+		
+		private System.Nullable<int> _TemplateID;
+		
+		private string _URL;
+		
+		private string _Note;
+		
+		private System.Nullable<int> _GalleryID;
+		
+		private bool _IsVisible;
+		
+		private string _FileUrl;
+		
+		public fn_List_PagesResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PageID", DbType="Int NOT NULL")]
+		public int PageID
+		{
+			get
+			{
+				return this._PageID;
+			}
+			set
+			{
+				if ((this._PageID != value))
+				{
+					this._PageID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ParentID", DbType="Int")]
+		public System.Nullable<int> ParentID
+		{
+			get
+			{
+				return this._ParentID;
+			}
+			set
+			{
+				if ((this._ParentID != value))
+				{
+					this._ParentID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TitleEN", DbType="NVarChar(200)")]
+		public string TitleEN
+		{
+			get
+			{
+				return this._TitleEN;
+			}
+			set
+			{
+				if ((this._TitleEN != value))
+				{
+					this._TitleEN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TitleKA", DbType="NVarChar(200)")]
+		public string TitleKA
+		{
+			get
+			{
+				return this._TitleKA;
+			}
+			set
+			{
+				if ((this._TitleKA != value))
+				{
+					this._TitleKA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TitleRU", DbType="NVarChar(200)")]
+		public string TitleRU
+		{
+			get
+			{
+				return this._TitleRU;
+			}
+			set
+			{
+				if ((this._TitleRU != value))
+				{
+					this._TitleRU = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DescriptionEN", DbType="NVarChar(MAX)")]
+		public string DescriptionEN
+		{
+			get
+			{
+				return this._DescriptionEN;
+			}
+			set
+			{
+				if ((this._DescriptionEN != value))
+				{
+					this._DescriptionEN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DescriptionKA", DbType="NVarChar(MAX)")]
+		public string DescriptionKA
+		{
+			get
+			{
+				return this._DescriptionKA;
+			}
+			set
+			{
+				if ((this._DescriptionKA != value))
+				{
+					this._DescriptionKA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DescriptionRU", DbType="NVarChar(MAX)")]
+		public string DescriptionRU
+		{
+			get
+			{
+				return this._DescriptionRU;
+			}
+			set
+			{
+				if ((this._DescriptionRU != value))
+				{
+					this._DescriptionRU = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TemplateID", DbType="Int")]
+		public System.Nullable<int> TemplateID
+		{
+			get
+			{
+				return this._TemplateID;
+			}
+			set
+			{
+				if ((this._TemplateID != value))
+				{
+					this._TemplateID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_URL", DbType="NVarChar(250)")]
+		public string URL
+		{
+			get
+			{
+				return this._URL;
+			}
+			set
+			{
+				if ((this._URL != value))
+				{
+					this._URL = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Note", DbType="NVarChar(500)")]
+		public string Note
+		{
+			get
+			{
+				return this._Note;
+			}
+			set
+			{
+				if ((this._Note != value))
+				{
+					this._Note = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GalleryID", DbType="Int")]
+		public System.Nullable<int> GalleryID
+		{
+			get
+			{
+				return this._GalleryID;
+			}
+			set
+			{
+				if ((this._GalleryID != value))
+				{
+					this._GalleryID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsVisible", DbType="Bit NOT NULL")]
+		public bool IsVisible
+		{
+			get
+			{
+				return this._IsVisible;
+			}
+			set
+			{
+				if ((this._IsVisible != value))
+				{
+					this._IsVisible = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FileUrl", DbType="NVarChar(250)")]
+		public string FileUrl
+		{
+			get
+			{
+				return this._FileUrl;
+			}
+			set
+			{
+				if ((this._FileUrl != value))
+				{
+					this._FileUrl = value;
 				}
 			}
 		}
