@@ -20,7 +20,7 @@
                 <div class="row mainGradient" id="nav">
                     <div class="left logo">
                         <span>
-                            <img src="Content/images/logo.png" />
+                            <img src="/Content/images/logo.png" />
                         </span>
                         <span>
                             <b>შერიგებისა და სამოქალაქო თანასწორობის</b>
@@ -174,8 +174,8 @@
                             </span>
                         </div>
                         <div class="col-md-6">
-                            <img src="Content/images/icons/icon1.png" class="right" />
-                            <img src="Content/images/icons/icon3.png" class="right" />
+                            <img src="/Content/images/icons/icon1.png" class="right" />
+                            <img src="/Content/images/icons/icon3.png" class="right" />
                         </div>
                     </div>
                 </div>

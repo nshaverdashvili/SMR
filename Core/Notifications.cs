@@ -128,7 +128,7 @@ namespace Core
         }
 
         public void SP_Notifications(int? iud, int RecordID, string URL , string FName , string LName , string Address, string  Mobile , string Fax ,
-                                    string Email , string PassportN , string Nationality , string BDate , bool? Sex , string EnteryNote , DateTime? EnteryDate ,
+                                    string Email , string PassportN , string Nationality , DateTime BDate , bool? Sex , string EnteryNote , DateTime? EnteryDate ,
                                     DateTime? LeaveDate , string Organisator , string TransportType , string Destination , string HostName , string HostContact ,
                                     string EmFName , string EmLName , string EmAddress , string EmMobile , string VisitorStatus , string ProjectTitle ,string ProjectNote ,
                                     DateTime? ProjectFDate , DateTime? ProjectLDate , string Partner, bool? IsSent , string Note , string WebPage , string RegFileURL ,

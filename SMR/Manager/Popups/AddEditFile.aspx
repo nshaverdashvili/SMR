@@ -37,7 +37,7 @@
         <div class="form-group">
             <label for="txtFileName">File Name</label>
             <asp:TextBox runat="server" CssClass="form-control" ID="txtFileName" ClientIDMode="Static"></asp:TextBox>
-            <asp:RequiredFieldValidator runat="server" ID="valFileName" ControlToValidate="txtFileName" Display="Dynamic" 
+            <asp:RequiredFieldValidator runat="server" ID="valFileName" ControlToValidate="txtFileName" Display="Dynamic"
                 ErrorMessage="ფაილის სახელი სავალდებულოა" CssClass="text-danger" ValidationGroup="vg"></asp:RequiredFieldValidator>
         </div>
         <div class="form-group">
@@ -47,57 +47,44 @@
             </asp:DropDownList>
         </div>
 
-        <!--NINA-->
-
         <ul class="nav nav-tabs" data-tabclass=".descgroup">
-          <li role="presentation" class="active"><a href="#groupDescEN">Description EN</a></li>
-          <li role="presentation"><a href="#groupDescKA">Description KA</a></li>
-          <li role="presentation"><a href="#groupDescRU">Description RU</a></li>
+            <li role="presentation" class="active"><a href="#groupDescEN">Description EN</a></li>
+            <li role="presentation"><a href="#groupDescKA">Description KA</a></li>
+            <li role="presentation"><a href="#groupDescRU">Description RU</a></li>
         </ul>
-        <div class="form-group descgroup" id="groupDescEN" >
-            <label for="txtDescriptionEN"></label>
-            <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control" ID="txtDescriptionEN" ClientIDMode="Static"></asp:TextBox>
+        <div>
+            <div class="form-group descgroup" id="groupDescEN">
+                <label for="txtDescriptionEN"></label>
+                <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control" ID="txtDescriptionEN" ClientIDMode="Static"></asp:TextBox>
+            </div>
+            <div class="form-group descgroup hidden" id="groupDescKA">
+                <label for="txtDescriptionKA"></label>
+                <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control" ID="txtDescriptionKA" ClientIDMode="Static"></asp:TextBox>
+            </div>
+            <div class="form-group descgroup hidden" id="groupDescRU">
+                <label for="txtDescriptionRU"></label>
+                <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control" ID="txtDescriptionRU" ClientIDMode="Static"></asp:TextBox>
+            </div>
+
+            <div class="form-group">
+                <label for="fuURL">File input</label>
+                <asp:FileUpload runat="server" ID="fuURL" ClientIDMode="Static" />
+                <p class="help-block">დასაშვები ფაილებია: jpg, png, pdf, doc</p>
+                <p class="text-danger">
+                    <asp:Literal ID="litUrl" runat="server" />
+                </p>
+                <asp:HiddenField runat="server" ID="hfURL" ClientIDMode="Static" />
+                <asp:RequiredFieldValidator runat="server" ID="valfuURL" ControlToValidate="fuURL" Display="Dynamic"
+                    ErrorMessage="ფაილის ატვირთვა სავალდებულოა" CssClass="text-danger" ValidationGroup="vg"></asp:RequiredFieldValidator>
+            </div>
         </div>
-        <div class="form-group descgroup hidden" id="groupDescKA">
-            <label for="txtDescriptionKA"></label>
-            <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control" ID="txtDescriptionKA" ClientIDMode="Static"></asp:TextBox>
-        </div>
-        <div class="form-group descgroup hidden" id="groupDescRU">
-            <label for="txtDescriptionRU"></label>
-            <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control" ID="txtDescriptionRU" ClientIDMode="Static"></asp:TextBox>
-        </div>
-
-
-
-
-
-
-
-
-
-
-
-
-         
-
-
-        <div class="form-group">
-            <label for="fuURL">File input</label>
-            <asp:FileUpload runat="server" ID="fuURL" ClientIDMode="Static" />
-            <p class="help-block">დასაშვები ფაილებია: jpg, png, pdf, doc</p>
-            <p class="text-danger">
-                <asp:Literal ID="litUrl" runat="server" /></p>
-            <asp:HiddenField runat="server" ID="hfURL" ClientIDMode="Static" />
-            <asp:RequiredFieldValidator runat="server" ID="valfuURL" ControlToValidate="fuURL" Display="Dynamic" 
-                ErrorMessage="ფაილის ატვირთვა სავალდებულოა" CssClass="text-danger" ValidationGroup="vg"></asp:RequiredFieldValidator>
-        </div>
+        <asp:Button runat="server" CssClass="btn btn-lg btn-block btn-success" ClientIDMode="Static" Text="Save" ID="btnSave" OnClick="btnSave_Click" ValidationGroup="vg" />
+        <asp:ObjectDataSource ID="dsFileTypes" runat="server" SelectMethod="ListDictionary" TypeName="Core.Tools.DictionariesRepository">
+            <SelectParameters>
+                <asp:Parameter DefaultValue="1" Name="Lvl" Type="Int32" />
+                <asp:Parameter DefaultValue="1" Name="Code" Type="Int32" />
+                <asp:Parameter DefaultValue="" Name="IsVisible" Type="Boolean" />
+            </SelectParameters>
+        </asp:ObjectDataSource>
     </div>
-    <asp:Button runat="server" CssClass="btn btn-lg btn-block btn-success" ClientIDMode="Static" Text="Save" ID="btnSave" OnClick="btnSave_Click" ValidationGroup="vg" />
-    <asp:ObjectDataSource ID="dsFileTypes" runat="server" SelectMethod="ListDictionary" TypeName="Core.Tools.DictionariesRepository">
-        <SelectParameters>
-            <asp:Parameter DefaultValue="1" Name="Lvl" Type="Int32" />
-            <asp:Parameter DefaultValue="1" Name="Code" Type="Int32" />
-            <asp:Parameter DefaultValue="" Name="IsVisible" Type="Boolean" />
-        </SelectParameters>
-    </asp:ObjectDataSource>
 </asp:Content>

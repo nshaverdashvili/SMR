@@ -201,6 +201,8 @@
     <Content Include="FilePage.aspx" />
     <Content Include="Manager\Popups\AddEditPages.aspx" />
     <Content Include="NewsList.aspx" />
+    <Content Include="Notifications\NotifForm1.aspx" />
+    <Content Include="Notifications\Notifications.aspx" />
     <Content Include="Plugins\jqueryUI\datepicker-ka.js" />
     <Content Include="Plugins\jqueryUI\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Plugins\jqueryUI\images\ui-bg_flat_0_eeeeee_40x100.png" />
@@ -620,6 +622,20 @@
     </Compile>
     <Compile Include="NewsList.aspx.designer.cs">
       <DependentUpon>NewsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\NotifForm1.aspx.cs">
+      <DependentUpon>NotifForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notifications\NotifForm1.aspx.designer.cs">
+      <DependentUpon>NotifForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\Notifications.aspx.cs">
+      <DependentUpon>Notifications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notifications\Notifications.aspx.designer.cs">
+      <DependentUpon>Notifications.aspx</DependentUpon>
     </Compile>
     <Compile Include="Polygon.aspx.cs">
       <DependentUpon>Polygon.aspx</DependentUpon>

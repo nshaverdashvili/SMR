@@ -54,7 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="Notifications.cs" />
     <Compile Include="CM\News.cs" />
     <Compile Include="CM\Pages.cs" />
     <Compile Include="DB\CM.designer.cs">
