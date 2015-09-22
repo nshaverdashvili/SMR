@@ -274,6 +274,15 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.TextBox txtProjectGoal;
         
         /// <summary>
+        /// txtProjectFDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtProjectFDate;
+        
+        /// <summary>
         /// txtProjectLDate control.
         /// </summary>
         /// <remarks>
@@ -281,15 +290,6 @@ namespace SMR.Notifications {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtProjectLDate;
-        
-        /// <summary>
-        /// TextBox1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
         
         /// <summary>
         /// txtLocalPartner control.

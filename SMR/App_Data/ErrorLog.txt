@@ -10,3 +10,25 @@ The statement has been terminated.
 
 ------------------------------------
 
+
+
+------------------------------------
+http://localhost:12175/Notifications/Notifications.aspx - 22.09.2015 14:18:09
+Source File - d:\gitProjects\SMR\Core\UM\Permissions.cs
+Line Number - 53
+Core.UM.PermissionsRepository.ListPermissions() --- A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.)
+
+
+------------------------------------
+
+
+
+------------------------------------
+http://localhost:12175/Notifications/Notifications.aspx - 22.09.2015 14:19:05
+Source File - d:\gitProjects\SMR\Core\UM\Permissions.cs
+Line Number - 53
+Core.UM.PermissionsRepository.ListPermissions() --- A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond.)
+
+
+------------------------------------
+

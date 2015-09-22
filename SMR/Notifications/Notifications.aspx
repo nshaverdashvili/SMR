@@ -13,8 +13,6 @@
             </div>
         </div>
 
-
-
         <div class="row form">
             <h4>პერსონალური ინფორმაცია</h4>
             <div class="form-group">
@@ -163,14 +161,14 @@
             </div>
 
             <div class="form-group">
-                <label for="txtProjectLDate">დასრულების თარიღი</label>
-                <asp:TextBox runat="server" CssClass="form-control" ID="txtProjectLDate" ClientIDMode="Static"></asp:TextBox>
+                <label for="txtProjectFDate">დაწყების თარიღი</label>
+                <asp:TextBox runat="server" CssClass="form-control" ID="txtProjectFDate" ClientIDMode="Static"></asp:TextBox>
             </div>
 
             <div class="form-group">
-                <label for="txtProjectFDate">დაწყების თარიღი</label>
-                <asp:TextBox runat="server" CssClass="form-control" ID="TextBox1" ClientIDMode="Static"></asp:TextBox>
-            </div>
+                <label for="txtProjectLDate">დასრულების თარიღი</label>
+                <asp:TextBox runat="server" CssClass="form-control" ID="txtProjectLDate" ClientIDMode="Static"></asp:TextBox>
+            </div>                       
 
             <div class="form-group">
                 <label for="txtLocalPartner">ადგილობრივი პარტნიორი</label>
