@@ -9,7 +9,7 @@
     <asp:Literal ID="litPlugins" runat="server"></asp:Literal>
     <link href="/Content/css/fonts.css" rel="stylesheet" />
     <link href="/Content/css/style.css" rel="stylesheet" />
-    <script src="/Scripts/frontjs/global.js?<%=Guid.NewGuid() %>"></script>
+    <script src="/Scripts/frontjs/global.js?<%=Guid.NewGuid() %>"></script>    
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>

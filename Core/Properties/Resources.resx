@@ -171,4 +171,79 @@
   <data name="TextSave" xml:space="preserve">
     <value>შენახვა</value>
   </data>
+  <data name="Address" xml:space="preserve">
+    <value>მისამართი</value>
+  </data>
+  <data name="Dateofbirth" xml:space="preserve">
+    <value>დაბადების თარიღი</value>
+  </data>
+  <data name="Desc1" xml:space="preserve">
+    <value>ნოტიფიკაცია ოკუპირებულ ტერიტორიებზე შესვლის თაობაზე საქართველოში მომუშავე და ოკუპირებული რეგიონების მონახულების მსურველმა პირებმა საჭიროა შეავსონ ქვემდებარე ფორმა. სანოტიფიკაციო ფორმა არ აკისრებს სახელმწიფო მინისტრის აპარატს რაიმე პასუხისმგებლობას და არ წარმოადგენს ოკუპირებული რეგიონების მონახულების ნებართვას. სანოტიფიკაციო ფორმა არის მხოლოდ ინფორმაციული ხასიათის. საერთაშორისო ჟურნალისტების მიერ მედიააკრედიტაციის მიღების მიზნით გთხოვთ დაუკავშირდეთ საქართველოს საგარეო საქმეთა სამინისტროს ან გადახვიდეთ ამ ბმულზე http://www.mfa.gov.ge</value>
+  </data>
+  <data name="Destinationplace" xml:space="preserve">
+    <value>დანიშნულების ადგილი</value>
+  </data>
+  <data name="Durationofstay" xml:space="preserve">
+    <value>დროის შუალედი</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>ელ-ფოსტა</value>
+  </data>
+  <data name="EmergencyContacts" xml:space="preserve">
+    <value>გადაუდებელ შემთხვევაში საკონტაქტო პირი</value>
+  </data>
+  <data name="Fax" xml:space="preserve">
+    <value>ფაქსი</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>სახელი</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>-დან</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>სქესი</value>
+  </data>
+  <data name="HostContact" xml:space="preserve">
+    <value>მასპინძლის საკონტაქტო ინფორმაცია</value>
+  </data>
+  <data name="HostsName" xml:space="preserve">
+    <value>მასპინძლის სახელი, გვარი</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>გვარი</value>
+  </data>
+  <data name="Nationality" xml:space="preserve">
+    <value>მოქალაქეობა</value>
+  </data>
+  <data name="PassportNumber" xml:space="preserve">
+    <value>პასპორტის ნომერი</value>
+  </data>
+  <data name="PersonalInformation" xml:space="preserve">
+    <value>პერსონალური ინფორმაცია</value>
+  </data>
+  <data name="ProjectImplemented" xml:space="preserve">
+    <value>განსახორციელებელი პროექტი</value>
+  </data>
+  <data name="PurposeofVisit" xml:space="preserve">
+    <value>შესვლის მიზანი</value>
+  </data>
+  <data name="Telephone" xml:space="preserve">
+    <value>ტელეფონი</value>
+  </data>
+  <data name="Timeline" xml:space="preserve">
+    <value>დროის შუალედი</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>-მდე</value>
+  </data>
+  <data name="UploadPhoto" xml:space="preserve">
+    <value>ატვირთეთ ფოტო</value>
+  </data>
+  <data name="Vehicletype" xml:space="preserve">
+    <value>ტრანსპორტის სახე</value>
+  </data>
+  <data name="VisitOrganizedby" xml:space="preserve">
+    <value>ვიზიტის ორგანიზატორი</value>
+  </data>
 </root>

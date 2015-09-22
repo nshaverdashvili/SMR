@@ -58,6 +58,15 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.TextBox txtFName;
         
         /// <summary>
+        /// reqFname control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqFname;
+        
+        /// <summary>
         /// txtLName control.
         /// </summary>
         /// <remarks>
@@ -130,13 +139,13 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.TextBox txtBDate;
         
         /// <summary>
-        /// ddSex control.
+        /// ddGender control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddSex;
+        protected global::System.Web.UI.WebControls.DropDownList ddGender;
         
         /// <summary>
         /// txtFDates control.
@@ -317,5 +326,14 @@ namespace SMR.Notifications {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtNote;
+        
+        /// <summary>
+        /// dsGender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource dsGender;
     }
 }

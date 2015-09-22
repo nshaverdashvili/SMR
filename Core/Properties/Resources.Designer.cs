@@ -70,6 +70,15 @@ namespace Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to მისამართი.
+        /// </summary>
+        public static string Address {
+            get {
+                return ResourceManager.GetString("Address", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to კონტაქტი.
         /// </summary>
         public static string Contact {
@@ -88,11 +97,119 @@ namespace Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to დაბადების თარიღი.
+        /// </summary>
+        public static string Dateofbirth {
+            get {
+                return ResourceManager.GetString("Dateofbirth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ნოტიფიკაცია ოკუპირებულ ტერიტორიებზე შესვლის თაობაზე საქართველოში მომუშავე და ოკუპირებული რეგიონების მონახულების მსურველმა პირებმა საჭიროა შეავსონ ქვემდებარე ფორმა. სანოტიფიკაციო ფორმა არ აკისრებს სახელმწიფო მინისტრის აპარატს რაიმე პასუხისმგებლობას და არ წარმოადგენს ოკუპირებული რეგიონების მონახულების ნებართვას. სანოტიფიკაციო ფორმა არის მხოლოდ ინფორმაციული ხასიათის. საერთაშორისო ჟურნალისტების მიერ მედიააკრედიტაციის მიღების მიზნით გთხოვთ დაუკავშირდეთ საქართველოს საგარეო საქმეთა სამინისტროს ან გადახვიდეთ ამ ბმუ [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string Desc1 {
+            get {
+                return ResourceManager.GetString("Desc1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to დანიშნულების ადგილი.
+        /// </summary>
+        public static string Destinationplace {
+            get {
+                return ResourceManager.GetString("Destinationplace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to დროის შუალედი.
+        /// </summary>
+        public static string Durationofstay {
+            get {
+                return ResourceManager.GetString("Durationofstay", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ელ-ფოსტა.
+        /// </summary>
+        public static string Email {
+            get {
+                return ResourceManager.GetString("Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to გადაუდებელ შემთხვევაში საკონტაქტო პირი.
+        /// </summary>
+        public static string EmergencyContacts {
+            get {
+                return ResourceManager.GetString("EmergencyContacts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ფაქსი.
+        /// </summary>
+        public static string Fax {
+            get {
+                return ResourceManager.GetString("Fax", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to სახელი.
+        /// </summary>
+        public static string FirstName {
+            get {
+                return ResourceManager.GetString("FirstName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -დან.
+        /// </summary>
+        public static string From {
+            get {
+                return ResourceManager.GetString("From", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to გალერეა.
         /// </summary>
         public static string Gallery {
             get {
                 return ResourceManager.GetString("Gallery", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to სქესი.
+        /// </summary>
+        public static string Gender {
+            get {
+                return ResourceManager.GetString("Gender", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to მასპინძლის საკონტაქტო ინფორმაცია.
+        /// </summary>
+        public static string HostContact {
+            get {
+                return ResourceManager.GetString("HostContact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to მასპინძლის სახელი, გვარი.
+        /// </summary>
+        public static string HostsName {
+            get {
+                return ResourceManager.GetString("HostsName", resourceCulture);
             }
         }
         
@@ -115,6 +232,15 @@ namespace Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to გვარი.
+        /// </summary>
+        public static string LastName {
+            get {
+                return ResourceManager.GetString("LastName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to შესვლა.
         /// </summary>
         public static string Login {
@@ -129,6 +255,15 @@ namespace Core.Properties {
         public static string Main {
             get {
                 return ResourceManager.GetString("Main", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to მოქალაქეობა.
+        /// </summary>
+        public static string Nationality {
+            get {
+                return ResourceManager.GetString("Nationality", resourceCulture);
             }
         }
         
@@ -169,11 +304,47 @@ namespace Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to პასპორტის ნომერი.
+        /// </summary>
+        public static string PassportNumber {
+            get {
+                return ResourceManager.GetString("PassportNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to პაროლი.
         /// </summary>
         public static string Password {
             get {
                 return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to პერსონალური ინფორმაცია.
+        /// </summary>
+        public static string PersonalInformation {
+            get {
+                return ResourceManager.GetString("PersonalInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to განსახორციელებელი პროექტი.
+        /// </summary>
+        public static string ProjectImplemented {
+            get {
+                return ResourceManager.GetString("ProjectImplemented", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to შესვლის მიზანი.
+        /// </summary>
+        public static string PurposeofVisit {
+            get {
+                return ResourceManager.GetString("PurposeofVisit", resourceCulture);
             }
         }
         
@@ -196,6 +367,15 @@ namespace Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ტელეფონი.
+        /// </summary>
+        public static string Telephone {
+            get {
+                return ResourceManager.GetString("Telephone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to შენახვა.
         /// </summary>
         public static string TextSave {
@@ -205,11 +385,56 @@ namespace Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to დროის შუალედი.
+        /// </summary>
+        public static string Timeline {
+            get {
+                return ResourceManager.GetString("Timeline", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to -მდე.
+        /// </summary>
+        public static string To {
+            get {
+                return ResourceManager.GetString("To", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ატვირთეთ ფოტო.
+        /// </summary>
+        public static string UploadPhoto {
+            get {
+                return ResourceManager.GetString("UploadPhoto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to მომხმარებელი.
         /// </summary>
         public static string UserName {
             get {
                 return ResourceManager.GetString("UserName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ტრანსპორტის სახე.
+        /// </summary>
+        public static string Vehicletype {
+            get {
+                return ResourceManager.GetString("Vehicletype", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ვიზიტის ორგანიზატორი.
+        /// </summary>
+        public static string VisitOrganizedby {
+            get {
+                return ResourceManager.GetString("VisitOrganizedby", resourceCulture);
             }
         }
         

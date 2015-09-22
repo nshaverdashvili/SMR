@@ -171,4 +171,76 @@
   <data name="TextSave" xml:space="preserve">
     <value>Save</value>
   </data>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="Dateofbirth" xml:space="preserve">
+    <value>Date of birth</value>
+  </data>
+  <data name="Desc1" xml:space="preserve">
+    <value>SMR Online Notification Application Persons working or traveling to Georgia aiming to visit occupied regions are kindly asked to fill out the Notification Form. The Notification Form does not put any type of liability upon the Office of the State Minister. Neither does it serve as permission for entering the conflict region. The Notification Form has only informational character. In order to obtain media accreditation, please, contact Ministry of Foreign Affairs of Georgia or follow the link http://www.mfa.gov.ge</value>
+  </data>
+  <data name="Destinationplace" xml:space="preserve">
+    <value>Destination place</value>
+  </data>
+  <data name="Durationofstay" xml:space="preserve">
+    <value>Duration of stay</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="Emergency Contacts" xml:space="preserve">
+    <value>Emergency Contacts</value>
+  </data>
+  <data name="Fax" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="HostContact" xml:space="preserve">
+    <value>Contact details of the Host</value>
+  </data>
+  <data name="HostsName" xml:space="preserve">
+    <value>Hosts name and surname</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="Nationality" xml:space="preserve">
+    <value>Nationality</value>
+  </data>
+  <data name="PassportNumber" xml:space="preserve">
+    <value>Passport Number</value>
+  </data>
+  <data name="ProjectImplemented" xml:space="preserve">
+    <value>Project to be implemented</value>
+  </data>
+  <data name="PurposeofVisit" xml:space="preserve">
+    <value>Purpose of Visit</value>
+  </data>
+  <data name="Telephone" xml:space="preserve">
+    <value>Telephone</value>
+  </data>
+  <data name="Timeline" xml:space="preserve">
+    <value>Timeline</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="UploadPhoto" xml:space="preserve">
+    <value>Upload Photo</value>
+  </data>
+  <data name="Vehicletype" xml:space="preserve">
+    <value>Vehicle type</value>
+  </data>
+  <data name="VisitOrganizedby" xml:space="preserve">
+    <value>Visit Organized by</value>
+  </data>
 </root>

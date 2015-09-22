@@ -24,7 +24,7 @@ namespace SMR
                 phCalendar.Visible = value;
             }
         }
-
+        public string PluginsStr { set { litPlugins.Text += value; } }
         public string PageUrl;
         public string PageTitle;
         public string Description;
@@ -53,7 +53,7 @@ namespace SMR
             IncludePlugins.Append(Plugins.modernizrJS());
             IncludePlugins.Append(Plugins.bootstrapJS());
             IncludePlugins.Append(Plugins.jssorJS());
-            litPlugins.Text = IncludePlugins.ToString();
+            PluginsStr = IncludePlugins.ToString();
 
         }
         private void InitStartup()

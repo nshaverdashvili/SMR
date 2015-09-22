@@ -171,4 +171,82 @@
   <data name="TextSave" xml:space="preserve">
     <value>Сохронить</value>
   </data>
+  <data name="Address" xml:space="preserve">
+    <value>Адрес</value>
+  </data>
+  <data name="Dateofbirth" xml:space="preserve">
+    <value>Дата рождения</value>
+  </data>
+  <data name="Desc1" xml:space="preserve">
+    <value>Уведомительная форма о посещении оккупированных регионов
+Работающим в Грузии и желающим посетить оккупированные регионы страны иностранным гражданам необходимо заполнить уведомительную форму.
+Уведомительная форма не возлагает каких-либо обязательств на Аппарат государственного министра Грузии и не является разрешением на въезд в оккупированные регионы. Вышеуказанная форма носит информационный характер.
+Иностранным журналистам, желающим посетить оккупированные регионы Грузии необходимо ознакомиться с процедурами аккредитования, посетив интернет-страницу Министерства иностранных дел Грузии - http://www.mfa.gov.ge</value>
+  </data>
+  <data name="Destinationplace" xml:space="preserve">
+    <value>Укажите место назначения</value>
+  </data>
+  <data name="Durationofstay" xml:space="preserve">
+    <value>Сроки</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Электронный адрес</value>
+  </data>
+  <data name="Emergency Contacts" xml:space="preserve">
+    <value>Контактное лицо в случае экстренной ситуации</value>
+  </data>
+  <data name="Fax" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>С...</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>Пол</value>
+  </data>
+  <data name="HostContact" xml:space="preserve">
+    <value>Контактная информация принимающей стороны</value>
+  </data>
+  <data name="HostsName" xml:space="preserve">
+    <value>Принимающая сторона: Имя, Фамилия</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Фамилия</value>
+  </data>
+  <data name="Nationality" xml:space="preserve">
+    <value>Гражданство</value>
+  </data>
+  <data name="PassportNumber" xml:space="preserve">
+    <value>Passport Number</value>
+  </data>
+  <data name="PersonalInformation" xml:space="preserve">
+    <value>Персональная информация</value>
+  </data>
+  <data name="ProjectImplemented" xml:space="preserve">
+    <value>Осуществляемый проект</value>
+  </data>
+  <data name="PurposeofVisit" xml:space="preserve">
+    <value>Цель визита (касательно проекта, др.)</value>
+  </data>
+  <data name="Telephone" xml:space="preserve">
+    <value>Телефон</value>
+  </data>
+  <data name="Timeline" xml:space="preserve">
+    <value>Сроки</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>По...</value>
+  </data>
+  <data name="UploadPhoto" xml:space="preserve">
+    <value>Фото</value>
+  </data>
+  <data name="Vehicletype" xml:space="preserve">
+    <value>Вид транспорта</value>
+  </data>
+  <data name="VisitOrganizedby" xml:space="preserve">
+    <value>Организатор визита:</value>
+  </data>
 </root>
