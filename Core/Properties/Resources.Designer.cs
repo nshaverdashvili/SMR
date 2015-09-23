@@ -144,9 +144,9 @@ namespace Core.Properties {
         /// <summary>
         ///   Looks up a localized string similar to გადაუდებელ შემთხვევაში საკონტაქტო პირი.
         /// </summary>
-        public static string EmergencyContacts {
+        public static string Emergency_Contacts {
             get {
-                return ResourceManager.GetString("EmergencyContacts", resourceCulture);
+                return ResourceManager.GetString("Emergency Contacts", resourceCulture);
             }
         }
         
@@ -156,6 +156,15 @@ namespace Core.Properties {
         public static string Fax {
             get {
                 return ResourceManager.GetString("Fax", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to დაწყების თარიღი.
+        /// </summary>
+        public static string FDate {
+            get {
+                return ResourceManager.GetString("FDate", resourceCulture);
             }
         }
         
@@ -237,6 +246,15 @@ namespace Core.Properties {
         public static string LastName {
             get {
                 return ResourceManager.GetString("LastName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to დასრულების თარიღი.
+        /// </summary>
+        public static string LDate {
+            get {
+                return ResourceManager.GetString("LDate", resourceCulture);
             }
         }
         

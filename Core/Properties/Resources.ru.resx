@@ -249,4 +249,10 @@
   <data name="VisitOrganizedby" xml:space="preserve">
     <value>Организатор визита:</value>
   </data>
+  <data name="FDate" xml:space="preserve">
+    <value>Дата начала</value>
+  </data>
+  <data name="LDate" xml:space="preserve">
+    <value>Дата завершения</value>
+  </data>
 </root>

@@ -189,9 +189,6 @@
   <data name="Email" xml:space="preserve">
     <value>ელ-ფოსტა</value>
   </data>
-  <data name="EmergencyContacts" xml:space="preserve">
-    <value>გადაუდებელ შემთხვევაში საკონტაქტო პირი</value>
-  </data>
   <data name="Fax" xml:space="preserve">
     <value>ფაქსი</value>
   </data>
@@ -245,5 +242,14 @@
   </data>
   <data name="VisitOrganizedby" xml:space="preserve">
     <value>ვიზიტის ორგანიზატორი</value>
+  </data>
+  <data name="FDate" xml:space="preserve">
+    <value>დაწყების თარიღი</value>
+  </data>
+  <data name="LDate" xml:space="preserve">
+    <value>დასრულების თარიღი</value>
+  </data>
+  <data name="Emergency Contacts" xml:space="preserve">
+    <value>გადაუდებელ შემთხვევაში საკონტაქტო პირი</value>
   </data>
 </root>

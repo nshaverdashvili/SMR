@@ -243,4 +243,13 @@
   <data name="VisitOrganizedby" xml:space="preserve">
     <value>Visit Organized by</value>
   </data>
+  <data name="FDate" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="LDate" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+  <data name="PersonalInformation" xml:space="preserve">
+    <value>Personal Information</value>
+  </data>
 </root>

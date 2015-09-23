@@ -37,155 +37,184 @@
             <div class="form-group">
                 <label for="txtLName"><%=Core.Properties.Resources.LastName%></label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="txtLName" ClientIDMode="Static"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ID="reqLname" ControlToValidate="txtLName" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
                 <label for="txtAddress"><%=Core.Properties.Resources.Address%></label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="txtAddress" ClientIDMode="Static"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ID="reqAddress" ControlToValidate="txtAddress" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
                 <label for="txtMobile"><%=Core.Properties.Resources.Telephone%></label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="txtMobile" ClientIDMode="Static"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ID="reqMobile" ControlToValidate="txtMobile" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
                 <label for="txtFax"><%=Core.Properties.Resources.Fax%></label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="txtFax" ClientIDMode="Static"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ID="reqFax" ControlToValidate="txtFax" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
                 <label for="txtEmail"><%=Core.Properties.Resources.Email%></label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="txtEmail" ClientIDMode="Static"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ID="reqEmail" ControlToValidate="txtEmail" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
                 <label for="txtPassportN"><%=Core.Properties.Resources.PassportNumber%></label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="txtPassportN" ClientIDMode="Static"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ID="reqPassportN" ControlToValidate="txtPassportN" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
                 <label for="txtNationality"><%=Core.Properties.Resources.Nationality%></label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="txtNationality" ClientIDMode="Static"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ID="reqNationality" ControlToValidate="txtNationality" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
                 <label for="txtBDate"><%=Core.Properties.Resources.Dateofbirth%></label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="txtBDate" ClientIDMode="Static"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ID="reqBDate" ControlToValidate="txtBDate" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
                 <label for="ddGender"><%=Core.Properties.Resources.Gender%></label>
                 <asp:DropDownList runat="server" ID="ddGender" DataSourceID="dsGender" DataTextField="Caption" DataValueField="DictionaryID" ClientIDMode="Static" CssClass="form-control">
-                </asp:DropDownList>
+                </asp:DropDownList>     
+                <asp:RequiredFieldValidator runat="server" ID="reqGender" ControlToValidate="ddGender" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>           
             </div>
             <h5><%=Core.Properties.Resources.Timeline%></h5>
             <div class="col-xs-6">
                 <div class="form-group">
                     <label for="txtFDates"><%=Core.Properties.Resources.From%></label>
                     <asp:TextBox runat="server" CssClass="form-control ical" ID="txtFDates" ClientIDMode="Static"></asp:TextBox>
+                    <asp:RequiredFieldValidator runat="server" ID="reqFDate" ControlToValidate="txtFDates" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
                 </div>
             </div>
             <div class="col-xs-6">
                 <div class="form-group">
-                    <label for="txtLDates"><%=Core.Properties.Resources.To%></label>
-                    <asp:TextBox runat="server" CssClass="form-control ical" ID="txtLDates" ClientIDMode="Static"></asp:TextBox>
+                    <label for="txtLDate"><%=Core.Properties.Resources.To%></label>
+                    <asp:TextBox runat="server" CssClass="form-control ical" ID="txtLDate" ClientIDMode="Static"></asp:TextBox>
+                    <asp:RequiredFieldValidator runat="server" ID="reqLDate" ControlToValidate="txtLDate" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
                 </div>
             </div>
             <div class="form-group">
                 <label for="ddOrganisator"><%=Core.Properties.Resources.VisitOrganizedby%></label>
                 <asp:DropDownList runat="server" ID="ddOrganisator" ClientIDMode="Static" CssClass="form-control">
                 </asp:DropDownList>
+                <asp:RequiredFieldValidator runat="server" ID="reqOrganisator" ControlToValidate="ddOrganisator" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
                 <label for="ddTransportType"><%=Core.Properties.Resources.Vehicletype%></label>
                 <asp:DropDownList runat="server" ID="ddTransportType" ClientIDMode="Static" CssClass="form-control">
                 </asp:DropDownList>
+                <asp:RequiredFieldValidator runat="server" ID="reqTransportType" ControlToValidate="ddTransportType" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
                 <label for="txtDestination"><%=Core.Properties.Resources.Destinationplace%></label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="txtDestination" ClientIDMode="Static"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ID="reqDestination" ControlToValidate="txtDestination" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
                 <label for="txtHostName"><%=Core.Properties.Resources.HostsName%></label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="txtHostName" ClientIDMode="Static"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ID="reqHostName" ControlToValidate="txtHostName" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
                 <label for="txtHostContact"><%=Core.Properties.Resources.HostContact%></label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="txtHostContact" ClientIDMode="Static"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ID="reqHostContact" ControlToValidate="txtHostContact" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
-            <h4><%=Core.Properties.Resources.EmergencyContacts%></h4>
+            <h4><%=Core.Properties.Resources.Emergency_Contacts%></h4>
             <div class="form-group">
                 <label for="txtFName1"><%=Core.Properties.Resources.FirstName%></label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="txtFName1" ClientIDMode="Static"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ID="reqFName1" ControlToValidate="txtFName1" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
                 <label for="txtLName1"><%=Core.Properties.Resources.LastName%></label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="txtLName1" ClientIDMode="Static"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ID="reqLName1" ControlToValidate="txtLName1" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
                 <label for="txtAddress1"><%=Core.Properties.Resources.Address%></label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="txtAddress1" ClientIDMode="Static"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ID="reqAddress1" ControlToValidate="txtAddress1" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
                 <label for="txtMobile1"><%=Core.Properties.Resources.Telephone%></label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="txtMobile1" ClientIDMode="Static"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ID="reqMobile1" ControlToValidate="txtMobile1" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
-            <h4>განსახორციელებელი პროექტი</h4>
+            <h4><%=Core.Properties.Resources.ProjectImplemented%></h4>
 
             <div class="form-group">
                 <label for="txtProject"><%=Core.Properties.Resources.ProjectImplemented%></label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="txtProject" ClientIDMode="Static"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ID="reqProject" ControlToValidate="txtProject" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
-                <label for="txtPropjectStatus">ვიზიტორის სტატუსი პროექტში</label>
-                <asp:TextBox runat="server" CssClass="form-control" ID="txtPropjectStatus" ClientIDMode="Static"></asp:TextBox>
+                <label for="txtProjectStatus">ვიზიტორის სტატუსი პროექტში</label>
+                <asp:TextBox runat="server" CssClass="form-control" ID="txtProjectStatus" ClientIDMode="Static"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ID="reqProjectStatus" ControlToValidate="txtProjectStatus" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
                 <label for="txtProjectName">პროექტის დასახელება</label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="txtProjectName" ClientIDMode="Static"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ID="reqProjectName" ControlToValidate="txtProjectName" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
                 <label for="txtProjectGoal">პროექტის მიზანი</label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="txtProjectGoal" ClientIDMode="Static"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ID="reqProjectGoal" ControlToValidate="txtProjectGoal" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
                 <label for="txtProjectFDate">დაწყების თარიღი</label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="txtProjectFDate" ClientIDMode="Static"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ID="reqProjectFDate" ControlToValidate="txtProjectFDate" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
                 <label for="txtProjectLDate">დასრულების თარიღი</label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="txtProjectLDate" ClientIDMode="Static"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ID="reqProjectLDate" ControlToValidate="txtProjectLdate" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
                 <label for="txtLocalPartner">ადგილობრივი პარტნიორი</label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="txtLocalPartner" ClientIDMode="Static"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ID="reqLocalPartner" ControlToValidate="txtLocalPartner" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
                 <label for="ddIsSent">გამოგზავნილია თუ არა სამინისტროში პროექტი ოკუპირებულ ტერიტორიაზე საქმიანობის წარმართვის წესების მიხედვით?</label>
                 <asp:DropDownList runat="server" ID="ddIsSent" ClientIDMode="Static" CssClass="form-control">
                 </asp:DropDownList>
+                <asp:RequiredFieldValidator runat="server" ID="reqIsSent" ControlToValidate="ddIsSent" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group descgroup" id="groupDescEN">
                 <label for="txtNote">დამატებითი ინფორმაცია</label>
                 <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control" ID="txtNote" ClientIDMode="Static"></asp:TextBox>
+                <asp:RequiredFieldValidator runat="server" ID="reqNote" ControlToValidate="txtNote" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
         </div>

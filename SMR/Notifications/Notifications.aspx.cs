@@ -19,7 +19,25 @@ namespace SMR.Notifications
         }
 
         void initErrorMessages() {
-            reqFname.ErrorMessage = Core.Properties.Resources.PersonalInformation;
+            reqFname.ErrorMessage = Core.Properties.Resources.FirstName;
+            reqLname.ErrorMessage = Core.Properties.Resources.LastName;
+            reqAddress.ErrorMessage = Core.Properties.Resources.Address;
+            reqMobile.ErrorMessage = Core.Properties.Resources.Telephone;
+            reqFax.ErrorMessage = Core.Properties.Resources.Fax;
+            reqEmail.ErrorMessage = Core.Properties.Resources.Email;
+            reqPassportN.ErrorMessage = Core.Properties.Resources.PassportNumber;
+            reqNationality.ErrorMessage = Core.Properties.Resources.Nationality;
+            reqBDate.ErrorMessage = Core.Properties.Resources.Dateofbirth;
+            reqGender.ErrorMessage = Core.Properties.Resources.Gender;
+            reqFDate.ErrorMessage = Core.Properties.Resources.FDate;
+            reqLDate.ErrorMessage = Core.Properties.Resources.LDate;
+            reqOrganisator.ErrorMessage = Core.Properties.Resources.VisitOrganizedby;
+            reqFName1.ErrorMessage = Core.Properties.Resources.FirstName;
+            reqLName1.ErrorMessage = Core.Properties.Resources.LastName;
+            reqAddress.ErrorMessage = Core.Properties.Resources.Address;
+            reqMobile1.ErrorMessage = Core.Properties.Resources.Telephone;
+            reqProject.ErrorMessage = Core.Properties.Resources.ProjectImplemented;
+
         }
     }
 }
