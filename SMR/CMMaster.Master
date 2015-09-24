@@ -50,11 +50,11 @@
                                         <asp:Repeater runat="server" ID="rptMainManu" ItemType="Core.UM.Permissions" OnItemDataBound="rptMainManu_ItemDataBound">
                                             <ItemTemplate>
                                                 <li>
-                                                    <a href="<%#Item.PageName %>"><%#Item.Caption %></a>
+                                                    <a href="/<%#Item.PageName %>"><%#Item.Caption %></a>
                                                     <div class="submanu hidden">
                                                         <asp:Repeater runat="server" ID="rptSubMnu" ItemType="Core.UM.Permissions">
                                                             <ItemTemplate>
-                                                                <a href="<%#Item.PageName %>"><%#Item.Caption %></a>
+                                                                <a href="/<%#Item.PageName %>"><%#Item.Caption %></a>
                                                             </ItemTemplate>
                                                         </asp:Repeater>
                                                     </div>

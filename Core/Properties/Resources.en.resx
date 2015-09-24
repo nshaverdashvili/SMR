@@ -252,4 +252,124 @@
   <data name="PersonalInformation" xml:space="preserve">
     <value>Personal Information</value>
   </data>
+  <data name="Statusofthevisitor" xml:space="preserve">
+    <value>Status of the visitor</value>
+  </data>
+  <data name="ProjectName" xml:space="preserve">
+    <value>Project Name</value>
+  </data>
+  <data name="Projectpurpose" xml:space="preserve">
+    <value>Project purpose</value>
+  </data>
+  <data name="IsSentProject" xml:space="preserve">
+    <value>Have you submitted the project to SMR in accordance with the Modalities for Conducting Activities in Occupied Territories</value>
+  </data>
+  <data name="LocalPartner" xml:space="preserve">
+    <value>Local Partner</value>
+  </data>
+  <data name="Provideadditionalinformation" xml:space="preserve">
+    <value>Provide additional information</value>
+  </data>
+  <data name="FNote" xml:space="preserve">
+    <value>Note:The present application is not a guarantee for entering occupied regions.</value>
+  </data>
+  <data name="preface1" xml:space="preserve">
+    <value>For the implementation of emergency humanitarian assistance in occupied territories of Georgia</value>
+  </data>
+  <data name="GeneralInformation" xml:space="preserve">
+    <value>General Information</value>
+  </data>
+  <data name="OrganizationName" xml:space="preserve">
+    <value>Organization name</value>
+  </data>
+  <data name="ApplicableUpload" xml:space="preserve">
+    <value>Organization's registration in Georgia (if applicable).</value>
+  </data>
+  <data name="fileextensions" xml:space="preserve">
+    <value>file extensions: ".jpg",".pdf,".rar"</value>
+  </data>
+  <data name="MissionDesc" xml:space="preserve">
+    <value>Description of organization's mission</value>
+  </data>
+  <data name="ContactForm1" xml:space="preserve">
+    <value>Contact Person (Name, Family name, Phone, email)</value>
+  </data>
+  <data name="HumInfo" xml:space="preserve">
+    <value>Information on the Necessity of Emergency Humanitarian Assistance</value>
+  </data>
+  <data name="HumDesc" xml:space="preserve">
+    <value>Description of humanitarian conditions (Cause of emergency, geographical area covered, humanitarian consequences)</value>
+  </data>
+  <data name="HumType" xml:space="preserve">
+    <value>Type of humanitarian assistance to be provided</value>
+  </data>
+  <data name="HumQuantity" xml:space="preserve">
+    <value>Quantity of humanitarian assistance to be provided</value>
+  </data>
+  <data name="Donor(s)" xml:space="preserve">
+    <value>Donor(s)</value>
+  </data>
+  <data name="EmerHum" xml:space="preserve">
+    <value>Emergency humanitarian assistance interventions (single/multiple)</value>
+  </data>
+  <data name="HumDirection" xml:space="preserve">
+    <value>Directions (and shares) of provision of emergency humanitarian assistance (e.g., from north, 1/3; from south, 2/3)</value>
+  </data>
+  <data name="AddInfo" xml:space="preserve">
+    <value>Additional information</value>
+  </data>
+  <data name="DescOfOrg" xml:space="preserve">
+    <value>Description of organization's mission</value>
+  </data>
+  <data name="WebPage" xml:space="preserve">
+    <value>Web page</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="NotificationForm1" xml:space="preserve">
+    <value>Notification form 1</value>
+  </data>
+  <data name="NotificationForm2" xml:space="preserve">
+    <value>Notification Form2</value>
+  </data>
+  <data name="NotificationForm3" xml:space="preserve">
+    <value>Notification Form 3</value>
+  </data>
+  <data name="NotifForm2Desc" xml:space="preserve">
+    <value>For intergovernmental organizations and international-development agencies conducting activities in occupied territories based on agreements with the Government of Georgia</value>
+  </data>
+  <data name="StatusOfProject" xml:space="preserve">
+    <value>Status of project (e.g., concept, financed, ongoing, extended)</value>
+  </data>
+  <data name="DonorsForm2" xml:space="preserve">
+    <value>Donor(s) (name(s) and contact information)</value>
+  </data>
+  <data name="AimOfProject" xml:space="preserve">
+    <value>Aim of project</value>
+  </data>
+  <data name="ExpectedResults" xml:space="preserve">
+    <value>Expected results of project</value>
+  </data>
+  <data name="InformationProjects" xml:space="preserve">
+    <value>Information on Projects to Be Implemented</value>
+  </data>
+  <data name="DescForm3" xml:space="preserve">
+    <value>For the implementation of non-exempt activities in occupied territories of Georgia</value>
+  </data>
+  <data name="DonorsForm3" xml:space="preserve">
+    <value>Project description is submitted jointly with donor(s): Yes/No. If Yes: Name of the donor(s)</value>
+  </data>
+  <data name="FinanceInfo" xml:space="preserve">
+    <value>Financial information (expected budget, resources, bank details) </value>
+  </data>
+  <data name="LocalPartners" xml:space="preserve">
+    <value>Local partners (name(s) and contact information)</value>
+  </data>
+  <data name="Schedule" xml:space="preserve">
+    <value>Expected schedule of trips to occupied territories</value>
+  </data>
+  <data name="WarningRequired" xml:space="preserve">
+    <value>{0} is required</value>
+  </data>
 </root>

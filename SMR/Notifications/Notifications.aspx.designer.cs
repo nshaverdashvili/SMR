@@ -274,15 +274,6 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.DropDownList ddOrganisator;
         
         /// <summary>
-        /// reqOrganisator control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqOrganisator;
-        
-        /// <summary>
         /// ddTransportType control.
         /// </summary>
         /// <remarks>
@@ -290,15 +281,6 @@ namespace SMR.Notifications {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddTransportType;
-        
-        /// <summary>
-        /// reqTransportType control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqTransportType;
         
         /// <summary>
         /// txtDestination control.
@@ -589,6 +571,15 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqNote;
         
         /// <summary>
+        /// btnSend control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSend;
+        
+        /// <summary>
         /// dsGender control.
         /// </summary>
         /// <remarks>
@@ -596,5 +587,32 @@ namespace SMR.Notifications {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ObjectDataSource dsGender;
+        
+        /// <summary>
+        /// dsVisitOrganisedBy control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource dsVisitOrganisedBy;
+        
+        /// <summary>
+        /// dsVehicletype control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource dsVehicletype;
+        
+        /// <summary>
+        /// dsIsSent control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ObjectDataSource dsIsSent;
     }
 }

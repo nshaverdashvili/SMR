@@ -21,7 +21,7 @@ body {
 }
 
 * {
-    font-family: "Myriad Pro", rioni;
+    font-family: 'Smr', Arial;
 }
 
     *, *:before, *:after {
@@ -110,7 +110,7 @@ footer {
 }
 
     .logo > span > b {
-        font-family: "nino";
+        font-family: 'Smr MT', Arial;
         color: #fff;
         font-weight: normal;
         line-height: 18px;
@@ -151,7 +151,7 @@ footer ul > li {
 
     footer ul > li > a {
         color: #fff;
-        font-family: "nino";
+        font-family: 'Smr MT', Arial;
         line-height: 46px;
         float: left;
     }
@@ -253,7 +253,7 @@ footer .ft-cp > div {
 }
 
     .Newsfeed > h3 {
-        font-family: "nino";
+        font-family: 'Smr MT', Arial;
         font-size: 16px;
         color: #1f4d89;
     }
@@ -291,7 +291,7 @@ footer .ft-cp > div {
         }
 
             .manuCon > ul > li > a {
-                font-family: "nino";
+                font-family: 'Smr MT', Arial;
                 display: block;
                 padding: 10px 15px 4px 15px;
                 background-color: #E2EAED;
@@ -317,7 +317,7 @@ footer .ft-cp > div {
 }
 
     .submanu > a {
-        font-family: "nino";
+        font-family: 'Smr MT', Arial;
         display: block;
         line-height: 35px;
         border-bottom: 1px solid #eee;
@@ -342,7 +342,7 @@ footer .ft-cp > div {
 
     .main .row > h3 {
         margin: 10px 0;
-        font-family: "nino";
+        font-family: 'Smr MT', Arial;
         font-size: 18px;
         font-weight: normal;
         display: block;
@@ -362,7 +362,7 @@ footer .ft-cp > div {
 
         .item > .title > a {
             color: #999;
-            font-family: "nino";
+            font-family: 'Smr MT', Arial;
         }
 
 
@@ -418,7 +418,7 @@ footer .ft-cp > div {
     .internalContent > h2 {
         font-size: 18px;
         color: #1f4d89;
-        font-family: 'nino';
+        font-family: 'Smr MT', Arial;
     }
 
     .internalContent > span {
@@ -445,12 +445,12 @@ footer .ft-cp > div {
         text-transform: uppercase;
     }
 label.chckbox {
-    font-family: "nino";
+    font-family: 'Smr MT', Arial;
     font-size: 14px;
 }
 
 .ui-datepicker * {
-    font-family: "nino";
+    font-family: 'Smr MT', Arial;
 }
 .files .item{
     margin-top:10px;
@@ -458,7 +458,7 @@ label.chckbox {
 .files .item >a{
     display:block;
     line-height:21px;
-    font-family:'nino';
+    font-family:'Smr MT', Arial;
     background:#337ab7;
     padding:10px 10px 5px 10px;
     border-radius:3px;
@@ -474,6 +474,10 @@ label.chckbox {
 }
 
 
+.notifgroup .form-group > label {
+    font-family:'Smr MT', Arial;
+    text-transform:uppercase;
+}
 
 
 

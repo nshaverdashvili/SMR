@@ -252,4 +252,130 @@
   <data name="Emergency Contacts" xml:space="preserve">
     <value>გადაუდებელ შემთხვევაში საკონტაქტო პირი</value>
   </data>
+  <data name="Statusofthevisitor" xml:space="preserve">
+    <value>ვიზიტორის სტატუსი პროექტში</value>
+  </data>
+  <data name="ProjectName" xml:space="preserve">
+    <value>პროექტის დასახელება</value>
+  </data>
+  <data name="Projectpurpose" xml:space="preserve">
+    <value>პროექტის მიზანი</value>
+  </data>
+  <data name="IsSentProject" xml:space="preserve">
+    <value>გამოგზავნილია თუ არა სამინისტროში პროექტი ოკუპირებულ ტერიტორიაზე საქმიანობის წარმართვის წესების მიხედვით?</value>
+  </data>
+  <data name="LocalPartner" xml:space="preserve">
+    <value>ადგილობრივი პარტნიორი</value>
+  </data>
+  <data name="Provideadditionalinformation" xml:space="preserve">
+    <value>დამატებითი ინფორმაცია</value>
+  </data>
+  <data name="FNote" xml:space="preserve">
+    <value>შენიშვნა: განაცხადის ფორმა არ წარმოადგენს ოკუპირებულ რეგიონებში შესვლის გარანტიას </value>
+  </data>
+  <data name="preface1" xml:space="preserve">
+    <value>საქართველოს ოკუპირებულ ტერიტორიებზე გადაუდებელი ჰუმანიტარული დახმარების წარმართვისათვის</value>
+  </data>
+  <data name="GeneralInformation" xml:space="preserve">
+    <value>ზოგადი ინფორმაცია</value>
+  </data>
+  <data name="OrganizationName" xml:space="preserve">
+    <value>ორგანიზაციის სახელი</value>
+  </data>
+  <data name="ApplicableUpload" xml:space="preserve">
+    <value>ინფორმაცია რეგისტრაციის შესახებ (რეგისტრაციის არსებობის შემთხვევაში)</value>
+  </data>
+  <data name="fileextensions" xml:space="preserve">
+    <value>დასაშვები ფაილები: ".jpg",".pdf,".rar"</value>
+  </data>
+  <data name="MissionDesc" xml:space="preserve">
+    <value>ორგანიზაციის მისიის აღწერა</value>
+  </data>
+  <data name="ContactForm1" xml:space="preserve">
+    <value>საკონტაქტო პირი (სახელი, გვარი, ტელეფონი)</value>
+  </data>
+  <data name="HumInfo" xml:space="preserve">
+    <value>ინფორმაცია გადაუდებელი ჰუმანიტარული დახმარების აუცილებლობის შესახებ</value>
+  </data>
+  <data name="HumDesc" xml:space="preserve">
+    <value>ჰუმანიტარული მდგომარეობის აღწერა (რით არის გამოწვეული, რომელ გეოგრაფიულ არეალს მოიცავს ჰუმანიტარული მდგომარეობის მიერ გამოწვეული შედეგები)</value>
+  </data>
+  <data name="HumType" xml:space="preserve">
+    <value>ჰუმანიტარული დახმარების აღწერა</value>
+  </data>
+  <data name="HumQuantity" xml:space="preserve">
+    <value>ჰუმანიტარული დახმარების რაოდენობა</value>
+  </data>
+  <data name="Donor(s)" xml:space="preserve">
+    <value>დონორები</value>
+  </data>
+  <data name="EmerHum" xml:space="preserve">
+    <value>გადაუდებელი ჰუმანიტარული დახმარების გაცემის ვადა (ერთჯერადი, მრავალჯერადი)</value>
+  </data>
+  <data name="HumDirection" xml:space="preserve">
+    <value>გადაუდებელი ჰუმანიტარული დახმარების შეტანის მიმართულება და პროპორციები</value>
+  </data>
+  <data name="AddInfo" xml:space="preserve">
+    <value>დამატებითი ინფორმაცია.</value>
+  </data>
+  <data name="DescOfOrg" xml:space="preserve">
+    <value>ორგანიზაციის მისიის აღწერა</value>
+  </data>
+  <data name="WebPage" xml:space="preserve">
+    <value>ვებ-გვერდი</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>გაგზავნა</value>
+  </data>
+  <data name="NotificationForm1" xml:space="preserve">
+    <value>სანოტიფიკაციო ფორმა 1</value>
+  </data>
+  <data name="NotificationForm2" xml:space="preserve">
+    <value>სანოტიფიკაციო ფორმა 2</value>
+  </data>
+  <data name="NotificationForm3" xml:space="preserve">
+    <value>სანოტიფიკაციო ფორმა 2</value>
+  </data>
+  <data name="NotifForm2Desc" xml:space="preserve">
+    <value>სახელმწიფოთაშორისი ორგანიზაციებისა და საერთაშორისო განვითარების ორგანიზაციებისათვის, რომლებიც ახორციელებენ საქმიანობას ოკუპირებულ ტერიტორიებზე საქართველოს მთავრობასთან დადებული შეთანხმებების თანახმად</value>
+  </data>
+  <data name="StatusOfProject" xml:space="preserve">
+    <value>პროექტის სტატუსი (მიმდინარე, იდეა, დაფინანსებული, გაგრძელებული)</value>
+  </data>
+  <data name="DonorsForm2" xml:space="preserve">
+    <value>დონორები (დასახელება და საკონტაქტო ინფორმაცია)</value>
+  </data>
+  <data name="AimOfProject" xml:space="preserve">
+    <value>პროექტის მიზანი</value>
+  </data>
+  <data name="ExpectedResults" xml:space="preserve">
+    <value>პროექტის მოსალოდნელი შედეგები</value>
+  </data>
+  <data name="InformationProjects" xml:space="preserve">
+    <value>ინფორმაცია განსახორციელებელი პროექტის შესახებ</value>
+  </data>
+  <data name="DescForm3" xml:space="preserve">
+    <value>ოკუპირებულ ტერიტორიებზე არასამეწარმეო საქმიანობის განხორციელებისათვის </value>
+  </data>
+  <data name="DonorsForm3" xml:space="preserve">
+    <value>პროექტი ერთობლივად არის წარდგენილი დონორისა და პროექტის წარმდგენელის მიერ (კი/არა). დადებითი პასუხის შემთხვევაში: დონორ(ებ)ის დასახელება</value>
+  </data>
+  <data name="FinanceInfo" xml:space="preserve">
+    <value>ფინანსური ინფორმაცია (მოსალოდნელი ბიუჯეტი, რესურსები, საბანკო ინფორმაცია)</value>
+  </data>
+  <data name="LocalPartners" xml:space="preserve">
+    <value>ინფორმაცია ადგილობრივი პარტნიორების შესახებ (დასახელება და საკონტაქტო ინფორმაცია)</value>
+  </data>
+  <data name="Schedule" xml:space="preserve">
+    <value>ოკუპირებულ ტერიტორიებზე გამგზავრების მოსალოდნელი განრიგი </value>
+  </data>
+  <data name="WarningRequired" xml:space="preserve">
+    <value>ველი {0} სავალდებულოა</value>
+  </data>
+  <data name="EmailAddress" xml:space="preserve">
+    <value></value>
+  </data>
+  <data name="EmailPassword" xml:space="preserve">
+    <value></value>
+  </data>
 </root>

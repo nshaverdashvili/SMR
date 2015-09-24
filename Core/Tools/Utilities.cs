@@ -7,6 +7,9 @@ using System.Web.UI.WebControls;
 using System.Web;
 using System.Configuration;
 using System.Threading;
+using SystemBase;
+using System.Net.Mail;
+using System.Web.Mail;
 
 namespace Core.Tools
 {    
@@ -46,6 +49,99 @@ namespace Core.Tools
             return ConfigurationManager.AppSettings["UploadFolder"];
         }
     }
+
+    public class Mail : ObjectBase
+    {
+        #region Properties
+        string _From;
+        string _Username;
+        string _Password;
+        string _SMTP = "smtpout.europe.secureserver.net";
+        int _Port = 25;
+        bool _EnableSSL = false;
+
+        public string From
+        {
+            set { _From = value; }
+            get { return _From; }
+        }
+        #endregion Properties
+
+        #region Constructors
+        public Mail() :
+            this(Core.Properties.Resources.EmailAddress, Core.Properties.Resources.EmailPassword)
+        {
+
+        }
+
+        public Mail(string Username, string Password)
+        {
+            _Username = Username;
+            _Password = Password;
+        }
+
+        public Mail(string SMTP, int Port, string Username, string Password, string From, bool EnableSSL)
+        {
+            _SMTP = SMTP;
+            _Username = Username;
+            _Password = Password;
+            _Port = Port;
+            _From = From;
+            _EnableSSL = EnableSSL;
+        }
+        #endregion Constructors
+
+        #region Methods
+        public bool Send(string From, string To, string Subject, string Body, string ReplyTo = null, List<MailAttachment> AttachmentsList = null)
+        {
+            return TryToReturn(string.Format("General.Mail.Send(From = {0}, To = {1}, Subject = {2}, Body = {3}, ReplyTo = {4})", From, To, Subject, Body, ReplyTo), () =>
+            {
+                Body = Body.Replace("http:", "");
+
+                var M = new System.Web.Mail.MailMessage();
+                M.Fields.Add("http://schemas.microsoft.com/cdo/configuration/smtpserver", _SMTP);
+                M.Fields.Add("http://schemas.microsoft.com/cdo/configuration/smtpserverport", _Port);
+                M.Fields.Add("http://schemas.microsoft.com/cdo/configuration/sendusing", "2");
+                //sendusing: cdoSendUsingPort, value 2, for sending the message using 
+                //the network.
+
+                //smtpauthenticate: Specifies the mechanism used when authenticating 
+                //to an SMTP 
+                //service over the network. Possible values are:
+                //- cdoAnonymous, value 0. Do not authenticate.
+                //- cdoBasic, value 1. Use basic clear-text authentication. 
+                //When using this option you have to provide the user name and password 
+                //through the sendusername and sendpassword fields.
+                //- cdoNTLM, value 2. The current process security context is used to 
+                // authenticate with the service.
+                M.Fields.Add("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate", "1");
+                //Use 0 for anonymous
+                M.Fields.Add("http://schemas.microsoft.com/cdo/configuration/sendusername", _Username);
+                M.Fields.Add("http://schemas.microsoft.com/cdo/configuration/sendpassword", _Password);
+                M.Fields.Add("http://schemas.microsoft.com/cdo/configuration/smtpusessl", "true");
+                M.From = To;
+                M.To = To;
+                M.Subject = Subject;
+                M.BodyFormat = MailFormat.Html;
+                M.BodyEncoding = Encoding.UTF8;
+                M.Body = Body;
+
+                AttachmentsList.ForEach(f => M.Attachments.Add(f));
+
+
+                if (!string.IsNullOrWhiteSpace(ReplyTo))
+                {
+                    M.Headers.Add("Reply-To", ReplyTo);
+                }
+
+                SmtpMail.SmtpServer = string.Format("{0}:{1}", _SMTP, _Port);
+                SmtpMail.Send(M);
+                return true;
+            });
+        }
+        #endregion Methods
+    }
+
     public static class CultureHelper
     {
         // Valid cultures

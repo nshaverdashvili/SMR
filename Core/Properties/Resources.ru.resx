@@ -255,4 +255,124 @@
   <data name="LDate" xml:space="preserve">
     <value>Дата завершения</value>
   </data>
+  <data name="Statusofthevisitor" xml:space="preserve">
+    <value>Статус восуществляемом проекте </value>
+  </data>
+  <data name="ProjectName" xml:space="preserve">
+    <value>Название проекта</value>
+  </data>
+  <data name="Projectpurpose" xml:space="preserve">
+    <value>Цель проекта</value>
+  </data>
+  <data name="IsSentProject" xml:space="preserve">
+    <value>Выслали ли вы осуществляемый проект в Аппарат государственного министра Грузии согласно Правилам по осуществлению деятельности в оккупированных регионах Грузии?</value>
+  </data>
+  <data name="LocalPartner" xml:space="preserve">
+    <value>Местные партнеры</value>
+  </data>
+  <data name="Provideadditionalinformation" xml:space="preserve">
+    <value>Приложения (предоставьте дополнительную информацию) </value>
+  </data>
+  <data name="FNote" xml:space="preserve">
+    <value>Примечание: данная уведомительная форма не является гарантией на въезд в оккупированные регионы Грузии</value>
+  </data>
+  <data name="preface1" xml:space="preserve">
+    <value>Для осуществления неотложной гуманитарной помощи на оккупированных территориях Грузии</value>
+  </data>
+  <data name="GeneralInformation" xml:space="preserve">
+    <value>Общая информация</value>
+  </data>
+  <data name="OrganizationName" xml:space="preserve">
+    <value>Название организации</value>
+  </data>
+  <data name="ApplicableUpload" xml:space="preserve">
+    <value>Наличие регистрации в Грузии (если таковое имеется).</value>
+  </data>
+  <data name="fileextensions" xml:space="preserve">
+    <value>Допустимые типы файлов : ".jpg",".pdf,".rar"</value>
+  </data>
+  <data name="MissionDesc" xml:space="preserve">
+    <value>Контактное лицо (Имя, фамилия, телефон, электронный адрес)</value>
+  </data>
+  <data name="ContactForm1" xml:space="preserve">
+    <value>Контактное лицо (Имя, фамилия, телефон, электронный адрес)</value>
+  </data>
+  <data name="HumInfo" xml:space="preserve">
+    <value>Информация о необходимости осуществления неотложной гуманитарной помощи</value>
+  </data>
+  <data name="HumDesc" xml:space="preserve">
+    <value>Описание гуманитарной обстановки (чем вызвана, географический ареал, последствия, вызванные вследствие сложившейся гуманитарной обстановки)</value>
+  </data>
+  <data name="HumType" xml:space="preserve">
+    <value>Тип гуманитарной помощи</value>
+  </data>
+  <data name="HumQuantity" xml:space="preserve">
+    <value>Количество гуманитарной помощи</value>
+  </data>
+  <data name="Donor(s)" xml:space="preserve">
+    <value>Донор (доноры)</value>
+  </data>
+  <data name="EmerHum" xml:space="preserve">
+    <value>Срок выдачи неотложной гуманитарной помощи (однократно/многократно)</value>
+  </data>
+  <data name="HumDirection" xml:space="preserve">
+    <value>Направление и пропорции вводимой неотложной гуманитарной помощи</value>
+  </data>
+  <data name="AddInfo" xml:space="preserve">
+    <value>Дополнительная информация</value>
+  </data>
+  <data name="DescOfOrg" xml:space="preserve">
+    <value>Описание миссии организации</value>
+  </data>
+  <data name="WebPage" xml:space="preserve">
+    <value>web-страница</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Послат</value>
+  </data>
+  <data name="NotificationForm1" xml:space="preserve">
+    <value>Уведомительная форма 1</value>
+  </data>
+  <data name="NotificationForm2" xml:space="preserve">
+    <value>Уведомительная форма 2</value>
+  </data>
+  <data name="NotificationForm3" xml:space="preserve">
+    <value>Уведомительная форма 3</value>
+  </data>
+  <data name="NotifForm2Desc" xml:space="preserve">
+    <value>Для межгосударственных организаций и агенств по международному развитию, осуществляющих свою деятельность на оккупированных территориях Грузии, согласно договорам (соглашениям), заключенным с правительством Грузии</value>
+  </data>
+  <data name="StatusOfProject" xml:space="preserve">
+    <value>Контактное лицо (Имя, фамилия, телефон, электронный адрес)</value>
+  </data>
+  <data name="DonorsForm2" xml:space="preserve">
+    <value>Донор (доноры) (название и контактная информация )</value>
+  </data>
+  <data name="AimOfProject" xml:space="preserve">
+    <value>Цель проекта</value>
+  </data>
+  <data name="ExpectedResults" xml:space="preserve">
+    <value>Ожидаемый результат проекта</value>
+  </data>
+  <data name="InformationProjects" xml:space="preserve">
+    <value>Информация об осуществляемом проекте</value>
+  </data>
+  <data name="DescForm3" xml:space="preserve">
+    <value>Для осуществления некоммерческой деятельности на оккупированных территориях Грузии</value>
+  </data>
+  <data name="DonorsForm3" xml:space="preserve">
+    <value>Проект предоставлен совместно с донором (Да/Нет). В случае положительного ответа указать название донора</value>
+  </data>
+  <data name="FinanceInfo" xml:space="preserve">
+    <value>Финансовая информация (вероятный бюджет, ресурсы, банковская информация)</value>
+  </data>
+  <data name="LocalPartners" xml:space="preserve">
+    <value>Местные партнеры (название и контактная информация )</value>
+  </data>
+  <data name="Schedule" xml:space="preserve">
+    <value>Предполагаемый график посещения оккупированных территорий</value>
+  </data>
+  <data name="WarningRequired" xml:space="preserve">
+    <value>{0} is required</value>
+  </data>
 </root>

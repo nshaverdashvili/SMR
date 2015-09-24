@@ -18,7 +18,7 @@
             <div class="form-group">
                 <label for="fuURL"><%=Core.Properties.Resources.UploadPhoto%></label>
                 <asp:FileUpload runat="server" ID="fuURL" ClientIDMode="Static" />
-                <p class="help-block" style="font-size: 10px;">დასაშვები ფაილებია: jpg, png, pdf, doc</p>
+                <p class="help-block" style="font-size: 10px;"><%=Core.Properties.Resources.fileextensions %></p>
                 <p class="text-danger">
                     <asp:Literal ID="litUrl" runat="server" />
                 </p>
@@ -78,15 +78,15 @@
 
             <div class="form-group">
                 <label for="txtBDate"><%=Core.Properties.Resources.Dateofbirth%></label>
-                <asp:TextBox runat="server" CssClass="form-control" ID="txtBDate" ClientIDMode="Static"></asp:TextBox>
+                <asp:TextBox runat="server" CssClass="form-control ical" ID="txtBDate" ClientIDMode="Static"></asp:TextBox>
                 <asp:RequiredFieldValidator runat="server" ID="reqBDate" ControlToValidate="txtBDate" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
                 <label for="ddGender"><%=Core.Properties.Resources.Gender%></label>
                 <asp:DropDownList runat="server" ID="ddGender" DataSourceID="dsGender" DataTextField="Caption" DataValueField="DictionaryID" ClientIDMode="Static" CssClass="form-control">
-                </asp:DropDownList>     
-                <asp:RequiredFieldValidator runat="server" ID="reqGender" ControlToValidate="ddGender" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>           
+                </asp:DropDownList>
+                <asp:RequiredFieldValidator runat="server" ID="reqGender" ControlToValidate="ddGender" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
             <h5><%=Core.Properties.Resources.Timeline%></h5>
             <div class="col-xs-6">
@@ -105,16 +105,14 @@
             </div>
             <div class="form-group">
                 <label for="ddOrganisator"><%=Core.Properties.Resources.VisitOrganizedby%></label>
-                <asp:DropDownList runat="server" ID="ddOrganisator" ClientIDMode="Static" CssClass="form-control">
+                <asp:DropDownList runat="server" ID="ddOrganisator" DataSourceID="dsVisitOrganisedBy" DataTextField="Caption" DataValueField="DictionaryID" ClientIDMode="Static" CssClass="form-control">
                 </asp:DropDownList>
-                <asp:RequiredFieldValidator runat="server" ID="reqOrganisator" ControlToValidate="ddOrganisator" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
                 <label for="ddTransportType"><%=Core.Properties.Resources.Vehicletype%></label>
-                <asp:DropDownList runat="server" ID="ddTransportType" ClientIDMode="Static" CssClass="form-control">
+                <asp:DropDownList runat="server" ID="ddTransportType" DataSourceID="dsVehicletype" DataTextField="Caption" DataValueField="DictionaryID" ClientIDMode="Static" CssClass="form-control">
                 </asp:DropDownList>
-                <asp:RequiredFieldValidator runat="server" ID="reqTransportType" ControlToValidate="ddTransportType" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
@@ -169,54 +167,60 @@
             </div>
 
             <div class="form-group">
-                <label for="txtProjectStatus">ვიზიტორის სტატუსი პროექტში</label>
+                <label for="txtProjectStatus"><%=Core.Properties.Resources.Statusofthevisitor%></label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="txtProjectStatus" ClientIDMode="Static"></asp:TextBox>
                 <asp:RequiredFieldValidator runat="server" ID="reqProjectStatus" ControlToValidate="txtProjectStatus" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
-                <label for="txtProjectName">პროექტის დასახელება</label>
+                <label for="txtProjectName"><%=Core.Properties.Resources.ProjectName%></label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="txtProjectName" ClientIDMode="Static"></asp:TextBox>
                 <asp:RequiredFieldValidator runat="server" ID="reqProjectName" ControlToValidate="txtProjectName" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
-                <label for="txtProjectGoal">პროექტის მიზანი</label>
+                <label for="txtProjectGoal"><%=Core.Properties.Resources.PurposeofVisit%></label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="txtProjectGoal" ClientIDMode="Static"></asp:TextBox>
                 <asp:RequiredFieldValidator runat="server" ID="reqProjectGoal" ControlToValidate="txtProjectGoal" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
-                <label for="txtProjectFDate">დაწყების თარიღი</label>
-                <asp:TextBox runat="server" CssClass="form-control" ID="txtProjectFDate" ClientIDMode="Static"></asp:TextBox>
+                <label for="txtProjectFDate"><%=Core.Properties.Resources.FDate%></label>
+                <asp:TextBox runat="server" CssClass="form-control ical" ID="txtProjectFDate" ClientIDMode="Static"></asp:TextBox>
                 <asp:RequiredFieldValidator runat="server" ID="reqProjectFDate" ControlToValidate="txtProjectFDate" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
-                <label for="txtProjectLDate">დასრულების თარიღი</label>
-                <asp:TextBox runat="server" CssClass="form-control" ID="txtProjectLDate" ClientIDMode="Static"></asp:TextBox>
+                <label for="txtProjectLDate"><%=Core.Properties.Resources.LDate%></label>
+                <asp:TextBox runat="server" CssClass="form-control ical" ID="txtProjectLDate" ClientIDMode="Static"></asp:TextBox>
                 <asp:RequiredFieldValidator runat="server" ID="reqProjectLDate" ControlToValidate="txtProjectLdate" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
-                <label for="txtLocalPartner">ადგილობრივი პარტნიორი</label>
+                <label for="txtLocalPartner"><%=Core.Properties.Resources.LocalPartner%></label>
                 <asp:TextBox runat="server" CssClass="form-control" ID="txtLocalPartner" ClientIDMode="Static"></asp:TextBox>
                 <asp:RequiredFieldValidator runat="server" ID="reqLocalPartner" ControlToValidate="txtLocalPartner" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
             <div class="form-group">
-                <label for="ddIsSent">გამოგზავნილია თუ არა სამინისტროში პროექტი ოკუპირებულ ტერიტორიაზე საქმიანობის წარმართვის წესების მიხედვით?</label>
-                <asp:DropDownList runat="server" ID="ddIsSent" ClientIDMode="Static" CssClass="form-control">
+                <label for="ddIsSent"><%=Core.Properties.Resources.IsSentProject%></label>
+                <asp:DropDownList runat="server" ID="ddIsSent" DataSourceID="dsIsSent" DataTextField="Caption" DataValueField="DictionaryID" ClientIDMode="Static" CssClass="form-control">
                 </asp:DropDownList>
                 <asp:RequiredFieldValidator runat="server" ID="reqIsSent" ControlToValidate="ddIsSent" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
-            <div class="form-group descgroup" id="groupDescEN">
-                <label for="txtNote">დამატებითი ინფორმაცია</label>
+            <div class="form-group">
+                <label for="txtNote"><%=Core.Properties.Resources.Provideadditionalinformation%></label>
                 <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control" ID="txtNote" ClientIDMode="Static"></asp:TextBox>
                 <asp:RequiredFieldValidator runat="server" ID="reqNote" ControlToValidate="txtNote" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
             </div>
 
+        </div>
+        <div class="row">
+            <div class="col-xs-12" style="margin: 20px 0;">
+                
+                <asp:Button runat="server" CssClass="btn btn-success btn-block" ID="btnSend" OnClick="btnSend_Click" />
+            </div>
         </div>
     </div>
     <asp:ObjectDataSource ID="dsGender" runat="server" SelectMethod="ListDictionary" TypeName="Core.Tools.DictionariesRepository">
@@ -226,6 +230,29 @@
             <asp:Parameter Name="IsVisible" Type="Boolean" />
         </SelectParameters>
     </asp:ObjectDataSource>
+    <asp:ObjectDataSource ID="dsVisitOrganisedBy" runat="server" SelectMethod="ListDictionary" TypeName="Core.Tools.DictionariesRepository">
+        <SelectParameters>
+            <asp:Parameter DefaultValue="1" Name="Lvl" Type="Int32" />
+            <asp:Parameter DefaultValue="6" Name="Code" Type="Int32" />
+            <asp:Parameter Name="IsVisible" Type="Boolean" />
+        </SelectParameters>
+    </asp:ObjectDataSource>
+    <asp:ObjectDataSource ID="dsVehicletype" runat="server" SelectMethod="ListDictionary" TypeName="Core.Tools.DictionariesRepository">
+        <SelectParameters>
+            <asp:Parameter DefaultValue="1" Name="Lvl" Type="Int32" />
+            <asp:Parameter DefaultValue="7" Name="Code" Type="Int32" />
+            <asp:Parameter Name="IsVisible" Type="Boolean" />
+        </SelectParameters>
+    </asp:ObjectDataSource>
+    <asp:ObjectDataSource ID="dsIsSent" runat="server" SelectMethod="ListDictionary" TypeName="Core.Tools.DictionariesRepository">
+        <SelectParameters>
+            <asp:Parameter DefaultValue="1" Name="Lvl" Type="Int32" />
+            <asp:Parameter DefaultValue="8" Name="Code" Type="Int32" />
+            <asp:Parameter Name="IsVisible" Type="Boolean" />
+        </SelectParameters>
+    </asp:ObjectDataSource>
+    <h5><%=Core.Properties.Resources.FNote%></h5>
 </asp:Content>
+
 <asp:Content ID="Content3" ContentPlaceHolderID="ScriptsPlaceHolder" runat="server">
 </asp:Content>

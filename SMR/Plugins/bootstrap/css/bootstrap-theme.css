@@ -234,12 +234,12 @@
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .active > a {
  color:#fff;
- font-family:"nino";
+ font-family:'Smr MT', Arial;
 }
 
 .navbar-default .navbar-nav > li > a {
     color:#fff;
-    font-family:'nino';
+    font-family:'Smr MT', Arial;
 }
 
 .navbar-default .navbar-nav > li > a:hover,

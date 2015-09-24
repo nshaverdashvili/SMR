@@ -70,6 +70,15 @@ namespace Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to დამატებითი ინფორმაცია..
+        /// </summary>
+        public static string AddInfo {
+            get {
+                return ResourceManager.GetString("AddInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to მისამართი.
         /// </summary>
         public static string Address {
@@ -79,11 +88,38 @@ namespace Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to პროექტის მიზანი.
+        /// </summary>
+        public static string AimOfProject {
+            get {
+                return ResourceManager.GetString("AimOfProject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ინფორმაცია რეგისტრაციის შესახებ (რეგისტრაციის არსებობის შემთხვევაში).
+        /// </summary>
+        public static string ApplicableUpload {
+            get {
+                return ResourceManager.GetString("ApplicableUpload", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to კონტაქტი.
         /// </summary>
         public static string Contact {
             get {
                 return ResourceManager.GetString("Contact", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to საკონტაქტო პირი (სახელი, გვარი, ტელეფონი).
+        /// </summary>
+        public static string ContactForm1 {
+            get {
+                return ResourceManager.GetString("ContactForm1", resourceCulture);
             }
         }
         
@@ -115,11 +151,56 @@ namespace Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ოკუპირებულ ტერიტორიებზე არასამეწარმეო საქმიანობის განხორციელებისათვის .
+        /// </summary>
+        public static string DescForm3 {
+            get {
+                return ResourceManager.GetString("DescForm3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ორგანიზაციის მისიის აღწერა.
+        /// </summary>
+        public static string DescOfOrg {
+            get {
+                return ResourceManager.GetString("DescOfOrg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to დანიშნულების ადგილი.
         /// </summary>
         public static string Destinationplace {
             get {
                 return ResourceManager.GetString("Destinationplace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to დონორები.
+        /// </summary>
+        public static string Donor_s_ {
+            get {
+                return ResourceManager.GetString("Donor(s)", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to დონორები (დასახელება და საკონტაქტო ინფორმაცია).
+        /// </summary>
+        public static string DonorsForm2 {
+            get {
+                return ResourceManager.GetString("DonorsForm2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to პროექტი ერთობლივად არის წარდგენილი დონორისა და პროექტის წარმდგენელის მიერ (კი/არა). დადებითი პასუხის შემთხვევაში: დონორ(ებ)ის დასახელება.
+        /// </summary>
+        public static string DonorsForm3 {
+            get {
+                return ResourceManager.GetString("DonorsForm3", resourceCulture);
             }
         }
         
@@ -142,11 +223,47 @@ namespace Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string EmailAddress {
+            get {
+                return ResourceManager.GetString("EmailAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string EmailPassword {
+            get {
+                return ResourceManager.GetString("EmailPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to გადაუდებელ შემთხვევაში საკონტაქტო პირი.
         /// </summary>
         public static string Emergency_Contacts {
             get {
                 return ResourceManager.GetString("Emergency Contacts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to გადაუდებელი ჰუმანიტარული დახმარების გაცემის ვადა (ერთჯერადი, მრავალჯერადი).
+        /// </summary>
+        public static string EmerHum {
+            get {
+                return ResourceManager.GetString("EmerHum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to პროექტის მოსალოდნელი შედეგები.
+        /// </summary>
+        public static string ExpectedResults {
+            get {
+                return ResourceManager.GetString("ExpectedResults", resourceCulture);
             }
         }
         
@@ -169,11 +286,38 @@ namespace Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to დასაშვები ფაილები: &quot;.jpg&quot;,&quot;.pdf,&quot;.rar&quot;.
+        /// </summary>
+        public static string fileextensions {
+            get {
+                return ResourceManager.GetString("fileextensions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ფინანსური ინფორმაცია (მოსალოდნელი ბიუჯეტი, რესურსები, საბანკო ინფორმაცია).
+        /// </summary>
+        public static string FinanceInfo {
+            get {
+                return ResourceManager.GetString("FinanceInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to სახელი.
         /// </summary>
         public static string FirstName {
             get {
                 return ResourceManager.GetString("FirstName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to შენიშვნა: განაცხადის ფორმა არ წარმოადგენს ოკუპირებულ რეგიონებში შესვლის გარანტიას .
+        /// </summary>
+        public static string FNote {
+            get {
+                return ResourceManager.GetString("FNote", resourceCulture);
             }
         }
         
@@ -205,6 +349,15 @@ namespace Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ზოგადი ინფორმაცია.
+        /// </summary>
+        public static string GeneralInformation {
+            get {
+                return ResourceManager.GetString("GeneralInformation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to მასპინძლის საკონტაქტო ინფორმაცია.
         /// </summary>
         public static string HostContact {
@@ -223,6 +376,51 @@ namespace Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ჰუმანიტარული მდგომარეობის აღწერა (რით არის გამოწვეული, რომელ გეოგრაფიულ არეალს მოიცავს ჰუმანიტარული მდგომარეობის მიერ გამოწვეული შედეგები).
+        /// </summary>
+        public static string HumDesc {
+            get {
+                return ResourceManager.GetString("HumDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to გადაუდებელი ჰუმანიტარული დახმარების შეტანის მიმართულება და პროპორციები.
+        /// </summary>
+        public static string HumDirection {
+            get {
+                return ResourceManager.GetString("HumDirection", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ინფორმაცია გადაუდებელი ჰუმანიტარული დახმარების აუცილებლობის შესახებ.
+        /// </summary>
+        public static string HumInfo {
+            get {
+                return ResourceManager.GetString("HumInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ჰუმანიტარული დახმარების რაოდენობა.
+        /// </summary>
+        public static string HumQuantity {
+            get {
+                return ResourceManager.GetString("HumQuantity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ჰუმანიტარული დახმარების აღწერა.
+        /// </summary>
+        public static string HumType {
+            get {
+                return ResourceManager.GetString("HumType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to მნიშვნელოვანი დოკუმენტები.
         /// </summary>
         public static string ImportantDocs {
@@ -232,11 +430,29 @@ namespace Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ინფორმაცია განსახორციელებელი პროექტის შესახებ.
+        /// </summary>
+        public static string InformationProjects {
+            get {
+                return ResourceManager.GetString("InformationProjects", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to სამოქალაქო ინტეგრაცია.
         /// </summary>
         public static string Integration {
             get {
                 return ResourceManager.GetString("Integration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to გამოგზავნილია თუ არა სამინისტროში პროექტი ოკუპირებულ ტერიტორიაზე საქმიანობის წარმართვის წესების მიხედვით?.
+        /// </summary>
+        public static string IsSentProject {
+            get {
+                return ResourceManager.GetString("IsSentProject", resourceCulture);
             }
         }
         
@@ -259,6 +475,24 @@ namespace Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ადგილობრივი პარტნიორი.
+        /// </summary>
+        public static string LocalPartner {
+            get {
+                return ResourceManager.GetString("LocalPartner", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ინფორმაცია ადგილობრივი პარტნიორების შესახებ (დასახელება და საკონტაქტო ინფორმაცია).
+        /// </summary>
+        public static string LocalPartners {
+            get {
+                return ResourceManager.GetString("LocalPartners", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to შესვლა.
         /// </summary>
         public static string Login {
@@ -273,6 +507,15 @@ namespace Core.Properties {
         public static string Main {
             get {
                 return ResourceManager.GetString("Main", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ორგანიზაციის მისიის აღწერა.
+        /// </summary>
+        public static string MissionDesc {
+            get {
+                return ResourceManager.GetString("MissionDesc", resourceCulture);
             }
         }
         
@@ -295,6 +538,42 @@ namespace Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to სახელმწიფოთაშორისი ორგანიზაციებისა და საერთაშორისო განვითარების ორგანიზაციებისათვის, რომლებიც ახორციელებენ საქმიანობას ოკუპირებულ ტერიტორიებზე საქართველოს მთავრობასთან დადებული შეთანხმებების თანახმად.
+        /// </summary>
+        public static string NotifForm2Desc {
+            get {
+                return ResourceManager.GetString("NotifForm2Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to სანოტიფიკაციო ფორმა 1.
+        /// </summary>
+        public static string NotificationForm1 {
+            get {
+                return ResourceManager.GetString("NotificationForm1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to სანოტიფიკაციო ფორმა 2.
+        /// </summary>
+        public static string NotificationForm2 {
+            get {
+                return ResourceManager.GetString("NotificationForm2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to სანოტიფიკაციო ფორმა 2.
+        /// </summary>
+        public static string NotificationForm3 {
+            get {
+                return ResourceManager.GetString("NotificationForm3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to სანოტიფიკაციო ფორმები.
         /// </summary>
         public static string NotificationForms {
@@ -309,6 +588,15 @@ namespace Core.Properties {
         public static string OfficeOfTheMinister {
             get {
                 return ResourceManager.GetString("OfficeOfTheMinister", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ორგანიზაციის სახელი.
+        /// </summary>
+        public static string OrganizationName {
+            get {
+                return ResourceManager.GetString("OrganizationName", resourceCulture);
             }
         }
         
@@ -349,11 +637,47 @@ namespace Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to საქართველოს ოკუპირებულ ტერიტორიებზე გადაუდებელი ჰუმანიტარული დახმარების წარმართვისათვის.
+        /// </summary>
+        public static string preface1 {
+            get {
+                return ResourceManager.GetString("preface1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to განსახორციელებელი პროექტი.
         /// </summary>
         public static string ProjectImplemented {
             get {
                 return ResourceManager.GetString("ProjectImplemented", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to პროექტის დასახელება.
+        /// </summary>
+        public static string ProjectName {
+            get {
+                return ResourceManager.GetString("ProjectName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to პროექტის მიზანი.
+        /// </summary>
+        public static string Projectpurpose {
+            get {
+                return ResourceManager.GetString("Projectpurpose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to დამატებითი ინფორმაცია.
+        /// </summary>
+        public static string Provideadditionalinformation {
+            get {
+                return ResourceManager.GetString("Provideadditionalinformation", resourceCulture);
             }
         }
         
@@ -376,11 +700,47 @@ namespace Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ოკუპირებულ ტერიტორიებზე გამგზავრების მოსალოდნელი განრიგი .
+        /// </summary>
+        public static string Schedule {
+            get {
+                return ResourceManager.GetString("Schedule", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to გაგზავნა.
+        /// </summary>
+        public static string Send {
+            get {
+                return ResourceManager.GetString("Send", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to სტატუს ნეიტრალური დოკუმენტები.
         /// </summary>
         public static string StatusNeutralDocs {
             get {
                 return ResourceManager.GetString("StatusNeutralDocs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to პროექტის სტატუსი (მიმდინარე, იდეა, დაფინანსებული, გაგრძელებული).
+        /// </summary>
+        public static string StatusOfProject {
+            get {
+                return ResourceManager.GetString("StatusOfProject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ვიზიტორის სტატუსი პროექტში.
+        /// </summary>
+        public static string Statusofthevisitor {
+            get {
+                return ResourceManager.GetString("Statusofthevisitor", resourceCulture);
             }
         }
         
@@ -453,6 +813,24 @@ namespace Core.Properties {
         public static string VisitOrganizedby {
             get {
                 return ResourceManager.GetString("VisitOrganizedby", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ველი {0} სავალდებულოა.
+        /// </summary>
+        public static string WarningRequired {
+            get {
+                return ResourceManager.GetString("WarningRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ვებ-გვერდი.
+        /// </summary>
+        public static string WebPage {
+            get {
+                return ResourceManager.GetString("WebPage", resourceCulture);
             }
         }
         

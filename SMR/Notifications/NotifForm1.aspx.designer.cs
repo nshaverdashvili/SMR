@@ -22,6 +22,15 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.TextBox txtOrgName;
         
         /// <summary>
+        /// reqOrgName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqOrgName;
+        
+        /// <summary>
         /// txtAddress control.
         /// </summary>
         /// <remarks>
@@ -29,6 +38,15 @@ namespace SMR.Notifications {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAddress;
+        
+        /// <summary>
+        /// reqAddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqAddress;
         
         /// <summary>
         /// txtMobile control.
@@ -40,6 +58,15 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.TextBox txtMobile;
         
         /// <summary>
+        /// reqMobile control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqMobile;
+        
+        /// <summary>
         /// txtEmail control.
         /// </summary>
         /// <remarks>
@@ -47,6 +74,15 @@ namespace SMR.Notifications {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEmail;
+        
+        /// <summary>
+        /// reqEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqEmail;
         
         /// <summary>
         /// txtWebPage control.
@@ -58,6 +94,15 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.TextBox txtWebPage;
         
         /// <summary>
+        /// reqWebPage control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqWebPage;
+        
+        /// <summary>
         /// fuURL control.
         /// </summary>
         /// <remarks>
@@ -65,6 +110,15 @@ namespace SMR.Notifications {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload fuURL;
+        
+        /// <summary>
+        /// reqAppUpload control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqAppUpload;
         
         /// <summary>
         /// litUrl control.
@@ -85,13 +139,13 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.HiddenField hfURL;
         
         /// <summary>
-        /// valfuURL control.
+        /// reqfuURL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator valfuURL;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqfuURL;
         
         /// <summary>
         /// txtMissionDesc control.
@@ -103,6 +157,15 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.TextBox txtMissionDesc;
         
         /// <summary>
+        /// reqMissionDesc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqMissionDesc;
+        
+        /// <summary>
         /// txtContact control.
         /// </summary>
         /// <remarks>
@@ -110,6 +173,15 @@ namespace SMR.Notifications {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtContact;
+        
+        /// <summary>
+        /// reqContactForm1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqContactForm1;
         
         /// <summary>
         /// txtDesc1 control.
@@ -121,6 +193,15 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.TextBox txtDesc1;
         
         /// <summary>
+        /// reqHumDesc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqHumDesc;
+        
+        /// <summary>
         /// txtDesc2 control.
         /// </summary>
         /// <remarks>
@@ -128,6 +209,15 @@ namespace SMR.Notifications {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDesc2;
+        
+        /// <summary>
+        /// reqHumType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqHumType;
         
         /// <summary>
         /// txtNumber control.
@@ -139,6 +229,15 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.TextBox txtNumber;
         
         /// <summary>
+        /// reqHumQuantity control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqHumQuantity;
+        
+        /// <summary>
         /// txtDonors control.
         /// </summary>
         /// <remarks>
@@ -146,6 +245,15 @@ namespace SMR.Notifications {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDonors;
+        
+        /// <summary>
+        /// reqDonors control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqDonors;
         
         /// <summary>
         /// txtTerms control.
@@ -157,6 +265,15 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.TextBox txtTerms;
         
         /// <summary>
+        /// reqTerms control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqTerms;
+        
+        /// <summary>
         /// txtProportions control.
         /// </summary>
         /// <remarks>
@@ -164,6 +281,15 @@ namespace SMR.Notifications {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtProportions;
+        
+        /// <summary>
+        /// reqDireqtions control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqDireqtions;
         
         /// <summary>
         /// FileUpload1 control.
@@ -193,13 +319,13 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.HiddenField HiddenField1;
         
         /// <summary>
-        /// RequiredFieldValidator1 control.
+        /// reqAddInfo control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqAddInfo;
         
         /// <summary>
         /// txtOrgName1 control.
@@ -211,6 +337,15 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.TextBox txtOrgName1;
         
         /// <summary>
+        /// reqOrgName1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqOrgName1;
+        
+        /// <summary>
         /// txtAddress1 control.
         /// </summary>
         /// <remarks>
@@ -218,6 +353,15 @@ namespace SMR.Notifications {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtAddress1;
+        
+        /// <summary>
+        /// reqAddress1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqAddress1;
         
         /// <summary>
         /// txtMobile1 control.
@@ -229,6 +373,15 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.TextBox txtMobile1;
         
         /// <summary>
+        /// reqMobile1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqMobile1;
+        
+        /// <summary>
         /// txtEmail1 control.
         /// </summary>
         /// <remarks>
@@ -236,6 +389,15 @@ namespace SMR.Notifications {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtEmail1;
+        
+        /// <summary>
+        /// reqEmail2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqEmail2;
         
         /// <summary>
         /// txtWebPage1 control.
@@ -247,6 +409,15 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.TextBox txtWebPage1;
         
         /// <summary>
+        /// reqWebPage2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqWebPage2;
+        
+        /// <summary>
         /// txtMissionDesc1 control.
         /// </summary>
         /// <remarks>
@@ -254,6 +425,15 @@ namespace SMR.Notifications {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtMissionDesc1;
+        
+        /// <summary>
+        /// reqMissionDesc2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqMissionDesc2;
         
         /// <summary>
         /// txtContact1 control.
@@ -265,6 +445,15 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.TextBox txtContact1;
         
         /// <summary>
+        /// reqContact2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqContact2;
+        
+        /// <summary>
         /// txtProjectTitle control.
         /// </summary>
         /// <remarks>
@@ -272,6 +461,15 @@ namespace SMR.Notifications {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtProjectTitle;
+        
+        /// <summary>
+        /// reqProjectTitle control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqProjectTitle;
         
         /// <summary>
         /// txtProjectStatus control.
@@ -283,6 +481,15 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.TextBox txtProjectStatus;
         
         /// <summary>
+        /// reqProjectStatus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqProjectStatus;
+        
+        /// <summary>
         /// txtDonors1 control.
         /// </summary>
         /// <remarks>
@@ -290,6 +497,15 @@ namespace SMR.Notifications {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDonors1;
+        
+        /// <summary>
+        /// reqDonors2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqDonors2;
         
         /// <summary>
         /// txtProjectGoal1 control.
@@ -301,6 +517,15 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.TextBox txtProjectGoal1;
         
         /// <summary>
+        /// reqProjectGoal2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqProjectGoal2;
+        
+        /// <summary>
         /// txtProjectResults1 control.
         /// </summary>
         /// <remarks>
@@ -308,6 +533,15 @@ namespace SMR.Notifications {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtProjectResults1;
+        
+        /// <summary>
+        /// reqProjectResults2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqProjectResults2;
         
         /// <summary>
         /// txtProjectFDate control.
@@ -319,6 +553,15 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.TextBox txtProjectFDate;
         
         /// <summary>
+        /// reqProjectFDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqProjectFDate;
+        
+        /// <summary>
         /// txtProjectLDate control.
         /// </summary>
         /// <remarks>
@@ -326,6 +569,15 @@ namespace SMR.Notifications {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtProjectLDate;
+        
+        /// <summary>
+        /// reqProjectLDate control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqProjectLDate;
         
         /// <summary>
         /// FileUpload2 control.
@@ -373,13 +625,31 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.TextBox txtOrgName2;
         
         /// <summary>
-        /// txtDonors2 control.
+        /// reqOrgName2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDonors2;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqOrgName2;
+        
+        /// <summary>
+        /// txtDonors3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtDonors3;
+        
+        /// <summary>
+        /// reqDonors3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqDonors3;
         
         /// <summary>
         /// txtAddress2 control.
@@ -391,6 +661,15 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.TextBox txtAddress2;
         
         /// <summary>
+        /// reqAddress3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqAddress3;
+        
+        /// <summary>
         /// txtMobile2 control.
         /// </summary>
         /// <remarks>
@@ -398,6 +677,15 @@ namespace SMR.Notifications {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtMobile2;
+        
+        /// <summary>
+        /// reqMobile3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqMobile3;
         
         /// <summary>
         /// txtEmail2 control.
@@ -409,6 +697,15 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.TextBox txtEmail2;
         
         /// <summary>
+        /// reqEmail3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqEmail3;
+        
+        /// <summary>
         /// txtWebPage2 control.
         /// </summary>
         /// <remarks>
@@ -416,6 +713,15 @@ namespace SMR.Notifications {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtWebPage2;
+        
+        /// <summary>
+        /// reqWebPage3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqWebPage3;
         
         /// <summary>
         /// FileUpload3 control.
@@ -463,6 +769,15 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.TextBox txtMission2;
         
         /// <summary>
+        /// reqMissionDesc3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqMissionDesc3;
+        
+        /// <summary>
         /// txtIsActive2 control.
         /// </summary>
         /// <remarks>
@@ -470,6 +785,15 @@ namespace SMR.Notifications {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtIsActive2;
+        
+        /// <summary>
+        /// reqStatusOfProject3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqStatusOfProject3;
         
         /// <summary>
         /// txtContactInfo2 control.
@@ -481,6 +805,15 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.TextBox txtContactInfo2;
         
         /// <summary>
+        /// reqContacts3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqContacts3;
+        
+        /// <summary>
         /// txtProjectTitle2 control.
         /// </summary>
         /// <remarks>
@@ -488,6 +821,15 @@ namespace SMR.Notifications {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtProjectTitle2;
+        
+        /// <summary>
+        /// reqProjectTitle3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqProjectTitle3;
         
         /// <summary>
         /// txtProjectStatus2 control.
@@ -499,6 +841,15 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.TextBox txtProjectStatus2;
         
         /// <summary>
+        /// reqStatus3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqStatus3;
+        
+        /// <summary>
         /// txtDonorContacts control.
         /// </summary>
         /// <remarks>
@@ -506,6 +857,15 @@ namespace SMR.Notifications {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDonorContacts;
+        
+        /// <summary>
+        /// reqDonorsContacts3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqDonorsContacts3;
         
         /// <summary>
         /// txtProjectGoal2 control.
@@ -517,6 +877,15 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.TextBox txtProjectGoal2;
         
         /// <summary>
+        /// reqProjectGoal3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqProjectGoal3;
+        
+        /// <summary>
         /// txtProjectResults2 control.
         /// </summary>
         /// <remarks>
@@ -524,6 +893,15 @@ namespace SMR.Notifications {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtProjectResults2;
+        
+        /// <summary>
+        /// reqProjectResults3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqProjectResults3;
         
         /// <summary>
         /// txtProjectFDate1 control.
@@ -535,13 +913,31 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.TextBox txtProjectFDate1;
         
         /// <summary>
-        /// TextBox2 control.
+        /// reqFDate3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox2;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqFDate3;
+        
+        /// <summary>
+        /// txtProjectLDate1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtProjectLDate1;
+        
+        /// <summary>
+        /// reqLDate3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqLDate3;
         
         /// <summary>
         /// txtFinanceInfo control.
@@ -553,6 +949,15 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.TextBox txtFinanceInfo;
         
         /// <summary>
+        /// reqFinanceInfo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqFinanceInfo;
+        
+        /// <summary>
         /// txtPartnerInfo control.
         /// </summary>
         /// <remarks>
@@ -562,6 +967,15 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.TextBox txtPartnerInfo;
         
         /// <summary>
+        /// reqPartnerInfo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqPartnerInfo;
+        
+        /// <summary>
         /// txtDepart control.
         /// </summary>
         /// <remarks>
@@ -569,6 +983,15 @@ namespace SMR.Notifications {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDepart;
+        
+        /// <summary>
+        /// reqSchedule control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqSchedule;
         
         /// <summary>
         /// FileUpload4 control.
@@ -605,5 +1028,14 @@ namespace SMR.Notifications {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
+        
+        /// <summary>
+        /// btnAddnew control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAddnew;
     }
 }
