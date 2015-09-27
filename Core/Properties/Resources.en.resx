@@ -372,4 +372,22 @@
   <data name="WarningRequired" xml:space="preserve">
     <value>{0} is required</value>
   </data>
+  <data name="NotificationTitle" xml:space="preserve">
+    <value>SMR Online Notification Application</value>
+  </data>
+  <data name="NotificationDesc" xml:space="preserve">
+    <value>Persons working or traveling to Georgia aiming to visit occupied regions are kindly asked to fill out the Notification Form. The Notification Form does not put any type of liability upon the Office of the State Minister. Neither does it serve as permission for entering the conflict region. The Notification Form has only informational character. In order to obtain media accreditation, please, contact Ministry of Foreign Affairs of Georgia or follow the link http://www.mfa.gov.ge</value>
+  </data>
+  <data name="NewsMonth" xml:space="preserve">
+    <value>News Archive</value>
+  </data>
+  <data name="cp1" xml:space="preserve">
+    <value>Copyright © 2009-2015 Office of The State Minister of Georgia</value>
+  </data>
+  <data name="cp2" xml:space="preserve">
+    <value>Copyright © 2009-2015 Office of The State Minister of Georgia</value>
+  </data>
+  <data name="cp3" xml:space="preserve">
+    <value>for Reconciliation and Civic Equality. All Rights Reserved. </value>
+  </data>
 </root>

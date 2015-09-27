@@ -378,4 +378,22 @@
   <data name="EmailPassword" xml:space="preserve">
     <value></value>
   </data>
+  <data name="NotificationTitle" xml:space="preserve">
+    <value>ნოტიფიკაცია ოკუპირებულ ტერიტორიებზე შესვლის თაობაზე</value>
+  </data>
+  <data name="NotificationDesc" xml:space="preserve">
+    <value>საქართველოში მომუშავე და ოკუპირებული რეგიონების მონახულების მსურველმა პირებმა საჭიროა შეავსონ ქვემდებარე ფორმა. სანოტიფიკაციო ფორმა არ აკისრებს სახელმწიფო მინისტრის აპარატს რაიმე პასუხისმგებლობას და არ წარმოადგენს ოკუპირებული რეგიონების მონახულების ნებართვას. სანოტიფიკაციო ფორმა არის მხოლოდ ინფორმაციული ხასიათის. საერთაშორისო ჟურნალისტების მიერ მედიააკრედიტაციის მიღების მიზნით გთხოვთ დაუკავშირდეთ საქართველოს საგარეო საქმეთა სამინისტროს ან გადახვიდეთ ამ ბმულზე http://www.mfa.gov.ge</value>
+  </data>
+  <data name="NewsMonth" xml:space="preserve">
+    <value>თვის ამბები</value>
+  </data>
+  <data name="cp1" xml:space="preserve">
+    <value>Copyright © 2009-2015 შერიგებისა და სამოქალაქო</value>
+  </data>
+  <data name="cp2" xml:space="preserve">
+    <value>თანასწორობის საკითხებში საქართველოს სახელმწიფო</value>
+  </data>
+  <data name="cp3" xml:space="preserve">
+    <value>მინისტრის აპარატი. ყველა უფლება დაცულია.</value>
+  </data>
 </root>

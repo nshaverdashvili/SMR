@@ -15,6 +15,23 @@
         <dx:ASPxTreeList ID="tlPermissions" ClientInstanceName="tlPermissions" runat="server" AutoGenerateColumns="False" DataSourceID="dsPermissions"
             KeyFieldName="PermissionID" ParentFieldName="ParentID">
             <Columns>
+                <dx:TreeListCommandColumn ButtonType="Image" Caption=" ">
+                    <CancelButton Visible="true">
+                        <Image Url="~/Content/images/grid/cancel.png"></Image>
+                    </CancelButton>
+                    <UpdateButton Visible="true">
+                        <Image Url="~/Content/images/grid/succsses.png"></Image>
+                    </UpdateButton>
+                    <NewButton Visible="True">
+                        <Image Url="~/Content/images/grid/add.png"></Image>
+                    </NewButton>
+                    <EditButton Visible="True">
+                        <Image Url="~/Content/images/grid/edit.png"></Image>
+                    </EditButton>
+                    <DeleteButton Visible="True">
+                        <Image Url="~/Content/images/grid/delete.png"></Image>
+                    </DeleteButton>
+                </dx:TreeListCommandColumn>
                 <dx:TreeListTextColumn FieldName="PermissionID" Visible="false">
                 </dx:TreeListTextColumn>
                 <dx:TreeListTextColumn FieldName="ParentID" Visible="false">

@@ -127,17 +127,17 @@ namespace Core
             });
         }
 
-        public void SP_Notifications(int? iud, int RecordID, string URL , string FName , string LName , string Address, string  Mobile , string Fax ,
-                                    string Email , string PassportN , string Nationality , DateTime BDate , bool? Sex , string EnteryNote , DateTime? EnteryDate ,
-                                    DateTime? LeaveDate , string Organisator , string TransportType , string Destination , string HostName , string HostContact ,
-                                    string EmFName , string EmLName , string EmAddress , string EmMobile , string VisitorStatus , string ProjectTitle ,string ProjectNote ,
-                                    DateTime? ProjectFDate , DateTime? ProjectLDate , string Partner, bool? IsSent , string Note , string WebPage , string RegFileURL ,
-                                    string MissionDesc , string Contact ,  string Desc1 , string Desc2 , int? Number , string Donors , string Term , string Proportions ,
-                                    string OrgName , string ProjectStatus , string Results , bool? IsActualProjects , string ProjectResults, 
-                                    string FinanceInfo , string PartnerInfo , string DepartPlan)
+        public void SP_Notifications(int? iud, int? RecordID = null, string URL = null, string FName = null, string LName = null, string Address = null, string Mobile = null, string Fax = null,
+                                    string Email = null, string PassportN = null, string Nationality = null, DateTime? BDate = null, bool? Gender = null, string EnteryNote = null, DateTime? EnteryDate = null,
+                                    DateTime? LeaveDate = null, string Organisator = null, string TransportType = null, string Destination = null, string HostName = null, string HostContact = null,
+                                    string EmFName = null, string EmLName = null, string EmAddress = null, string EmMobile = null, string VisitorStatus = null, string ProjectTitle = null, string ProjectNote = null,
+                                    DateTime? ProjectFDate = null, DateTime? ProjectLDate = null, string Partner = null, bool? IsSent = null, string Note = null, string WebPage = null, string RegFileURL = null,
+                                    string MissionDesc = null, string Contact = null, string Desc1 = null, string Desc2 = null, int? Number = null, string Donors = null, string Term = null, string Proportions = null,
+                                    string OrgName = null, string ProjectStatus = null, string Results = null, bool? IsActualProjects = null, string ProjectResults = null,
+                                    string FinanceInfo = null, string PartnerInfo = null, string DepartPlan = null)
         {
             TryExecute(string.Format("SP_Notifications(iud = {0}, RecordID = {1}, URL = {2}, FName = {3}, LName = {4}, Address = {5}, Mobile = {6}, Fax = {7}, Email = {8}, PassportN = {9}, Nationality = {10}, BDate = {11}, Sex = {12}, EnteryNote = {13}, EnteryDate = {14}, LeaveDate = {15}, Organisator = {16}, TransportType = {17}, Destination = {18}, HostName = {19}), HostContact = {20}, EmFName = {21}, EmLName = {22}, EmAddress = {23}, EmMobile = {24}, VisitorStatus = {25}, ProjectTitle = {26}, ProjectNote = {27}, ProjectFDate  = {28}, ProjectLDate = {29}, Partner = {30}, IsSent = {31}, Note = {32}, WebPage = {33}, RegFileURL = {34},  OrgName = {35}, ProjectStatus = {36}, Results = {37}, IsActualProjects = {38}, ProjectResults = {39}, FinanceInfo = {40}, PartnerInfo = {41}, DepartPlan = {42}",
-                iud, RecordID, URL , FName , LName , Address,  Mobile ,  Fax , Email ,  PassportN ,  Nationality ,  BDate ,  Sex ,  EnteryNote ,  EnteryDate ,
+                iud, RecordID, URL, FName, LName, Address, Mobile, Fax, Email, PassportN, Nationality, BDate, Gender, EnteryNote, EnteryDate,
                                      LeaveDate ,  Organisator ,  TransportType ,  Destination ,  HostName ,  HostContact ,
                                      EmFName ,  EmLName ,  EmAddress ,  EmMobile ,  VisitorStatus ,  ProjectTitle , ProjectNote ,
                                      ProjectFDate , ProjectLDate ,  Partner,  IsSent ,  Note ,  WebPage ,  RegFileURL ,
@@ -148,7 +148,7 @@ namespace Core
                     using (var db = DB.DBCon.GetToolsDataContext())
                     {
                         int? NewID = RecordID;
-                        db.sp_Notifications(iud, ref NewID, URL, FName, LName, Address, Mobile, Fax, Email, PassportN, Nationality, BDate, Sex, EnteryNote, EnteryDate,
+                        db.sp_Notifications(iud, ref NewID, URL, FName, LName, Address, Mobile, Fax, Email, PassportN, Nationality, BDate, Gender, EnteryNote, EnteryDate,
                                      LeaveDate, Organisator, TransportType, Destination, HostName, HostContact,
                                      EmFName, EmLName, EmAddress, EmMobile, VisitorStatus, ProjectTitle, ProjectNote,
                                      ProjectFDate, ProjectLDate, Partner, IsSent, Note, WebPage, RegFileURL,

@@ -64,7 +64,10 @@ namespace SMR.Notifications
                 fuURL.SaveAs(string.Format("{0}{1}", path, fuURLFileName));
             }
 
-            //N.SP_Notifications(0,null,fuURLFileName, txtAddress.Text,)//yvela prop gadavce
+            //N.SP_Notifications(0,null, fuURLFileName, txtFName.Text, txtLName.Text, txtAddress.Text, txtMobile.Text, txtFax.Text, txtEmail.Text,
+            //    txtPassportN.Text, txtNationality.Text, DateTime.Parse(txtBDate.Text), );
+         
+
 
         }
     }

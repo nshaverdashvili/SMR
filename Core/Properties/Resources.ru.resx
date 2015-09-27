@@ -375,4 +375,24 @@
   <data name="WarningRequired" xml:space="preserve">
     <value>{0} is required</value>
   </data>
+  <data name="NotificationTitle" xml:space="preserve">
+    <value>Уведомительная форма о посещении оккупированных регионов</value>
+  </data>
+  <data name="NotificationDesc" xml:space="preserve">
+    <value>Работающим в Грузии и желающим посетить оккупированные регионы страны иностранным гражданам необходимо заполнить уведомительную форму.
+Уведомительная форма не возлагает каких-либо обязательств на Аппарат государственного министра Грузии и не является разрешением на въезд в оккупированные регионы. Вышеуказанная форма носит информационный характер.
+Иностранным журналистам, желающим посетить оккупированные регионы Грузии необходимо ознакомиться с процедурами аккредитования, посетив интернет-страницу Министерства иностранных дел Грузии - http://www.mfa.gov.ge</value>
+  </data>
+  <data name="NewsMonth" xml:space="preserve">
+    <value>Архив новостей</value>
+  </data>
+  <data name="cp1" xml:space="preserve">
+    <value>Copyright © 2009-2015 Аппарат государственного министра</value>
+  </data>
+  <data name="cp2" xml:space="preserve">
+    <value>Грузии по вопросам примирения и гражданского</value>
+  </data>
+  <data name="cp3" xml:space="preserve">
+    <value>равноправия. Все права защищены</value>
+  </data>
 </root>

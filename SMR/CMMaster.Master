@@ -137,7 +137,7 @@
                             <div class="phCalendar">
                                 <label class="chckbox">
                                     <input type="checkbox" id="IsMonth" />
-                                    თვის ამბები
+                                    <%=Core.Properties.Resources.NewsMonth %>
                                 </label>
                                 <div class="Calendar"></div>
                             </div>
@@ -166,11 +166,11 @@
                     <div class="row ft-cp">
                         <div class="col-md-6">
                             <span class="footerCP">
-                                <b>Copyright © 2009-2015 შერიგებისა და სამოქალაქო </b>
+                                <b><%=Core.Properties.Resources.cp1 %> </b>
                                 <br />
-                                <b>თანასწორობის საკითხებში საქართველოს სახელმწიფო მინისტრის აპარატი.</b>
+                                <b><%=Core.Properties.Resources.cp2 %> </b>
                                 <br />
-                                <b>ყველა უფლება დაცულია.</b>
+                                <b><%=Core.Properties.Resources.cp3 %> </b>
                             </span>
                         </div>
                         <div class="col-md-6">

@@ -8,6 +8,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using Lib;
 using Core.UM;
+using Core;
 
 
 namespace SMR.Notifications
@@ -70,6 +71,11 @@ namespace SMR.Notifications
             reqPartnerInfo.ErrorMessage = Core.Properties.Resources.LocalPartner;
             reqSchedule.ErrorMessage = Core.Properties.Resources.Schedule;
         }
+        protected void btnSend_Click(object sender, EventArgs e)
+        {
+           
 
+
+        }
     }
 }

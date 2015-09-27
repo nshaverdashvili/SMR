@@ -124,6 +124,33 @@ namespace Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Copyright © 2009-2015 შერიგებისა და სამოქალაქო.
+        /// </summary>
+        public static string cp1 {
+            get {
+                return ResourceManager.GetString("cp1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to თანასწორობის საკითხებში საქართველოს სახელმწიფო.
+        /// </summary>
+        public static string cp2 {
+            get {
+                return ResourceManager.GetString("cp2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to მინისტრის აპარატი. ყველა უფლება დაცულია..
+        /// </summary>
+        public static string cp3 {
+            get {
+                return ResourceManager.GetString("cp3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ახალი.
         /// </summary>
         public static string CreateNew {
@@ -538,11 +565,29 @@ namespace Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to თვის ამბები.
+        /// </summary>
+        public static string NewsMonth {
+            get {
+                return ResourceManager.GetString("NewsMonth", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to სახელმწიფოთაშორისი ორგანიზაციებისა და საერთაშორისო განვითარების ორგანიზაციებისათვის, რომლებიც ახორციელებენ საქმიანობას ოკუპირებულ ტერიტორიებზე საქართველოს მთავრობასთან დადებული შეთანხმებების თანახმად.
         /// </summary>
         public static string NotifForm2Desc {
             get {
                 return ResourceManager.GetString("NotifForm2Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to საქართველოში მომუშავე და ოკუპირებული რეგიონების მონახულების მსურველმა პირებმა საჭიროა შეავსონ ქვემდებარე ფორმა. სანოტიფიკაციო ფორმა არ აკისრებს სახელმწიფო მინისტრის აპარატს რაიმე პასუხისმგებლობას და არ წარმოადგენს ოკუპირებული რეგიონების მონახულების ნებართვას. სანოტიფიკაციო ფორმა არის მხოლოდ ინფორმაციული ხასიათის. საერთაშორისო ჟურნალისტების მიერ მედიააკრედიტაციის მიღების მიზნით გთხოვთ დაუკავშირდეთ საქართველოს საგარეო საქმეთა სამინისტროს ან გადახვიდეთ ამ ბმულზე http://www.mfa.gov.ge.
+        /// </summary>
+        public static string NotificationDesc {
+            get {
+                return ResourceManager.GetString("NotificationDesc", resourceCulture);
             }
         }
         
@@ -579,6 +624,15 @@ namespace Core.Properties {
         public static string NotificationForms {
             get {
                 return ResourceManager.GetString("NotificationForms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ნოტიფიკაცია ოკუპირებულ ტერიტორიებზე შესვლის თაობაზე.
+        /// </summary>
+        public static string NotificationTitle {
+            get {
+                return ResourceManager.GetString("NotificationTitle", resourceCulture);
             }
         }
         

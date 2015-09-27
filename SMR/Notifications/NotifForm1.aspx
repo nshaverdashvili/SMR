@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CMMaster.Master" AutoEventWireup="true" CodeBehind="NotifForm1.aspx.cs" Inherits="SMR.Notifications.NotifForm1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    
     <script>
         $(function () {
             $(".nav-tabs a").click(function () {
