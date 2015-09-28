@@ -229,13 +229,13 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqGender;
         
         /// <summary>
-        /// txtFDates control.
+        /// txtFDate control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFDates;
+        protected global::System.Web.UI.WebControls.TextBox txtFDate;
         
         /// <summary>
         /// reqFDate control.
@@ -614,5 +614,14 @@ namespace SMR.Notifications {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ObjectDataSource dsIsSent;
+        
+        /// <summary>
+        /// litScripts control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal litScripts;
     }
 }

@@ -86,6 +86,7 @@ namespace Core.DB
 		public int sp_Notifications(
 					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> iud, 
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="RecordID", DbType="Int")] ref System.Nullable<int> recordID, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="NotificationTypeID", DbType="Int")] System.Nullable<int> notificationTypeID, 
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="URL", DbType="NVarChar(250)")] string uRL, 
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Fname", DbType="NVarChar(50)")] string fname, 
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Lname", DbType="NVarChar(100)")] string lname, 
@@ -136,7 +137,7 @@ namespace Core.DB
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="PartnerInfo", DbType="NVarChar(MAX)")] string partnerInfo, 
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="DepartPlan", DbType="NVarChar(MAX)")] string departPlan)
 		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iud, recordID, uRL, fname, lname, address, mobile, fax, email, passportN, nationality, bdate, sex, enteryNote, enteryDate, leaveDate, organisator, transportType, destination, hostName, hostContact, emFName, emLName, emAddress, emMobile, visitorStatus, projectTitle, projectNote, projectFDate, projectLDate, partner, isSent, note, webPage, regFileURL, missionDesc, contact, desc1, desc2, number, donors, term, proportions, orgName, projectStatus, results, isActualProjects, projectResults, financeInfo, partnerInfo, departPlan);
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iud, recordID, notificationTypeID, uRL, fname, lname, address, mobile, fax, email, passportN, nationality, bdate, sex, enteryNote, enteryDate, leaveDate, organisator, transportType, destination, hostName, hostContact, emFName, emLName, emAddress, emMobile, visitorStatus, projectTitle, projectNote, projectFDate, projectLDate, partner, isSent, note, webPage, regFileURL, missionDesc, contact, desc1, desc2, number, donors, term, proportions, orgName, projectStatus, results, isActualProjects, projectResults, financeInfo, partnerInfo, departPlan);
 			recordID = ((System.Nullable<int>)(result.GetParameterValue(1)));
 			return ((int)(result.ReturnValue));
 		}

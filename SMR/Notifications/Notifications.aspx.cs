@@ -16,6 +16,11 @@ namespace SMR.Notifications
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack && Session["IsSent"]!=null)
+            {
+                litScripts.Text = "<script> alert('მონაცემები გადაგზავნილია')</script>";
+                Session["IsSent"] = null;
+            }
             initErrorMessages();
         }
 
@@ -56,6 +61,7 @@ namespace SMR.Notifications
         {
             var N = new NoficicationsRepository();
             var fuURLFileName = "";
+            
             if (fuURL.HasFile)
             {
                 fuURLFileName = fuURL.FileName.ToAZ09Dash(true, true);
@@ -63,12 +69,87 @@ namespace SMR.Notifications
 
                 fuURL.SaveAs(string.Format("{0}{1}", path, fuURLFileName));
             }
+            var NotifType = new DictionariesRepository().ListDictionary(1, 9).FirstOrDefault(w => w.CodeVal == 1).DictionaryID;
+            var BDate =string.IsNullOrEmpty(txtBDate.Text) ? DateTime.Now : DateTime.Parse(txtBDate.Text);
+            var EnteryDate = string.IsNullOrEmpty(txtFDate.Text) ? DateTime.Now : DateTime.Parse(txtFDate.Text);
+            var LeaveDate = string.IsNullOrEmpty(txtLDate.Text) ? DateTime.Now : DateTime.Parse(txtLDate.Text);
+            N.SP_Notifications(0,
+                NotificationTypeID: NotifType,
+                URL: fuURLFileName,
+                FName: txtFName.Text,
+                LName: txtLName.Text,
+                Address: txtAddress.Text,
+                Mobile: txtMobile.Text,
+                Fax: txtFax.Text,
+                Email: txtEmail.Text,
+                PassportN: txtPassportN.Text,
+                Nationality: txtNationality.Text,
+                BDate: BDate,
+                Gender: bool.Parse(ddGender.SelectedValue),
+                EnteryDate: EnteryDate,
+                LeaveDate: LeaveDate,
+                Organisator: ddOrganisator.SelectedValue,
+                TransportType: ddTransportType.SelectedValue,
+                Destination: txtDestination.Text,
+                HostName: txtHostName.Text,
+                HostContact: txtHostContact.Text,
+                EmFName : txtFName1.Text,
+                EmLName: txtLName1.Text,
+                EmAddress: txtAddress1.Text,
+                EmMobile: txtMobile1.Text,
+                VisitorStatus : txtProjectStatus.Text,
+                ProjectTitle:  txtProjectName.Text,
+                ProjectNote	:txtProjectGoal.Text,
+                ProjectFDate: DateTime.Parse(txtProjectFDate.Text),
+                ProjectLDate:DateTime.Parse(txtProjectLDate.Text),
+                Partner: txtLocalPartner.Text,
+                IsSent	: bool.Parse(ddIsSent.SelectedValue),
+                Note: txtNote.Text);
+            if (!N.IsError)
+            {
+                var NotifyObject = new Core.Notifications
+                {
+                    NotificationTypeID = NotifType,
+                    URL = fuURLFileName,
+                    FName = txtFName.Text,
+                    LName = txtLName.Text,
+                    Address = txtAddress.Text,
+                    Mobile = txtMobile.Text,
+                    Fax = txtFax.Text,
+                    Email = txtEmail.Text,
+                    PassportN = txtPassportN.Text,
+                    Nationality = txtNationality.Text,
+                    BDate = BDate,
+                    Sex = bool.Parse(ddGender.SelectedValue),
+                    EnteryDate = EnteryDate,
+                    LeaveDate = LeaveDate,
+                    Organisator = ddOrganisator.SelectedValue,
+                    TransportType = ddTransportType.SelectedValue,
+                    Destination = txtDestination.Text,
+                    HostName = txtHostName.Text,
+                    HostContact = txtHostContact.Text,
+                    EmFName = txtFName1.Text,
+                    EmLName = txtLName1.Text,
+                    EmAddress = txtAddress1.Text,
+                    EmMobile = txtMobile1.Text,
+                    VisitorStatus = txtProjectStatus.Text,
+                    ProjectTitle = txtProjectName.Text,
+                    ProjectNote = txtProjectGoal.Text,
+                    ProjectFDate = DateTime.Parse(txtProjectFDate.Text),
+                    ProjectLDate = DateTime.Parse(txtProjectLDate.Text),
+                    Partner = txtLocalPartner.Text,
+                    IsSent = bool.Parse(ddIsSent.SelectedValue),
+                    Note = txtNote.Text
+                };
 
-            //N.SP_Notifications(0,null, fuURLFileName, txtFName.Text, txtLName.Text, txtAddress.Text, txtMobile.Text, txtFax.Text, txtEmail.Text,
-            //    txtPassportN.Text, txtNationality.Text, DateTime.Parse(txtBDate.Text), );
-         
+                var rpt = new rptNotification();
+                rpt.NotificationData = NotifyObject;
+                var FileName = string.Format("Notification_{0:yyyy-MM-dd}_{1}", DateTime.Now, Guid.NewGuid().ToString().Substring(1, 6));
+                rpt.ExportToPdf(string.Format("{0}{1}", Utility.GetUploadFolder(), FileName));
 
-
+                Session["IsSent"] = true;
+                Response.Redirect(Request.Url.OriginalString);
+            }
         }
     }
 }

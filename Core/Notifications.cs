@@ -11,6 +11,7 @@ namespace Core
     public class Notifications
     {
         public int RecordID { get; set; }
+        public int? NotificationTypeID { get; set; }
         public string URL { get; set; }
         public string FName { get; set; }
         public string LName { get; set; }
@@ -127,7 +128,7 @@ namespace Core
             });
         }
 
-        public void SP_Notifications(int? iud, int? RecordID = null, string URL = null, string FName = null, string LName = null, string Address = null, string Mobile = null, string Fax = null,
+        public void SP_Notifications(int? iud, int? RecordID = null, int? NotificationTypeID=null, string URL = null, string FName = null, string LName = null, string Address = null, string Mobile = null, string Fax = null,
                                     string Email = null, string PassportN = null, string Nationality = null, DateTime? BDate = null, bool? Gender = null, string EnteryNote = null, DateTime? EnteryDate = null,
                                     DateTime? LeaveDate = null, string Organisator = null, string TransportType = null, string Destination = null, string HostName = null, string HostContact = null,
                                     string EmFName = null, string EmLName = null, string EmAddress = null, string EmMobile = null, string VisitorStatus = null, string ProjectTitle = null, string ProjectNote = null,
@@ -148,7 +149,7 @@ namespace Core
                     using (var db = DB.DBCon.GetToolsDataContext())
                     {
                         int? NewID = RecordID;
-                        db.sp_Notifications(iud, ref NewID, URL, FName, LName, Address, Mobile, Fax, Email, PassportN, Nationality, BDate, Gender, EnteryNote, EnteryDate,
+                        db.sp_Notifications(iud, ref NewID, NotificationTypeID, URL, FName, LName, Address, Mobile, Fax, Email, PassportN, Nationality, BDate, Gender, EnteryNote, EnteryDate,
                                      LeaveDate, Organisator, TransportType, Destination, HostName, HostContact,
                                      EmFName, EmLName, EmAddress, EmMobile, VisitorStatus, ProjectTitle, ProjectNote,
                                      ProjectFDate, ProjectLDate, Partner, IsSent, Note, WebPage, RegFileURL,

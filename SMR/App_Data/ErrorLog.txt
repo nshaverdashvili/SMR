@@ -32,3 +32,14 @@ Core.UM.PermissionsRepository.ListPermissions() --- A network-related or instanc
 
 ------------------------------------
 
+
+
+------------------------------------
+http://localhost:12175/Notifications/Notifications.aspx - 29.09.2015 2:50:40
+Source File - d:\gitProjects\SMR\Core\UM\Permissions.cs
+Line Number - 53
+Core.UM.PermissionsRepository.ListPermissions() --- A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The semaphore timeout period has expired.)
+
+
+------------------------------------
+

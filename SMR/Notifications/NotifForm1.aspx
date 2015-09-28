@@ -383,7 +383,7 @@
             </div>
 
              <div class="col-xs-12" style="margin: 20px 0;">
-                 <asp:Button runat="server"  CssClass="btn btn-block btn-success" ID="btnAddnew" ValidationGroup="vg"/>
+                 <asp:Button runat="server"  CssClass="btn btn-block btn-success" ID="btnAddnew"    />
             </div>
         </div>
     </div>
