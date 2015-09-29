@@ -5,7 +5,7 @@
     <script>
         $(function () {
             $(".nav-tabs a").click(function () {
-
+                $("#hfNotifyType").val($(this).data("value"));
                 $(".nav-tabs a").parent().removeClass("active");
                 $(this).parent().addClass("active");
 
@@ -25,10 +25,11 @@
     <div class="container-fluid main">
         <div class="col-xs-12" style="margin-top: 30px;">
             <ul class="nav nav-tabs" data-tabclass=".notifgroup">
-                <li role="presentation" class="active"><a href="#groupnotif1">სანოტიფიკაციო ფორმა 1</a></li>
-                <li role="presentation"><a href="#groupnotif2">სანოტიფიკაციო ფორმა 2</a></li>
-                <li role="presentation"><a href="#groupnotif3">სანოტიფიკაციო ფორმა 3</a></li>
+                <li role="presentation" class="active"><a href="#groupnotif1" data-value="2">სანოტიფიკაციო ფორმა 1</a></li>
+                <li role="presentation"><a href="#groupnotif2" data-value="3">სანოტიფიკაციო ფორმა 2</a></li>
+                <li role="presentation"><a href="#groupnotif3" data-value="4">სანოტიფიკაციო ფორმა 3</a></li>
             </ul>
+            <asp:HiddenField runat="server" ID ="hfNotifyType" ClientIDMode="Static" value="2"/>
             <div id="groupnotif1" class="notifgroup">
                 <h4><%=Core.Properties.Resources.preface1%></h4>
                 <h5><%=Core.Properties.Resources.GeneralInformation %></h5>
@@ -128,7 +129,7 @@
 
                 <div class="form-group">
                     <label for="fuURLNote"><%=Core.Properties.Resources.AddInfo %></label>
-                    <asp:FileUpload runat="server" ID="FileUpload1" ClientIDMode="Static" />
+                    <asp:FileUpload runat="server" ID="fuURLNote" ClientIDMode="Static" />
                     <p class="help-block" style="font-size: 10px;"><%=Core.Properties.Resources.fileextensions %></p>
                     <p class="text-danger">
                         <asp:Literal ID="Literal1" runat="server" />
@@ -383,10 +384,11 @@
             </div>
 
              <div class="col-xs-12" style="margin: 20px 0;">
-                 <asp:Button runat="server"  CssClass="btn btn-block btn-success" ID="btnAddnew"    />
+                 <asp:Button runat="server"  CssClass="btn btn-block btn-success" ID="btnAddnew" OnClick="btnSend_Click"   />
             </div>
         </div>
     </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ScriptsPlaceHolder" runat="server">
+     <asp:Literal runat="server" ID="litScripts"></asp:Literal>
 </asp:Content>

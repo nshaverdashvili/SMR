@@ -54,7 +54,7 @@
                                                     <div class="submanu hidden">
                                                         <asp:Repeater runat="server" ID="rptSubMnu" ItemType="Core.UM.Permissions">
                                                             <ItemTemplate>
-                                                                <a href="/<%#Item.PageName %>"><%#Item.Caption %></a>
+                                                                <a href="<%#Item.PageName %>"><%#Item.Caption %></a>
                                                             </ItemTemplate>
                                                         </asp:Repeater>
                                                     </div>

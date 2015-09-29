@@ -76,12 +76,6 @@ namespace Core.DB
 			return this.CreateMethodCallQuery<fn_List_DictionariesResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), level, dictionaryCode, showInvisibleItems);
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.fn_List_Notifications", IsComposable=true)]
-		public IQueryable<fn_List_NotificationsResult> fn_List_Notifications([global::System.Data.Linq.Mapping.ParameterAttribute(Name="RecordID", DbType="Int")] System.Nullable<int> recordID)
-		{
-			return this.CreateMethodCallQuery<fn_List_NotificationsResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), recordID);
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_Notifications")]
 		public int sp_Notifications(
 					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> iud, 
@@ -124,7 +118,7 @@ namespace Core.DB
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Contact", DbType="NVarChar(250)")] string contact, 
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Desc1", DbType="NVarChar(MAX)")] string desc1, 
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Desc2", DbType="NVarChar(MAX)")] string desc2, 
-					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Number", DbType="Int")] System.Nullable<int> number, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Number", DbType="NVarChar(150)")] string number, 
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Donors", DbType="NVarChar(300)")] string donors, 
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Term", DbType="NVarChar(100)")] string term, 
 					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Proportions", DbType="NVarChar(300)")] string proportions, 
@@ -140,6 +134,12 @@ namespace Core.DB
 			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iud, recordID, notificationTypeID, uRL, fname, lname, address, mobile, fax, email, passportN, nationality, bdate, sex, enteryNote, enteryDate, leaveDate, organisator, transportType, destination, hostName, hostContact, emFName, emLName, emAddress, emMobile, visitorStatus, projectTitle, projectNote, projectFDate, projectLDate, partner, isSent, note, webPage, regFileURL, missionDesc, contact, desc1, desc2, number, donors, term, proportions, orgName, projectStatus, results, isActualProjects, projectResults, financeInfo, partnerInfo, departPlan);
 			recordID = ((System.Nullable<int>)(result.GetParameterValue(1)));
 			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.fn_List_Notifications", IsComposable=true)]
+		public IQueryable<fn_List_NotificationsResult> fn_List_Notifications([global::System.Data.Linq.Mapping.ParameterAttribute(Name="RecordID", DbType="Int")] System.Nullable<int> recordID)
+		{
+			return this.CreateMethodCallQuery<fn_List_NotificationsResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), recordID);
 		}
 	}
 	
@@ -482,7 +482,7 @@ namespace Core.DB
 		
 		private string _Desc2;
 		
-		private System.Nullable<int> _Number;
+		private string _Number;
 		
 		private string _Donors;
 		
@@ -1118,8 +1118,8 @@ namespace Core.DB
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Number", DbType="Int")]
-		public System.Nullable<int> Number
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Number", DbType="NVarChar(150)")]
+		public string Number
 		{
 			get
 			{

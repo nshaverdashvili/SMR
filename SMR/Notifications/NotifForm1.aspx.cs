@@ -17,6 +17,12 @@ namespace SMR.Notifications
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack && Session["IsSent"] != null)
+            {
+                litScripts.Text = "<script> alert('მონაცემები გადაგზავნილია')</script>";
+                Session["IsSent"] = null;
+            }
+            initErrorMessages();
             initErrorMessages();
             btnAddnew.Text = Core.Properties.Resources.Send;
         }
@@ -73,9 +79,75 @@ namespace SMR.Notifications
         }
         protected void btnSend_Click(object sender, EventArgs e)
         {
-           
+            var N = new NoficicationsRepository();
+            var fuURLFileName = "";
 
+            if (fuURL.HasFile)
+            {
+                fuURLFileName = fuURL.FileName.ToAZ09Dash(true, true);
+                var path = string.Format("{0}//Notifications//", Utility.GetUploadFolder());
 
+                fuURL.SaveAs(string.Format("{0}{1}", path, fuURLFileName));                
+            }
+            var fuURLNoteFile = "";
+
+            if (fuURLNote.HasFile)
+            {
+                fuURLNoteFile = fuURLNote.FileName.ToAZ09Dash(true, true);
+                var path = string.Format("{0}//Notifications//", Utility.GetUploadFolder());
+
+                fuURLNote.SaveAs(string.Format("{0}{1}", path, fuURLNoteFile));                
+            }
+            
+            var NotifType = new DictionariesRepository().ListDictionary(1, 9).FirstOrDefault(w => w.CodeVal == Convert.ToInt32(hfNotifyType.Value)).DictionaryID;
+
+            N.SP_Notifications(0,
+                NotificationTypeID: NotifType,
+                OrgName : txtOrgName.Text,
+                Address: txtAddress.Text,
+                Mobile: txtMobile.Text,
+                Email: txtEmail.Text,
+                WebPage: txtWebPage.Text,
+                URL: fuURLFileName,
+                MissionDesc: txtMissionDesc.Text,
+                Contact: txtContact.Text,
+                Desc1: txtDesc1.Text,
+                Desc2: txtDesc2.Text,
+                Number: txtNumber.Text,
+                Donors: txtDonors.Text,
+                Term: txtTerms.Text,
+                Proportions: txtProportions.Text,
+                RegFileURL: fuURLNoteFile
+                );
+        if (!N.IsError)
+            {
+                var NotifyObject = new Core.Notifications
+                {
+                    NotificationTypeID= NotifType,
+                    OrgName = txtOrgName.Text,
+                    Address= txtAddress.Text,
+                    Mobile= txtMobile.Text,
+                    Email= txtEmail.Text,
+                    WebPage= txtWebPage.Text,
+                    URL= fuURLFileName,
+                    MissionDesc= txtMissionDesc.Text,
+                    Contact= txtContact.Text,
+                    Desc1= txtDesc1.Text,
+                    Desc2= txtDesc2.Text,
+                    Number= txtNumber.Text,
+                    Donors = txtDonors.Text,
+                    Term = txtTerms.Text,
+                    Proportions = txtProportions.Text,
+                    RegFileURL= fuURLNoteFile
+                };
+                var rpt = new rptNotification();
+                rpt.NotificationData = NotifyObject;
+                var FileName = string.Format("Notification_{0:yyyy-MM-dd}_{1}", DateTime.Now, Guid.NewGuid().ToString().Substring(1, 6));
+                rpt.ExportToPdf(string.Format("{0}{1}", Utility.GetUploadFolder(), FileName));
+
+                Session["IsSent"] = true;
+                Response.Redirect(Request.Url.OriginalString);
+            }
         }
     }
 }

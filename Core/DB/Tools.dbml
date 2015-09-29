@@ -39,61 +39,6 @@
       <Column Name="CRTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
     </ElementType>
   </Function>
-  <Function Name="dbo.fn_List_Notifications" Method="fn_List_Notifications" IsComposable="true">
-    <Parameter Name="RecordID" Parameter="recordID" Type="System.Int32" DbType="Int" />
-    <ElementType Name="fn_List_NotificationsResult">
-      <Column Name="RecordID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="URL" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="FName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="LName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="Address" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="Mobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Fax" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Email" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="PassportN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="Nationality" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="BDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="Sex" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="EnteryNote" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="EnteryDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="LeaveDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="Organisator" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="TransportType" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="Destination" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="HostName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="HostContact" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="EmFName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="EmLName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="EmAddress" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
-      <Column Name="EmMobile" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="VisitorStatus" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
-      <Column Name="ProjectTitle" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
-      <Column Name="ProjectNote" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="ProjectFDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="ProjectLDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="Partner" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
-      <Column Name="IsSent" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="Note" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="WebPage" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="RegFileURL" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
-      <Column Name="MissionDesc" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="Contact" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
-      <Column Name="Desc1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="Desc2" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="Number" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="Donors" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
-      <Column Name="Term" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
-      <Column Name="Proportions" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
-      <Column Name="OrgName" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
-      <Column Name="ProjectStatus" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
-      <Column Name="Results" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="IsActualProjects" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="ProjectResults" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="FinanceInfo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="PartnerInfo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="DepartPlan" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-    </ElementType>
-  </Function>
   <Function Name="dbo.sp_Notifications" Method="sp_Notifications">
     <Parameter Name="iud" Type="System.Int32" DbType="Int" />
     <Parameter Name="RecordID" Parameter="recordID" Type="System.Int32" DbType="Int" Direction="InOut" />
@@ -135,7 +80,7 @@
     <Parameter Name="Contact" Parameter="contact" Type="System.String" DbType="NVarChar(250)" />
     <Parameter Name="Desc1" Parameter="desc1" Type="System.String" DbType="NVarChar(MAX)" />
     <Parameter Name="Desc2" Parameter="desc2" Type="System.String" DbType="NVarChar(MAX)" />
-    <Parameter Name="Number" Parameter="number" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Number" Parameter="number" Type="System.String" DbType="NVarChar(150)" />
     <Parameter Name="Donors" Parameter="donors" Type="System.String" DbType="NVarChar(300)" />
     <Parameter Name="Term" Parameter="term" Type="System.String" DbType="NVarChar(100)" />
     <Parameter Name="Proportions" Parameter="proportions" Type="System.String" DbType="NVarChar(300)" />
@@ -148,5 +93,60 @@
     <Parameter Name="PartnerInfo" Parameter="partnerInfo" Type="System.String" DbType="NVarChar(MAX)" />
     <Parameter Name="DepartPlan" Parameter="departPlan" Type="System.String" DbType="NVarChar(MAX)" />
     <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.fn_List_Notifications" Method="fn_List_Notifications" IsComposable="true">
+    <Parameter Name="RecordID" Parameter="recordID" Type="System.Int32" DbType="Int" />
+    <ElementType Name="fn_List_NotificationsResult">
+      <Column Name="RecordID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="URL" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="FName" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="LName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Fax" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="PassportN" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Nationality" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="BDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Sex" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EnteryNote" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EnteryDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="LeaveDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Organisator" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="TransportType" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Destination" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="HostName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="HostContact" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EmFName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="EmLName" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="EmAddress" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="EmMobile" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="VisitorStatus" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ProjectTitle" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="ProjectNote" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ProjectFDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ProjectLDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Partner" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="IsSent" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Note" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="WebPage" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="RegFileURL" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="MissionDesc" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Contact" Type="System.String" DbType="NVarChar(250)" CanBeNull="true" />
+      <Column Name="Desc1" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Desc2" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Number" Type="System.String" DbType="NVarChar(150)" CanBeNull="true" />
+      <Column Name="Donors" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Term" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Proportions" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="OrgName" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="ProjectStatus" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Results" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsActualProjects" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ProjectResults" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FinanceInfo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PartnerInfo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DepartPlan" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
   </Function>
 </Database>

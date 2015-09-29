@@ -13,6 +13,15 @@ namespace SMR.Notifications {
     public partial class NotifForm1 {
         
         /// <summary>
+        /// hfNotifyType control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfNotifyType;
+        
+        /// <summary>
         /// txtOrgName control.
         /// </summary>
         /// <remarks>
@@ -292,13 +301,13 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqDireqtions;
         
         /// <summary>
-        /// FileUpload1 control.
+        /// fuURLNote control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload1;
+        protected global::System.Web.UI.WebControls.FileUpload fuURLNote;
         
         /// <summary>
         /// Literal1 control.
@@ -1037,5 +1046,14 @@ namespace SMR.Notifications {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnAddnew;
+        
+        /// <summary>
+        /// litScripts control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal litScripts;
     }
 }

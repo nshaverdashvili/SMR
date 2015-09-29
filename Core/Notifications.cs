@@ -49,7 +49,7 @@ namespace Core
         public string Contact { get; set; }
         public string Desc1 { get; set; }
         public string Desc2 { get; set; }
-        public int? Number { get; set; }
+        public string Number { get; set; }
         public string Donors { get; set; }
         public string Term { get; set; }
         public string Proportions { get; set; }
@@ -133,7 +133,7 @@ namespace Core
                                     DateTime? LeaveDate = null, string Organisator = null, string TransportType = null, string Destination = null, string HostName = null, string HostContact = null,
                                     string EmFName = null, string EmLName = null, string EmAddress = null, string EmMobile = null, string VisitorStatus = null, string ProjectTitle = null, string ProjectNote = null,
                                     DateTime? ProjectFDate = null, DateTime? ProjectLDate = null, string Partner = null, bool? IsSent = null, string Note = null, string WebPage = null, string RegFileURL = null,
-                                    string MissionDesc = null, string Contact = null, string Desc1 = null, string Desc2 = null, int? Number = null, string Donors = null, string Term = null, string Proportions = null,
+                                    string MissionDesc = null, string Contact = null, string Desc1 = null, string Desc2 = null, string Number = null, string Donors = null, string Term = null, string Proportions = null,
                                     string OrgName = null, string ProjectStatus = null, string Results = null, bool? IsActualProjects = null, string ProjectResults = null,
                                     string FinanceInfo = null, string PartnerInfo = null, string DepartPlan = null)
         {
