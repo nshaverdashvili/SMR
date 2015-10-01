@@ -215,6 +215,7 @@
     <Content Include="Content\fonts\Smr\regular_up.svg" />
     <Content Include="Content\images\bg1.jpg" />
     <Content Include="detailsPage.aspx" />
+    <Content Include="FileList.aspx" />
     <Content Include="FilePage.aspx" />
     <Content Include="Manager\Popups\AddEditPages.aspx" />
     <Content Include="NewsList.aspx" />
@@ -521,6 +522,13 @@
     </Compile>
     <Compile Include="detailsPage.aspx.designer.cs">
       <DependentUpon>detailsPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileList.aspx.cs">
+      <DependentUpon>FileList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileList.aspx.designer.cs">
+      <DependentUpon>FileList.aspx</DependentUpon>
     </Compile>
     <Compile Include="FilePage.aspx.cs">
       <DependentUpon>FilePage.aspx</DependentUpon>

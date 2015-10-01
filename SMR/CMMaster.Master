@@ -124,10 +124,23 @@
                 <div class="row" id="body">
                     <div class="left manuCon">
                         <ul>
-                            <asp:Repeater runat="server" ID="rptLeftManu" ItemType="Core.UM.Permissions">
+                            <asp:Repeater runat="server" ID="rptLeftManu" ItemType="Core.UM.Permissions" OnItemDataBound="rptLeftManu_ItemDataBound" >
                                 <ItemTemplate>
                                     <li>
-                                        <a href="<%#Item.PageName %>"><%#Item.Caption %></a>
+                                        <a href="<%#Item.PageName %>" class="left-manuitem"><%#Item.Caption %></a>
+                                        <asp:Repeater runat="server" ID="rptLeftSubManu" ItemType="Core.UM.Permissions">
+                                            <HeaderTemplate>
+                                              <ul class="left-submanu hidden">
+                                            </HeaderTemplate>
+                                                <ItemTemplate>
+                                                  <li>
+                                                    <a href="<%#Item.PageName %>" class="fix-padding" ><%#Item.Caption %></a>
+                                                  </li>
+                                                </ItemTemplate>
+                                            <FooterTemplate>
+                                              </ul>
+                                            </FooterTemplate>
+                                        </asp:Repeater>                                        
                                     </li>
                                 </ItemTemplate>
                             </asp:Repeater>
@@ -263,6 +276,14 @@
 
             $("#header").mouseover(function () {
                 $(".navbar-nav li").children(".submanu").addClass("hidden");
+            });
+
+            $(".left-manuitem").click(function () {
+                if ($(this).attr("href")==="#") {
+                    $(this).parent().children(".left-submanu").toggleClass("hidden")
+                    return false;
+                }
+
             });
         });
     </script>

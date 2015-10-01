@@ -16,7 +16,10 @@
                 <Columns>
                     <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="True" ShowNewButton="false" ShowNewButtonInHeader="false" ButtonType="image" Caption=" " Width="60">
                     </dx:GridViewCommandColumn>
-                    <dx:GridViewDataTextColumn FieldName="RecordID" >
+                    <dx:GridViewDataTextColumn FieldName="RecordID">
+                        <EditItemTemplate>
+                            <%#Eval("RecordID") %>
+                        </EditItemTemplate>
                     </dx:GridViewDataTextColumn>
                     <dx:GridViewBandColumn Caption="Title">
                         <Columns>

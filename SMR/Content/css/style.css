@@ -20,6 +20,22 @@ body {
     background: url('/Content/images/bg1.jpg');
 }
 
+.fix-padding {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.cl:before,
+.cl:after {
+  display: table;
+  content: " ";
+}
+.cl:after{
+ clear:both;
+}
+
 * {
     font-family: 'Smr', Arial;
 }
@@ -486,14 +502,43 @@ label.chckbox {
 }
 
 
+.left-submanu {
+    margin: 10px 20px;
+    list-style: none;
+    padding: 0;
+}
+.left-submanu > li{
+    width: 225px;
+    margin-bottom: 2px;
+}
+.left-submanu > li a {
+    display:block;
+    padding: 5px;
+    border-radius: 4px;
+    font-size:13px;
+}
 
+.file-groups {
+    background:#0596CD;
+    padding:5px;
+    border-radius:4px;
+     color:#fff;
+     margin-top: 10px;
+}
 
+    .file-groups > a {
+       color:#fff;
+       text-decoration:none;
+       display:block;
+    }
 
+.file-item {
+    margin:5px 20px 2px 20px;
+}
 
+    .file-item > a {
+        font-size:13px;
 
-
-
-
-
+    }
 
 

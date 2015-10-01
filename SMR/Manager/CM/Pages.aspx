@@ -14,6 +14,7 @@
     <div class="row">
         <div class="col-xs-12">
             <dx:ASPxGridView ID="gridPages" ClientInstanceName="gridPages" runat="server" AutoGenerateColumns="False" DataSourceID="dsPages" KeyFieldName="PageID" Width="100%">
+                <ClientSideEvents EndCallback="function(){InitAction();}" />
                 <Columns>
                     <dx:GridViewDataColumn Width="40" FixedStyle="Left">
                         <DataItemTemplate>

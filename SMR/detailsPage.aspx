@@ -8,7 +8,7 @@
                 <a href="#" class="mainImg">
                     <asp:Literal ID="ltrImgURL" runat="server"></asp:Literal>
                 </a>
-                <h2>
+                <h2  class="bottom-border">
                     <asp:Literal ID="ltrTitle" runat="server"></asp:Literal>
                 </h2>
                 <span>

@@ -104,5 +104,21 @@ namespace SMR
             Response.Cookies.Add(cookie);
             Response.Redirect(Request.Url.OriginalString);
         }
+
+        protected void rptLeftManu_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+            if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                var ParentID = ((Permissions)e.Item.DataItem).PermissionID;
+                var SubMnuList = p.ListChildPermissions(ParentID);
+                if (SubMnuList.Any())
+                {
+                    var rpt = (Repeater)e.Item.FindControl("rptLeftSubManu");
+                    rpt.DataSource = SubMnuList;
+                    rpt.DataBind();
+
+                }
+            }
+        }
     }
 }

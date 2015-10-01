@@ -7,7 +7,6 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-
 namespace SMR.Manager.Popups
 {
     public partial class AddEditPages : Models.PageBase // System.Web.UI.Page
