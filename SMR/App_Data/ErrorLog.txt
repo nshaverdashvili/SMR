@@ -1,0 +1,12 @@
+
+
+------------------------------------
+http://localhost:12175/default.aspx - 02.10.2015 2:28:06
+Source File - d:\gitProjects\SMR\Core\CM\News.cs
+Line Number - 83
+Core.CM.NewsRepository.ListNews() --- Cannot open database "SMR" requested by the login. The login failed.
+Login failed for user 'smruser'.
+
+
+------------------------------------
+
