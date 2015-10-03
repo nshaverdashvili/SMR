@@ -21,9 +21,11 @@ namespace SMR
                  var N = new PagesRepository();
                  var F= new  FilesRepository();
                  var SinglePage = N.ListPages(_ID).SingleOrDefault();
+
                  if (SinglePage != null)
                  {
                      ltrTitle.Text = SinglePage.Title;
+                     ltrFullText.Text = SinglePage.Description;
                      ListFiles = F.ListGalleryFiles(SinglePage.GalleryID);
                      rptFileGroups.DataSource = ListFiles.GroupBy(g => g.FileName).Select(s => new Files { FileName=s.Key}); 
                      rptFileGroups.DataBind();

@@ -44,6 +44,8 @@ namespace SMR
            // IncludePlugins.AppendFormat("<meta property=\"og:description\" content=\"{0}\" />",  Description);
            // IncludePlugins.Append("<meta property=\"og:image\" content=\"http://www.your-domain.com/path/image.jpg \" />");
 
+
+
             IncludePlugins.Append(Plugins.bootstrapCSS());
             IncludePlugins.Append(Plugins.normalizeCSS());
             IncludePlugins.Append(Plugins.awesomefontsCSS());
@@ -58,12 +60,14 @@ namespace SMR
         }
         private void InitStartup()
         {
-
+            var CurrCulture=CultureHelper.GetCurrentCulture();
+            phDatepickerKa.Visible = CurrCulture=="ka-GE";
+            phDatepickerRu.Visible = CurrCulture == "ru-RU";
             rptMainManu.DataSource = p.ListPermissions().Where(w => w.Level == 1 && w.CodeName == "1" && w.Caption != " ");
             rptMainManu.DataBind();
             rptLeftManu.DataSource = p.ListPermissions().Where(w => w.Level == 1 && w.CodeName == "3" && w.Caption != " ");
             rptLeftManu.DataBind();
-            var Slider = new NewsRepository().ListNewsSlider(CultureHelper.GetCurrentCulture()).Where(w => w.IsVisible.Value).Take(5);
+            var Slider = new NewsRepository().ListNewsSlider(CurrCulture).Where(w => w.IsVisible.Value).Take(5);
             rptSlider.DataSource = Slider;
             rptSlider.DataBind();
             rptSliderText.DataSource = Slider;

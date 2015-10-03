@@ -195,7 +195,12 @@
             </footer>
         </div>
     </form>
-    <script src="/Plugins/jqueryUI/datepicker-ka.js"></script>
+    <asp:ContentPlaceHolder runat="server" Visible="false" ID="phDatepickerKa">
+        <script src="/Plugins/jqueryUI/datepicker-ka.js"></script>
+    </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder runat="server" Visible="false" ID="phDatepickerRu">
+        <script src="/Plugins/jqueryUI/datepicker-ru.js"></script>
+    </asp:ContentPlaceHolder>
     <script>
         $(function () {
             var currentDate = new Date();

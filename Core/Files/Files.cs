@@ -34,6 +34,8 @@ namespace Core.Files
             }
         }
         public string URL { get; set; }
+        public string URLKa { get; set; }
+        public string URLRu { get; set; }
         public int? TypeID { get; set; }
         public bool? IsDefault { get; set; }
     }
@@ -54,17 +56,21 @@ namespace Core.Files
                         DescriptionKA = s.DescriptionKA,
                         DescriptionRU = s.DescriptionRU,
                         URL=s.URL,
+                        URLKa = s.URLKa,
+                        URLRu = s.URLRu,
                         TypeID=s.TypeID
                     }).ToList();
                 }
             });
         }
 
-        public void SP_Files(int? iud, int? FileID, string FileName, string DescriptionEN, string DescriptionKA, string DescriptionRU, string URL, int? TypeID)
+        public void SP_Files(int? iud, int? FileID, string FileName, string DescriptionEN, string DescriptionKA, string DescriptionRU, string URL, string URLKa, string URLRu, int? TypeID)
         {
-            TryExecute(string.Format("SP_Files(iud = {0}, FileID = {1}, FileName = {2}, DescriptionEN = {3}, DescriptionKA = {4}, DescriptionRU = {5}, URL = {6}, TypeID = {7})", iud, FileID, FileName, DescriptionEN, DescriptionKA, DescriptionRU, URL, TypeID), () =>
+            TryExecute(string.Format("SP_Files(iud = {0}, FileID = {1}, FileName = {2}, DescriptionEN = {3}, DescriptionKA = {4}, DescriptionRU = {5}, URL = {6}, URLKa = {7}, URLRu = {8}, TypeID = 9})", iud, FileID, FileName, DescriptionEN, DescriptionKA, DescriptionRU, URL, URLKa, URLRu, TypeID), () =>
             {
                 var FilePath=string.Format("{0}\\{1}",Utility.GetUploadFolder(), URL);
+                var FilePathKa=string.Format("{0}\\{1}",Utility.GetUploadFolder(), URLKa);
+                var FilePathRu=string.Format("{0}\\{1}",Utility.GetUploadFolder(), URLRu);
                 if (File.Exists(FilePath) && iud==2)
                 {
                     File.Delete(FilePath);
@@ -73,7 +79,7 @@ namespace Core.Files
                 using (var db = DB.DBCon.GetFilesDataContext())
                 {
                     int? NewID = FileID;
-                    db.sp_Files(iud, ref NewID, FileName, DescriptionEN, DescriptionKA, DescriptionRU, URL, TypeID);
+                    db.sp_Files(iud, ref NewID, FileName, DescriptionEN, DescriptionKA, DescriptionRU, URL, URLKa, URLRu, TypeID);
                     this.ID = NewID;
                 }
             });
@@ -93,6 +99,8 @@ namespace Core.Files
                         DescriptionKA = s.DescriptionKA,
                         DescriptionRU = s.DescriptionRU,
                         URL = s.URL,
+                        URLKa = s.URLKa,
+                        URLRu = s.URLRu,
                         TypeID = s.TypeID,
                         IsDefault = s.IsDefault
                     }).ToList();

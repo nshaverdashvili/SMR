@@ -17,6 +17,7 @@
                 <h2  class="bottom-border">
                     <asp:Literal ID="ltrTitle" runat="server"></asp:Literal>
                 </h2>
+                <p class="text"><asp:Literal runat="server" ID="ltrFullText"></asp:Literal></p>
                 <asp:Repeater runat="server" ID="rptFileGroups" OnItemDataBound="rptFileGroups_ItemDataBound">
                     <ItemTemplate>
                         <div>

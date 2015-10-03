@@ -222,6 +222,7 @@
     <Content Include="Notifications\NotifForm1.aspx" />
     <Content Include="Notifications\Notifications.aspx" />
     <Content Include="Plugins\jqueryUI\datepicker-ka.js" />
+    <Content Include="Plugins\jqueryUI\datepicker-ru.js" />
     <Content Include="Plugins\jqueryUI\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Plugins\jqueryUI\images\ui-bg_flat_0_eeeeee_40x100.png" />
     <Content Include="Plugins\jqueryUI\images\ui-bg_flat_55_ffffff_40x100.png" />

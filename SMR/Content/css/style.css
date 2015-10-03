@@ -541,4 +541,21 @@ label.chckbox {
 
     }
 
+.row.paging {
+    margin: 0 auto;
+    width: 400px;
+    text-align: center;
+}
 
+.row.paging a{
+    display:inline-block;
+    padding: 5px 10px;
+    border:1px solid #ccc;
+    margin-top:10px;
+    color:#337ab7;
+}
+
+
+    .row.paging a:hover {
+        background:#e0e0e0;
+    }

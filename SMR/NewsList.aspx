@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/CMMaster.Master" AutoEventWireup="true" CodeBehind="NewsList.aspx.cs" Inherits="SMR.NewsList" %>
+
 <%@ MasterType TypeName="SMR.CMMaster" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -16,7 +17,7 @@
                         </div>
                         <div class="new-content">
                             <a href="/NewsDetails.aspx?ID=<%#Item.NewsID %>" class="itemImg">
-                                <img src="Uploads/<%#Item.ImgURL%>?w=125&mode=stretch"/></a>
+                                <img src="Uploads/<%#Item.ImgURL%>?w=125&mode=stretch" /></a>
                             <a href="/NewsDetails.aspx?ID=<%#Item.NewsID %>" class="itemText">
                                 <span><%#string.Format("{0:dd/MM/yyyy}", Item.NewsDate) %></span>
                                 <p><%#Item.Description %></p>
@@ -26,6 +27,9 @@
                     </div>
                 </ItemTemplate>
             </asp:Repeater>
+        </div>
+        <div class="row paging">
+            <asp:PlaceHolder ID="plcPaging" runat="server" />
         </div>
     </div>
 </asp:Content>

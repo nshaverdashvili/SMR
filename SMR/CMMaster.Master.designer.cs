@@ -130,6 +130,24 @@ namespace SMR {
         protected global::System.Web.UI.WebControls.Repeater rptFooterManu;
         
         /// <summary>
+        /// phDatepickerKa control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder phDatepickerKa;
+        
+        /// <summary>
+        /// phDatepickerRu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ContentPlaceHolder phDatepickerRu;
+        
+        /// <summary>
         /// ScriptsPlaceHolder control.
         /// </summary>
         /// <remarks>
