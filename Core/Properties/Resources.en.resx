@@ -390,4 +390,9 @@
   <data name="cp3" xml:space="preserve">
     <value>for Reconciliation and Civic Equality. All Rights Reserved. </value>
   </data>
+  <data name="LogoDesc" xml:space="preserve">
+    <value>&lt;b&gt;Office Of The State Minister&lt;/b&gt;
+                            &lt;b&gt;of Georgia for Reconciliation and&lt;/b&gt;
+                            &lt;b&gt;Civil Equality&lt;/b&gt;</value>
+  </data>
 </root>

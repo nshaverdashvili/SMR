@@ -40,22 +40,31 @@ namespace SMR.Manager.Popups {
         protected global::System.Web.UI.WebControls.Literal litMsg;
         
         /// <summary>
-        /// txtFileName control.
+        /// txtFileNameEn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFileName;
+        protected global::System.Web.UI.WebControls.TextBox txtFileNameEn;
         
         /// <summary>
-        /// valFileName control.
+        /// txtFileNameKA control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator valFileName;
+        protected global::System.Web.UI.WebControls.TextBox txtFileNameKA;
+        
+        /// <summary>
+        /// txtFileNameRU control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtFileNameRU;
         
         /// <summary>
         /// ddFileType control.
@@ -94,40 +103,85 @@ namespace SMR.Manager.Popups {
         protected global::System.Web.UI.WebControls.TextBox txtDescriptionRU;
         
         /// <summary>
-        /// fuURL control.
+        /// fuURLka control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload fuURL;
+        protected global::System.Web.UI.WebControls.FileUpload fuURLka;
         
         /// <summary>
-        /// litUrl control.
+        /// litUrlka control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal litUrl;
+        protected global::System.Web.UI.WebControls.Literal litUrlka;
         
         /// <summary>
-        /// hfURL control.
+        /// hfURLka control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField hfURL;
+        protected global::System.Web.UI.WebControls.HiddenField hfURLka;
         
         /// <summary>
-        /// valfuURL control.
+        /// fuURLen control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator valfuURL;
+        protected global::System.Web.UI.WebControls.FileUpload fuURLen;
+        
+        /// <summary>
+        /// litUrlen control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal litUrlen;
+        
+        /// <summary>
+        /// hfURLen control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfURLen;
+        
+        /// <summary>
+        /// fuURLru control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload fuURLru;
+        
+        /// <summary>
+        /// litUrlru control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal litUrlru;
+        
+        /// <summary>
+        /// hfURLru control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfURLru;
         
         /// <summary>
         /// btnSave control.

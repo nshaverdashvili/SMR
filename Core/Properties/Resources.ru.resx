@@ -395,4 +395,9 @@
   <data name="cp3" xml:space="preserve">
     <value>равноправия. Все права защищены</value>
   </data>
+  <data name="LogoDesc" xml:space="preserve">
+    <value>&lt;b&gt;Аппарат государственного министра&lt;/b&gt;
+                            &lt;b&gt;Грузии по вопросам примирения&lt;/b&gt;
+                            &lt;b&gt;и гражданского равноправия&lt;/b&gt;</value>
+  </data>
 </root>

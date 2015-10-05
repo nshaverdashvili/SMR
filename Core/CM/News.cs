@@ -73,7 +73,24 @@ namespace Core.CM
         public bool? IsVisibleSliderRU { get; set; }
         public string VideoURL { get; set; }
         public int? GalleryID { get; set; }
-        public string ImgURL { get; set; }
+        public string ImgURLKa { get; set; }
+        public string ImgURLRu { get; set; }
+        public string ImgURLEn { get; set; }
+        public string ImgURL
+        {
+            get
+            {
+                if (Thread.CurrentThread.CurrentUICulture.Name == "ka-GE")
+                {
+                    return ImgURLKa;
+                }
+                if (Thread.CurrentThread.CurrentUICulture.Name == "ru-RU")
+                {
+                    return ImgURLRu;
+                }
+                return ImgURLEn;
+            }
+        }
     }
     public class NewsRepository : ObjectBase
     {
@@ -105,7 +122,9 @@ namespace Core.CM
                         IsVisibleSliderRU = s.IsVisibleSliderRU,
                         VideoURL=s.VideoURL,
                         GalleryID=s.GalleryID,
-                        ImgURL = s.URL
+                        ImgURLKa = s.URLKa,
+                        ImgURLRu = s.URLRu,
+                        ImgURLEn = s.URL
                     }).ToList();
                 }
             });
@@ -137,7 +156,9 @@ namespace Core.CM
                         IsVisibleSliderRU = s.IsVisibleSliderRU,
                         VideoURL = s.VideoURL,
                         GalleryID = s.GalleryID,
-                        ImgURL = s.URL
+                        ImgURLKa = s.URLKa,
+                        ImgURLRu = s.URLRu,
+                        ImgURLEn = s.URL
                     }).ToList();
                 }
             });

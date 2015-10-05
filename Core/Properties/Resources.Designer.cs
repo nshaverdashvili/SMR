@@ -529,6 +529,17 @@ namespace Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to &lt;b&gt;შერიგებისა და სამოქალაქო თანასწორობის&lt;/b&gt;
+        ///                            &lt;b&gt;საკითხებში საქართველოს სახელმწიფო&lt;/b&gt;
+        ///                            &lt;b&gt;მინისტრის აპარატი&lt;/b&gt;.
+        /// </summary>
+        public static string LogoDesc {
+            get {
+                return ResourceManager.GetString("LogoDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to მთავარი.
         /// </summary>
         public static string Main {

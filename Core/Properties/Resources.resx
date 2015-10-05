@@ -396,4 +396,9 @@
   <data name="cp3" xml:space="preserve">
     <value>მინისტრის აპარატი. ყველა უფლება დაცულია.</value>
   </data>
+  <data name="LogoDesc" xml:space="preserve">
+    <value>&lt;b&gt;შერიგებისა და სამოქალაქო თანასწორობის&lt;/b&gt;
+                            &lt;b&gt;საკითხებში საქართველოს სახელმწიფო&lt;/b&gt;
+                            &lt;b&gt;მინისტრის აპარატი&lt;/b&gt;</value>
+  </data>
 </root>
