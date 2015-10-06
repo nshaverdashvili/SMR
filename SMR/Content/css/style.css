@@ -556,6 +556,6 @@ label.chckbox {
 }
 
 
-    .row.paging a:hover {
-        background:#e0e0e0;
-    }
+.row.paging a:hover {
+    background:#e0e0e0;
+}

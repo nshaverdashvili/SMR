@@ -66,6 +66,11 @@
                         </nav>
                     </div>
                 </div>
+                <!-- ტესტირების რეჟიმი -->
+                <div class="row" style="text-align:center; background-color:#F2DEDE; color:#a94442; width: 1321px; font-size:14px; border-style:solid; border-width:1px; border-color:#ebccd1; ">
+                    საიტი მუშაობს ტესტირების რეჟიმში
+                </div>
+                <!-- ტესტირების რეჟიმი -->
                 <div class="row" id="header">
                     <div class="conteiner-fluid">
                         <div class="col-md-5" style="width: 550px; padding: 0;">
@@ -186,7 +191,7 @@
                         </div>
                         <div class="col-md-6">
                             <a href="https://www.facebook.com/SMRCEgeorgia"><img src="/Content/images/icons/icon1.png" class="right" /></a>
-                            <a href="https://www.youtube.com/user/reintegrationgovge"><img src="/Content/images/icons/icon1.png" class="right" /></a>
+                            <a href="https://www.youtube.com/user/reintegrationgovge"><img src="/Content/images/icons/icon3.png" class="right" /></a>
                         </div>
                     </div>
                 </div>
@@ -282,7 +287,7 @@
             });
 
             $(".left-manuitem").click(function () {
-                if ($(this).attr("href")==="#") {
+                if ($(this).attr("href") === "#") {
                     $(this).parent().children(".left-submanu").toggleClass("hidden")
                     return false;
                 }

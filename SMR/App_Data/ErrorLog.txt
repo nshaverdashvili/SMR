@@ -10,3 +10,36 @@ Login failed for user 'smruser'.
 
 ------------------------------------
 
+
+
+------------------------------------
+http://localhost:12175/default.aspx - 06.10.2015 1:19:50
+Source File - d:\gitProjects\SMR\Core\UM\Permissions.cs
+Line Number - 77
+Core.UM.PermissionsRepository.ListChildPermissions(ParentID) --- A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The semaphore timeout period has expired.)
+
+
+------------------------------------
+
+
+
+------------------------------------
+http://localhost:12175/default.aspx - 06.10.2015 1:24:27
+Source File - d:\gitProjects\SMR\Core\CM\News.cs
+Line Number - 100
+Core.CM.NewsRepository.ListNews() --- Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+
+
+------------------------------------
+
+
+
+------------------------------------
+http://localhost:12175/default.aspx - 06.10.2015 1:31:48
+Source File - d:\gitProjects\SMR\Core\CM\News.cs
+Line Number - 100
+Core.CM.NewsRepository.ListNews() --- Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+
+
+------------------------------------
+
