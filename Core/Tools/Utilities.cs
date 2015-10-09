@@ -48,6 +48,11 @@ namespace Core.Tools
         {
             return ConfigurationManager.AppSettings["UploadFolder"];
         }
+
+
+        public static List<int> List_RangeOfNumbers(int from, int Count) {
+            return Enumerable.Range(from, Count).ToList();
+        }
     }
 
     public class Mail : ObjectBase

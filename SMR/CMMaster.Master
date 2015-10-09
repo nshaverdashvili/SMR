@@ -158,6 +158,7 @@
                                 <div class="Calendar"></div>
                             </div>
                         </asp:PlaceHolder>
+                       
                     </div>
                     <div class="left" id="content">
                         <asp:ContentPlaceHolder ID="BodyPlaceHolder" runat="server">

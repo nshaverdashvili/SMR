@@ -78,13 +78,30 @@
                     <asp:RequiredFieldValidator runat="server" ID="reqNationality" ControlToValidate="txtNationality" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
                 </div>
 
+                
                 <div class="form-group">
                     <label for="txtBDate"><%=Core.Properties.Resources.Dateofbirth%></label>
-                    <asp:TextBox runat="server" CssClass="form-control ical" ID="txtBDate" ClientIDMode="Static"></asp:TextBox>
-                    <asp:RequiredFieldValidator runat="server" ID="reqBDate" ControlToValidate="txtBDate" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
-                </div>
+                    <!--Nina-->
+                    <div class="row">
+                   <div class="col-xs-4">
+                     <asp:DropDownList runat="server" ID="ddBDay" DataTextField ="Value" DataValueField="Value" ClientIDMode="Static" CssClass="form-control">
+                    </asp:DropDownList>
+                    </div>
+                    <div class="col-xs-4">
+                    <asp:DropDownList runat="server" ID="ddBMonth" DataTextField="Caption" DataValueField="Value" ClientIDMode="Static" CssClass="form-control">
+                    </asp:DropDownList>
+                        </div>
+                    <div class="col-xs-4">
+                    <asp:DropDownList runat="server" ID="ddBYear" DataTextField="Value" DataValueField="Value" ClientIDMode="Static" CssClass="form-control">
+                    </asp:DropDownList>
+                  </div>
+                        </div>
+                    <!--Nina-->
+                    <!--Calendar <asp:TextBox runat="server" CssClass="form-control ical" ID="txtBDate" ClientIDMode="Static"></asp:TextBox>
+                    <asp:RequiredFieldValidator runat="server" ID="reqBDate" ControlToValidate="txtBDate" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator> -->
+            </div>
 
-                <div class="form-group">
+            <div class="form-group">
                     <label for="ddGender"><%=Core.Properties.Resources.Gender%></label>
                     <asp:DropDownList runat="server" ID="ddGender" DataSourceID="dsGender" DataTextField="Caption" DataValueField="CodeVal" ClientIDMode="Static" CssClass="form-control">
                     </asp:DropDownList>
@@ -236,15 +253,15 @@
                 </div>
             </div>
 
-    </div>
-    <div class="row">
-
-        <div class="col-xs-12" style="margin: 20px 0;">
-            <asp:Button runat="server" CssClass="btn btn-success btn-block" ID="btnSend" OnClick="btnSend_Click" />
-             <h5><%=Core.Properties.Resources.FNote%></h5>
         </div>
-        
-    </div>
+        <div class="row">
+
+            <div class="col-xs-12" style="margin: 20px 0;">
+                <asp:Button runat="server" CssClass="btn btn-success btn-block" ID="btnSend" OnClick="btnSend_Click" />
+                <h5><%=Core.Properties.Resources.FNote%></h5>
+            </div>
+
+        </div>
     </div>
     <asp:ObjectDataSource ID="dsGender" runat="server" SelectMethod="ListDictionary" TypeName="Core.Tools.DictionariesRepository">
         <SelectParameters>
@@ -274,10 +291,10 @@
             <asp:Parameter Name="IsVisible" Type="Boolean" />
         </SelectParameters>
     </asp:ObjectDataSource>
-   
+
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="ScriptsPlaceHolder" runat="server">
     <asp:Literal runat="server" ID="litScripts"></asp:Literal>
-    
+
 </asp:Content>

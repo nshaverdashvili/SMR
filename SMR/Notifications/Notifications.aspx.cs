@@ -9,6 +9,7 @@ using System.Web.UI.WebControls;
 using Lib;
 using Core.UM;
 using Core;
+using System.Globalization;
 
 namespace SMR.Notifications
 {
@@ -16,10 +17,22 @@ namespace SMR.Notifications
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack && Session["IsSent"]!=null)
+            if (!IsPostBack)
             {
-                litScripts.Text = "<script> alert('მონაცემები გადაგზავნილია')</script>";
-                Session["IsSent"] = null;
+                if (Session["IsSent"] != null)
+                {
+                    litScripts.Text = "<script> alert('მონაცემები გადაგზავნილია')</script>";
+                    Session["IsSent"] = null;
+                }
+
+                ddBDay.DataSource = Utility.List_RangeOfNumbers(1, 31).Select(s => new { Value = s }).ToList();
+                ddBDay.DataBind();
+                ddBMonth.DataSource = DateTimeFormatInfo.CurrentInfo.MonthNames.Select((item, index) => new { Caption = item, Value = index+1 }).ToList(); //Utility.List_RangeOfNumbers(1, 12).Select(s => new { Value = s }).ToList();
+                ddBMonth.DataBind();
+                ddBYear.DataSource = Utility.List_RangeOfNumbers(1900, 2015).Select(s => new { Value = s }).ToList();
+                ddBYear.DataBind();
+                
+
             }
             initErrorMessages();
         }
@@ -70,9 +83,10 @@ namespace SMR.Notifications
                 fuURL.SaveAs(string.Format("{0}{1}", path, fuURLFileName));
             }
             var NotifType = new DictionariesRepository().ListDictionary(1, 9).FirstOrDefault(w => w.CodeVal == 1).DictionaryID;
-            var BDate =string.IsNullOrEmpty(txtBDate.Text) ? DateTime.Now : DateTime.Parse(txtBDate.Text);
+            var BDate = new DateTime(Convert.ToInt32(ddBYear.SelectedValue), Convert.ToInt32(ddBMonth.SelectedValue), Convert.ToInt32(ddBDay.SelectedValue));
             var EnteryDate = string.IsNullOrEmpty(txtFDate.Text) ? DateTime.Now : DateTime.Parse(txtFDate.Text);
             var LeaveDate = string.IsNullOrEmpty(txtLDate.Text) ? DateTime.Now : DateTime.Parse(txtLDate.Text);
+            /*
             N.SP_Notifications(0,
                 NotificationTypeID: NotifType,
                 URL: fuURLFileName,
@@ -107,6 +121,7 @@ namespace SMR.Notifications
                 Note: txtNote.Text);
             if (!N.IsError)
             {
+             */
                 var NotifyObject = new Core.Notifications
                 {
                     NotificationTypeID = NotifType,
@@ -120,7 +135,7 @@ namespace SMR.Notifications
                     PassportN = txtPassportN.Text,
                     Nationality = txtNationality.Text,
                     BDate = BDate,
-                    Sex = bool.Parse(ddGender.SelectedValue),
+                    //Sex = bool.Parse(ddGender.SelectedValue),
                     EnteryDate = EnteryDate,
                     LeaveDate = LeaveDate,
                     Organisator = ddOrganisator.SelectedValue,
@@ -138,18 +153,17 @@ namespace SMR.Notifications
                     ProjectFDate = DateTime.Parse(txtProjectFDate.Text),
                     ProjectLDate = DateTime.Parse(txtProjectLDate.Text),
                     Partner = txtLocalPartner.Text,
-                    IsSent = bool.Parse(ddIsSent.SelectedValue),
+                    //IsSent = bool.Parse(ddIsSent.SelectedValue),
                     Note = txtNote.Text
                 };
 
-                var rpt = new rptNotification();
-                rpt.NotificationData = NotifyObject;
-                var FileName = string.Format("Notification_{0:yyyy-MM-dd}_{1}", DateTime.Now, Guid.NewGuid().ToString().Substring(1, 6));
+                var rpt = new rptNotification( NotifyObject );
+                var FileName = string.Format("Notification_{0:yyyy-MM-dd}_{1}.pdf", DateTime.Now, Guid.NewGuid().ToString().Substring(1, 6));
                 rpt.ExportToPdf(string.Format("{0}{1}", Utility.GetUploadFolder(), FileName));
 
                 Session["IsSent"] = true;
                 Response.Redirect(Request.Url.OriginalString);
-            }
+            //}
         }
     }
 }

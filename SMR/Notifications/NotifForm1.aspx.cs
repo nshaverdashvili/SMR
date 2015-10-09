@@ -140,8 +140,8 @@ namespace SMR.Notifications
                     Proportions = txtProportions.Text,
                     RegFileURL= fuURLNoteFile
                 };
-                var rpt = new rptNotification();
-                rpt.NotificationData = NotifyObject;
+                var rpt = new rptNotification(NotifyObject);
+              
                 var FileName = string.Format("Notification_{0:yyyy-MM-dd}_{1}", DateTime.Now, Guid.NewGuid().ToString().Substring(1, 6));
                 rpt.ExportToPdf(string.Format("{0}{1}", Utility.GetUploadFolder(), FileName));
 
