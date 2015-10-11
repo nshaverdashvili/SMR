@@ -49,6 +49,7 @@ namespace Core.CM
             }
         }
         public int? TemplateID { get; set; }
+        public string FileUrl { get; set; }
         public string URL { get; set; }
         public string Note { get; set; }
         public int? GalleryID { get; set; }
@@ -75,6 +76,7 @@ namespace Core.CM
                         DescriptionRU = s.DescriptionRU,
                         TemplateID=s.TemplateID,
                         URL=s.URL,
+                        FileUrl=s.FileUrl,
                         Note=s.Note,	
                         GalleryID=s.GalleryID,	
                         IsVisible=s.IsVisible

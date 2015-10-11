@@ -75,6 +75,72 @@ namespace Core.DB
 		{
 			return this.CreateMethodCallQuery<fn_List_DictionariesResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), level, dictionaryCode, showInvisibleItems);
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_Notifications")]
+		public int sp_Notifications(
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> iud, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="RecordID", DbType="Int")] ref System.Nullable<int> recordID, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="NotificationTypeID", DbType="Int")] System.Nullable<int> notificationTypeID, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="URL", DbType="NVarChar(250)")] string uRL, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Fname", DbType="NVarChar(50)")] string fname, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Lname", DbType="NVarChar(100)")] string lname, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Address", DbType="NVarChar(200)")] string address, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Mobile", DbType="NVarChar(50)")] string mobile, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Fax", DbType="NVarChar(50)")] string fax, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Email", DbType="NVarChar(150)")] string email, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="PassportN", DbType="NVarChar(50)")] string passportN, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Nationality", DbType="NVarChar(100)")] string nationality, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Bdate", DbType="DateTime")] System.Nullable<System.DateTime> bdate, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Sex", DbType="Bit")] System.Nullable<bool> sex, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="EnteryNote", DbType="NVarChar(MAX)")] string enteryNote, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="EnteryDate", DbType="DateTime")] System.Nullable<System.DateTime> enteryDate, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="LeaveDate", DbType="DateTime")] System.Nullable<System.DateTime> leaveDate, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Organisator", DbType="NVarChar(200)")] string organisator, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="TransportType", DbType="NVarChar(150)")] string transportType, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Destination", DbType="NVarChar(150)")] string destination, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="HostName", DbType="NVarChar(200)")] string hostName, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="HostContact", DbType="NVarChar(MAX)")] string hostContact, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="EmFName", DbType="NVarChar(100)")] string emFName, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="EmLName", DbType="NVarChar(100)")] string emLName, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="EmAddress", DbType="NVarChar(250)")] string emAddress, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="EmMobile", DbType="NVarChar(100)")] string emMobile, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="VisitorStatus", DbType="NVarChar(200)")] string visitorStatus, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="ProjectTitle", DbType="NVarChar(300)")] string projectTitle, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="ProjectNote", DbType="NVarChar(MAX)")] string projectNote, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="ProjectFDate", DbType="DateTime")] System.Nullable<System.DateTime> projectFDate, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="ProjectLDate", DbType="DateTime")] System.Nullable<System.DateTime> projectLDate, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Partner", DbType="NVarChar(250)")] string partner, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="IsSent", DbType="Bit")] System.Nullable<bool> isSent, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Note", DbType="NVarChar(MAX)")] string note, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="WebPage", DbType="NVarChar(100)")] string webPage, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="RegFileURL", DbType="NVarChar(250)")] string regFileURL, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="MissionDesc", DbType="NVarChar(MAX)")] string missionDesc, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Contact", DbType="NVarChar(250)")] string contact, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Desc1", DbType="NVarChar(MAX)")] string desc1, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Desc2", DbType="NVarChar(MAX)")] string desc2, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Number", DbType="NVarChar(150)")] string number, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Donors", DbType="NVarChar(300)")] string donors, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Term", DbType="NVarChar(100)")] string term, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Proportions", DbType="NVarChar(300)")] string proportions, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="OrgName", DbType="NVarChar(300)")] string orgName, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="ProjectStatus", DbType="NVarChar(300)")] string projectStatus, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="Results", DbType="NVarChar(MAX)")] string results, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="IsActualProjects", DbType="Bit")] System.Nullable<bool> isActualProjects, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="ProjectResults", DbType="NVarChar(MAX)")] string projectResults, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="FinanceInfo", DbType="NVarChar(MAX)")] string financeInfo, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="PartnerInfo", DbType="NVarChar(MAX)")] string partnerInfo, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="DepartPlan", DbType="NVarChar(MAX)")] string departPlan)
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iud, recordID, notificationTypeID, uRL, fname, lname, address, mobile, fax, email, passportN, nationality, bdate, sex, enteryNote, enteryDate, leaveDate, organisator, transportType, destination, hostName, hostContact, emFName, emLName, emAddress, emMobile, visitorStatus, projectTitle, projectNote, projectFDate, projectLDate, partner, isSent, note, webPage, regFileURL, missionDesc, contact, desc1, desc2, number, donors, term, proportions, orgName, projectStatus, results, isActualProjects, projectResults, financeInfo, partnerInfo, departPlan);
+			recordID = ((System.Nullable<int>)(result.GetParameterValue(1)));
+			return ((int)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.fn_List_Notifications", IsComposable=true)]
+		public IQueryable<fn_List_NotificationsResult> fn_List_Notifications([global::System.Data.Linq.Mapping.ParameterAttribute(Name="RecordID", DbType="Int")] System.Nullable<int> recordID)
+		{
+			return this.CreateMethodCallQuery<fn_List_NotificationsResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), recordID);
+		}
 	}
 	
 	public partial class fn_List_DictionariesResult
@@ -332,6 +398,914 @@ namespace Core.DB
 				if ((this._CRTime != value))
 				{
 					this._CRTime = value;
+				}
+			}
+		}
+	}
+	
+	public partial class fn_List_NotificationsResult
+	{
+		
+		private int _RecordID;
+		
+		private string _URL;
+		
+		private string _FName;
+		
+		private string _LName;
+		
+		private string _Address;
+		
+		private string _Mobile;
+		
+		private string _Fax;
+		
+		private string _Email;
+		
+		private string _PassportN;
+		
+		private string _Nationality;
+		
+		private System.Nullable<System.DateTime> _BDate;
+		
+		private System.Nullable<bool> _Sex;
+		
+		private string _EnteryNote;
+		
+		private System.Nullable<System.DateTime> _EnteryDate;
+		
+		private System.Nullable<System.DateTime> _LeaveDate;
+		
+		private string _Organisator;
+		
+		private string _TransportType;
+		
+		private string _Destination;
+		
+		private string _HostName;
+		
+		private string _HostContact;
+		
+		private string _EmFName;
+		
+		private string _EmLName;
+		
+		private string _EmAddress;
+		
+		private string _EmMobile;
+		
+		private string _VisitorStatus;
+		
+		private string _ProjectTitle;
+		
+		private string _ProjectNote;
+		
+		private System.Nullable<System.DateTime> _ProjectFDate;
+		
+		private System.Nullable<System.DateTime> _ProjectLDate;
+		
+		private string _Partner;
+		
+		private System.Nullable<bool> _IsSent;
+		
+		private string _Note;
+		
+		private string _WebPage;
+		
+		private string _RegFileURL;
+		
+		private string _MissionDesc;
+		
+		private string _Contact;
+		
+		private string _Desc1;
+		
+		private string _Desc2;
+		
+		private string _Number;
+		
+		private string _Donors;
+		
+		private string _Term;
+		
+		private string _Proportions;
+		
+		private string _OrgName;
+		
+		private string _ProjectStatus;
+		
+		private string _Results;
+		
+		private System.Nullable<bool> _IsActualProjects;
+		
+		private string _ProjectResults;
+		
+		private string _FinanceInfo;
+		
+		private string _PartnerInfo;
+		
+		private string _DepartPlan;
+		
+		public fn_List_NotificationsResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RecordID", DbType="Int NOT NULL")]
+		public int RecordID
+		{
+			get
+			{
+				return this._RecordID;
+			}
+			set
+			{
+				if ((this._RecordID != value))
+				{
+					this._RecordID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_URL", DbType="NVarChar(200)")]
+		public string URL
+		{
+			get
+			{
+				return this._URL;
+			}
+			set
+			{
+				if ((this._URL != value))
+				{
+					this._URL = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FName", DbType="NVarChar(50)")]
+		public string FName
+		{
+			get
+			{
+				return this._FName;
+			}
+			set
+			{
+				if ((this._FName != value))
+				{
+					this._FName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LName", DbType="NVarChar(100)")]
+		public string LName
+		{
+			get
+			{
+				return this._LName;
+			}
+			set
+			{
+				if ((this._LName != value))
+				{
+					this._LName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Address", DbType="NVarChar(200)")]
+		public string Address
+		{
+			get
+			{
+				return this._Address;
+			}
+			set
+			{
+				if ((this._Address != value))
+				{
+					this._Address = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Mobile", DbType="NVarChar(50)")]
+		public string Mobile
+		{
+			get
+			{
+				return this._Mobile;
+			}
+			set
+			{
+				if ((this._Mobile != value))
+				{
+					this._Mobile = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Fax", DbType="NVarChar(50)")]
+		public string Fax
+		{
+			get
+			{
+				return this._Fax;
+			}
+			set
+			{
+				if ((this._Fax != value))
+				{
+					this._Fax = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Email", DbType="NVarChar(150)")]
+		public string Email
+		{
+			get
+			{
+				return this._Email;
+			}
+			set
+			{
+				if ((this._Email != value))
+				{
+					this._Email = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PassportN", DbType="NVarChar(50)")]
+		public string PassportN
+		{
+			get
+			{
+				return this._PassportN;
+			}
+			set
+			{
+				if ((this._PassportN != value))
+				{
+					this._PassportN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Nationality", DbType="NVarChar(100)")]
+		public string Nationality
+		{
+			get
+			{
+				return this._Nationality;
+			}
+			set
+			{
+				if ((this._Nationality != value))
+				{
+					this._Nationality = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_BDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> BDate
+		{
+			get
+			{
+				return this._BDate;
+			}
+			set
+			{
+				if ((this._BDate != value))
+				{
+					this._BDate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Sex", DbType="Bit")]
+		public System.Nullable<bool> Sex
+		{
+			get
+			{
+				return this._Sex;
+			}
+			set
+			{
+				if ((this._Sex != value))
+				{
+					this._Sex = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EnteryNote", DbType="NVarChar(MAX)")]
+		public string EnteryNote
+		{
+			get
+			{
+				return this._EnteryNote;
+			}
+			set
+			{
+				if ((this._EnteryNote != value))
+				{
+					this._EnteryNote = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EnteryDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> EnteryDate
+		{
+			get
+			{
+				return this._EnteryDate;
+			}
+			set
+			{
+				if ((this._EnteryDate != value))
+				{
+					this._EnteryDate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_LeaveDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> LeaveDate
+		{
+			get
+			{
+				return this._LeaveDate;
+			}
+			set
+			{
+				if ((this._LeaveDate != value))
+				{
+					this._LeaveDate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Organisator", DbType="NVarChar(200)")]
+		public string Organisator
+		{
+			get
+			{
+				return this._Organisator;
+			}
+			set
+			{
+				if ((this._Organisator != value))
+				{
+					this._Organisator = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TransportType", DbType="NVarChar(150)")]
+		public string TransportType
+		{
+			get
+			{
+				return this._TransportType;
+			}
+			set
+			{
+				if ((this._TransportType != value))
+				{
+					this._TransportType = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Destination", DbType="NVarChar(150)")]
+		public string Destination
+		{
+			get
+			{
+				return this._Destination;
+			}
+			set
+			{
+				if ((this._Destination != value))
+				{
+					this._Destination = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HostName", DbType="NVarChar(200)")]
+		public string HostName
+		{
+			get
+			{
+				return this._HostName;
+			}
+			set
+			{
+				if ((this._HostName != value))
+				{
+					this._HostName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_HostContact", DbType="NVarChar(MAX)")]
+		public string HostContact
+		{
+			get
+			{
+				return this._HostContact;
+			}
+			set
+			{
+				if ((this._HostContact != value))
+				{
+					this._HostContact = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmFName", DbType="NVarChar(100)")]
+		public string EmFName
+		{
+			get
+			{
+				return this._EmFName;
+			}
+			set
+			{
+				if ((this._EmFName != value))
+				{
+					this._EmFName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmLName", DbType="NVarChar(100)")]
+		public string EmLName
+		{
+			get
+			{
+				return this._EmLName;
+			}
+			set
+			{
+				if ((this._EmLName != value))
+				{
+					this._EmLName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmAddress", DbType="NVarChar(250)")]
+		public string EmAddress
+		{
+			get
+			{
+				return this._EmAddress;
+			}
+			set
+			{
+				if ((this._EmAddress != value))
+				{
+					this._EmAddress = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_EmMobile", DbType="NVarChar(100)")]
+		public string EmMobile
+		{
+			get
+			{
+				return this._EmMobile;
+			}
+			set
+			{
+				if ((this._EmMobile != value))
+				{
+					this._EmMobile = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_VisitorStatus", DbType="NVarChar(200)")]
+		public string VisitorStatus
+		{
+			get
+			{
+				return this._VisitorStatus;
+			}
+			set
+			{
+				if ((this._VisitorStatus != value))
+				{
+					this._VisitorStatus = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProjectTitle", DbType="NVarChar(300)")]
+		public string ProjectTitle
+		{
+			get
+			{
+				return this._ProjectTitle;
+			}
+			set
+			{
+				if ((this._ProjectTitle != value))
+				{
+					this._ProjectTitle = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProjectNote", DbType="NVarChar(MAX)")]
+		public string ProjectNote
+		{
+			get
+			{
+				return this._ProjectNote;
+			}
+			set
+			{
+				if ((this._ProjectNote != value))
+				{
+					this._ProjectNote = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProjectFDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> ProjectFDate
+		{
+			get
+			{
+				return this._ProjectFDate;
+			}
+			set
+			{
+				if ((this._ProjectFDate != value))
+				{
+					this._ProjectFDate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProjectLDate", DbType="DateTime")]
+		public System.Nullable<System.DateTime> ProjectLDate
+		{
+			get
+			{
+				return this._ProjectLDate;
+			}
+			set
+			{
+				if ((this._ProjectLDate != value))
+				{
+					this._ProjectLDate = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Partner", DbType="NVarChar(250)")]
+		public string Partner
+		{
+			get
+			{
+				return this._Partner;
+			}
+			set
+			{
+				if ((this._Partner != value))
+				{
+					this._Partner = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsSent", DbType="Bit")]
+		public System.Nullable<bool> IsSent
+		{
+			get
+			{
+				return this._IsSent;
+			}
+			set
+			{
+				if ((this._IsSent != value))
+				{
+					this._IsSent = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Note", DbType="NVarChar(MAX)")]
+		public string Note
+		{
+			get
+			{
+				return this._Note;
+			}
+			set
+			{
+				if ((this._Note != value))
+				{
+					this._Note = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_WebPage", DbType="NVarChar(100)")]
+		public string WebPage
+		{
+			get
+			{
+				return this._WebPage;
+			}
+			set
+			{
+				if ((this._WebPage != value))
+				{
+					this._WebPage = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RegFileURL", DbType="NVarChar(150)")]
+		public string RegFileURL
+		{
+			get
+			{
+				return this._RegFileURL;
+			}
+			set
+			{
+				if ((this._RegFileURL != value))
+				{
+					this._RegFileURL = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MissionDesc", DbType="NVarChar(MAX)")]
+		public string MissionDesc
+		{
+			get
+			{
+				return this._MissionDesc;
+			}
+			set
+			{
+				if ((this._MissionDesc != value))
+				{
+					this._MissionDesc = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Contact", DbType="NVarChar(250)")]
+		public string Contact
+		{
+			get
+			{
+				return this._Contact;
+			}
+			set
+			{
+				if ((this._Contact != value))
+				{
+					this._Contact = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Desc1", DbType="NVarChar(MAX)")]
+		public string Desc1
+		{
+			get
+			{
+				return this._Desc1;
+			}
+			set
+			{
+				if ((this._Desc1 != value))
+				{
+					this._Desc1 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Desc2", DbType="NVarChar(MAX)")]
+		public string Desc2
+		{
+			get
+			{
+				return this._Desc2;
+			}
+			set
+			{
+				if ((this._Desc2 != value))
+				{
+					this._Desc2 = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Number", DbType="NVarChar(150)")]
+		public string Number
+		{
+			get
+			{
+				return this._Number;
+			}
+			set
+			{
+				if ((this._Number != value))
+				{
+					this._Number = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Donors", DbType="NVarChar(300)")]
+		public string Donors
+		{
+			get
+			{
+				return this._Donors;
+			}
+			set
+			{
+				if ((this._Donors != value))
+				{
+					this._Donors = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Term", DbType="NVarChar(100)")]
+		public string Term
+		{
+			get
+			{
+				return this._Term;
+			}
+			set
+			{
+				if ((this._Term != value))
+				{
+					this._Term = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Proportions", DbType="NVarChar(300)")]
+		public string Proportions
+		{
+			get
+			{
+				return this._Proportions;
+			}
+			set
+			{
+				if ((this._Proportions != value))
+				{
+					this._Proportions = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_OrgName", DbType="NVarChar(300)")]
+		public string OrgName
+		{
+			get
+			{
+				return this._OrgName;
+			}
+			set
+			{
+				if ((this._OrgName != value))
+				{
+					this._OrgName = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProjectStatus", DbType="NVarChar(300)")]
+		public string ProjectStatus
+		{
+			get
+			{
+				return this._ProjectStatus;
+			}
+			set
+			{
+				if ((this._ProjectStatus != value))
+				{
+					this._ProjectStatus = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Results", DbType="NVarChar(MAX)")]
+		public string Results
+		{
+			get
+			{
+				return this._Results;
+			}
+			set
+			{
+				if ((this._Results != value))
+				{
+					this._Results = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_IsActualProjects", DbType="Bit")]
+		public System.Nullable<bool> IsActualProjects
+		{
+			get
+			{
+				return this._IsActualProjects;
+			}
+			set
+			{
+				if ((this._IsActualProjects != value))
+				{
+					this._IsActualProjects = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ProjectResults", DbType="NVarChar(MAX)")]
+		public string ProjectResults
+		{
+			get
+			{
+				return this._ProjectResults;
+			}
+			set
+			{
+				if ((this._ProjectResults != value))
+				{
+					this._ProjectResults = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FinanceInfo", DbType="NVarChar(MAX)")]
+		public string FinanceInfo
+		{
+			get
+			{
+				return this._FinanceInfo;
+			}
+			set
+			{
+				if ((this._FinanceInfo != value))
+				{
+					this._FinanceInfo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_PartnerInfo", DbType="NVarChar(MAX)")]
+		public string PartnerInfo
+		{
+			get
+			{
+				return this._PartnerInfo;
+			}
+			set
+			{
+				if ((this._PartnerInfo != value))
+				{
+					this._PartnerInfo = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DepartPlan", DbType="NVarChar(MAX)")]
+		public string DepartPlan
+		{
+			get
+			{
+				return this._DepartPlan;
+			}
+			set
+			{
+				if ((this._DepartPlan != value))
+				{
+					this._DepartPlan = value;
 				}
 			}
 		}

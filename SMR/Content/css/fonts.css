@@ -1,28 +1,62 @@
 ﻿@font-face {
-    font-family: 'nino';
-    
-    src: url('../fonts/bpg_nino_mtavruli_bold.eot');
-    src: url('../fonts/bpg_nino_mtavruli_bold.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/bpg_nino_mtavruli_bold.woff') format('woff'),
-         url('../fonts/bpg_nino_mtavruli_bold.ttf') format('truetype'),
-         url('../fonts/bpg_nino_mtavruli_bold.svg#bpg_nino_mtavrulibold') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'Smr MT';
+	src: url('../fonts/Smr/extraLight.eot');
+	src: url('../fonts/Smr/extraLight.eot?#iefix') format('embedded-opentype'),
+			 url('../fonts/Smr/extraLight.woff') format('woff'),
+			 url('../fonts/Smr/extraLight.ttf') format('truetype'),
+			 url('../fonts/Smr/extraLight.svg#Smr MT') format('svg');
+	font-weight: 300;
+	font-style: normal;
 }
+@font-face {
+	font-family: 'Smr';
+	src: url('../fonts/Smr/regular.eot');
+	src: url('../fonts/Smr/regular.eot?#iefix') format('embedded-opentype'),
+			 url('../fonts/Smr/regular.woff') format('woff'),
+			 url('../fonts/Smr/regular.ttf') format('truetype'),
+			 url('../fonts/Smr/regular.svg#Smr') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Smr';
+	src: url('../fonts/Smr/bold.eot');
+	src: url('../fonts/Smr/bold.eot?#iefix') format('embedded-opentype'),
+			 url('../fonts/Smr/bold.woff') format('woff'),
+			 url('../fonts/Smr/bold.ttf') format('truetype'),
+			 url('../fonts/Smr/bold.svg#Smr') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
 
 @font-face {
-    font-family: 'rioni';
-    src: url('../fonts/bpg_rioni_arial.eot');
-    src: url('../fonts/bpg_rioni_arial.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/bpg_rioni_arial.woff') format('woff'), 
-         url('../fonts/bpg_rioni_arial.ttf') format('truetype'), 
-         url('../fonts/bpg_rioni_arial.svg#bpg_nino_mtavrulibold') format('svg');
-    font-weight: bold;
-    font-style: normal;
+	font-family: 'Smr MT';
+	src: url('../fonts/Smr/extraLight_up.eot');
+	src: url('../fonts/Smr/extraLight_up.eot?#iefix') format('embedded-opentype'),
+			 url('../fonts/Smr/extraLight_up.woff') format('woff'),
+			 url('../fonts/Smr/extraLight_up.ttf') format('truetype'),
+			 url('../fonts/Smr/extraLight_up.svg#Smr MT') format('svg');
+	font-weight: 100;
+	font-style: normal;
 }
-
-@font-face
-{
-font-family: 'calibri';
-	src: url('../fonts/calibri.ttf'); /* IE9+ */
+@font-face {
+	font-family: 'Smr MT';
+	src: url('../fonts/Smr/extraLight_up.eot');
+	src: url('../fonts/Smr/extraLight_up.eot?#iefix') format('embedded-opentype'),
+			 url('../fonts/Smr/extraLight_up.woff') format('woff'),
+			 url('../fonts/Smr/extraLight_up.ttf') format('truetype'),
+			 url('../fonts/Smr/extraLight_up.svg#Smr MT') format('svg');
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Smr MT';
+	src: url('../fonts/Smr/regular_up.eot');
+	src: url('../fonts/Smr/regular_up.eot?#iefix') format('embedded-opentype'),
+			 url('../fonts/Smr/regular_up.woff') format('woff'),
+			 url('../fonts/Smr/regular_up.ttf') format('truetype'),
+			 url('../fonts/Smr/regular_up.svg#Smr MT') format('svg');
+	font-weight: normal;
+	font-style: normal;
 }

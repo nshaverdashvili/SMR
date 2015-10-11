@@ -10,6 +10,7 @@
         <LoadingPanel Url="~/App_Themes/DevEx/GridView/Loading.gif" />
     </ImagesFilterControl>
     <SettingsPager CurrentPageNumberFormat="{0}" />
+<Settings ShowFilterRow="True" ShowGroupPanel="True"></Settings>
     <Styles>
         <Header SortingImageSpacing="5" />
 	    <LoadingPanel ImageSpacing="5" />

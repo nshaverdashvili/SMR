@@ -171,4 +171,243 @@
   <data name="TextSave" xml:space="preserve">
     <value>შენახვა</value>
   </data>
+  <data name="Address" xml:space="preserve">
+    <value>მისამართი</value>
+  </data>
+  <data name="Dateofbirth" xml:space="preserve">
+    <value>დაბადების თარიღი</value>
+  </data>
+  <data name="Desc1" xml:space="preserve">
+    <value>ნოტიფიკაცია ოკუპირებულ ტერიტორიებზე შესვლის თაობაზე საქართველოში მომუშავე და ოკუპირებული რეგიონების მონახულების მსურველმა პირებმა საჭიროა შეავსონ ქვემდებარე ფორმა. სანოტიფიკაციო ფორმა არ აკისრებს სახელმწიფო მინისტრის აპარატს რაიმე პასუხისმგებლობას და არ წარმოადგენს ოკუპირებული რეგიონების მონახულების ნებართვას. სანოტიფიკაციო ფორმა არის მხოლოდ ინფორმაციული ხასიათის. საერთაშორისო ჟურნალისტების მიერ მედიააკრედიტაციის მიღების მიზნით გთხოვთ დაუკავშირდეთ საქართველოს საგარეო საქმეთა სამინისტროს ან გადახვიდეთ ამ ბმულზე http://www.mfa.gov.ge</value>
+  </data>
+  <data name="Destinationplace" xml:space="preserve">
+    <value>დანიშნულების ადგილი</value>
+  </data>
+  <data name="Durationofstay" xml:space="preserve">
+    <value>დროის შუალედი</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>ელ-ფოსტა</value>
+  </data>
+  <data name="Fax" xml:space="preserve">
+    <value>ფაქსი</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>სახელი</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>-დან</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>სქესი</value>
+  </data>
+  <data name="HostContact" xml:space="preserve">
+    <value>მასპინძლის საკონტაქტო ინფორმაცია</value>
+  </data>
+  <data name="HostsName" xml:space="preserve">
+    <value>მასპინძლის სახელი, გვარი</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>გვარი</value>
+  </data>
+  <data name="Nationality" xml:space="preserve">
+    <value>მოქალაქეობა</value>
+  </data>
+  <data name="PassportNumber" xml:space="preserve">
+    <value>პასპორტის ნომერი</value>
+  </data>
+  <data name="PersonalInformation" xml:space="preserve">
+    <value>პერსონალური ინფორმაცია</value>
+  </data>
+  <data name="ProjectImplemented" xml:space="preserve">
+    <value>განსახორციელებელი პროექტი</value>
+  </data>
+  <data name="PurposeofVisit" xml:space="preserve">
+    <value>შესვლის მიზანი</value>
+  </data>
+  <data name="Telephone" xml:space="preserve">
+    <value>ტელეფონი</value>
+  </data>
+  <data name="Timeline" xml:space="preserve">
+    <value>დროის შუალედი</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>-მდე</value>
+  </data>
+  <data name="UploadPhoto" xml:space="preserve">
+    <value>ატვირთეთ ფოტო</value>
+  </data>
+  <data name="Vehicletype" xml:space="preserve">
+    <value>ტრანსპორტის სახე</value>
+  </data>
+  <data name="VisitOrganizedby" xml:space="preserve">
+    <value>ვიზიტის ორგანიზატორი</value>
+  </data>
+  <data name="FDate" xml:space="preserve">
+    <value>დაწყების თარიღი</value>
+  </data>
+  <data name="LDate" xml:space="preserve">
+    <value>დასრულების თარიღი</value>
+  </data>
+  <data name="Emergency Contacts" xml:space="preserve">
+    <value>გადაუდებელ შემთხვევაში საკონტაქტო პირი</value>
+  </data>
+  <data name="Statusofthevisitor" xml:space="preserve">
+    <value>ვიზიტორის სტატუსი პროექტში</value>
+  </data>
+  <data name="ProjectName" xml:space="preserve">
+    <value>პროექტის დასახელება</value>
+  </data>
+  <data name="Projectpurpose" xml:space="preserve">
+    <value>პროექტის მიზანი</value>
+  </data>
+  <data name="IsSentProject" xml:space="preserve">
+    <value>გამოგზავნილია თუ არა სამინისტროში პროექტი ოკუპირებულ ტერიტორიაზე საქმიანობის წარმართვის წესების მიხედვით?</value>
+  </data>
+  <data name="LocalPartner" xml:space="preserve">
+    <value>ადგილობრივი პარტნიორი</value>
+  </data>
+  <data name="Provideadditionalinformation" xml:space="preserve">
+    <value>დამატებითი ინფორმაცია</value>
+  </data>
+  <data name="FNote" xml:space="preserve">
+    <value>შენიშვნა: განაცხადის ფორმა არ წარმოადგენს ოკუპირებულ რეგიონებში შესვლის გარანტიას </value>
+  </data>
+  <data name="preface1" xml:space="preserve">
+    <value>საქართველოს ოკუპირებულ ტერიტორიებზე გადაუდებელი ჰუმანიტარული დახმარების წარმართვისათვის</value>
+  </data>
+  <data name="GeneralInformation" xml:space="preserve">
+    <value>ზოგადი ინფორმაცია</value>
+  </data>
+  <data name="OrganizationName" xml:space="preserve">
+    <value>ორგანიზაციის სახელი</value>
+  </data>
+  <data name="ApplicableUpload" xml:space="preserve">
+    <value>ინფორმაცია რეგისტრაციის შესახებ (რეგისტრაციის არსებობის შემთხვევაში)</value>
+  </data>
+  <data name="fileextensions" xml:space="preserve">
+    <value>დასაშვები ფაილები: ".jpg",".pdf,".rar"</value>
+  </data>
+  <data name="MissionDesc" xml:space="preserve">
+    <value>ორგანიზაციის მისიის აღწერა</value>
+  </data>
+  <data name="ContactForm1" xml:space="preserve">
+    <value>საკონტაქტო პირი (სახელი, გვარი, ტელეფონი)</value>
+  </data>
+  <data name="HumInfo" xml:space="preserve">
+    <value>ინფორმაცია გადაუდებელი ჰუმანიტარული დახმარების აუცილებლობის შესახებ</value>
+  </data>
+  <data name="HumDesc" xml:space="preserve">
+    <value>ჰუმანიტარული მდგომარეობის აღწერა (რით არის გამოწვეული, რომელ გეოგრაფიულ არეალს მოიცავს ჰუმანიტარული მდგომარეობის მიერ გამოწვეული შედეგები)</value>
+  </data>
+  <data name="HumType" xml:space="preserve">
+    <value>ჰუმანიტარული დახმარების აღწერა</value>
+  </data>
+  <data name="HumQuantity" xml:space="preserve">
+    <value>ჰუმანიტარული დახმარების რაოდენობა</value>
+  </data>
+  <data name="Donor(s)" xml:space="preserve">
+    <value>დონორები</value>
+  </data>
+  <data name="EmerHum" xml:space="preserve">
+    <value>გადაუდებელი ჰუმანიტარული დახმარების გაცემის ვადა (ერთჯერადი, მრავალჯერადი)</value>
+  </data>
+  <data name="HumDirection" xml:space="preserve">
+    <value>გადაუდებელი ჰუმანიტარული დახმარების შეტანის მიმართულება და პროპორციები</value>
+  </data>
+  <data name="AddInfo" xml:space="preserve">
+    <value>დამატებითი ინფორმაცია.</value>
+  </data>
+  <data name="DescOfOrg" xml:space="preserve">
+    <value>ორგანიზაციის მისიის აღწერა</value>
+  </data>
+  <data name="WebPage" xml:space="preserve">
+    <value>ვებ-გვერდი</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>გაგზავნა</value>
+  </data>
+  <data name="NotificationForm1" xml:space="preserve">
+    <value>სანოტიფიკაციო ფორმა 1</value>
+  </data>
+  <data name="NotificationForm2" xml:space="preserve">
+    <value>სანოტიფიკაციო ფორმა 2</value>
+  </data>
+  <data name="NotificationForm3" xml:space="preserve">
+    <value>სანოტიფიკაციო ფორმა 2</value>
+  </data>
+  <data name="NotifForm2Desc" xml:space="preserve">
+    <value>სახელმწიფოთაშორისი ორგანიზაციებისა და საერთაშორისო განვითარების ორგანიზაციებისათვის, რომლებიც ახორციელებენ საქმიანობას ოკუპირებულ ტერიტორიებზე საქართველოს მთავრობასთან დადებული შეთანხმებების თანახმად</value>
+  </data>
+  <data name="StatusOfProject" xml:space="preserve">
+    <value>პროექტის სტატუსი (მიმდინარე, იდეა, დაფინანსებული, გაგრძელებული)</value>
+  </data>
+  <data name="DonorsForm2" xml:space="preserve">
+    <value>დონორები (დასახელება და საკონტაქტო ინფორმაცია)</value>
+  </data>
+  <data name="AimOfProject" xml:space="preserve">
+    <value>პროექტის მიზანი</value>
+  </data>
+  <data name="ExpectedResults" xml:space="preserve">
+    <value>პროექტის მოსალოდნელი შედეგები</value>
+  </data>
+  <data name="InformationProjects" xml:space="preserve">
+    <value>ინფორმაცია განსახორციელებელი პროექტის შესახებ</value>
+  </data>
+  <data name="DescForm3" xml:space="preserve">
+    <value>ოკუპირებულ ტერიტორიებზე არასამეწარმეო საქმიანობის განხორციელებისათვის </value>
+  </data>
+  <data name="DonorsForm3" xml:space="preserve">
+    <value>პროექტი ერთობლივად არის წარდგენილი დონორისა და პროექტის წარმდგენელის მიერ (კი/არა). დადებითი პასუხის შემთხვევაში: დონორ(ებ)ის დასახელება</value>
+  </data>
+  <data name="FinanceInfo" xml:space="preserve">
+    <value>ფინანსური ინფორმაცია (მოსალოდნელი ბიუჯეტი, რესურსები, საბანკო ინფორმაცია)</value>
+  </data>
+  <data name="LocalPartners" xml:space="preserve">
+    <value>ინფორმაცია ადგილობრივი პარტნიორების შესახებ (დასახელება და საკონტაქტო ინფორმაცია)</value>
+  </data>
+  <data name="Schedule" xml:space="preserve">
+    <value>ოკუპირებულ ტერიტორიებზე გამგზავრების მოსალოდნელი განრიგი </value>
+  </data>
+  <data name="WarningRequired" xml:space="preserve">
+    <value>ველი {0} სავალდებულოა</value>
+  </data>
+  <data name="EmailAddress" xml:space="preserve">
+    <value>ninashaverdashvili@gmail.com</value>
+  </data>
+  <data name="EmailPassword" xml:space="preserve">
+    <value>1Nshaverda</value>
+  </data>
+  <data name="NotificationTitle" xml:space="preserve">
+    <value>ნოტიფიკაცია ოკუპირებულ ტერიტორიებზე შესვლის თაობაზე</value>
+  </data>
+  <data name="NotificationDesc" xml:space="preserve">
+    <value>საქართველოში მომუშავე და ოკუპირებული რეგიონების მონახულების მსურველმა პირებმა საჭიროა შეავსონ ქვემდებარე ფორმა. სანოტიფიკაციო ფორმა არ აკისრებს სახელმწიფო მინისტრის აპარატს რაიმე პასუხისმგებლობას და არ წარმოადგენს ოკუპირებული რეგიონების მონახულების ნებართვას. სანოტიფიკაციო ფორმა არის მხოლოდ ინფორმაციული ხასიათის. საერთაშორისო ჟურნალისტების მიერ მედიააკრედიტაციის მიღების მიზნით გთხოვთ დაუკავშირდეთ საქართველოს საგარეო საქმეთა სამინისტროს ან გადახვიდეთ ამ ბმულზე http://www.mfa.gov.ge</value>
+  </data>
+  <data name="NewsMonth" xml:space="preserve">
+    <value>თვის ამბები</value>
+  </data>
+  <data name="cp1" xml:space="preserve">
+    <value>Copyright © 2009-2015 შერიგებისა და სამოქალაქო</value>
+  </data>
+  <data name="cp2" xml:space="preserve">
+    <value>თანასწორობის საკითხებში საქართველოს სახელმწიფო</value>
+  </data>
+  <data name="cp3" xml:space="preserve">
+    <value>მინისტრის აპარატი. ყველა უფლება დაცულია.</value>
+  </data>
+  <data name="LogoDesc" xml:space="preserve">
+    <value>&lt;b&gt;შერიგებისა და სამოქალაქო თანასწორობის&lt;/b&gt;
+                            &lt;b&gt;საკითხებში საქართველოს სახელმწიფო&lt;/b&gt;
+                            &lt;b&gt;მინისტრის აპარატი&lt;/b&gt;</value>
+  </data>
+  <data name="Name_ContactPage" xml:space="preserve">
+    <value>სახელი და გვარი</value>
+  </data>
+  <data name="Email_ContactPage" xml:space="preserve">
+    <value>ელ.ფოსტა</value>
+  </data>
+  <data name="Message_ContactPage" xml:space="preserve">
+    <value>ტექსტი</value>
+  </data>
 </root>

@@ -20,19 +20,30 @@
             KeyFieldName="FileID">
             <ClientSideEvents EndCallback="function(){ InitAction(); }" />
             <Columns>                
-                <dx:GridViewDataTextColumn FieldName="FileName" >
+                <dx:GridViewDataTextColumn FieldName="FileName" width="350">
+                    <DataItemTemplate>
+                       En: <%#Eval("FileNameEn") %><br />
+                       Ka: <%#Eval("FileNameKa") %><br />
+                       Ru: <%#Eval("FileNameRu") %>
+                    </DataItemTemplate>
                 </dx:GridViewDataTextColumn>
+
                 <dx:GridViewBandColumn Caption="Description">
                     <Columns>
-                <dx:GridViewDataTextColumn FieldName="DescriptionEN" Caption="English">
+                <dx:GridViewDataTextColumn FieldName="DescriptionEN" Caption="English" width="350">
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="DescriptionKA" Caption="ქართული">
+                <dx:GridViewDataTextColumn FieldName="DescriptionKA" Caption="ქართული" width="350">
                 </dx:GridViewDataTextColumn>
-                <dx:GridViewDataTextColumn FieldName="DescriptionRU" Caption="Русский">
+                <dx:GridViewDataTextColumn FieldName="DescriptionRU" Caption="Русский" width="350">
                 </dx:GridViewDataTextColumn>
                     </Columns>
                 </dx:GridViewBandColumn>
-                <dx:GridViewDataTextColumn FieldName="URL" >
+                <dx:GridViewDataTextColumn FieldName="URL" width="150">
+                    <DataItemTemplate>
+                       En: <%#Eval("UrlEn") %><br />
+                       Ka: <%#Eval("UrlKa") %><br />
+                       Ru: <%#Eval("UrlRu") %>
+                    </DataItemTemplate>
                 </dx:GridViewDataTextColumn>
                  <dx:GridViewDataComboBoxColumn FieldName="TypeID">
                     <PropertiesComboBox DataSourceID="dsTypes" TextField="Caption" ValueField="DictionaryID" EnableSynchronization="False">
@@ -51,11 +62,15 @@
             <DeleteParameters>
                 <asp:Parameter Name="iud" Type="Int32"  DefaultValue="2"/>
                 <asp:Parameter Name="FileID" Type="Int32" />
-                <asp:Parameter Name="FileName" Type="String" />
+                <asp:Parameter Name="FileNameKa" Type="String" />
+                <asp:Parameter Name="FileNameEn" Type="String" />
+                <asp:Parameter Name="FileNameRu" Type="String" />
                 <asp:Parameter Name="DescriptionEN" Type="String" />
                 <asp:Parameter Name="DescriptionKA" Type="String" />
                 <asp:Parameter Name="DescriptionRU" Type="String" />
                 <asp:Parameter Name="URL" Type="String" />
+                <asp:Parameter Name="URLKa" Type="String" />
+                <asp:Parameter Name="URLRu" Type="String" />
                 <asp:Parameter Name="TypeID" Type="Int32" />
             </DeleteParameters>
             <SelectParameters>

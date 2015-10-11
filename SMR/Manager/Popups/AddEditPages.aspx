@@ -1,21 +1,8 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Manager/Popups/PopupMaster.Master" AutoEventWireup="true" CodeBehind="AddEditPages.aspx.cs" Inherits="SMR.Manager.Popups.AddEditPages" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Manager/Popups/PopupMaster.Master" AutoEventWireup="true" CodeBehind="AddEditPages.aspx.cs" Inherits="SMR.Manager.Popups.AddEditPages" ValidateRequest="false" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <asp:Literal runat="server" ID="litHead"></asp:Literal>
     <script>
-        tinymce.init({
-            selector: ".tinymce",
-            menubar: false,
-            paste_word_valid_elements: "b,strong,i,h1,h2",
-            toolbar: "bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | media code",
-            plugins: "fullscreen,media,code",
-            forced_root_block: false,
-            force_p_newlines: false,
-            remove_linebreaks: false,
-            force_br_newlines: true,
-            remove_trailing_nbsp: false,
-            verify_html: false
-        });
         $(function () {
             $("#txtDate").datepicker({ dateFormat: 'dd/mm/yy' });
             $("#txtDate").prop("readonly", true);
@@ -77,7 +64,7 @@
         <div class="form-group">
             <label for="ddGalleryID">Gallery</label>
             <asp:DropDownList runat="server" ID="ddGalleryID" ClientIDMode="Static" CssClass="form-control" DataSourceID="dsGallery"
-                DataValueField="RecordID" DataTextField="Title">
+                DataValueField="RecordID" DataTextField="Title" OnDataBound="ddGalleryID_DataBound">
             </asp:DropDownList>
         </div>
         <div class="form-group">
@@ -96,15 +83,15 @@
         </ul>
         <div class="form-group descgroup" id="groupDescEN">
             <label for="txtDescEN"></label>
-            <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control tinymce" ID="txtDescEN" ClientIDMode="Static"></asp:TextBox>
+            <asp:TextBox runat="server" TextMode="MultiLine" Rows="8" CssClass="form-control tinymce" ID="txtDescEN" ClientIDMode="Static"></asp:TextBox>
         </div>
         <div class="form-group descgroup hidden" id="groupDescKA">
             <label for="txtDescKA"></label>
-            <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control tinymce" ID="txtDescKA" ClientIDMode="Static"></asp:TextBox>
+            <asp:TextBox runat="server" TextMode="MultiLine" Rows="8" CssClass="form-control tinymce" ID="txtDescKA" ClientIDMode="Static"></asp:TextBox>
         </div>
         <div class="form-group descgroup hidden" id="groupDescRU">
             <label for="txtDescRU"></label>
-            <asp:TextBox runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control tinymce" ID="txtDescRU" ClientIDMode="Static"></asp:TextBox>
+            <asp:TextBox runat="server" TextMode="MultiLine" Rows="8" CssClass="form-control tinymce" ID="txtDescRU" ClientIDMode="Static"></asp:TextBox>
         </div>
         <div class="form-group">
             <div class="checkbox">

@@ -33,5 +33,16 @@ namespace Core.Properties {
                 return ((string)(this["SMRConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=smruser.db.10526094.hostedresource.com;Initial Catalog=smruser;Persis" +
+            "t Security Info=True;User ID=smruser;Password=a1qaz!QAZ")]
+        public string smruserConnectionString {
+            get {
+                return ((string)(this["smruserConnectionString"]));
+            }
+        }
     }
 }

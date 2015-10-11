@@ -22,7 +22,7 @@ namespace Core.DB
 	using System;
 	
 	
-	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="SMR")]
+	[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="smruser")]
 	public partial class FilesDataContext : System.Data.Linq.DataContext
 	{
 		
@@ -33,7 +33,7 @@ namespace Core.DB
     #endregion
 		
 		public FilesDataContext() : 
-				base(global::Core.Properties.Settings.Default.SMRConnectionString, mappingSource)
+				base(global::Core.Properties.Settings.Default.smruserConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
@@ -62,24 +62,10 @@ namespace Core.DB
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.fn_List_Files", IsComposable=true)]
-		public IQueryable<fn_List_FilesResult> fn_List_Files([global::System.Data.Linq.Mapping.ParameterAttribute(Name="FileID", DbType="Int")] System.Nullable<int> fileID)
-		{
-			return this.CreateMethodCallQuery<fn_List_FilesResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fileID);
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.fn_List_Gallery", IsComposable=true)]
 		public IQueryable<fn_List_GalleryResult> fn_List_Gallery([global::System.Data.Linq.Mapping.ParameterAttribute(Name="RecordID", DbType="Int")] System.Nullable<int> recordID)
 		{
 			return this.CreateMethodCallQuery<fn_List_GalleryResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), recordID);
-		}
-		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_Files")]
-		public int sp_Files([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> iud, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FileID", DbType="Int")] ref System.Nullable<int> fileID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FileName", DbType="NVarChar(300)")] string fileName, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DescriptionEN", DbType="NVarChar(MAX)")] string descriptionEN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DescriptionKA", DbType="NVarChar(MAX)")] string descriptionKA, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DescriptionRU", DbType="NVarChar(MAX)")] string descriptionRU, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="URL", DbType="NVarChar(250)")] string uRL, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TypeID", DbType="Int")] System.Nullable<int> typeID)
-		{
-			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iud, fileID, fileName, descriptionEN, descriptionKA, descriptionRU, uRL, typeID);
-			fileID = ((System.Nullable<int>)(result.GetParameterValue(1)));
-			return ((int)(result.ReturnValue));
 		}
 		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_Gallery")]
@@ -90,12 +76,6 @@ namespace Core.DB
 			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.fn_List_GalleryFiles", IsComposable=true)]
-		public IQueryable<fn_List_GalleryFilesResult> fn_List_GalleryFiles([global::System.Data.Linq.Mapping.ParameterAttribute(Name="GalleryID", DbType="Int")] System.Nullable<int> galleryID)
-		{
-			return this.CreateMethodCallQuery<fn_List_GalleryFilesResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), galleryID);
-		}
-		
 		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_GalleryFiles")]
 		public int sp_GalleryFiles([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> iud, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="RecordID", DbType="Int")] ref System.Nullable<int> recordID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="GalleryID", DbType="Int")] System.Nullable<int> galleryID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FileID", DbType="Int")] System.Nullable<int> fileID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="IsDefault", DbType="Bit")] System.Nullable<bool> isDefault)
 		{
@@ -103,139 +83,53 @@ namespace Core.DB
 			recordID = ((System.Nullable<int>)(result.GetParameterValue(1)));
 			return ((int)(result.ReturnValue));
 		}
-	}
-	
-	public partial class fn_List_FilesResult
-	{
 		
-		private int _FileID;
-		
-		private string _FileName;
-		
-		private string _DescriptionEN;
-		
-		private string _DescriptionKA;
-		
-		private string _DescriptionRU;
-		
-		private string _URL;
-		
-		private System.Nullable<int> _TypeID;
-		
-		public fn_List_FilesResult()
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_News")]
+		public int sp_News(
+					[global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> iud, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="NewsID", DbType="Int")] ref System.Nullable<int> newsID, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="NewsDate", DbType="DateTime")] System.Nullable<System.DateTime> newsDate, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="TitleEN", DbType="NVarChar(MAX)")] string titleEN, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="TitleKA", DbType="NVarChar(MAX)")] string titleKA, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="TitleRU", DbType="NVarChar(MAX)")] string titleRU, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="DescriptionEN", DbType="NVarChar(MAX)")] string descriptionEN, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="DescriptionKA", DbType="NVarChar(MAX)")] string descriptionKA, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="DescriptionRU", DbType="NVarChar(MAX)")] string descriptionRU, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="FullTextEN", DbType="NVarChar(MAX)")] string fullTextEN, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="FullTextKA", DbType="NVarChar(MAX)")] string fullTextKA, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="FullTextRU", DbType="NVarChar(MAX)")] string fullTextRU, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="CategoryID", DbType="Int")] System.Nullable<int> categoryID, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="SortVal", DbType="Int")] System.Nullable<int> sortVal, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="IsVisible", DbType="Bit")] System.Nullable<bool> isVisible, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="IsVisibleSliderEN", DbType="Bit")] System.Nullable<bool> isVisibleSliderEN, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="IsVisibleSliderKA", DbType="Bit")] System.Nullable<bool> isVisibleSliderKA, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="IsVisibleSliderRU", DbType="Bit")] System.Nullable<bool> isVisibleSliderRU, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="VideoURL", DbType="NVarChar(300)")] string videoURL, 
+					[global::System.Data.Linq.Mapping.ParameterAttribute(Name="GalleryID", DbType="Int")] System.Nullable<int> galleryID)
 		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iud, newsID, newsDate, titleEN, titleKA, titleRU, descriptionEN, descriptionKA, descriptionRU, fullTextEN, fullTextKA, fullTextRU, categoryID, sortVal, isVisible, isVisibleSliderEN, isVisibleSliderKA, isVisibleSliderRU, videoURL, galleryID);
+			newsID = ((System.Nullable<int>)(result.GetParameterValue(1)));
+			return ((int)(result.ReturnValue));
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FileID", DbType="Int NOT NULL")]
-		public int FileID
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.fn_List_Files", IsComposable=true)]
+		public IQueryable<fn_List_FilesResult> fn_List_Files([global::System.Data.Linq.Mapping.ParameterAttribute(Name="FileID", DbType="Int")] System.Nullable<int> fileID)
 		{
-			get
-			{
-				return this._FileID;
-			}
-			set
-			{
-				if ((this._FileID != value))
-				{
-					this._FileID = value;
-				}
-			}
+			return this.CreateMethodCallQuery<fn_List_FilesResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), fileID);
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FileName", DbType="NVarChar(300) NOT NULL", CanBeNull=false)]
-		public string FileName
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.fn_List_GalleryFiles", IsComposable=true)]
+		public IQueryable<fn_List_GalleryFilesResult> fn_List_GalleryFiles([global::System.Data.Linq.Mapping.ParameterAttribute(Name="GalleryID", DbType="Int")] System.Nullable<int> galleryID)
 		{
-			get
-			{
-				return this._FileName;
-			}
-			set
-			{
-				if ((this._FileName != value))
-				{
-					this._FileName = value;
-				}
-			}
+			return this.CreateMethodCallQuery<fn_List_GalleryFilesResult>(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), galleryID);
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DescriptionEN", DbType="NVarChar(MAX)")]
-		public string DescriptionEN
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.sp_Files")]
+		public int sp_Files([global::System.Data.Linq.Mapping.ParameterAttribute(DbType="Int")] System.Nullable<int> iud, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FileID", DbType="Int")] ref System.Nullable<int> fileID, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FileNameKa", DbType="NVarChar(300)")] string fileNameKa, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FileNameEn", DbType="NVarChar(300)")] string fileNameEn, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="FileNameRu", DbType="NVarChar(300)")] string fileNameRu, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DescriptionEN", DbType="NVarChar(MAX)")] string descriptionEN, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DescriptionKA", DbType="NVarChar(MAX)")] string descriptionKA, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="DescriptionRU", DbType="NVarChar(MAX)")] string descriptionRU, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="URL", DbType="NVarChar(250)")] string uRL, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="URLKA", DbType="NVarChar(250)")] string uRLKA, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="URLRu", DbType="NVarChar(250)")] string uRLRu, [global::System.Data.Linq.Mapping.ParameterAttribute(Name="TypeID", DbType="Int")] System.Nullable<int> typeID)
 		{
-			get
-			{
-				return this._DescriptionEN;
-			}
-			set
-			{
-				if ((this._DescriptionEN != value))
-				{
-					this._DescriptionEN = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DescriptionKA", DbType="NVarChar(MAX)")]
-		public string DescriptionKA
-		{
-			get
-			{
-				return this._DescriptionKA;
-			}
-			set
-			{
-				if ((this._DescriptionKA != value))
-				{
-					this._DescriptionKA = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DescriptionRU", DbType="NVarChar(MAX)")]
-		public string DescriptionRU
-		{
-			get
-			{
-				return this._DescriptionRU;
-			}
-			set
-			{
-				if ((this._DescriptionRU != value))
-				{
-					this._DescriptionRU = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_URL", DbType="NVarChar(250) NOT NULL", CanBeNull=false)]
-		public string URL
-		{
-			get
-			{
-				return this._URL;
-			}
-			set
-			{
-				if ((this._URL != value))
-				{
-					this._URL = value;
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TypeID", DbType="Int")]
-		public System.Nullable<int> TypeID
-		{
-			get
-			{
-				return this._TypeID;
-			}
-			set
-			{
-				if ((this._TypeID != value))
-				{
-					this._TypeID = value;
-				}
-			}
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())), iud, fileID, fileNameKa, fileNameEn, fileNameRu, descriptionEN, descriptionKA, descriptionRU, uRL, uRLKA, uRLRu, typeID);
+			fileID = ((System.Nullable<int>)(result.GetParameterValue(1)));
+			return ((int)(result.ReturnValue));
 		}
 	}
 	
@@ -373,14 +267,16 @@ namespace Core.DB
 		}
 	}
 	
-	public partial class fn_List_GalleryFilesResult
+	public partial class fn_List_FilesResult
 	{
-		
-		private int _RecordID;
 		
 		private int _FileID;
 		
-		private string _FileName;
+		private string _FileNameKa;
+		
+		private string _FileNameEn;
+		
+		private string _FileNameRu;
 		
 		private string _DescriptionEN;
 		
@@ -390,30 +286,14 @@ namespace Core.DB
 		
 		private string _URL;
 		
+		private string _URLKa;
+		
+		private string _URLRu;
+		
 		private System.Nullable<int> _TypeID;
 		
-		private System.Nullable<System.DateTime> _CRTime;
-		
-		private bool _IsDefault;
-		
-		public fn_List_GalleryFilesResult()
+		public fn_List_FilesResult()
 		{
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RecordID", DbType="Int NOT NULL")]
-		public int RecordID
-		{
-			get
-			{
-				return this._RecordID;
-			}
-			set
-			{
-				if ((this._RecordID != value))
-				{
-					this._RecordID = value;
-				}
-			}
 		}
 		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FileID", DbType="Int NOT NULL")]
@@ -432,18 +312,50 @@ namespace Core.DB
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FileName", DbType="NVarChar(300) NOT NULL", CanBeNull=false)]
-		public string FileName
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FileNameKa", DbType="NVarChar(300) NOT NULL", CanBeNull=false)]
+		public string FileNameKa
 		{
 			get
 			{
-				return this._FileName;
+				return this._FileNameKa;
 			}
 			set
 			{
-				if ((this._FileName != value))
+				if ((this._FileNameKa != value))
 				{
-					this._FileName = value;
+					this._FileNameKa = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FileNameEn", DbType="NVarChar(300)")]
+		public string FileNameEn
+		{
+			get
+			{
+				return this._FileNameEn;
+			}
+			set
+			{
+				if ((this._FileNameEn != value))
+				{
+					this._FileNameEn = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FileNameRu", DbType="NVarChar(300)")]
+		public string FileNameRu
+		{
+			get
+			{
+				return this._FileNameRu;
+			}
+			set
+			{
+				if ((this._FileNameRu != value))
+				{
+					this._FileNameRu = value;
 				}
 			}
 		}
@@ -508,6 +420,266 @@ namespace Core.DB
 				if ((this._URL != value))
 				{
 					this._URL = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_URLKa", DbType="NVarChar(250)")]
+		public string URLKa
+		{
+			get
+			{
+				return this._URLKa;
+			}
+			set
+			{
+				if ((this._URLKa != value))
+				{
+					this._URLKa = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_URLRu", DbType="NVarChar(250)")]
+		public string URLRu
+		{
+			get
+			{
+				return this._URLRu;
+			}
+			set
+			{
+				if ((this._URLRu != value))
+				{
+					this._URLRu = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TypeID", DbType="Int")]
+		public System.Nullable<int> TypeID
+		{
+			get
+			{
+				return this._TypeID;
+			}
+			set
+			{
+				if ((this._TypeID != value))
+				{
+					this._TypeID = value;
+				}
+			}
+		}
+	}
+	
+	public partial class fn_List_GalleryFilesResult
+	{
+		
+		private int _RecordID;
+		
+		private int _FileID;
+		
+		private string _FileNameKa;
+		
+		private string _FileNameEn;
+		
+		private string _FileNameRu;
+		
+		private string _DescriptionEN;
+		
+		private string _DescriptionKA;
+		
+		private string _DescriptionRU;
+		
+		private string _URL;
+		
+		private string _URLKa;
+		
+		private string _URLRu;
+		
+		private System.Nullable<int> _TypeID;
+		
+		private System.Nullable<System.DateTime> _CRTime;
+		
+		private bool _IsDefault;
+		
+		public fn_List_GalleryFilesResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_RecordID", DbType="Int NOT NULL")]
+		public int RecordID
+		{
+			get
+			{
+				return this._RecordID;
+			}
+			set
+			{
+				if ((this._RecordID != value))
+				{
+					this._RecordID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FileID", DbType="Int NOT NULL")]
+		public int FileID
+		{
+			get
+			{
+				return this._FileID;
+			}
+			set
+			{
+				if ((this._FileID != value))
+				{
+					this._FileID = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FileNameKa", DbType="NVarChar(300) NOT NULL", CanBeNull=false)]
+		public string FileNameKa
+		{
+			get
+			{
+				return this._FileNameKa;
+			}
+			set
+			{
+				if ((this._FileNameKa != value))
+				{
+					this._FileNameKa = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FileNameEn", DbType="NVarChar(300)")]
+		public string FileNameEn
+		{
+			get
+			{
+				return this._FileNameEn;
+			}
+			set
+			{
+				if ((this._FileNameEn != value))
+				{
+					this._FileNameEn = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_FileNameRu", DbType="NVarChar(300)")]
+		public string FileNameRu
+		{
+			get
+			{
+				return this._FileNameRu;
+			}
+			set
+			{
+				if ((this._FileNameRu != value))
+				{
+					this._FileNameRu = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DescriptionEN", DbType="NVarChar(MAX)")]
+		public string DescriptionEN
+		{
+			get
+			{
+				return this._DescriptionEN;
+			}
+			set
+			{
+				if ((this._DescriptionEN != value))
+				{
+					this._DescriptionEN = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DescriptionKA", DbType="NVarChar(MAX)")]
+		public string DescriptionKA
+		{
+			get
+			{
+				return this._DescriptionKA;
+			}
+			set
+			{
+				if ((this._DescriptionKA != value))
+				{
+					this._DescriptionKA = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_DescriptionRU", DbType="NVarChar(MAX)")]
+		public string DescriptionRU
+		{
+			get
+			{
+				return this._DescriptionRU;
+			}
+			set
+			{
+				if ((this._DescriptionRU != value))
+				{
+					this._DescriptionRU = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_URL", DbType="NVarChar(250) NOT NULL", CanBeNull=false)]
+		public string URL
+		{
+			get
+			{
+				return this._URL;
+			}
+			set
+			{
+				if ((this._URL != value))
+				{
+					this._URL = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_URLKa", DbType="NVarChar(250)")]
+		public string URLKa
+		{
+			get
+			{
+				return this._URLKa;
+			}
+			set
+			{
+				if ((this._URLKa != value))
+				{
+					this._URLKa = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_URLRu", DbType="NVarChar(250)")]
+		public string URLRu
+		{
+			get
+			{
+				return this._URLRu;
+			}
+			set
+			{
+				if ((this._URLRu != value))
+				{
+					this._URLRu = value;
 				}
 			}
 		}

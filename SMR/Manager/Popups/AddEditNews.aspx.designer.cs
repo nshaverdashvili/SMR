@@ -76,6 +76,15 @@ namespace SMR.Manager.Popups {
         protected global::System.Web.UI.WebControls.TextBox txtTitleRU;
         
         /// <summary>
+        /// txtSortVal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSortVal;
+        
+        /// <summary>
         /// chkVisible control.
         /// </summary>
         /// <remarks>
@@ -83,6 +92,33 @@ namespace SMR.Manager.Popups {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chkVisible;
+        
+        /// <summary>
+        /// chkVisibleSliderEN control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkVisibleSliderEN;
+        
+        /// <summary>
+        /// chkVisibleSliderKA control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkVisibleSliderKA;
+        
+        /// <summary>
+        /// chkVisibleSliderRU control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkVisibleSliderRU;
         
         /// <summary>
         /// txtDate control.

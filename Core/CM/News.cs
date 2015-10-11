@@ -68,9 +68,29 @@ namespace Core.CM
         public int? CategoryID { get; set; }
         public int? SortVal { get; set; }
         public bool? IsVisible { get; set; }
+        public bool? IsVisibleSliderEN { get; set; }
+        public bool? IsVisibleSliderKA { get; set; }
+        public bool? IsVisibleSliderRU { get; set; }
         public string VideoURL { get; set; }
         public int? GalleryID { get; set; }
-        public string ImgURL { get; set; }
+        public string ImgURLKa { get; set; }
+        public string ImgURLRu { get; set; }
+        public string ImgURLEn { get; set; }
+        public string ImgURL
+        {
+            get
+            {
+                if (Thread.CurrentThread.CurrentUICulture.Name == "ka-GE")
+                {
+                    return ImgURLKa;
+                }
+                if (Thread.CurrentThread.CurrentUICulture.Name == "ru-RU")
+                {
+                    return ImgURLRu;
+                }
+                return ImgURLEn;
+            }
+        }
     }
     public class NewsRepository : ObjectBase
     {
@@ -97,26 +117,65 @@ namespace Core.CM
                         CategoryID=s.CategoryID,
                         SortVal=s.SortVal,
                         IsVisible=s.IsVisible,
+                        IsVisibleSliderEN = s.IsVisibleSliderEN,
+                        IsVisibleSliderKA = s.IsVisibleSliderKA,
+                        IsVisibleSliderRU = s.IsVisibleSliderRU,
                         VideoURL=s.VideoURL,
                         GalleryID=s.GalleryID,
-                        ImgURL = s.URL
+                        ImgURLKa = s.URLKa,
+                        ImgURLRu = s.URLRu,
+                        ImgURLEn = s.URL
+                    }).ToList();
+                }
+            });
+        }
+        public List<News> ListNewsSlider(string LangName)
+        {
+            return TryToReturn(string.Format("Core.CM.NewsRepository.ListNews()"), () =>
+            {
+                using (var db = DB.DBCon.GetCMDataContext())
+                {
+                    return db.fn_List_NewsForSlider(LangName).Select(s => new News
+                    {
+                        NewsID = s.NewsID,
+                        NewsDate = s.NewsDate,
+                        TitleEN = s.TitleEN,
+                        TitleKA = s.TitleKA,
+                        TitleRU = s.TitleRU,
+                        DescriptionEN = s.DescriptionEN,
+                        DescriptionKA = s.DescriptionKA,
+                        DescriptionRU = s.DescriptionRU,
+                        FullTextEN = s.FullTextEN,
+                        FullTextKA = s.FullTextKA,
+                        FullTextRU = s.FullTextRU,
+                        CategoryID = s.CategoryID,
+                        SortVal = s.SortVal,
+                        IsVisible = s.IsVisible,
+                        IsVisibleSliderEN = s.IsVisibleSliderEN,
+                        IsVisibleSliderKA = s.IsVisibleSliderKA,
+                        IsVisibleSliderRU = s.IsVisibleSliderRU,
+                        VideoURL = s.VideoURL,
+                        GalleryID = s.GalleryID,
+                        ImgURLKa = s.URLKa,
+                        ImgURLRu = s.URLRu,
+                        ImgURLEn = s.URL
                     }).ToList();
                 }
             });
         }
 
         public void SP_News(int? iud, int NewsID, DateTime? NewsDate, string TitleEN,string TitleKA,string TitleRU, string DescriptionEN,string DescriptionKA,string DescriptionRU, string FullTextEN, string FullTextKA, string FullTextRU, int? CategoryID, int? SortVal,
-                            bool? IsVisible, string VideoURL, int? GalleryID)
+                            bool? IsVisible, bool? IsVisibleSliderEN, bool? IsVisibleSliderKA, bool? IsVisibleSliderRU, string VideoURL, int? GalleryID)
         {
-            TryExecute(string.Format("SP_News(iud = {0}, NewsID = {1}, NewsDate = {2}, TitleEN = {3}, TitleKA = {4}, TitleRU = {5}, DescriptionEN = {6}, DescriptionKA = {7}, DescriptionRU = {8}, FullTextEN = {9}, FullTextKA = {10}, FullTextRU = {11}, CategoryID = {12}, SortVal = {13}, IsVisible = {14}, VideoURL = {15}, GalleryID = {16})", 
+            TryExecute(string.Format("SP_News(iud = {0}, NewsID = {1}, NewsDate = {2}, TitleEN = {3}, TitleKA = {4}, TitleRU = {5}, DescriptionEN = {6}, DescriptionKA = {7}, DescriptionRU = {8}, FullTextEN = {9}, FullTextKA = {10}, FullTextRU = {11}, CategoryID = {12}, SortVal = {13}, IsVisible = {14}, IsVisibleSliderKA = {15}, IsVisibleSliderKA = {16}, IsVisibleSliderRU = {17}, VideoURL = {18}, GalleryID = {19})", 
                 iud, NewsID, NewsDate, TitleEN, TitleKA, TitleRU, DescriptionEN, DescriptionKA, DescriptionRU,
-                FullTextEN, FullTextKA, FullTextRU, CategoryID, SortVal, IsVisible, VideoURL, GalleryID), () =>
+                FullTextEN, FullTextKA, FullTextRU, CategoryID, SortVal, IsVisible, IsVisibleSliderEN, IsVisibleSliderKA, IsVisibleSliderRU, VideoURL, GalleryID), () =>
             {
                 using (var db = DB.DBCon.GetCMDataContext())
                 {
                     int? NewID = NewsID;
                     db.sp_News(iud, ref NewID, NewsDate, TitleEN, TitleKA, TitleRU, DescriptionEN, DescriptionKA, DescriptionRU,
-                        FullTextEN, FullTextKA, FullTextRU, CategoryID, SortVal, IsVisible, VideoURL, GalleryID);
+                        FullTextEN, FullTextKA, FullTextRU, CategoryID, SortVal, IsVisible, IsVisibleSliderEN, IsVisibleSliderKA, IsVisibleSliderRU, VideoURL, GalleryID);
                     this.ID = NewID;
                 }
             });

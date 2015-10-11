@@ -16,7 +16,10 @@
                 <Columns>
                     <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="True" ShowNewButton="false" ShowNewButtonInHeader="false" ButtonType="image" Caption=" " Width="60">
                     </dx:GridViewCommandColumn>
-                    <dx:GridViewDataTextColumn FieldName="RecordID" Visible="false">
+                    <dx:GridViewDataTextColumn FieldName="RecordID">
+                        <EditItemTemplate>
+                            <%#Eval("RecordID") %>
+                        </EditItemTemplate>
                     </dx:GridViewDataTextColumn>
                     <dx:GridViewBandColumn Caption="Title">
                         <Columns>
@@ -56,7 +59,11 @@
                                     </DataItemTemplate>
                                 </dx:GridViewDataTextColumn>
                                 <dx:GridViewDataComboBoxColumn FieldName="FileID" Width="200" Caption="File Name">
-                                    <PropertiesComboBox DataSourceID="dsFiles" TextField="FileName" ValueField="FileID">
+                                    <PropertiesComboBox DataSourceID="dsFiles" ValueField="FileID" TextFormatString="{0}">
+                                        <Columns>
+                                            <dx:ListBoxColumn FieldName="FileName" />
+                                            <dx:ListBoxColumn FieldName="Description" />
+                                        </Columns>
                                     </PropertiesComboBox>
                                 </dx:GridViewDataComboBoxColumn>
                                 <dx:GridViewDataCheckColumn FieldName="IsDefault" Width="100">

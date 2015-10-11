@@ -171,4 +171,243 @@
   <data name="TextSave" xml:space="preserve">
     <value>Save</value>
   </data>
+  <data name="Address" xml:space="preserve">
+    <value>Address</value>
+  </data>
+  <data name="Dateofbirth" xml:space="preserve">
+    <value>Date of birth</value>
+  </data>
+  <data name="Desc1" xml:space="preserve">
+    <value>SMR Online Notification Application Persons working or traveling to Georgia aiming to visit occupied regions are kindly asked to fill out the Notification Form. The Notification Form does not put any type of liability upon the Office of the State Minister. Neither does it serve as permission for entering the conflict region. The Notification Form has only informational character. In order to obtain media accreditation, please, contact Ministry of Foreign Affairs of Georgia or follow the link http://www.mfa.gov.ge</value>
+  </data>
+  <data name="Destinationplace" xml:space="preserve">
+    <value>Destination place</value>
+  </data>
+  <data name="Durationofstay" xml:space="preserve">
+    <value>Duration of stay</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="Emergency Contacts" xml:space="preserve">
+    <value>Emergency Contacts</value>
+  </data>
+  <data name="Fax" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="FirstName" xml:space="preserve">
+    <value>First Name</value>
+  </data>
+  <data name="From" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Gender" xml:space="preserve">
+    <value>Gender</value>
+  </data>
+  <data name="HostContact" xml:space="preserve">
+    <value>Contact details of the Host</value>
+  </data>
+  <data name="HostsName" xml:space="preserve">
+    <value>Hosts name and surname</value>
+  </data>
+  <data name="LastName" xml:space="preserve">
+    <value>Last Name</value>
+  </data>
+  <data name="Nationality" xml:space="preserve">
+    <value>Nationality</value>
+  </data>
+  <data name="PassportNumber" xml:space="preserve">
+    <value>Passport Number</value>
+  </data>
+  <data name="ProjectImplemented" xml:space="preserve">
+    <value>Project to be implemented</value>
+  </data>
+  <data name="PurposeofVisit" xml:space="preserve">
+    <value>Purpose of Visit</value>
+  </data>
+  <data name="Telephone" xml:space="preserve">
+    <value>Telephone</value>
+  </data>
+  <data name="Timeline" xml:space="preserve">
+    <value>Timeline</value>
+  </data>
+  <data name="To" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="UploadPhoto" xml:space="preserve">
+    <value>Upload Photo</value>
+  </data>
+  <data name="Vehicletype" xml:space="preserve">
+    <value>Vehicle type</value>
+  </data>
+  <data name="VisitOrganizedby" xml:space="preserve">
+    <value>Visit Organized by</value>
+  </data>
+  <data name="FDate" xml:space="preserve">
+    <value>Start Date</value>
+  </data>
+  <data name="LDate" xml:space="preserve">
+    <value>End Date</value>
+  </data>
+  <data name="PersonalInformation" xml:space="preserve">
+    <value>Personal Information</value>
+  </data>
+  <data name="Statusofthevisitor" xml:space="preserve">
+    <value>Status of the visitor</value>
+  </data>
+  <data name="ProjectName" xml:space="preserve">
+    <value>Project Name</value>
+  </data>
+  <data name="Projectpurpose" xml:space="preserve">
+    <value>Project purpose</value>
+  </data>
+  <data name="IsSentProject" xml:space="preserve">
+    <value>Have you submitted the project to SMR in accordance with the Modalities for Conducting Activities in Occupied Territories</value>
+  </data>
+  <data name="LocalPartner" xml:space="preserve">
+    <value>Local Partner</value>
+  </data>
+  <data name="Provideadditionalinformation" xml:space="preserve">
+    <value>Provide additional information</value>
+  </data>
+  <data name="FNote" xml:space="preserve">
+    <value>Note:The present application is not a guarantee for entering occupied regions.</value>
+  </data>
+  <data name="preface1" xml:space="preserve">
+    <value>For the implementation of emergency humanitarian assistance in occupied territories of Georgia</value>
+  </data>
+  <data name="GeneralInformation" xml:space="preserve">
+    <value>General Information</value>
+  </data>
+  <data name="OrganizationName" xml:space="preserve">
+    <value>Organization name</value>
+  </data>
+  <data name="ApplicableUpload" xml:space="preserve">
+    <value>Organization's registration in Georgia (if applicable).</value>
+  </data>
+  <data name="fileextensions" xml:space="preserve">
+    <value>file extensions: ".jpg",".pdf,".rar"</value>
+  </data>
+  <data name="MissionDesc" xml:space="preserve">
+    <value>Description of organization's mission</value>
+  </data>
+  <data name="ContactForm1" xml:space="preserve">
+    <value>Contact Person (Name, Family name, Phone, email)</value>
+  </data>
+  <data name="HumInfo" xml:space="preserve">
+    <value>Information on the Necessity of Emergency Humanitarian Assistance</value>
+  </data>
+  <data name="HumDesc" xml:space="preserve">
+    <value>Description of humanitarian conditions (Cause of emergency, geographical area covered, humanitarian consequences)</value>
+  </data>
+  <data name="HumType" xml:space="preserve">
+    <value>Type of humanitarian assistance to be provided</value>
+  </data>
+  <data name="HumQuantity" xml:space="preserve">
+    <value>Quantity of humanitarian assistance to be provided</value>
+  </data>
+  <data name="Donor(s)" xml:space="preserve">
+    <value>Donor(s)</value>
+  </data>
+  <data name="EmerHum" xml:space="preserve">
+    <value>Emergency humanitarian assistance interventions (single/multiple)</value>
+  </data>
+  <data name="HumDirection" xml:space="preserve">
+    <value>Directions (and shares) of provision of emergency humanitarian assistance (e.g., from north, 1/3; from south, 2/3)</value>
+  </data>
+  <data name="AddInfo" xml:space="preserve">
+    <value>Additional information</value>
+  </data>
+  <data name="DescOfOrg" xml:space="preserve">
+    <value>Description of organization's mission</value>
+  </data>
+  <data name="WebPage" xml:space="preserve">
+    <value>Web page</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="NotificationForm1" xml:space="preserve">
+    <value>Notification form 1</value>
+  </data>
+  <data name="NotificationForm2" xml:space="preserve">
+    <value>Notification Form2</value>
+  </data>
+  <data name="NotificationForm3" xml:space="preserve">
+    <value>Notification Form 3</value>
+  </data>
+  <data name="NotifForm2Desc" xml:space="preserve">
+    <value>For intergovernmental organizations and international-development agencies conducting activities in occupied territories based on agreements with the Government of Georgia</value>
+  </data>
+  <data name="StatusOfProject" xml:space="preserve">
+    <value>Status of project (e.g., concept, financed, ongoing, extended)</value>
+  </data>
+  <data name="DonorsForm2" xml:space="preserve">
+    <value>Donor(s) (name(s) and contact information)</value>
+  </data>
+  <data name="AimOfProject" xml:space="preserve">
+    <value>Aim of project</value>
+  </data>
+  <data name="ExpectedResults" xml:space="preserve">
+    <value>Expected results of project</value>
+  </data>
+  <data name="InformationProjects" xml:space="preserve">
+    <value>Information on Projects to Be Implemented</value>
+  </data>
+  <data name="DescForm3" xml:space="preserve">
+    <value>For the implementation of non-exempt activities in occupied territories of Georgia</value>
+  </data>
+  <data name="DonorsForm3" xml:space="preserve">
+    <value>Project description is submitted jointly with donor(s): Yes/No. If Yes: Name of the donor(s)</value>
+  </data>
+  <data name="FinanceInfo" xml:space="preserve">
+    <value>Financial information (expected budget, resources, bank details) </value>
+  </data>
+  <data name="LocalPartners" xml:space="preserve">
+    <value>Local partners (name(s) and contact information)</value>
+  </data>
+  <data name="Schedule" xml:space="preserve">
+    <value>Expected schedule of trips to occupied territories</value>
+  </data>
+  <data name="WarningRequired" xml:space="preserve">
+    <value>{0} is required</value>
+  </data>
+  <data name="NotificationTitle" xml:space="preserve">
+    <value>SMR Online Notification Application</value>
+  </data>
+  <data name="NotificationDesc" xml:space="preserve">
+    <value>Persons working or traveling to Georgia aiming to visit occupied regions are kindly asked to fill out the Notification Form. The Notification Form does not put any type of liability upon the Office of the State Minister. Neither does it serve as permission for entering the conflict region. The Notification Form has only informational character. In order to obtain media accreditation, please, contact Ministry of Foreign Affairs of Georgia or follow the link http://www.mfa.gov.ge</value>
+  </data>
+  <data name="NewsMonth" xml:space="preserve">
+    <value>News Archive</value>
+  </data>
+  <data name="cp1" xml:space="preserve">
+    <value>Copyright © 2009-2015 Office of The State Minister of Georgia</value>
+  </data>
+  <data name="cp2" xml:space="preserve">
+    <value>Copyright © 2009-2015 Office of The State Minister of Georgia</value>
+  </data>
+  <data name="cp3" xml:space="preserve">
+    <value>for Reconciliation and Civic Equality. All Rights Reserved. </value>
+  </data>
+  <data name="LogoDesc" xml:space="preserve">
+    <value>&lt;b&gt;Office Of The State Minister&lt;/b&gt;
+                            &lt;b&gt;of Georgia for Reconciliation and&lt;/b&gt;
+                            &lt;b&gt;Civil Equality&lt;/b&gt;</value>
+  </data>
+  <data name="EmailAddress" xml:space="preserve">
+    <value>ninashaverdashvili@gmail.com</value>
+  </data>
+  <data name="EmailPassword" xml:space="preserve">
+    <value>1Nshaverda</value>
+  </data>
+  <data name="Name_ContactPage" xml:space="preserve">
+    <value>Name and Lastname</value>
+  </data>
+  <data name="Email_ContactPage" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Message_ContactPage" xml:space="preserve">
+    <value>Text</value>
+  </data>
 </root>

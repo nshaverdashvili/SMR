@@ -68,6 +68,12 @@
                 </dx:GridViewDataTextColumn>
                 <dx:GridViewDataCheckColumn FieldName="IsVisible" >
                 </dx:GridViewDataCheckColumn>
+                <dx:GridViewDataCheckColumn FieldName="IsVisibleSliderEN" >
+                </dx:GridViewDataCheckColumn>
+                <dx:GridViewDataCheckColumn FieldName="IsVisibleSliderKA" >
+                </dx:GridViewDataCheckColumn>
+                <dx:GridViewDataCheckColumn FieldName="IsVisibleSliderRU" >
+                </dx:GridViewDataCheckColumn>
                 <dx:GridViewDataComboBoxColumn FieldName="GalleryID" >
                     <PropertiesComboBox DataSourceID="dsGalleries" TextField="Title" ValueField="RecordID">
                     </PropertiesComboBox>
@@ -108,6 +114,9 @@
                 <asp:Parameter Name="CategoryID" Type="Int32" />
                 <asp:Parameter Name="SortVal" Type="Int32" />
                 <asp:Parameter Name="IsVisible" Type="Boolean" />
+                <asp:Parameter Name="IsVisibleSliderEN" Type="Boolean" />
+                <asp:Parameter Name="IsVisibleSliderKA" Type="Boolean" />
+                <asp:Parameter Name="IsVisibleSliderRU" Type="Boolean" />
                 <asp:Parameter Name="VideoURL" Type="String" />
                 <asp:Parameter Name="GalleryID" Type="Int32" />
             </DeleteParameters>           

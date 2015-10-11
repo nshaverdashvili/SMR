@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace SMR.Manager.Files
 {
-    public partial class Galleries : System.Web.UI.Page
+    public partial class Galleries : Models.PageBase
     {
         protected void Page_Load(object sender, EventArgs e)
         {

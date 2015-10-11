@@ -7,10 +7,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-
 namespace SMR.Manager.Popups
 {
-    public partial class AddEditPages : System.Web.UI.Page
+    public partial class AddEditPages : Models.PageBase // System.Web.UI.Page
     {
         int _ID;
         PagesRepository pr = new PagesRepository();
@@ -50,8 +49,11 @@ namespace SMR.Manager.Popups
         {
             msgPH.Visible = true;
             var iud = (byte)(_ID > 0 ? 1 : 0);
+
+            var GalleryID= string.IsNullOrEmpty(ddGalleryID.SelectedValue) ? (int?)null :  int.Parse(ddGalleryID.SelectedValue);
+
             pr.SP_Pages(iud, _ID, null, txtTitleEN.Text, txtTitleKA.Text, txtTitleRU.Text, txtDescEN.Text, txtDescKA.Text, txtDescRU.Text, int.Parse(ddTemplateID.SelectedValue),
-                txtURL.Text, txtNote.Text, int.Parse(ddGalleryID.SelectedValue), chkVisible.Checked);
+                txtURL.Text, txtNote.Text, GalleryID, chkVisible.Checked);
             if (pr.IsError)
             {
                 litMsg.Text = "ოპერაცია არ შესრულდა: " + pr.ErrorMessage;
@@ -59,6 +61,12 @@ namespace SMR.Manager.Popups
             }
             litMsg.Text = "<script>$(function(){window.parent.gridPages.Refresh(); window.parent.ClosePopupPage();});</script>";
 
+        }
+
+        protected void ddGalleryID_DataBound(object sender, EventArgs e)
+        {
+            ddGalleryID.Items.Insert(0, new ListItem(String.Empty, String.Empty));
+            ddGalleryID.SelectedIndex = 0;
         }
 
     }

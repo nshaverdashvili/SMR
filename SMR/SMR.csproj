@@ -41,7 +41,22 @@
     <Reference Include="Base">
       <HintPath>..\Extdll\Base.dll</HintPath>
     </Reference>
+    <Reference Include="DevExpress.Charts.v13.2.Core, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Data.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Office.v13.2.Core, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v13.2.Core, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v13.2.Core, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v13.2.Core, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v13.2.Core, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.Web.ASPxThemes.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
@@ -51,6 +66,13 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.Web.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
       <Private>True</Private>
     </Reference>
     <Reference Include="DevExpress.XtraTreeList.v13.2, Version=13.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
@@ -76,6 +98,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -191,15 +214,28 @@
     <Content Include="App_Themes\DevEx\Web\ucButtonPressedBack.png" />
     <Content Include="App_Themes\DevEx\Web\ucProgressBack.png" />
     <Content Include="App_Themes\DevEx\Web\ucProgressIndicatorBack.png" />
+    <Content Include="contact.aspx" />
     <Content Include="Content\css\fonts.css" />
     <Content Include="Content\css\managerPopupStyle.css" />
     <Content Include="Content\css\managerStyle.css" />
     <Content Include="Content\css\admin.css" />
     <Content Include="Content\css\timeline.css" />
+    <Content Include="Content\fonts\Smr\bold.svg" />
+    <Content Include="Content\fonts\Smr\bold_up.svg" />
+    <Content Include="Content\fonts\Smr\extraLight.svg" />
+    <Content Include="Content\fonts\Smr\extraLight_up.svg" />
+    <Content Include="Content\fonts\Smr\regular.svg" />
+    <Content Include="Content\fonts\Smr\regular_up.svg" />
     <Content Include="Content\images\bg1.jpg" />
+    <Content Include="detailsPage.aspx" />
+    <Content Include="FileList.aspx" />
+    <Content Include="FilePage.aspx" />
     <Content Include="Manager\Popups\AddEditPages.aspx" />
     <Content Include="NewsList.aspx" />
+    <Content Include="Notifications\NotifForm1.aspx" />
+    <Content Include="Notifications\Notifications.aspx" />
     <Content Include="Plugins\jqueryUI\datepicker-ka.js" />
+    <Content Include="Plugins\jqueryUI\datepicker-ru.js" />
     <Content Include="Plugins\jqueryUI\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Plugins\jqueryUI\images\ui-bg_flat_0_eeeeee_40x100.png" />
     <Content Include="Plugins\jqueryUI\images\ui-bg_flat_55_ffffff_40x100.png" />
@@ -418,13 +454,6 @@
     <Content Include="App_Themes\DevEx\ASPxUploadControl.skin" />
     <Content Include="App_Themes\DevEx\ASPxValidationSummary.skin" />
     <Content Include="CMMaster.Master" />
-    <Content Include="Content\fonts\bpg_nino_mtavruli_bold.eot" />
-    <Content Include="Content\fonts\BPG_NINO_MTAVRULI_BOLD.ttf" />
-    <Content Include="Content\fonts\bpg_nino_mtavruli_bold.woff" />
-    <Content Include="Content\fonts\bpg_nino_mtavruli_normal.ttf" />
-    <Content Include="Content\fonts\bpg_rioni_arial.eot" />
-    <Content Include="Content\fonts\bpg_rioni_arial.ttf" />
-    <Content Include="Content\fonts\bpg_rioni_arial.woff" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
@@ -435,6 +464,30 @@
     <Content Include="Plugins\tinymce\skins\lightgray\fonts\tinymce.eot" />
     <Content Include="Plugins\tinymce\skins\lightgray\fonts\tinymce.ttf" />
     <Content Include="Plugins\tinymce\skins\lightgray\fonts\tinymce.woff" />
+    <Content Include="Content\fonts\Smr\bold.eot" />
+    <Content Include="Content\fonts\Smr\bold.ttf" />
+    <Content Include="Content\fonts\Smr\bold.woff" />
+    <Content Include="Content\fonts\Smr\bold.woff2" />
+    <Content Include="Content\fonts\Smr\bold_up.eot" />
+    <Content Include="Content\fonts\Smr\bold_up.ttf" />
+    <Content Include="Content\fonts\Smr\bold_up.woff" />
+    <Content Include="Content\fonts\Smr\bold_up.woff2" />
+    <Content Include="Content\fonts\Smr\extraLight.eot" />
+    <Content Include="Content\fonts\Smr\extraLight.ttf" />
+    <Content Include="Content\fonts\Smr\extraLight.woff" />
+    <Content Include="Content\fonts\Smr\extralight.woff2" />
+    <Content Include="Content\fonts\Smr\extraLight_up.eot" />
+    <Content Include="Content\fonts\Smr\extraLight_up.ttf" />
+    <Content Include="Content\fonts\Smr\extraLight_up.woff" />
+    <Content Include="Content\fonts\Smr\extralight_up.woff2" />
+    <Content Include="Content\fonts\Smr\regular.eot" />
+    <Content Include="Content\fonts\Smr\regular.ttf" />
+    <Content Include="Content\fonts\Smr\regular.woff" />
+    <Content Include="Content\fonts\Smr\regular.woff2" />
+    <Content Include="Content\fonts\Smr\regular_up.eot" />
+    <Content Include="Content\fonts\Smr\regular_up.ttf" />
+    <Content Include="Content\fonts\Smr\regular_up.woff" />
+    <Content Include="Content\fonts\Smr\regular_up.woff2" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -460,7 +513,9 @@
     <Content Include="Uploads\News\2.jpg" />
     <Content Include="Uploads\News\3.png" />
     <Content Include="Uploads\News\4.png" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CMMaster.Master.cs">
@@ -470,12 +525,40 @@
     <Compile Include="CMMaster.Master.designer.cs">
       <DependentUpon>CMMaster.Master</DependentUpon>
     </Compile>
+    <Compile Include="contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="detailsPage.aspx.cs">
+      <DependentUpon>detailsPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="detailsPage.aspx.designer.cs">
+      <DependentUpon>detailsPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FileList.aspx.cs">
+      <DependentUpon>FileList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FileList.aspx.designer.cs">
+      <DependentUpon>FileList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FilePage.aspx.cs">
+      <DependentUpon>FilePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FilePage.aspx.designer.cs">
+      <DependentUpon>FilePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -605,6 +688,32 @@
     <Compile Include="NewsList.aspx.designer.cs">
       <DependentUpon>NewsList.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Notifications\NotifForm1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Notifications\NotifForm2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Notifications\NotifForm3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Notifications\rptNotification.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Notifications\NotifForm1.aspx.cs">
+      <DependentUpon>NotifForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notifications\NotifForm1.aspx.designer.cs">
+      <DependentUpon>NotifForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Notifications\Notifications.aspx.cs">
+      <DependentUpon>Notifications.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notifications\Notifications.aspx.designer.cs">
+      <DependentUpon>Notifications.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Polygon.aspx.cs">
       <DependentUpon>Polygon.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -623,6 +732,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Popups\" />
+    <Folder Include="Uploads\Notifications\" />
     <Folder Include="UserControls\" />
   </ItemGroup>
   <ItemGroup>
@@ -632,6 +742,18 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Notifications\NotifForm1.resx">
+      <DependentUpon>NotifForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\NotifForm2.resx">
+      <DependentUpon>NotifForm2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\NotifForm3.resx">
+      <DependentUpon>NotifForm3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notifications\rptNotification.resx">
+      <DependentUpon>rptNotification.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
   </ItemGroup>
   <PropertyGroup>

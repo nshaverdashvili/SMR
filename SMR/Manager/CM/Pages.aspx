@@ -14,6 +14,7 @@
     <div class="row">
         <div class="col-xs-12">
             <dx:ASPxGridView ID="gridPages" ClientInstanceName="gridPages" runat="server" AutoGenerateColumns="False" DataSourceID="dsPages" KeyFieldName="PageID" Width="100%">
+                <ClientSideEvents EndCallback="function(){InitAction();}" />
                 <Columns>
                     <dx:GridViewDataColumn Width="40" FixedStyle="Left">
                         <DataItemTemplate>
@@ -23,6 +24,8 @@
                     </dx:GridViewDataColumn>
                     <dx:GridViewCommandColumn ShowDeleteButton="True" ShowEditButton="false" ShowNewButton="false" ShowNewButtonInHeader="false" ButtonType="image" Caption=" ">
                     </dx:GridViewCommandColumn>
+                    <dx:GridViewDataTextColumn FieldName="PageID" Caption="ID">
+                    </dx:GridViewDataTextColumn>
                     <dx:GridViewBandColumn Caption="Title">
                         <Columns>
                             <dx:GridViewDataTextColumn FieldName="TitleEN" Caption="English">
