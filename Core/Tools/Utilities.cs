@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
@@ -9,7 +10,6 @@ using System.Configuration;
 using System.Threading;
 using SystemBase;
 using System.Net.Mail;
-using System.Web.Mail;
 
 namespace Core.Tools
 {    
@@ -103,47 +103,28 @@ namespace Core.Tools
             {
                 Body = Body.Replace("http:", "");
 
-                var M = new System.Web.Mail.MailMessage();
-                M.Fields.Add("http://schemas.microsoft.com/cdo/configuration/smtpserver", _SMTP);
-                M.Fields.Add("http://schemas.microsoft.com/cdo/configuration/smtpserverport", _Port);
-                M.Fields.Add("http://schemas.microsoft.com/cdo/configuration/sendusing", "2");
-                //sendusing: cdoSendUsingPort, value 2, for sending the message using 
-                //the network.
+                var SC = new SmtpClient
+                {
+                    Port = _Port,
+                    Host = _SMTP,
+                    EnableSsl = _EnableSSL,
+                    Timeout = 10000,
+                    DeliveryMethod = SmtpDeliveryMethod.Network,
+                    UseDefaultCredentials=false,
+                    Credentials = new NetworkCredential(_Username, _Password)
+                };
 
-                //smtpauthenticate: Specifies the mechanism used when authenticating 
-                //to an SMTP 
-                //service over the network. Possible values are:
-                //- cdoAnonymous, value 0. Do not authenticate.
-                //- cdoBasic, value 1. Use basic clear-text authentication. 
-                //When using this option you have to provide the user name and password 
-                //through the sendusername and sendpassword fields.
-                //- cdoNTLM, value 2. The current process security context is used to 
-                // authenticate with the service.
-                M.Fields.Add("http://schemas.microsoft.com/cdo/configuration/smtpauthenticate", "1");
-                //Use 0 for anonymous
-                M.Fields.Add("http://schemas.microsoft.com/cdo/configuration/sendusername", _Username);
-                M.Fields.Add("http://schemas.microsoft.com/cdo/configuration/sendpassword", _Password);
-                M.Fields.Add("http://schemas.microsoft.com/cdo/configuration/smtpusessl", "true");
-                M.From = To;
-                M.To = To;
-                M.Subject = Subject;
-                M.BodyFormat = MailFormat.Html;
-                M.BodyEncoding = Encoding.UTF8;
-                M.Body = Body;
+                var MM = new MailMessage(From,To,Subject,Body)
+                {
+                    BodyEncoding = Encoding.UTF8,
+                    DeliveryNotificationOptions = DeliveryNotificationOptions.OnFailure
+                };
                 if (AttachmentsList!=null)
                 {
-                    AttachmentsList.ForEach(f => M.Attachments.Add(f));
-                }
-                
-
-
-                if (!string.IsNullOrWhiteSpace(ReplyTo))
-                {
-                    M.Headers.Add("Reply-To", ReplyTo);
+                    AttachmentsList.ForEach(f => MM.Attachments.Add(f));
                 }
 
-                SmtpMail.SmtpServer = string.Format("{0}:{1}", _SMTP, _Port);
-                SmtpMail.Send(M);
+                SC.Send(MM);
                 return true;
             });
         }
