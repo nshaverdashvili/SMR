@@ -400,4 +400,19 @@
                             &lt;b&gt;Грузии по вопросам примирения&lt;/b&gt;
                             &lt;b&gt;и гражданского равноправия&lt;/b&gt;</value>
   </data>
+  <data name="EmailAddress" xml:space="preserve">
+    <value>ninashaverdashvili@gmail.com</value>
+  </data>
+  <data name="EmailPassword" xml:space="preserve">
+    <value>1Nshaverda</value>
+  </data>
+  <data name="Name_ContactPage" xml:space="preserve">
+    <value>Имя Фамилия</value>
+  </data>
+  <data name="Email_ContactPage" xml:space="preserve">
+    <value>Эл.почта</value>
+  </data>
+  <data name="Message_ContactPage" xml:space="preserve">
+    <value>Текст</value>
+  </data>
 </root>

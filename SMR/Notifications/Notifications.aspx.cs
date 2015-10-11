@@ -10,6 +10,8 @@ using Lib;
 using Core.UM;
 using Core;
 using System.Globalization;
+using System.IO;
+using System.Net.Mail;
 
 namespace SMR.Notifications
 {
@@ -157,10 +159,20 @@ namespace SMR.Notifications
                     Note = txtNote.Text
                 };
 
-                var rpt = new rptNotification( NotifyObject );
+                var M = new Core.Tools.Mail();
+                var ms = new MemoryStream();
+                var ListAtt = new List<Attachment>();
+                var rpt = new rptNotification(NotifyObject);
                 var FileName = string.Format("Notification_{0:yyyy-MM-dd}_{1}.pdf", DateTime.Now, Guid.NewGuid().ToString().Substring(1, 6));
-                rpt.ExportToPdf(string.Format("{0}{1}", Utility.GetUploadFolder(), FileName));
+                //rpt.ExportToPdf(string.Format("{0}{1}", Utility.GetUploadFolder(), FileName));
+                rpt.ExportToPdf(ms);
+                System.Net.Mime.ContentType ct = new System.Net.Mime.ContentType(System.Net.Mime.MediaTypeNames.Application.Pdf);
+                System.Net.Mail.Attachment attach = new System.Net.Mail.Attachment(ms, ct);
+                attach.ContentDisposition.FileName = FileName;
+                ListAtt.Add(attach);
 
+                M.Send("ninashaverdashvili@gmail.com", "ninashaverdashvili@gmail.com", "სანოტიპიკაციო ფორმა", "ინფორმაცია საიტიდან", AttachmentsList: ListAtt);
+                ms.Close();
                 Session["IsSent"] = true;
                 Response.Redirect(Request.Url.OriginalString);
             //}

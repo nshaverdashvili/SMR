@@ -373,10 +373,10 @@
     <value>ველი {0} სავალდებულოა</value>
   </data>
   <data name="EmailAddress" xml:space="preserve">
-    <value></value>
+    <value>ninashaverdashvili@gmail.com</value>
   </data>
   <data name="EmailPassword" xml:space="preserve">
-    <value></value>
+    <value>1Nshaverda</value>
   </data>
   <data name="NotificationTitle" xml:space="preserve">
     <value>ნოტიფიკაცია ოკუპირებულ ტერიტორიებზე შესვლის თაობაზე</value>
@@ -400,5 +400,14 @@
     <value>&lt;b&gt;შერიგებისა და სამოქალაქო თანასწორობის&lt;/b&gt;
                             &lt;b&gt;საკითხებში საქართველოს სახელმწიფო&lt;/b&gt;
                             &lt;b&gt;მინისტრის აპარატი&lt;/b&gt;</value>
+  </data>
+  <data name="Name_ContactPage" xml:space="preserve">
+    <value>სახელი და გვარი</value>
+  </data>
+  <data name="Email_ContactPage" xml:space="preserve">
+    <value>ელ.ფოსტა</value>
+  </data>
+  <data name="Message_ContactPage" xml:space="preserve">
+    <value>ტექსტი</value>
   </data>
 </root>

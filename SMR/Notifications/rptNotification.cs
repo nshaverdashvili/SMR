@@ -55,10 +55,6 @@ public class rptNotification : DevExpress.XtraReports.UI.XtraReport
     private XRRichText xrRichText2;
     private XRRichText xrRichText3;
     private XRRichText xrRichText4;
-    private XRLabel xrLabel1;
-    private XRLabel xrLabel2;
-    private XRLabel xrLabel3;
-    private XRLabel xrLabel4;
     private XRRichText txtVisitorStatus;
     private XRRichText txtProjectName;
     private XRRichText txtVisitGoal;
@@ -70,6 +66,10 @@ public class rptNotification : DevExpress.XtraReports.UI.XtraReport
     private XRLabel xrLabel5;
     private XRRichText txtHostName;
     private XRLabel xrLabel6;
+    private XRRichText txtTel1;
+    private XRRichText txtAddress1;
+    private XRRichText txtLName1;
+    private XRRichText txtFName1;
     /// <summary>
     /// Required designer variable.
     /// </summary>
@@ -82,8 +82,30 @@ public class rptNotification : DevExpress.XtraReports.UI.XtraReport
         InitializeComponent();
 
         txtFName.Text = nt.FName;
-        //esenia gasatseri..
-        
+        txtLName.Text = nt.LName;
+        txtAddress.Text = nt.Address;
+        txtTel.Text = nt.Mobile;
+        txtFax.Text = nt.Fax;
+        txtEMail.Text = nt.Email;
+        txtPassportN.Text = nt.PassportN;
+        txtNationality.Text = nt.Nationality;
+        txtBDate.Text = nt.BDate.ToString();
+        txtDates.Text = nt.ProjectFDate.ToString(); //shecdomit maqvs mgoni
+        txtTransportType.Text = nt.TransportType;
+        txtDestination.Text = nt.Destination;
+        txtHostName.Text = nt.HostName;
+        txtFName1.Text = nt.EmFName;
+        txtLName1.Text = nt.EmLName;
+        txtAddress1.Text = nt.EmAddress;
+        txtTel1.Text = nt.EmMobile;
+        txtVisitorStatus.Text = nt.VisitorStatus;
+        txtProjectName.Text = nt.ProjectTitle;
+        txtVisitGoal.Text = nt.ProjectNote;
+        txtFDate.Text = nt.ProjectFDate.ToString();
+        txtLDate.Text = nt.ProjectLDate.ToString();
+        txtPartner.Text = nt.Partner;
+        txtIsSent.Text = nt.IsSent.ToString();
+        txtAddInfo.Text = nt.Note; //??        
     }
 
     /// <summary> 
@@ -125,10 +147,6 @@ public class rptNotification : DevExpress.XtraReports.UI.XtraReport
             this.xrRichText2 = new DevExpress.XtraReports.UI.XRRichText();
             this.xrRichText3 = new DevExpress.XtraReports.UI.XRRichText();
             this.xrRichText4 = new DevExpress.XtraReports.UI.XRRichText();
-            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             this.label16 = new DevExpress.XtraReports.UI.XRLabel();
             this.label15 = new DevExpress.XtraReports.UI.XRLabel();
             this.label18 = new DevExpress.XtraReports.UI.XRLabel();
@@ -169,6 +187,10 @@ public class rptNotification : DevExpress.XtraReports.UI.XtraReport
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.txtName = new DevExpress.XtraReports.UI.XRRichText();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
+            this.txtFName1 = new DevExpress.XtraReports.UI.XRRichText();
+            this.txtLName1 = new DevExpress.XtraReports.UI.XRRichText();
+            this.txtAddress1 = new DevExpress.XtraReports.UI.XRRichText();
+            this.txtTel1 = new DevExpress.XtraReports.UI.XRRichText();
             ((System.ComponentModel.ISupportInitialize)(this.txtHostName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVisitorStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProjectName)).BeginInit();
@@ -202,11 +224,19 @@ public class rptNotification : DevExpress.XtraReports.UI.XtraReport
             ((System.ComponentModel.ISupportInitialize)(this.txtFName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTransportType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFName1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLName1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddress1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.txtTel1,
+            this.txtAddress1,
+            this.txtLName1,
+            this.txtFName1,
             this.xrLabel6,
             this.txtHostName,
             this.xrLabel5,
@@ -223,10 +253,6 @@ public class rptNotification : DevExpress.XtraReports.UI.XtraReport
             this.xrRichText2,
             this.xrRichText3,
             this.xrRichText4,
-            this.xrLabel1,
-            this.xrLabel2,
-            this.xrLabel3,
-            this.xrLabel4,
             this.label16,
             this.label15,
             this.label18,
@@ -417,46 +443,6 @@ public class rptNotification : DevExpress.XtraReports.UI.XtraReport
             this.xrRichText4.SizeF = new System.Drawing.SizeF(287.5F, 23.00001F);
             this.xrRichText4.StylePriority.UseFont = false;
             // 
-            // xrLabel1
-            // 
-            this.xrLabel1.Font = new System.Drawing.Font("Sylfaen", 9.75F);
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(287.0002F, 464.7709F);
-            this.xrLabel1.Name = "xrLabel1";
-            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel1.SizeF = new System.Drawing.SizeF(144.9583F, 23.00003F);
-            this.xrLabel1.StylePriority.UseFont = false;
-            this.xrLabel1.Text = "მისამართი";
-            // 
-            // xrLabel2
-            // 
-            this.xrLabel2.Font = new System.Drawing.Font("Sylfaen", 9.75F);
-            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(287.0002F, 488.7709F);
-            this.xrLabel2.Name = "xrLabel2";
-            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel2.SizeF = new System.Drawing.SizeF(145.8333F, 23.00002F);
-            this.xrLabel2.StylePriority.UseFont = false;
-            this.xrLabel2.Text = "ტელეფონი:";
-            // 
-            // xrLabel3
-            // 
-            this.xrLabel3.Font = new System.Drawing.Font("Sylfaen", 9.75F);
-            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(287.1251F, 416.6458F);
-            this.xrLabel3.Name = "xrLabel3";
-            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel3.SizeF = new System.Drawing.SizeF(145.8333F, 23F);
-            this.xrLabel3.StylePriority.UseFont = false;
-            this.xrLabel3.Text = "სახელი:";
-            // 
-            // xrLabel4
-            // 
-            this.xrLabel4.Font = new System.Drawing.Font("Sylfaen", 9.75F);
-            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(287.0002F, 440.7708F);
-            this.xrLabel4.Name = "xrLabel4";
-            this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel4.SizeF = new System.Drawing.SizeF(145.8333F, 23F);
-            this.xrLabel4.StylePriority.UseFont = false;
-            this.xrLabel4.Text = "გვარი:";
-            // 
             // label16
             // 
             this.label16.Font = new System.Drawing.Font("Sylfaen", 9.75F);
@@ -495,7 +481,7 @@ public class rptNotification : DevExpress.XtraReports.UI.XtraReport
             this.label17.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.label17.SizeF = new System.Drawing.SizeF(144.9583F, 23.00003F);
             this.label17.StylePriority.UseFont = false;
-            this.label17.Text = "მისამართი";
+            this.label17.Text = "მისამართი:";
             // 
             // txtLName2
             // 
@@ -836,6 +822,42 @@ public class rptNotification : DevExpress.XtraReports.UI.XtraReport
             this.BottomMargin.StylePriority.UseFont = false;
             this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
+            // txtFName1
+            // 
+            this.txtFName1.Font = new System.Drawing.Font("Sylfaen", 9.75F);
+            this.txtFName1.LocationFloat = new DevExpress.Utils.PointFloat(290.4584F, 416.6458F);
+            this.txtFName1.Name = "txtFName1";
+            this.txtFName1.SerializableRtfString = resources.GetString("txtFName1.SerializableRtfString");
+            this.txtFName1.SizeF = new System.Drawing.SizeF(291.4166F, 18F);
+            this.txtFName1.StylePriority.UseFont = false;
+            // 
+            // txtLName1
+            // 
+            this.txtLName1.Font = new System.Drawing.Font("Sylfaen", 9.75F);
+            this.txtLName1.LocationFloat = new DevExpress.Utils.PointFloat(290.4584F, 440.7708F);
+            this.txtLName1.Name = "txtLName1";
+            this.txtLName1.SerializableRtfString = resources.GetString("txtLName1.SerializableRtfString");
+            this.txtLName1.SizeF = new System.Drawing.SizeF(291.4166F, 18F);
+            this.txtLName1.StylePriority.UseFont = false;
+            // 
+            // txtAddress1
+            // 
+            this.txtAddress1.Font = new System.Drawing.Font("Sylfaen", 9.75F);
+            this.txtAddress1.LocationFloat = new DevExpress.Utils.PointFloat(290.4584F, 464.7709F);
+            this.txtAddress1.Name = "txtAddress1";
+            this.txtAddress1.SerializableRtfString = resources.GetString("txtAddress1.SerializableRtfString");
+            this.txtAddress1.SizeF = new System.Drawing.SizeF(291.4166F, 18.00003F);
+            this.txtAddress1.StylePriority.UseFont = false;
+            // 
+            // txtTel1
+            // 
+            this.txtTel1.Font = new System.Drawing.Font("Sylfaen", 9.75F);
+            this.txtTel1.LocationFloat = new DevExpress.Utils.PointFloat(290.4584F, 488.7709F);
+            this.txtTel1.Name = "txtTel1";
+            this.txtTel1.SerializableRtfString = resources.GetString("txtTel1.SerializableRtfString");
+            this.txtTel1.SizeF = new System.Drawing.SizeF(291.4166F, 18F);
+            this.txtTel1.StylePriority.UseFont = false;
+            // 
             // rptNotification
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -876,6 +898,10 @@ public class rptNotification : DevExpress.XtraReports.UI.XtraReport
             ((System.ComponentModel.ISupportInitialize)(this.txtFName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTransportType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFName1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLName1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddress1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
     }

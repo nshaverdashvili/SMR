@@ -250,7 +250,16 @@ namespace Core.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to ელ.ფოსტა.
+        /// </summary>
+        public static string Email_ContactPage {
+            get {
+                return ResourceManager.GetString("Email_ContactPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ninashaverdashvili@gmail.com.
         /// </summary>
         public static string EmailAddress {
             get {
@@ -259,7 +268,7 @@ namespace Core.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to .
+        ///   Looks up a localized string similar to 1Nshaverda.
         /// </summary>
         public static string EmailPassword {
             get {
@@ -549,11 +558,29 @@ namespace Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ტექსტი.
+        /// </summary>
+        public static string Message_ContactPage {
+            get {
+                return ResourceManager.GetString("Message_ContactPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ორგანიზაციის მისიის აღწერა.
         /// </summary>
         public static string MissionDesc {
             get {
                 return ResourceManager.GetString("MissionDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to სახელი და გვარი.
+        /// </summary>
+        public static string Name_ContactPage {
+            get {
+                return ResourceManager.GetString("Name_ContactPage", resourceCulture);
             }
         }
         

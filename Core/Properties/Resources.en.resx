@@ -395,4 +395,19 @@
                             &lt;b&gt;of Georgia for Reconciliation and&lt;/b&gt;
                             &lt;b&gt;Civil Equality&lt;/b&gt;</value>
   </data>
+  <data name="EmailAddress" xml:space="preserve">
+    <value>ninashaverdashvili@gmail.com</value>
+  </data>
+  <data name="EmailPassword" xml:space="preserve">
+    <value>1Nshaverda</value>
+  </data>
+  <data name="Name_ContactPage" xml:space="preserve">
+    <value>Name and Lastname</value>
+  </data>
+  <data name="Email_ContactPage" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Message_ContactPage" xml:space="preserve">
+    <value>Text</value>
+  </data>
 </root>

@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using DevExpress.XtraReports.UI;
+using Core;
 
 /// <summary>
 /// Summary description for NotifForm3
@@ -39,8 +40,6 @@ public class NotifForm3 : DevExpress.XtraReports.UI.XtraReport
     private XRRichText txtProjectStatus;
     private XRLabel xrLabel9;
     private XRRichText txtDonorsInfo;
-    private XRRichText txtProjectGoal;
-    private XRLabel xrLabel10;
     private XRLabel xrLabel12;
     private XRRichText txtProjectResult;
     private XRLabel xrLabel13;
@@ -78,7 +77,29 @@ public class NotifForm3 : DevExpress.XtraReports.UI.XtraReport
         }
         base.Dispose(disposing);
     }
+    public NotifForm3(Notifications nf3)
+    {
+        InitializeComponent();
 
+        txtOrgName.Text = nf3.OrgName;
+        txtProjectDesc.Text = nf3.Note;
+        txtAddress.Text = nf3.Address;
+        txtTel.Text = nf3.Mobile;
+        txtEMail.Text = nf3.Email;
+        txtWebPage.Text = nf3.WebPage;
+        txtMission.Text = nf3.MissionDesc;
+        txtProjectIsActive.Text = nf3.IsActualProjects.ToString();
+        txtContactInfo.Text = nf3.Contact;
+        txtProjectName.Text = nf3.ProjectTitle;
+        txtDonorsInfo.Text = nf3.Donors;
+        txtProjectResult.Text = nf3.ProjectResults;
+        txtFDate.Text = nf3.ProjectFDate.ToString();
+        txtLDate.Text = nf3.ProjectLDate.ToString();
+        txtFinanceInfo.Text = nf3.FinanceInfo;
+        txtLocalPartner.Text = nf3.PartnerInfo;
+        txtDepartPlan.Text = nf3.DepartPlan;
+
+    }
     #region Designer generated code
 
     /// <summary>
@@ -89,14 +110,27 @@ public class NotifForm3 : DevExpress.XtraReports.UI.XtraReport
     {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NotifForm3));
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
-            this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
-            this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
-            this.txtName = new DevExpress.XtraReports.UI.XRRichText();
-            this.txtOrgName = new DevExpress.XtraReports.UI.XRRichText();
-            this.label1 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
-            this.txtProjectDesc = new DevExpress.XtraReports.UI.XRRichText();
+            this.txtDepartPlan = new DevExpress.XtraReports.UI.XRRichText();
+            this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
+            this.txtLocalPartner = new DevExpress.XtraReports.UI.XRRichText();
+            this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
+            this.txtFinanceInfo = new DevExpress.XtraReports.UI.XRRichText();
+            this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
+            this.txtProjectName = new DevExpress.XtraReports.UI.XRRichText();
+            this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
+            this.txtProjectStatus = new DevExpress.XtraReports.UI.XRRichText();
+            this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
+            this.txtDonorsInfo = new DevExpress.XtraReports.UI.XRRichText();
+            this.xrLabel12 = new DevExpress.XtraReports.UI.XRLabel();
+            this.txtProjectResult = new DevExpress.XtraReports.UI.XRRichText();
+            this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
+            this.txtFDate = new DevExpress.XtraReports.UI.XRRichText();
+            this.xrLabel14 = new DevExpress.XtraReports.UI.XRLabel();
+            this.txtLDate = new DevExpress.XtraReports.UI.XRRichText();
+            this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
+            this.txtProjectIsActive = new DevExpress.XtraReports.UI.XRRichText();
+            this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             this.txtWebPage = new DevExpress.XtraReports.UI.XRRichText();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.txtAddress = new DevExpress.XtraReports.UI.XRRichText();
@@ -109,49 +143,33 @@ public class NotifForm3 : DevExpress.XtraReports.UI.XtraReport
             this.txtMission = new DevExpress.XtraReports.UI.XRRichText();
             this.label13 = new DevExpress.XtraReports.UI.XRLabel();
             this.txtContactInfo = new DevExpress.XtraReports.UI.XRRichText();
-            this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
-            this.txtProjectIsActive = new DevExpress.XtraReports.UI.XRRichText();
-            this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
-            this.txtProjectName = new DevExpress.XtraReports.UI.XRRichText();
-            this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
-            this.txtProjectStatus = new DevExpress.XtraReports.UI.XRRichText();
-            this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
-            this.txtDonorsInfo = new DevExpress.XtraReports.UI.XRRichText();
-            this.txtProjectGoal = new DevExpress.XtraReports.UI.XRRichText();
-            this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel12 = new DevExpress.XtraReports.UI.XRLabel();
-            this.txtProjectResult = new DevExpress.XtraReports.UI.XRRichText();
-            this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
-            this.txtFDate = new DevExpress.XtraReports.UI.XRRichText();
-            this.xrLabel14 = new DevExpress.XtraReports.UI.XRLabel();
-            this.txtLDate = new DevExpress.XtraReports.UI.XRRichText();
-            this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
-            this.txtFinanceInfo = new DevExpress.XtraReports.UI.XRRichText();
-            this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
-            this.txtLocalPartner = new DevExpress.XtraReports.UI.XRRichText();
-            this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
-            this.txtDepartPlan = new DevExpress.XtraReports.UI.XRRichText();
-            ((System.ComponentModel.ISupportInitialize)(this.txtName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtOrgName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProjectDesc)).BeginInit();
+            this.txtProjectDesc = new DevExpress.XtraReports.UI.XRRichText();
+            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
+            this.txtOrgName = new DevExpress.XtraReports.UI.XRRichText();
+            this.label1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
+            this.txtName = new DevExpress.XtraReports.UI.XRRichText();
+            this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDepartPlan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLocalPartner)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFinanceInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProjectName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProjectStatus)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDonorsInfo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProjectResult)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLDate)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProjectIsActive)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWebPage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEMail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMission)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContactInfo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProjectIsActive)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProjectName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProjectStatus)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDonorsInfo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProjectGoal)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProjectResult)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFDate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLDate)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFinanceInfo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLocalPartner)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDepartPlan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProjectDesc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOrgName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
@@ -169,8 +187,6 @@ public class NotifForm3 : DevExpress.XtraReports.UI.XtraReport
             this.txtProjectStatus,
             this.xrLabel9,
             this.txtDonorsInfo,
-            this.txtProjectGoal,
-            this.xrLabel10,
             this.xrLabel12,
             this.txtProjectResult,
             this.xrLabel13,
@@ -197,70 +213,169 @@ public class NotifForm3 : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel11,
             this.txtOrgName,
             this.label1});
-            this.Detail.HeightF = 1107F;
+            this.Detail.HeightF = 1053.875F;
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
-            // TopMargin
+            // txtDepartPlan
             // 
-            this.TopMargin.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.txtName});
-            this.TopMargin.Name = "TopMargin";
-            this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.txtDepartPlan.LocationFloat = new DevExpress.Utils.PointFloat(290.2501F, 952.8333F);
+            this.txtDepartPlan.Name = "txtDepartPlan";
+            this.txtDepartPlan.SerializableRtfString = resources.GetString("txtDepartPlan.SerializableRtfString");
+            this.txtDepartPlan.SizeF = new System.Drawing.SizeF(345.5833F, 76.12494F);
             // 
-            // BottomMargin
+            // xrLabel17
             // 
-            this.BottomMargin.Name = "BottomMargin";
-            this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(12.24999F, 952.8333F);
+            this.xrLabel17.Name = "xrLabel17";
+            this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel17.SizeF = new System.Drawing.SizeF(247.0417F, 43.83337F);
+            this.xrLabel17.Text = "ოკუპირებულ ტერიტორიებზე გამგზავრების მოსალოდნელი განრიგი";
             // 
-            // txtName
+            // txtLocalPartner
             // 
-            this.txtName.LocationFloat = new DevExpress.Utils.PointFloat(54.16667F, 48.95833F);
-            this.txtName.Name = "txtName";
-            this.txtName.SerializableRtfString = resources.GetString("txtName.SerializableRtfString");
-            this.txtName.SizeF = new System.Drawing.SizeF(565.3749F, 37.29166F);
+            this.txtLocalPartner.LocationFloat = new DevExpress.Utils.PointFloat(290.2501F, 872.6251F);
+            this.txtLocalPartner.Name = "txtLocalPartner";
+            this.txtLocalPartner.SerializableRtfString = resources.GetString("txtLocalPartner.SerializableRtfString");
+            this.txtLocalPartner.SizeF = new System.Drawing.SizeF(345.5833F, 76.12494F);
             // 
-            // txtOrgName
+            // xrLabel16
             // 
-            this.txtOrgName.LocationFloat = new DevExpress.Utils.PointFloat(290.2502F, 30.00001F);
-            this.txtOrgName.Name = "txtOrgName";
-            this.txtOrgName.SerializableRtfString = resources.GetString("txtOrgName.SerializableRtfString");
-            this.txtOrgName.SizeF = new System.Drawing.SizeF(349.7498F, 23F);
+            this.xrLabel16.LocationFloat = new DevExpress.Utils.PointFloat(12.24995F, 872.6251F);
+            this.xrLabel16.Name = "xrLabel16";
+            this.xrLabel16.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel16.SizeF = new System.Drawing.SizeF(244.7917F, 57.37488F);
+            this.xrLabel16.Text = "ინფორმაცია ადგილობრივი პარტნიორების შესახებ (დასახელება და საკონტაქტო ინფორმაცია)" +
+    " ";
             // 
-            // label1
+            // xrLabel15
             // 
-            this.label1.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 30.00001F);
-            this.label1.Name = "label1";
-            this.label1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.label1.SizeF = new System.Drawing.SizeF(160.5833F, 23F);
-            this.label1.Text = "ორგანიზაციის სახელი:";
+            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(12.24996F, 790.9587F);
+            this.xrLabel15.Name = "xrLabel15";
+            this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel15.SizeF = new System.Drawing.SizeF(244.7917F, 43.83331F);
+            this.xrLabel15.Text = "ფინანსური ინფორმაცია (მოსალოდნელი ბიუჯეტი, რესურსები, საბანკო ინფორმაცია)";
             // 
-            // xrLabel11
+            // txtFinanceInfo
             // 
-            this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(226.0417F, 3F);
-            this.xrLabel11.Name = "xrLabel11";
-            this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel11.SizeF = new System.Drawing.SizeF(147.9166F, 22.99997F);
-            this.xrLabel11.Text = "ზოგადი ინფორმაცია";
+            this.txtFinanceInfo.LocationFloat = new DevExpress.Utils.PointFloat(290.2501F, 790.9587F);
+            this.txtFinanceInfo.Name = "txtFinanceInfo";
+            this.txtFinanceInfo.SerializableRtfString = resources.GetString("txtFinanceInfo.SerializableRtfString");
+            this.txtFinanceInfo.SizeF = new System.Drawing.SizeF(345.5833F, 76.12494F);
             // 
-            // xrLabel1
+            // xrLabel7
             // 
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(9.99999F, 56.00001F);
-            this.xrLabel1.Name = "xrLabel1";
-            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel1.SizeF = new System.Drawing.SizeF(236.625F, 102.1666F);
-            this.xrLabel1.Text = "პროექტი ერთობლივად არის წარდგენილი დონორისა და პროექტის წარმდგენელის მიერ (კი/არა" +
-    "). დადებითი პასუხის შემთხვევაში: დონორ(ებ)ის დასახელება";
+            this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(9.99999F, 460.8961F);
+            this.xrLabel7.Name = "xrLabel7";
+            this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel7.SizeF = new System.Drawing.SizeF(244.7917F, 22.99997F);
+            this.xrLabel7.Text = "პროექტის დასახელება";
             // 
-            // txtProjectDesc
+            // txtProjectName
             // 
-            this.txtProjectDesc.LocationFloat = new DevExpress.Utils.PointFloat(290.2502F, 56.00001F);
-            this.txtProjectDesc.Name = "txtProjectDesc";
-            this.txtProjectDesc.SerializableRtfString = resources.GetString("txtProjectDesc.SerializableRtfString");
-            this.txtProjectDesc.SizeF = new System.Drawing.SizeF(349.7498F, 100.1666F);
+            this.txtProjectName.LocationFloat = new DevExpress.Utils.PointFloat(290.2502F, 460.8961F);
+            this.txtProjectName.Name = "txtProjectName";
+            this.txtProjectName.SerializableRtfString = resources.GetString("txtProjectName.SerializableRtfString");
+            this.txtProjectName.SizeF = new System.Drawing.SizeF(345.5833F, 22.99997F);
+            // 
+            // xrLabel8
+            // 
+            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(9.99999F, 487.8961F);
+            this.xrLabel8.Name = "xrLabel8";
+            this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel8.SizeF = new System.Drawing.SizeF(244.7917F, 43.83331F);
+            this.xrLabel8.Text = "პროექტის სტატუსი (მიმდინარე, იდეა, დაფინანსებული, გაგრძელებული) ";
+            // 
+            // txtProjectStatus
+            // 
+            this.txtProjectStatus.LocationFloat = new DevExpress.Utils.PointFloat(290.2502F, 487.8961F);
+            this.txtProjectStatus.Name = "txtProjectStatus";
+            this.txtProjectStatus.SerializableRtfString = resources.GetString("txtProjectStatus.SerializableRtfString");
+            this.txtProjectStatus.SizeF = new System.Drawing.SizeF(345.5833F, 76.12497F);
+            // 
+            // xrLabel9
+            // 
+            this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(9.99999F, 566.021F);
+            this.xrLabel9.Name = "xrLabel9";
+            this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel9.SizeF = new System.Drawing.SizeF(244.7917F, 43.83331F);
+            this.xrLabel9.Text = "დონორები (დასახელება და საკონტაქტო ინფორმაცია)";
+            // 
+            // txtDonorsInfo
+            // 
+            this.txtDonorsInfo.LocationFloat = new DevExpress.Utils.PointFloat(290.2502F, 566.021F);
+            this.txtDonorsInfo.Name = "txtDonorsInfo";
+            this.txtDonorsInfo.SerializableRtfString = resources.GetString("txtDonorsInfo.SerializableRtfString");
+            this.txtDonorsInfo.SizeF = new System.Drawing.SizeF(345.5833F, 76.125F);
+            // 
+            // xrLabel12
+            // 
+            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(12.24999F, 646.2709F);
+            this.xrLabel12.Name = "xrLabel12";
+            this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel12.SizeF = new System.Drawing.SizeF(244.7917F, 43.83331F);
+            this.xrLabel12.Text = "პროექტის მოსალოდნელი შედეგები";
+            // 
+            // txtProjectResult
+            // 
+            this.txtProjectResult.LocationFloat = new DevExpress.Utils.PointFloat(290.2502F, 646.2709F);
+            this.txtProjectResult.Name = "txtProjectResult";
+            this.txtProjectResult.SerializableRtfString = resources.GetString("txtProjectResult.SerializableRtfString");
+            this.txtProjectResult.SizeF = new System.Drawing.SizeF(345.5833F, 76.12494F);
+            // 
+            // xrLabel13
+            // 
+            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(12.24996F, 727.8335F);
+            this.xrLabel13.Name = "xrLabel13";
+            this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel13.SizeF = new System.Drawing.SizeF(244.7917F, 27.16663F);
+            this.xrLabel13.Text = "დაწყების თარიღი";
+            // 
+            // txtFDate
+            // 
+            this.txtFDate.LocationFloat = new DevExpress.Utils.PointFloat(290.2502F, 726.396F);
+            this.txtFDate.Name = "txtFDate";
+            this.txtFDate.SerializableRtfString = resources.GetString("txtFDate.SerializableRtfString");
+            this.txtFDate.SizeF = new System.Drawing.SizeF(345.5833F, 28.60425F);
+            // 
+            // xrLabel14
+            // 
+            this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(12.24996F, 760.7921F);
+            this.xrLabel14.Name = "xrLabel14";
+            this.xrLabel14.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel14.SizeF = new System.Drawing.SizeF(244.7917F, 27.16663F);
+            this.xrLabel14.Text = "დასრულების თარიღი";
+            // 
+            // txtLDate
+            // 
+            this.txtLDate.LocationFloat = new DevExpress.Utils.PointFloat(290.2502F, 759.3544F);
+            this.txtLDate.Name = "txtLDate";
+            this.txtLDate.SerializableRtfString = resources.GetString("txtLDate.SerializableRtfString");
+            this.txtLDate.SizeF = new System.Drawing.SizeF(345.5833F, 28.60431F);
+            // 
+            // xrLabel6
+            // 
+            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(162.5F, 426.4378F);
+            this.xrLabel6.Name = "xrLabel6";
+            this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel6.SizeF = new System.Drawing.SizeF(341.6666F, 22.99997F);
+            this.xrLabel6.Text = "ინფორმაცია განსახორციელებელი პროექტის შესახებ";
+            // 
+            // txtProjectIsActive
+            // 
+            this.txtProjectIsActive.LocationFloat = new DevExpress.Utils.PointFloat(290.2501F, 343.8544F);
+            this.txtProjectIsActive.Name = "txtProjectIsActive";
+            this.txtProjectIsActive.SerializableRtfString = resources.GetString("txtProjectIsActive.SerializableRtfString");
+            this.txtProjectIsActive.SizeF = new System.Drawing.SizeF(348.7083F, 22.99997F);
+            // 
+            // xrLabel4
+            // 
+            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(9.99999F, 343.8544F);
+            this.xrLabel4.Name = "xrLabel4";
+            this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel4.SizeF = new System.Drawing.SizeF(262.5F, 22.99997F);
+            this.xrLabel4.Text = "პროექტები (მიმდინარე/დასრულებული):";
             // 
             // txtWebPage
             // 
@@ -352,179 +467,65 @@ public class NotifForm3 : DevExpress.XtraReports.UI.XtraReport
             this.txtContactInfo.SerializableRtfString = resources.GetString("txtContactInfo.SerializableRtfString");
             this.txtContactInfo.SizeF = new System.Drawing.SizeF(348.7083F, 22.99997F);
             // 
-            // xrLabel4
+            // txtProjectDesc
             // 
-            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(9.99999F, 343.8544F);
-            this.xrLabel4.Name = "xrLabel4";
-            this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel4.SizeF = new System.Drawing.SizeF(262.5F, 22.99997F);
-            this.xrLabel4.Text = "პროექტები (მიმდინარე/დასრულებული):";
+            this.txtProjectDesc.LocationFloat = new DevExpress.Utils.PointFloat(290.2502F, 56.00001F);
+            this.txtProjectDesc.Name = "txtProjectDesc";
+            this.txtProjectDesc.SerializableRtfString = resources.GetString("txtProjectDesc.SerializableRtfString");
+            this.txtProjectDesc.SizeF = new System.Drawing.SizeF(349.7498F, 100.1666F);
             // 
-            // txtProjectIsActive
+            // xrLabel1
             // 
-            this.txtProjectIsActive.LocationFloat = new DevExpress.Utils.PointFloat(290.2501F, 343.8544F);
-            this.txtProjectIsActive.Name = "txtProjectIsActive";
-            this.txtProjectIsActive.SerializableRtfString = resources.GetString("txtProjectIsActive.SerializableRtfString");
-            this.txtProjectIsActive.SizeF = new System.Drawing.SizeF(348.7083F, 22.99997F);
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(9.99999F, 56.00001F);
+            this.xrLabel1.Name = "xrLabel1";
+            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(236.625F, 102.1666F);
+            this.xrLabel1.Text = "პროექტი ერთობლივად არის წარდგენილი დონორისა და პროექტის წარმდგენელის მიერ (კი/არა" +
+    "). დადებითი პასუხის შემთხვევაში: დონორ(ებ)ის დასახელება";
             // 
-            // xrLabel6
+            // xrLabel11
             // 
-            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(162.5F, 426.4378F);
-            this.xrLabel6.Name = "xrLabel6";
-            this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel6.SizeF = new System.Drawing.SizeF(341.6666F, 22.99997F);
-            this.xrLabel6.Text = "ინფორმაცია განსახორციელებელი პროექტის შესახებ";
+            this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(226.0417F, 3F);
+            this.xrLabel11.Name = "xrLabel11";
+            this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel11.SizeF = new System.Drawing.SizeF(147.9166F, 22.99997F);
+            this.xrLabel11.Text = "ზოგადი ინფორმაცია";
             // 
-            // xrLabel7
+            // txtOrgName
             // 
-            this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(9.99999F, 460.8961F);
-            this.xrLabel7.Name = "xrLabel7";
-            this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel7.SizeF = new System.Drawing.SizeF(244.7917F, 22.99997F);
-            this.xrLabel7.Text = "პროექტის დასახელება";
+            this.txtOrgName.LocationFloat = new DevExpress.Utils.PointFloat(290.2502F, 30.00001F);
+            this.txtOrgName.Name = "txtOrgName";
+            this.txtOrgName.SerializableRtfString = resources.GetString("txtOrgName.SerializableRtfString");
+            this.txtOrgName.SizeF = new System.Drawing.SizeF(349.7498F, 23F);
             // 
-            // txtProjectName
+            // label1
             // 
-            this.txtProjectName.LocationFloat = new DevExpress.Utils.PointFloat(290.2502F, 460.8961F);
-            this.txtProjectName.Name = "txtProjectName";
-            this.txtProjectName.SerializableRtfString = resources.GetString("txtProjectName.SerializableRtfString");
-            this.txtProjectName.SizeF = new System.Drawing.SizeF(345.5833F, 22.99997F);
+            this.label1.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 30.00001F);
+            this.label1.Name = "label1";
+            this.label1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.label1.SizeF = new System.Drawing.SizeF(160.5833F, 23F);
+            this.label1.Text = "ორგანიზაციის სახელი:";
             // 
-            // xrLabel8
+            // TopMargin
             // 
-            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(9.99999F, 487.8961F);
-            this.xrLabel8.Name = "xrLabel8";
-            this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel8.SizeF = new System.Drawing.SizeF(244.7917F, 43.83331F);
-            this.xrLabel8.Text = "პროექტის სტატუსი (მიმდინარე, იდეა, დაფინანსებული, გაგრძელებული) ";
+            this.TopMargin.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.txtName});
+            this.TopMargin.Name = "TopMargin";
+            this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
-            // txtProjectStatus
+            // txtName
             // 
-            this.txtProjectStatus.LocationFloat = new DevExpress.Utils.PointFloat(290.2502F, 487.8961F);
-            this.txtProjectStatus.Name = "txtProjectStatus";
-            this.txtProjectStatus.SerializableRtfString = resources.GetString("txtProjectStatus.SerializableRtfString");
-            this.txtProjectStatus.SizeF = new System.Drawing.SizeF(345.5833F, 76.12497F);
+            this.txtName.LocationFloat = new DevExpress.Utils.PointFloat(54.16667F, 48.95833F);
+            this.txtName.Name = "txtName";
+            this.txtName.SerializableRtfString = resources.GetString("txtName.SerializableRtfString");
+            this.txtName.SizeF = new System.Drawing.SizeF(565.3749F, 37.29166F);
             // 
-            // xrLabel9
+            // BottomMargin
             // 
-            this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(9.99999F, 566.021F);
-            this.xrLabel9.Name = "xrLabel9";
-            this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel9.SizeF = new System.Drawing.SizeF(244.7917F, 43.83331F);
-            this.xrLabel9.Text = "დონორები (დასახელება და საკონტაქტო ინფორმაცია)";
-            // 
-            // txtDonorsInfo
-            // 
-            this.txtDonorsInfo.LocationFloat = new DevExpress.Utils.PointFloat(290.2502F, 566.021F);
-            this.txtDonorsInfo.Name = "txtDonorsInfo";
-            this.txtDonorsInfo.SerializableRtfString = resources.GetString("txtDonorsInfo.SerializableRtfString");
-            this.txtDonorsInfo.SizeF = new System.Drawing.SizeF(345.5833F, 76.125F);
-            // 
-            // txtProjectGoal
-            // 
-            this.txtProjectGoal.LocationFloat = new DevExpress.Utils.PointFloat(290.2502F, 645.1459F);
-            this.txtProjectGoal.Name = "txtProjectGoal";
-            this.txtProjectGoal.SerializableRtfString = resources.GetString("txtProjectGoal.SerializableRtfString");
-            this.txtProjectGoal.SizeF = new System.Drawing.SizeF(345.5833F, 76.12494F);
-            // 
-            // xrLabel10
-            // 
-            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(9.99999F, 645.1459F);
-            this.xrLabel10.Name = "xrLabel10";
-            this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel10.SizeF = new System.Drawing.SizeF(244.7917F, 43.83331F);
-            this.xrLabel10.Text = "პროექტის სტატუსი (მიმდინარე, იდეა, დაფინანსებული, გაგრძელებული) ";
-            // 
-            // xrLabel12
-            // 
-            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(12.24999F, 723.2709F);
-            this.xrLabel12.Name = "xrLabel12";
-            this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel12.SizeF = new System.Drawing.SizeF(244.7917F, 43.83331F);
-            this.xrLabel12.Text = "პროექტის მოსალოდნელი შედეგები";
-            // 
-            // txtProjectResult
-            // 
-            this.txtProjectResult.LocationFloat = new DevExpress.Utils.PointFloat(290.2502F, 723.2709F);
-            this.txtProjectResult.Name = "txtProjectResult";
-            this.txtProjectResult.SerializableRtfString = resources.GetString("txtProjectResult.SerializableRtfString");
-            this.txtProjectResult.SizeF = new System.Drawing.SizeF(345.5833F, 76.12494F);
-            // 
-            // xrLabel13
-            // 
-            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(12.24996F, 804.8335F);
-            this.xrLabel13.Name = "xrLabel13";
-            this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel13.SizeF = new System.Drawing.SizeF(244.7917F, 27.16663F);
-            this.xrLabel13.Text = "დაწყების თარიღი";
-            // 
-            // txtFDate
-            // 
-            this.txtFDate.LocationFloat = new DevExpress.Utils.PointFloat(290.2502F, 803.396F);
-            this.txtFDate.Name = "txtFDate";
-            this.txtFDate.SerializableRtfString = resources.GetString("txtFDate.SerializableRtfString");
-            this.txtFDate.SizeF = new System.Drawing.SizeF(345.5833F, 28.60425F);
-            // 
-            // xrLabel14
-            // 
-            this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(12.24996F, 837.7921F);
-            this.xrLabel14.Name = "xrLabel14";
-            this.xrLabel14.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel14.SizeF = new System.Drawing.SizeF(244.7917F, 27.16663F);
-            this.xrLabel14.Text = "დასრულების თარიღი";
-            // 
-            // txtLDate
-            // 
-            this.txtLDate.LocationFloat = new DevExpress.Utils.PointFloat(290.2502F, 836.3544F);
-            this.txtLDate.Name = "txtLDate";
-            this.txtLDate.SerializableRtfString = resources.GetString("txtLDate.SerializableRtfString");
-            this.txtLDate.SizeF = new System.Drawing.SizeF(345.5833F, 28.60431F);
-            // 
-            // xrLabel15
-            // 
-            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(12.24996F, 867.9587F);
-            this.xrLabel15.Name = "xrLabel15";
-            this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel15.SizeF = new System.Drawing.SizeF(244.7917F, 43.83331F);
-            this.xrLabel15.Text = "ფინანსური ინფორმაცია (მოსალოდნელი ბიუჯეტი, რესურსები, საბანკო ინფორმაცია)";
-            // 
-            // txtFinanceInfo
-            // 
-            this.txtFinanceInfo.LocationFloat = new DevExpress.Utils.PointFloat(290.2501F, 867.9587F);
-            this.txtFinanceInfo.Name = "txtFinanceInfo";
-            this.txtFinanceInfo.SerializableRtfString = resources.GetString("txtFinanceInfo.SerializableRtfString");
-            this.txtFinanceInfo.SizeF = new System.Drawing.SizeF(345.5833F, 76.12494F);
-            // 
-            // xrLabel16
-            // 
-            this.xrLabel16.LocationFloat = new DevExpress.Utils.PointFloat(12.24995F, 949.6251F);
-            this.xrLabel16.Name = "xrLabel16";
-            this.xrLabel16.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel16.SizeF = new System.Drawing.SizeF(244.7917F, 57.37488F);
-            this.xrLabel16.Text = "ინფორმაცია ადგილობრივი პარტნიორების შესახებ (დასახელება და საკონტაქტო ინფორმაცია)" +
-    " ";
-            // 
-            // txtLocalPartner
-            // 
-            this.txtLocalPartner.LocationFloat = new DevExpress.Utils.PointFloat(290.2501F, 949.6251F);
-            this.txtLocalPartner.Name = "txtLocalPartner";
-            this.txtLocalPartner.SerializableRtfString = resources.GetString("txtLocalPartner.SerializableRtfString");
-            this.txtLocalPartner.SizeF = new System.Drawing.SizeF(345.5833F, 76.12494F);
-            // 
-            // xrLabel17
-            // 
-            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(12.24999F, 1028.875F);
-            this.xrLabel17.Name = "xrLabel17";
-            this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel17.SizeF = new System.Drawing.SizeF(247.0417F, 43.83337F);
-            this.xrLabel17.Text = "ოკუპირებულ ტერიტორიებზე გამგზავრების მოსალოდნელი განრიგი";
-            // 
-            // txtDepartPlan
-            // 
-            this.txtDepartPlan.LocationFloat = new DevExpress.Utils.PointFloat(290.2501F, 1028.875F);
-            this.txtDepartPlan.Name = "txtDepartPlan";
-            this.txtDepartPlan.SerializableRtfString = resources.GetString("txtDepartPlan.SerializableRtfString");
-            this.txtDepartPlan.SizeF = new System.Drawing.SizeF(345.5833F, 76.12494F);
+            this.BottomMargin.Name = "BottomMargin";
+            this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // NotifForm3
             // 
@@ -533,26 +534,25 @@ public class NotifForm3 : DevExpress.XtraReports.UI.XtraReport
             this.TopMargin,
             this.BottomMargin});
             this.Version = "13.2";
-            ((System.ComponentModel.ISupportInitialize)(this.txtName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtOrgName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProjectDesc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDepartPlan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLocalPartner)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFinanceInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProjectName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProjectStatus)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtDonorsInfo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProjectResult)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLDate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProjectIsActive)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWebPage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEMail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMission)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContactInfo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProjectIsActive)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProjectName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProjectStatus)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDonorsInfo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProjectGoal)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtProjectResult)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFDate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLDate)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFinanceInfo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLocalPartner)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtDepartPlan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtProjectDesc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOrgName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
     }

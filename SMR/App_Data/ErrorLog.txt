@@ -43,3 +43,25 @@ Core.CM.NewsRepository.ListNews() --- Timeout expired.  The timeout period elaps
 
 ------------------------------------
 
+
+
+------------------------------------
+http://localhost:12175/Notifications/Notifications.aspx - 11.10.2015 4:21:03
+Source File - d:\gitProjects\SMR\Core\Tools\Utilities.cs
+Line Number - 102
+General.Mail.Send(From = Wesite@smr.gov.ge, To = ninashaverdashvili@gmail.com, Subject = სანოტიპიკაციო ფორმა, Body = ინფორმაცია საიტიდან, ReplyTo = ) --- The requested body part was not found in this message.
+
+
+------------------------------------
+
+
+
+------------------------------------
+http://localhost:12175/contact.aspx - 12.10.2015 1:19:03
+Source File - d:\gitProjects\SMR\Core\Tools\Utilities.cs
+Line Number - 102
+General.Mail.Send(From = ninashaverdashvili@gmail.com, To = ninashaverdashvili@gmail.com, Subject = საკონტაქტო გვერდი, Body = სახელი:Nino /n/r ელ.ფოსტა:ninashaverdashvili@gmail.com /n/r წერილი: System.Web.UI.WebControls.TextBox, ReplyTo = ) --- The requested body part was not found in this message.
+
+
+------------------------------------
+

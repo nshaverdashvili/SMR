@@ -61,9 +61,9 @@ namespace Core.Tools
         string _From;
         string _Username;
         string _Password;
-        string _SMTP = "smtpout.europe.secureserver.net";
-        int _Port = 25;
-        bool _EnableSSL = false;
+        string _SMTP = "smtp.gmail.com";
+        int _Port = 587;
+        bool _EnableSSL = true;
 
         public string From
         {
@@ -97,7 +97,7 @@ namespace Core.Tools
         #endregion Constructors
 
         #region Methods
-        public bool Send(string From, string To, string Subject, string Body, string ReplyTo = null, List<MailAttachment> AttachmentsList = null)
+        public bool Send(string From, string To, string Subject, string Body, string ReplyTo = null, List<Attachment> AttachmentsList = null)
         {
             return TryToReturn(string.Format("General.Mail.Send(From = {0}, To = {1}, Subject = {2}, Body = {3}, ReplyTo = {4})", From, To, Subject, Body, ReplyTo), () =>
             {
@@ -130,8 +130,11 @@ namespace Core.Tools
                 M.BodyFormat = MailFormat.Html;
                 M.BodyEncoding = Encoding.UTF8;
                 M.Body = Body;
-
-                AttachmentsList.ForEach(f => M.Attachments.Add(f));
+                if (AttachmentsList!=null)
+                {
+                    AttachmentsList.ForEach(f => M.Attachments.Add(f));
+                }
+                
 
 
                 if (!string.IsNullOrWhiteSpace(ReplyTo))
