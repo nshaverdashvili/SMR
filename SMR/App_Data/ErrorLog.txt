@@ -65,3 +65,54 @@ General.Mail.Send(From = ninashaverdashvili@gmail.com, To = ninashaverdashvili@g
 
 ------------------------------------
 
+
+
+------------------------------------
+http://localhost:12175/contact.aspx - 12.10.2015 1:53:07
+Source File - d:\gitProjects\SMR\Core\Tools\Utilities.cs
+Line Number - 102
+General.Mail.Send(From = ninashaverdashvili@gmail.com, To = ninashaverdashvili@gmail.com, Subject = საკონტაქტო გვერდი, Body = სახელი:Nino /n/r ელ.ფოსტა:ninashaverdashvili@gmail.com /n/r წერილი: System.Web.UI.WebControls.TextBox, ReplyTo = ) --- The operation has timed out.
+
+------------------------------------
+
+
+
+------------------------------------
+http://localhost:12175/contact.aspx - 12.10.2015 1:57:11
+Source File - d:\gitProjects\SMR\Core\Tools\Utilities.cs
+Line Number - 102
+General.Mail.Send(From = ninashaverdashvili@gmail.com, To = ninashaverdashvili@gmail.com, Subject = საკონტაქტო გვერდი, Body = სახელი:Nino /n/r ელ.ფოსტა:ninashaverdashvili@gmail.com /n/r წერილი: System.Web.UI.WebControls.TextBox, ReplyTo = ) --- The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.5.1 Authentication Required. Learn more at
+
+------------------------------------
+
+
+
+------------------------------------
+http://localhost:12175/contact.aspx - 12.10.2015 2:00:30
+Source File - d:\gitProjects\SMR\Core\Tools\Utilities.cs
+Line Number - 102
+General.Mail.Send(From = ninashaverdashvili@gmail.com, To = ninashaverdashvili@gmail.com, Subject = საკონტაქტო გვერდი, Body = სახელი:Nino /n/r ელ.ფოსტა:ninashaverdashvili@gmail.com /n/r წერილი: System.Web.UI.WebControls.TextBox, ReplyTo = ) --- The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.5.1 Authentication Required. Learn more at
+
+------------------------------------
+
+
+
+------------------------------------
+http://localhost:12175/default.aspx - 12.10.2015 2:02:16
+Source File - d:\gitProjects\SMR\Core\CM\News.cs
+Line Number - 100
+Core.CM.NewsRepository.ListNews() --- Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+
+
+------------------------------------
+
+
+
+------------------------------------
+http://localhost:12175/contact.aspx - 12.10.2015 2:03:27
+Source File - d:\gitProjects\SMR\Core\Tools\Utilities.cs
+Line Number - 102
+General.Mail.Send(From = ninashaverdashvili@gmail.com, To = ninashaverdashvili@gmail.com, Subject = საკონტაქტო გვერდი, Body = სახელი:Nino /n/r ელ.ფოსტა:ninashaverdashvili@gmail.com /n/r წერილი: System.Web.UI.WebControls.TextBox, ReplyTo = ) --- The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.5.1 Authentication Required. Learn more at
+
+------------------------------------
+

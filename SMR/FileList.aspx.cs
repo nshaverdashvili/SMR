@@ -26,7 +26,7 @@ namespace SMR
                  {
                      ltrTitle.Text = SinglePage.Title;
                      ltrFullText.Text = SinglePage.Description;
-                     ListFiles = F.ListGalleryFiles(SinglePage.GalleryID);
+                     ListFiles = F.ListGalleryFiles(SinglePage.GalleryID).Where(w =>w.FileName!= null && w.FileName.Length>1).ToList();
                      rptFileGroups.DataSource = ListFiles.GroupBy(g => g.FileName).Select(s => new Files { FileName=s.Key}); 
                      rptFileGroups.DataBind();
                  }

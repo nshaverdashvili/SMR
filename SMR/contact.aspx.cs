@@ -35,7 +35,7 @@ namespace SMR
         protected void btnSend_Click(object sender, EventArgs e)
         {
             var M= new Core.Tools.Mail();
-            string Body= string.Format("სახელი:{0} /n/r ელ.ფოსტა:{1} /n/r წერილი: {2}",txtName.Text,txtEmail.Text,txtMessage);
+            string Body= string.Format("სახელი:{0} {3} ელ.ფოსტა:{1} {3} წერილი: {2}",txtName.Text,txtEmail.Text,txtMessage.Text,Environment.NewLine);
             M.Send(Core.Properties.Resources.EmailAddress, Core.Properties.Resources.EmailAddress, "საკონტაქტო გვერდი", Body);
             Response.Redirect(Request.Url.OriginalString);
         }
