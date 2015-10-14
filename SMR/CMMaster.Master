@@ -4,7 +4,9 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>
+        <%=Core.Properties.Resources.PageTitle %>
+    </title>
 
     <asp:Literal ID="litPlugins" runat="server"></asp:Literal>
     <link href="/Content/css/fonts.css" rel="stylesheet" />
@@ -101,7 +103,7 @@
                             </div>
                         </div>
                         <div class="col-md-7">
-                            <div id="slider_content" style="display: none; position: relative; margin: 0 auto; width: 700px;; height: 250px; overflow: hidden;">
+                            <div id="slider_content" style="display: none; position: relative; margin: 0 auto; width: 700px; height: 250px; overflow: hidden;">
                                 <div u="loading" style="position: absolute; top: 0px; left: 0px;">
                                     <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; background-color: #000; top: 0px; left: 0px; width: 100%; height: 100%;">
                                     </div>
@@ -113,7 +115,7 @@
                                         <ItemTemplate>
                                             <div class="Newsfeed">
                                                 <h3><%#Item.Title %></h3>
-                                                <span><%#string.Format("{0:dd/MM/yyyy}", Item.NewsDate) %></span>
+                                                <span><%#string.Format("{0:yyyy-MM-dd}", Item.NewsDate) %></span>
                                                 <p><%#Item.Description %></p>
                                             </div>
                                         </ItemTemplate>

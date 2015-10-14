@@ -702,6 +702,15 @@ namespace Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to შერიგებისა და სამოქალაქო თანასწორობის საკითხებში საქართველოს სახელმწიფო მინისტრის აპარატი.
+        /// </summary>
+        public static string PageTitle {
+            get {
+                return ResourceManager.GetString("PageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to პასპორტის ნომერი.
         /// </summary>
         public static string PassportNumber {

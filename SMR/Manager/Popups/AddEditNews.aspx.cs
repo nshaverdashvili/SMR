@@ -28,7 +28,7 @@ namespace SMR.Manager.Popups
             if (item !=null)
             {
                 ddGalleryID.SelectedValue = item.CategoryID.ToString();
-                txtDate.Text = string.Format("{0:dd/MM/yyyy}", item.NewsDate);
+                txtDate.Text = string.Format("{0:yyyy-MM-dd}", item.NewsDate);
                 txtTitleEN.Text = item.TitleEN;
                 txtTitleKA.Text = item.TitleKA;
                 txtTitleRU.Text = item.TitleRU;

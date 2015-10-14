@@ -410,4 +410,7 @@
   <data name="Message_ContactPage" xml:space="preserve">
     <value>ტექსტი</value>
   </data>
+  <data name="PageTitle" xml:space="preserve">
+    <value>შერიგებისა და სამოქალაქო თანასწორობის საკითხებში საქართველოს სახელმწიფო მინისტრის აპარატი</value>
+  </data>
 </root>

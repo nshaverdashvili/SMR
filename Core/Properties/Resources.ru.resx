@@ -415,4 +415,7 @@
   <data name="Message_ContactPage" xml:space="preserve">
     <value>Текст</value>
   </data>
+  <data name="PageTitle" xml:space="preserve">
+    <value>Аппарат государственного министра Грузии по вопросам примирения и гражданского равноправия</value>
+  </data>
 </root>

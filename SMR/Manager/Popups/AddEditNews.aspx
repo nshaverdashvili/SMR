@@ -5,7 +5,7 @@
     <script>
        
         $(function () {
-            $("#txtDate").datepicker({ dateFormat: 'dd/mm/yy' });
+            $("#txtDate").datepicker({ dateFormat: 'yy-mm-dd' });
             $("#txtDate").prop("readonly", true);
 
             $(".nav-tabs a").click(function () {
