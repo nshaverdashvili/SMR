@@ -67,7 +67,7 @@ namespace SMR
             rptMainManu.DataBind();
             rptLeftManu.DataSource = p.ListPermissions().Where(w => w.Level == 1 && w.CodeName == "3" && w.Caption != " ");
             rptLeftManu.DataBind();
-            var Slider = new NewsRepository().ListNewsSlider(CurrCulture).Where(w => w.IsVisible.Value).Take(5);
+            var Slider = new NewsRepository().ListNewsSlider(CurrCulture).Where(w => w.IsVisible.Value).OrderByDescending(o=> o.NewsDate).Take(5);
             rptSlider.DataSource = Slider;
             rptSlider.DataBind();
             rptSliderText.DataSource = Slider;
