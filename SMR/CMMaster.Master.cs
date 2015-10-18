@@ -70,8 +70,7 @@ namespace SMR
             var Slider = new NewsRepository().ListNewsSlider(CurrCulture).Where(w => w.IsVisible.Value).OrderByDescending(o=> o.NewsDate).Take(5);
             rptSlider.DataSource = Slider;
             rptSlider.DataBind();
-            rptSliderText.DataSource = Slider;
-            rptSliderText.DataBind();
+           
 
         }
 
