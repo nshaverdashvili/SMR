@@ -48,12 +48,14 @@ namespace SMR
 
             IncludePlugins.Append(Plugins.bootstrapCSS());
             IncludePlugins.Append(Plugins.normalizeCSS());
+            IncludePlugins.Append(Plugins.fancyboxCSS());
             IncludePlugins.Append(Plugins.awesomefontsCSS());
             IncludePlugins.Append(Plugins.jqueryUICSS());
             IncludePlugins.Append(Plugins.jqueryJS());
             IncludePlugins.Append(Plugins.jqueryUIJS());
             IncludePlugins.Append(Plugins.modernizrJS());
             IncludePlugins.Append(Plugins.bootstrapJS());
+            IncludePlugins.Append(Plugins.fancyboxJS());
             IncludePlugins.Append(Plugins.jssorJS());
             PluginsStr = IncludePlugins.ToString();
 

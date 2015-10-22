@@ -6,9 +6,9 @@
     <div class="container-fluid main">
         <div class="row">
             <div class="internalContent">
-                <a href="#" class="mainImg">
+                
                     <asp:Literal ID="ltrImgURL" runat="server"></asp:Literal>
-                </a>
+                
                 <h2>
                     <asp:Literal ID="ltrTitle" runat="server"></asp:Literal>
                 </h2>

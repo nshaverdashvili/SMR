@@ -12,6 +12,7 @@ namespace SMR
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            
             var N = new NewsRepository();
             int _ID;
             if (int.TryParse(Request.QueryString["ID"], out _ID))
@@ -19,7 +20,7 @@ namespace SMR
                 var SingleNews = N.ListNews(_ID).SingleOrDefault();
                 if (SingleNews != null)
                 {
-                    ltrImgURL.Text = string.Format("<img src=\"Uploads/{0}?w=200\" />", SingleNews.ImgURL);
+                    ltrImgURL.Text = string.Format("<a href=\"Uploads/{0}\" class=\"mainImg\"  data-showpopup='true'><img src=\"Uploads/{0}?w=200\" /></a>", SingleNews.ImgURL);
                     ltrTitle.Text = SingleNews.Title;
 
                     ltrDate.Text = string.Format("{0:dd/MM/yyyy}", SingleNews.NewsDate);
