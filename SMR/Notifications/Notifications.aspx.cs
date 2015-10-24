@@ -26,15 +26,12 @@ namespace SMR.Notifications
                     litScripts.Text = "<script> alert('მონაცემები გადაგზავნილია')</script>";
                     Session["IsSent"] = null;
                 }
-
                 ddBDay.DataSource = Utility.List_RangeOfNumbers(1, 31).Select(s => new { Value = s }).ToList();
                 ddBDay.DataBind();
                 ddBMonth.DataSource = DateTimeFormatInfo.CurrentInfo.MonthNames.Select((item, index) => new { Caption = item, Value = index+1 }).ToList(); //Utility.List_RangeOfNumbers(1, 12).Select(s => new { Value = s }).ToList();
                 ddBMonth.DataBind();
                 ddBYear.DataSource = Utility.List_RangeOfNumbers(1900, 2015).Select(s => new { Value = s }).ToList();
                 ddBYear.DataBind();
-                
-
             }
             initErrorMessages();
         }
@@ -68,8 +65,6 @@ namespace SMR.Notifications
             reqLocalPartner.ErrorMessage = Core.Properties.Resources.LocalPartner;
             reqIsSent.ErrorMessage = Core.Properties.Resources.IsSentProject;
             reqNote.ErrorMessage = Core.Properties.Resources.Provideadditionalinformation;
-
-
         }
 
         protected void btnSend_Click(object sender, EventArgs e)

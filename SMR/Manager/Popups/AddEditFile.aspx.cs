@@ -59,7 +59,7 @@ namespace SMR.Manager.Popups
             }
 
             var ext = Path.GetExtension(fuURL.FileName);
-            if (".jpg .png .pdf .docx".Contains(ext))
+            if (".jpg .png .pdf .docx".Contains(ext.ToLower()))
             {
                 FileName = fuURL.FileName.ToAZ09Dash(true,true);
                 fuURL.SaveAs(string.Format("{0}\\{1}", Utility.GetUploadFolder(), FileName));
