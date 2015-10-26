@@ -20,10 +20,8 @@ public class rptNotifForm2 : DevExpress.XtraReports.UI.XtraReport
     private XRLabel label3;
     private XRLabel label1;
     private XRRichText txtFax;
-    private XRRichText txtEMail;
     private XRRichText txtTel;
     private XRRichText txtAddress;
-    private XRRichText txtOrgName;
     private XRLabel xrLabel1;
     private XRRichText txtWebPage;
     private XRLabel xrLabel2;
@@ -46,6 +44,8 @@ public class rptNotifForm2 : DevExpress.XtraReports.UI.XtraReport
     private XRRichText txtFDate;
     private XRLabel xrLabel12;
     private XRLabel xrLabel11;
+    private XRRichText txtEMail;
+    private XRRichText txtOrgName;
     /// <summary>
     /// Required designer variable.
     /// </summary>
@@ -127,10 +127,8 @@ public class rptNotifForm2 : DevExpress.XtraReports.UI.XtraReport
             this.label3 = new DevExpress.XtraReports.UI.XRLabel();
             this.label1 = new DevExpress.XtraReports.UI.XRLabel();
             this.txtFax = new DevExpress.XtraReports.UI.XRRichText();
-            this.txtEMail = new DevExpress.XtraReports.UI.XRRichText();
             this.txtTel = new DevExpress.XtraReports.UI.XRRichText();
             this.txtAddress = new DevExpress.XtraReports.UI.XRRichText();
-            this.txtOrgName = new DevExpress.XtraReports.UI.XRRichText();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.txtWebPage = new DevExpress.XtraReports.UI.XRRichText();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
@@ -138,6 +136,8 @@ public class rptNotifForm2 : DevExpress.XtraReports.UI.XtraReport
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.txtName = new DevExpress.XtraReports.UI.XRRichText();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
+            this.txtOrgName = new DevExpress.XtraReports.UI.XRRichText();
+            this.txtEMail = new DevExpress.XtraReports.UI.XRRichText();
             ((System.ComponentModel.ISupportInitialize)(this.txtLDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFDate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProjectResult)).BeginInit();
@@ -147,13 +147,13 @@ public class rptNotifForm2 : DevExpress.XtraReports.UI.XtraReport
             ((System.ComponentModel.ISupportInitialize)(this.txtProjectName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContactInfo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFax)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEMail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtOrgName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWebPage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMission)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOrgName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEMail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
@@ -427,15 +427,6 @@ public class rptNotifForm2 : DevExpress.XtraReports.UI.XtraReport
             this.txtFax.SizeF = new System.Drawing.SizeF(349.7498F, 23F);
             this.txtFax.StylePriority.UseFont = false;
             // 
-            // txtEMail
-            // 
-            this.txtEMail.Font = new System.Drawing.Font("Sylfaen", 9.75F);
-            this.txtEMail.LocationFloat = new DevExpress.Utils.PointFloat(290.2502F, 128F);
-            this.txtEMail.Name = "txtEMail";
-            this.txtEMail.SerializableRtfString = resources.GetString("txtEMail.SerializableRtfString");
-            this.txtEMail.SizeF = new System.Drawing.SizeF(349.7498F, 20.00002F);
-            this.txtEMail.StylePriority.UseFont = false;
-            // 
             // txtTel
             // 
             this.txtTel.Font = new System.Drawing.Font("Sylfaen", 9.75F);
@@ -453,15 +444,6 @@ public class rptNotifForm2 : DevExpress.XtraReports.UI.XtraReport
             this.txtAddress.SerializableRtfString = resources.GetString("txtAddress.SerializableRtfString");
             this.txtAddress.SizeF = new System.Drawing.SizeF(349.7498F, 23F);
             this.txtAddress.StylePriority.UseFont = false;
-            // 
-            // txtOrgName
-            // 
-            this.txtOrgName.Font = new System.Drawing.Font("Sylfaen", 9.75F);
-            this.txtOrgName.LocationFloat = new DevExpress.Utils.PointFloat(290.2502F, 31.00001F);
-            this.txtOrgName.Name = "txtOrgName";
-            this.txtOrgName.SerializableRtfString = resources.GetString("txtOrgName.SerializableRtfString");
-            this.txtOrgName.SizeF = new System.Drawing.SizeF(349.7498F, 23F);
-            this.txtOrgName.StylePriority.UseFont = false;
             // 
             // xrLabel1
             // 
@@ -524,6 +506,24 @@ public class rptNotifForm2 : DevExpress.XtraReports.UI.XtraReport
             this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
+            // txtOrgName
+            // 
+            this.txtOrgName.Font = new System.Drawing.Font("Sylfaen", 9.75F);
+            this.txtOrgName.LocationFloat = new DevExpress.Utils.PointFloat(290.2502F, 31.00001F);
+            this.txtOrgName.Name = "txtOrgName";
+            this.txtOrgName.SerializableRtfString = resources.GetString("txtOrgName.SerializableRtfString");
+            this.txtOrgName.SizeF = new System.Drawing.SizeF(349.7498F, 23F);
+            this.txtOrgName.StylePriority.UseFont = false;
+            // 
+            // txtEMail
+            // 
+            this.txtEMail.Font = new System.Drawing.Font("Sylfaen", 9.75F);
+            this.txtEMail.LocationFloat = new DevExpress.Utils.PointFloat(290.2502F, 128F);
+            this.txtEMail.Name = "txtEMail";
+            this.txtEMail.SerializableRtfString = resources.GetString("txtEMail.SerializableRtfString");
+            this.txtEMail.SizeF = new System.Drawing.SizeF(349.7498F, 20.00002F);
+            this.txtEMail.StylePriority.UseFont = false;
+            // 
             // rptNotifForm2
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -540,13 +540,13 @@ public class rptNotifForm2 : DevExpress.XtraReports.UI.XtraReport
             ((System.ComponentModel.ISupportInitialize)(this.txtProjectName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtContactInfo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFax)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtEMail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtOrgName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtWebPage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtMission)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtOrgName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEMail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
     }

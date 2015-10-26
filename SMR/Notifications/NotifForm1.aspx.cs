@@ -175,6 +175,7 @@ namespace SMR.Notifications
                         NObj.Term = txtTerms.Text;
                         NObj.Proportions = txtProportions.Text;
                         NObj.RegFileURL = fuURLNoteFile;
+                        Session["IsSent"] = MakeNotification(NObj);
                         break;
                     case "3":
                         NObj.NotificationTypeID = NotifType;
@@ -186,11 +187,8 @@ namespace SMR.Notifications
                         //NObj.URL = fuURLFileName2;
                         NObj.MissionDesc = txtMissionDesc1.Text;
                         NObj.Contact = txtContact1.Text;
-                        //NObj.Desc1 = txtDesc1.Text;
-                        //NObj.Desc2 = txtDesc2.Text;
-                        //NObj.Number = txtNumber.Text;
                         NObj.ProjectTitle = txtProjectTitle.Text;
-                        NObj.Donors = txtDonors1.Text;
+                        //NObj.Donors = txtDonors1.Text;
                         NObj.ProjectStatus = txtProjectStatus.Text;
                         //NObj.Term = txtTerms.Text;
                         NObj.Donors = txtDonors1.Text;
@@ -200,6 +198,7 @@ namespace SMR.Notifications
                         NObj.ProjectLDate = DateTime.Parse(txtProjectLDate.Text);
                         //NObj.Proportions = txtProportions.Text;
                         NObj.RegFileURL = fuURLNoteFile1;
+                        Session["IsSent"] = MakeNotification(NObj);
                         break;
                     case "4":
                         NObj.NotificationTypeID = NotifType;
@@ -208,15 +207,9 @@ namespace SMR.Notifications
                         NObj.Mobile = txtMobile2.Text;
                         NObj.Email = txtEmail2.Text;
                         NObj.WebPage = txtWebPage2.Text;
-                        NObj.URL = fuURLFileName2;
-                        //NObj.MissionDesc = txtMissionDesc.Text;
-                        //NObj.URL = fuURL;  aq ver gavige ragac????????????????????????????????????
+                        NObj.URL = fuURLFileName2;                        
                         NObj.MissionDesc = txtMission2.Text;
-                        //NObj.Contact = txtContact.Text;
-                        //NObj.Desc1 = txtDesc1.Text;
-                        //NObj.Desc2 = txtDesc2.Text;
-                        //NObj.Number = txtNumber.Text;
-                        NObj.IsActualProjects = bool.Parse(txtIsActive2.Text);
+                        NObj.IsActualProjects = bool.Parse(txtIsActive2.Text); // es rogor unda iyos??
                         NObj.ProjectTitle = txtProjectTitle2.Text;
                         NObj.ProjectStatus = txtProjectStatus2.Text;
                         NObj.Donors = txtDonorContacts.Text;
@@ -229,22 +222,49 @@ namespace SMR.Notifications
                         NObj.DepartPlan = txtDepart.Text;
                         NObj.RegFileURL = fuURLNoteFile2;
 
-                        //NObj.Donors = txtDonors.Text;
-                        //NObj.Term = txtTerms.Text;
-                        //NObj.Contact = txtContactInfo2.Text;
-                        //NObj.Proportions = txtProportions.Text;
-                        
-                        break;
-                    default:
+                        Session["IsSent"] = MakeNotification(NObj);
                         break;
                 }
 
+                //NObj.Desc1 = txtDesc1.Text;
+                //NObj.Desc2 = txtDesc2.Text;
+                //NObj.Number = txtNumber.Text;
+
+                
+                Response.Redirect(Request.Url.OriginalString);
+
+  
+            }
+
+        }
+
+        private bool MakeNotification(Core.Notifications NObj)
+        {
+            try
+            {
                 var M = new Core.Tools.Mail();
                 var ms = new MemoryStream();
                 var ListAtt = new List<Attachment>();
-                var rpt = new rptNotifForm1(NObj);
+
                 var FileName = string.Format("Notification_{0:yyyy-MM-dd}_{1}.pdf", DateTime.Now, Guid.NewGuid().ToString().Substring(1, 6));
-                rpt.ExportToPdf(ms);
+                switch (hfNotifyType.Value)
+                {
+                    case "2":
+                        var rpt2 = new rptNotifForm1(NObj);
+                        rpt2.ExportToPdf(ms);
+                        break;
+                    case "3":
+                        var rpt3 = new rptNotifForm2(NObj);
+                        rpt3.ExportToPdf(ms);
+                        break;
+                    case "4":
+                        var rpt4 = new rptNotifForm3(NObj);
+                        rpt4.ExportToPdf(ms);
+                        break;
+
+                }
+
+
                 ms.Seek(0, System.IO.SeekOrigin.Begin);
 
                 var attach = new Attachment(ms, FileName, "application/pdf");
@@ -252,11 +272,13 @@ namespace SMR.Notifications
 
                 M.Send("ninashaverdashvili@gmail.com", "ninashaverdashvili@gmail.com", "სანოტიიკაციო ფორმა", "ინფორმაცია საიტიდან", AttachmentsList: ListAtt);
                 ms.Close();
-                Session["IsSent"] = true;
-                Response.Redirect(Request.Url.OriginalString);
-
-  
+                return true;
             }
+            catch (Exception ex)
+            {
+                return false;
+            }
+           
         }
     }
 }

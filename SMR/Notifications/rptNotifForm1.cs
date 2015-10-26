@@ -80,6 +80,7 @@ public class rptNotifForm1 : DevExpress.XtraReports.UI.XtraReport
     {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rptNotifForm1));
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.xrRichText2 = new DevExpress.XtraReports.UI.XRRichText();
             this.txtProportions = new DevExpress.XtraReports.UI.XRRichText();
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
             this.txtHumTerms = new DevExpress.XtraReports.UI.XRRichText();
@@ -112,7 +113,7 @@ public class rptNotifForm1 : DevExpress.XtraReports.UI.XtraReport
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.txtName = new DevExpress.XtraReports.UI.XRRichText();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
-            this.xrRichText2 = new DevExpress.XtraReports.UI.XRRichText();
+            ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProportions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHumTerms)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDonors)).BeginInit();
@@ -129,7 +130,6 @@ public class rptNotifForm1 : DevExpress.XtraReports.UI.XtraReport
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
@@ -170,6 +170,15 @@ public class rptNotifForm1 : DevExpress.XtraReports.UI.XtraReport
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.Detail.StylePriority.UseFont = false;
             this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // xrRichText2
+            // 
+            this.xrRichText2.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrRichText2.LocationFloat = new DevExpress.Utils.PointFloat(289.2086F, 82.00009F);
+            this.xrRichText2.Name = "xrRichText2";
+            this.xrRichText2.SerializableRtfString = resources.GetString("xrRichText2.SerializableRtfString");
+            this.xrRichText2.SizeF = new System.Drawing.SizeF(349.7498F, 23F);
+            this.xrRichText2.StylePriority.UseFont = false;
             // 
             // txtProportions
             // 
@@ -475,15 +484,6 @@ public class rptNotifForm1 : DevExpress.XtraReports.UI.XtraReport
             this.BottomMargin.StylePriority.UseFont = false;
             this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
-            // xrRichText2
-            // 
-            this.xrRichText2.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.xrRichText2.LocationFloat = new DevExpress.Utils.PointFloat(289.2086F, 82.00009F);
-            this.xrRichText2.Name = "xrRichText2";
-            this.xrRichText2.SerializableRtfString = resources.GetString("xrRichText2.SerializableRtfString");
-            this.xrRichText2.SizeF = new System.Drawing.SizeF(349.7498F, 23F);
-            this.xrRichText2.StylePriority.UseFont = false;
-            // 
             // rptNotifForm1
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -492,6 +492,7 @@ public class rptNotifForm1 : DevExpress.XtraReports.UI.XtraReport
             this.BottomMargin});
             this.Margins = new System.Drawing.Printing.Margins(100, 100, 100, 67);
             this.Version = "13.2";
+            ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProportions)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHumTerms)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDonors)).EndInit();
@@ -508,7 +509,6 @@ public class rptNotifForm1 : DevExpress.XtraReports.UI.XtraReport
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtFax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
     }
@@ -527,9 +527,10 @@ public class rptNotifForm1 : DevExpress.XtraReports.UI.XtraReport
         txtWebPage.Text = nf1.WebPage;
         txtMission.Text = nf1.MissionDesc;
         txtContactInfo.Text = nf1.Contact;
-        txtDesc1.Text = nf1.Desc1;
-        txtDesc2.Text = nf1.Desc2;
-        txtHumNumber.Text = nf1.Number;
+        
+        //txtDesc1.Text = nf1.Desc1;
+        //txtDesc2.Text = nf1.Desc2;
+        //txtHumNumber.Text = nf1.Number;
         txtDonors.Text = nf1.Donors;
         txtHumTerms.Text = nf1.Term;
         txtProportions.Text = nf1.Proportions;

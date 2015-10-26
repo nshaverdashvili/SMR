@@ -392,8 +392,9 @@
   </data>
   <data name="LogoDesc" xml:space="preserve">
     <value>&lt;b&gt;Office Of The State Minister&lt;/b&gt;
-                            &lt;b&gt;of Georgia for Reconciliation and &lt;/b&gt;
-                            &lt;b&gt;Civic Equality&lt;/b&gt;</value>
+&lt;b&gt;of Georgia for Reconciliation and&lt;/b&gt;
+&lt;b&gt;&amp;nbsp;Civic Equality&lt;/b&gt;
+</value>
   </data>
   <data name="EmailAddress" xml:space="preserve">
     <value>ninashaverdashvili@gmail.com</value>
