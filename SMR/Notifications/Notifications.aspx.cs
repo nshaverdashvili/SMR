@@ -166,7 +166,7 @@ namespace SMR.Notifications
                 var attach = new Attachment(ms, FileName, "application/pdf");
                 ListAtt.Add(attach);
 
-                M.Send("ninashaverdashvili@gmail.com", "ninashaverdashvili@gmail.com", "სანოტიპიკაციო ფორმა", "ინფორმაცია საიტიდან", AttachmentsList: ListAtt);
+                M.Send("ninashaverdashvili@gmail.com", "ninashaverdashvili@gmail.com", "სანოტიფიკაციო ფორმა", "ინფორმაცია საიტიდან", AttachmentsList: ListAtt);
                 ms.Close();
                 Session["IsSent"] = true;
                 Response.Redirect(Request.Url.OriginalString);

@@ -8,7 +8,7 @@ using Core;
 /// <summary>
 /// Summary description for NotifForm3
 /// </summary>
-public class NotifForm3 : DevExpress.XtraReports.UI.XtraReport
+public class rptNotifForm3 : DevExpress.XtraReports.UI.XtraReport
 {
     private DevExpress.XtraReports.UI.DetailBand Detail;
     private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
@@ -57,7 +57,7 @@ public class NotifForm3 : DevExpress.XtraReports.UI.XtraReport
     /// </summary>
     private System.ComponentModel.IContainer components = null;
 
-    public NotifForm3()
+    public rptNotifForm3()
     {
         InitializeComponent();
         //
@@ -77,7 +77,7 @@ public class NotifForm3 : DevExpress.XtraReports.UI.XtraReport
         }
         base.Dispose(disposing);
     }
-    public NotifForm3(Notifications nf3)
+    public rptNotifForm3(Notifications nf3)
     {
         InitializeComponent();
 
@@ -108,7 +108,7 @@ public class NotifForm3 : DevExpress.XtraReports.UI.XtraReport
     /// </summary>
     private void InitializeComponent()
     {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NotifForm3));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rptNotifForm3));
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.txtDepartPlan = new DevExpress.XtraReports.UI.XRRichText();
             this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();

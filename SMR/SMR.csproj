@@ -688,13 +688,13 @@
     <Compile Include="NewsList.aspx.designer.cs">
       <DependentUpon>NewsList.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Notifications\NotifForm1.cs">
+    <Compile Include="Notifications\rptNotifForm1.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Notifications\NotifForm2.cs">
+    <Compile Include="Notifications\rptNotifForm2.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Notifications\NotifForm3.cs">
+    <Compile Include="Notifications\rptNotifForm3.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Notifications\rptNotification.cs">
@@ -742,14 +742,14 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Notifications\NotifForm1.resx">
-      <DependentUpon>NotifForm1.cs</DependentUpon>
+    <EmbeddedResource Include="Notifications\rptNotifForm1.resx">
+      <DependentUpon>rptNotifForm1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Notifications\NotifForm2.resx">
-      <DependentUpon>NotifForm2.cs</DependentUpon>
+    <EmbeddedResource Include="Notifications\rptNotifForm2.resx">
+      <DependentUpon>rptNotifForm2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Notifications\NotifForm3.resx">
-      <DependentUpon>NotifForm3.cs</DependentUpon>
+    <EmbeddedResource Include="Notifications\rptNotifForm3.resx">
+      <DependentUpon>rptNotifForm3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Notifications\rptNotification.resx">
       <DependentUpon>rptNotification.cs</DependentUpon>

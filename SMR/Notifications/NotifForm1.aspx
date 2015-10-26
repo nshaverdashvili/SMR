@@ -229,7 +229,7 @@
                 </div>
                 <div class="form-group">
                     <label for="fuURLNote1"><%=Core.Properties.Resources.AddInfo%></label>
-                    <asp:FileUpload runat="server" ID="FileUpload2" ClientIDMode="Static" />
+                    <asp:FileUpload runat="server" ID="fuURLNote1" ClientIDMode="Static" />
                     <p class="help-block" style="font-size: 10px;"><%=Core.Properties.Resources.fileextensions%></p>
                     <p class="text-danger">
                         <asp:Literal ID="Literal2" runat="server" />
@@ -240,6 +240,7 @@
 
                 </div>
             </div>
+           
             <div id="groupnotif3" class="notifgroup hidden">
                 <h4><%=Core.Properties.Resources.DescForm3 %></h4>
                 <h5><%=Core.Properties.Resources.GeneralInformation %></h5>
@@ -281,7 +282,7 @@
 
                 <div class="form-group">
                     <label for="fuURL2"><%=Core.Properties.Resources.ApplicableUpload %></label>
-                    <asp:FileUpload runat="server" ID="FileUpload3" ClientIDMode="Static" />
+                    <asp:FileUpload runat="server" ID="fuURL2" ClientIDMode="Static" />
                     <p class="help-block" style="font-size: 10px;"><%=Core.Properties.Resources.fileextensions %></p>
                     <p class="text-danger">
                         <asp:Literal ID="Literal3" runat="server" />
@@ -372,7 +373,7 @@
 
                 <div class="form-group">
                     <label for="fuURLNote2"><%=Core.Properties.Resources.AddInfo %></label>
-                    <asp:FileUpload runat="server" ID="FileUpload4" ClientIDMode="Static" />
+                    <asp:FileUpload runat="server" ID="fuURLNote2" ClientIDMode="Static" />
                     <p class="help-block" style="font-size: 10px;"><%=Core.Properties.Resources.fileextensions%></p>
                     <p class="text-danger">
                         <asp:Literal ID="Literal4" runat="server" />

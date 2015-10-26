@@ -9,7 +9,9 @@ using System.Web.UI.WebControls;
 using Lib;
 using Core.UM;
 using Core;
-
+using System.Globalization;
+using System.IO;
+using System.Net.Mail;
 
 namespace SMR.Notifications
 {
@@ -22,7 +24,6 @@ namespace SMR.Notifications
                 litScripts.Text = "<script> alert('მონაცემები გადაგზავნილია')</script>";
                 Session["IsSent"] = null;
             }
-            initErrorMessages();
             initErrorMessages();
             btnAddnew.Text = Core.Properties.Resources.Send;
         }
@@ -80,6 +81,7 @@ namespace SMR.Notifications
         protected void btnSend_Click(object sender, EventArgs e)
         {
             var N = new NoficicationsRepository();
+
             var fuURLFileName = "";
 
             if (fuURL.HasFile)
@@ -89,6 +91,17 @@ namespace SMR.Notifications
 
                 fuURL.SaveAs(string.Format("{0}{1}", path, fuURLFileName));                
             }
+
+            var fuURLFileName2 = "";
+
+            if (fuURL2.HasFile)
+            {
+                fuURLFileName2 = fuURL2.FileName.ToAZ09Dash(true, true);
+                var path = string.Format("{0}//Notifications//", Utility.GetUploadFolder());
+
+                fuURL2.SaveAs(string.Format("{0}{1}", path, fuURLFileName2));
+            }
+
             var fuURLNoteFile = "";
 
             if (fuURLNote.HasFile)
@@ -98,9 +111,29 @@ namespace SMR.Notifications
 
                 fuURLNote.SaveAs(string.Format("{0}{1}", path, fuURLNoteFile));                
             }
+
+            var fuURLNoteFile1 = "";
+
+            if (fuURLNote1.HasFile)
+            {
+                fuURLNoteFile1 = fuURLNote1.FileName.ToAZ09Dash(true, true);
+                var path = string.Format("{0}//Notifications//", Utility.GetUploadFolder());
+
+                fuURLNote1.SaveAs(string.Format("{0}{1}", path, fuURLNoteFile1));
+            }
+
+            var fuURLNoteFile2 = "";
+
+            if (fuURLNote2.HasFile)
+            {
+                fuURLNoteFile2 = fuURLNote2.FileName.ToAZ09Dash(true, true);
+                var path = string.Format("{0}//Notifications//", Utility.GetUploadFolder());
+
+                fuURLNote2.SaveAs(string.Format("{0}{1}", path, fuURLNoteFile2));
+            }
             
             var NotifType = new DictionariesRepository().ListDictionary(1, 9).FirstOrDefault(w => w.CodeVal == Convert.ToInt32(hfNotifyType.Value)).DictionaryID;
-
+/*
             N.SP_Notifications(0,
                 NotificationTypeID: NotifType,
                 OrgName : txtOrgName.Text,
@@ -119,34 +152,110 @@ namespace SMR.Notifications
                 Proportions: txtProportions.Text,
                 RegFileURL: fuURLNoteFile
                 );
-        if (!N.IsError)
+ */
+        //if (!N.IsError)
             {
-                var NotifyObject = new Core.Notifications
+                var NObj = new Core.Notifications();
+                switch (hfNotifyType.Value)
                 {
-                    NotificationTypeID= NotifType,
-                    OrgName = txtOrgName.Text,
-                    Address= txtAddress.Text,
-                    Mobile= txtMobile.Text,
-                    Email= txtEmail.Text,
-                    WebPage= txtWebPage.Text,
-                    URL= fuURLFileName,
-                    MissionDesc= txtMissionDesc.Text,
-                    Contact= txtContact.Text,
-                    Desc1= txtDesc1.Text,
-                    Desc2= txtDesc2.Text,
-                    Number= txtNumber.Text,
-                    Donors = txtDonors.Text,
-                    Term = txtTerms.Text,
-                    Proportions = txtProportions.Text,
-                    RegFileURL= fuURLNoteFile
-                };
-                var rpt = new rptNotification(NotifyObject);
-              
-                var FileName = string.Format("Notification_{0:yyyy-MM-dd}_{1}", DateTime.Now, Guid.NewGuid().ToString().Substring(1, 6));
-                rpt.ExportToPdf(string.Format("{0}{1}", Utility.GetUploadFolder(), FileName));
+                    case "2":
+                        NObj.NotificationTypeID = NotifType;
+                        NObj.OrgName = txtOrgName.Text;
+                        NObj.Address = txtAddress.Text;
+                        NObj.Mobile = txtMobile.Text;
+                        NObj.Email = txtEmail.Text;
+                        NObj.WebPage = txtWebPage.Text;
+                        NObj.URL = fuURLFileName;
+                        NObj.MissionDesc = txtMissionDesc.Text;
+                        NObj.Contact = txtContact.Text;
+                        NObj.Desc1 = txtDesc1.Text;
+                        NObj.Desc2 = txtDesc2.Text;
+                        NObj.Number = txtNumber.Text;
+                        NObj.Donors = txtDonors.Text;
+                        NObj.Term = txtTerms.Text;
+                        NObj.Proportions = txtProportions.Text;
+                        NObj.RegFileURL = fuURLNoteFile;
+                        break;
+                    case "3":
+                        NObj.NotificationTypeID = NotifType;
+                        NObj.OrgName = txtOrgName1.Text;
+                        NObj.Address = txtAddress1.Text;
+                        NObj.Mobile = txtMobile1.Text;
+                        NObj.Email = txtEmail1.Text;
+                        NObj.WebPage = txtWebPage1.Text;
+                        //NObj.URL = fuURLFileName2;
+                        NObj.MissionDesc = txtMissionDesc1.Text;
+                        NObj.Contact = txtContact1.Text;
+                        //NObj.Desc1 = txtDesc1.Text;
+                        //NObj.Desc2 = txtDesc2.Text;
+                        //NObj.Number = txtNumber.Text;
+                        NObj.ProjectTitle = txtProjectTitle.Text;
+                        NObj.Donors = txtDonors1.Text;
+                        NObj.ProjectStatus = txtProjectStatus.Text;
+                        //NObj.Term = txtTerms.Text;
+                        NObj.Donors = txtDonors1.Text;
+                        NObj.Term = txtProjectGoal1.Text;
+                        NObj.ProjectResults = txtProjectResults1.Text;
+                        NObj.ProjectFDate = DateTime.Parse(txtProjectFDate.Text);
+                        NObj.ProjectLDate = DateTime.Parse(txtProjectLDate.Text);
+                        //NObj.Proportions = txtProportions.Text;
+                        NObj.RegFileURL = fuURLNoteFile1;
+                        break;
+                    case "4":
+                        NObj.NotificationTypeID = NotifType;
+                        NObj.OrgName = txtOrgName2.Text;
+                        NObj.Address = txtAddress2.Text;
+                        NObj.Mobile = txtMobile2.Text;
+                        NObj.Email = txtEmail2.Text;
+                        NObj.WebPage = txtWebPage2.Text;
+                        NObj.URL = fuURLFileName2;
+                        //NObj.MissionDesc = txtMissionDesc.Text;
+                        //NObj.URL = fuURL;  aq ver gavige ragac????????????????????????????????????
+                        NObj.MissionDesc = txtMission2.Text;
+                        //NObj.Contact = txtContact.Text;
+                        //NObj.Desc1 = txtDesc1.Text;
+                        //NObj.Desc2 = txtDesc2.Text;
+                        //NObj.Number = txtNumber.Text;
+                        NObj.IsActualProjects = bool.Parse(txtIsActive2.Text);
+                        NObj.ProjectTitle = txtProjectTitle2.Text;
+                        NObj.ProjectStatus = txtProjectStatus2.Text;
+                        NObj.Donors = txtDonorContacts.Text;
+                        NObj.Term = txtProjectGoal2.Text;
+                        NObj.ProjectResults = txtProjectResults1.Text;
+                        NObj.ProjectFDate = DateTime.Parse(txtProjectFDate.Text);
+                        NObj.ProjectLDate = DateTime.Parse(txtProjectLDate.Text);
+                        NObj.FinanceInfo = txtFinanceInfo.Text;
+                        NObj.PartnerInfo = txtPartnerInfo.Text;
+                        NObj.DepartPlan = txtDepart.Text;
+                        NObj.RegFileURL = fuURLNoteFile2;
 
+                        //NObj.Donors = txtDonors.Text;
+                        //NObj.Term = txtTerms.Text;
+                        //NObj.Contact = txtContactInfo2.Text;
+                        //NObj.Proportions = txtProportions.Text;
+                        
+                        break;
+                    default:
+                        break;
+                }
+
+                var M = new Core.Tools.Mail();
+                var ms = new MemoryStream();
+                var ListAtt = new List<Attachment>();
+                var rpt = new rptNotifForm1(NObj);
+                var FileName = string.Format("Notification_{0:yyyy-MM-dd}_{1}.pdf", DateTime.Now, Guid.NewGuid().ToString().Substring(1, 6));
+                rpt.ExportToPdf(ms);
+                ms.Seek(0, System.IO.SeekOrigin.Begin);
+
+                var attach = new Attachment(ms, FileName, "application/pdf");
+                ListAtt.Add(attach);
+
+                M.Send("ninashaverdashvili@gmail.com", "ninashaverdashvili@gmail.com", "სანოტიიკაციო ფორმა", "ინფორმაცია საიტიდან", AttachmentsList: ListAtt);
+                ms.Close();
                 Session["IsSent"] = true;
                 Response.Redirect(Request.Url.OriginalString);
+
+  
             }
         }
     }

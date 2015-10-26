@@ -8,7 +8,7 @@ using Core;
 /// <summary>
 /// Summary description for NotifForm1
 /// </summary>
-public class NotifForm1 : DevExpress.XtraReports.UI.XtraReport
+public class rptNotifForm1 : DevExpress.XtraReports.UI.XtraReport
 {
     private DevExpress.XtraReports.UI.DetailBand Detail;
     private DevExpress.XtraReports.UI.TopMarginBand TopMargin;
@@ -23,7 +23,6 @@ public class NotifForm1 : DevExpress.XtraReports.UI.XtraReport
     private XRLabel label3;
     private XRLabel label6;
     private XRLabel xrLabel5;
-    private XRLabel xrLabel6;
     private XRRichText txtWebPage;
     private XRLabel xrLabel1;
     private XRLabel xrLabel2;
@@ -43,6 +42,8 @@ public class NotifForm1 : DevExpress.XtraReports.UI.XtraReport
     private XRLabel xrLabel9;
     private XRRichText txtProportions;
     private XRLabel xrLabel10;
+    private XRLabel xrLabel6;
+    private XRRichText xrRichText2;
     /// <summary>
     /// Required designer variable.
     /// </summary>
@@ -77,7 +78,7 @@ public class NotifForm1 : DevExpress.XtraReports.UI.XtraReport
     /// </summary>
     private void InitializeComponent()
     {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NotifForm1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rptNotifForm1));
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.txtProportions = new DevExpress.XtraReports.UI.XRRichText();
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
@@ -101,16 +102,17 @@ public class NotifForm1 : DevExpress.XtraReports.UI.XtraReport
             this.txtAddress = new DevExpress.XtraReports.UI.XRRichText();
             this.txtTel = new DevExpress.XtraReports.UI.XRRichText();
             this.txtEMail = new DevExpress.XtraReports.UI.XRRichText();
-            this.txtFax = new DevExpress.XtraReports.UI.XRRichText();
             this.label1 = new DevExpress.XtraReports.UI.XRLabel();
             this.label3 = new DevExpress.XtraReports.UI.XRLabel();
             this.label6 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrRichText1 = new DevExpress.XtraReports.UI.XRRichText();
+            this.txtFax = new DevExpress.XtraReports.UI.XRRichText();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.txtName = new DevExpress.XtraReports.UI.XRRichText();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
+            this.xrRichText2 = new DevExpress.XtraReports.UI.XRRichText();
             ((System.ComponentModel.ISupportInitialize)(this.txtProportions)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHumTerms)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDonors)).BeginInit();
@@ -124,14 +126,16 @@ public class NotifForm1 : DevExpress.XtraReports.UI.XtraReport
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEMail)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFax)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
             // 
             this.Detail.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrRichText2,
             this.txtProportions,
             this.xrLabel10,
             this.txtHumTerms,
@@ -154,259 +158,333 @@ public class NotifForm1 : DevExpress.XtraReports.UI.XtraReport
             this.txtAddress,
             this.txtTel,
             this.txtEMail,
-            this.txtFax,
             this.label1,
             this.label3,
             this.label6,
             this.xrLabel5,
             this.xrLabel6,
             this.xrRichText1});
+            this.Detail.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Detail.HeightF = 632.2917F;
             this.Detail.Name = "Detail";
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.Detail.StylePriority.UseFont = false;
             this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // txtProportions
             // 
+            this.txtProportions.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtProportions.LocationFloat = new DevExpress.Utils.PointFloat(291.2917F, 557.5833F);
             this.txtProportions.Name = "txtProportions";
             this.txtProportions.SerializableRtfString = resources.GetString("txtProportions.SerializableRtfString");
             this.txtProportions.SizeF = new System.Drawing.SizeF(348.7083F, 53.20834F);
+            this.txtProportions.StylePriority.UseFont = false;
             // 
             // xrLabel10
             // 
+            this.xrLabel10.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(12.25001F, 557.5833F);
             this.xrLabel10.Name = "xrLabel10";
             this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel10.SizeF = new System.Drawing.SizeF(244.7917F, 53.20828F);
+            this.xrLabel10.StylePriority.UseFont = false;
             this.xrLabel10.Text = "გადაუდებელი ჰუმანიტარული დახმარების შეტანის მიმართულება და პროპორციები";
             // 
             // txtHumTerms
             // 
+            this.txtHumTerms.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHumTerms.LocationFloat = new DevExpress.Utils.PointFloat(290.2501F, 499.375F);
             this.txtHumTerms.Name = "txtHumTerms";
             this.txtHumTerms.SerializableRtfString = resources.GetString("txtHumTerms.SerializableRtfString");
             this.txtHumTerms.SizeF = new System.Drawing.SizeF(348.7083F, 53.20834F);
+            this.txtHumTerms.StylePriority.UseFont = false;
             // 
             // xrLabel9
             // 
+            this.xrLabel9.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 499.375F);
             this.xrLabel9.Name = "xrLabel9";
             this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel9.SizeF = new System.Drawing.SizeF(244.7917F, 53.20828F);
+            this.xrLabel9.StylePriority.UseFont = false;
             this.xrLabel9.Text = "გადაუდებელი ჰუმანიტარული დახმარების გაცემის ვადა (ერთჯერადი, მრავალჯერადი)";
             // 
             // txtDonors
             // 
+            this.txtDonors.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDonors.LocationFloat = new DevExpress.Utils.PointFloat(290.2501F, 468.2501F);
             this.txtDonors.Name = "txtDonors";
             this.txtDonors.SerializableRtfString = resources.GetString("txtDonors.SerializableRtfString");
             this.txtDonors.SizeF = new System.Drawing.SizeF(348.7083F, 26.12491F);
+            this.txtDonors.StylePriority.UseFont = false;
             // 
             // xrLabel8
             // 
+            this.xrLabel8.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(13.12497F, 468.25F);
             this.xrLabel8.Name = "xrLabel8";
             this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel8.SizeF = new System.Drawing.SizeF(244.7917F, 26.12494F);
+            this.xrLabel8.StylePriority.UseFont = false;
             this.xrLabel8.Text = "დონორები";
             // 
             // txtDesc2
             // 
+            this.txtDesc2.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDesc2.LocationFloat = new DevExpress.Utils.PointFloat(290.2501F, 408.7501F);
             this.txtDesc2.Name = "txtDesc2";
             this.txtDesc2.SerializableRtfString = resources.GetString("txtDesc2.SerializableRtfString");
             this.txtDesc2.SizeF = new System.Drawing.SizeF(348.7083F, 26.12491F);
+            this.txtDesc2.StylePriority.UseFont = false;
             // 
             // xrLabel7
             // 
+            this.xrLabel7.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(13.12496F, 437.7917F);
             this.xrLabel7.Name = "xrLabel7";
             this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel7.SizeF = new System.Drawing.SizeF(244.7917F, 26.12494F);
+            this.xrLabel7.StylePriority.UseFont = false;
             this.xrLabel7.Text = "ჰუმანიტარული დახმარების რაოდენობა ";
             // 
             // txtDesc1
             // 
+            this.txtDesc1.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDesc1.LocationFloat = new DevExpress.Utils.PointFloat(290.2501F, 322.8333F);
             this.txtDesc1.Name = "txtDesc1";
             this.txtDesc1.SerializableRtfString = resources.GetString("txtDesc1.SerializableRtfString");
             this.txtDesc1.SizeF = new System.Drawing.SizeF(348.7083F, 82.375F);
+            this.txtDesc1.StylePriority.UseFont = false;
             // 
             // xrLabel4
             // 
+            this.xrLabel4.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(13.12494F, 408.7501F);
             this.xrLabel4.Name = "xrLabel4";
             this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel4.SizeF = new System.Drawing.SizeF(244.7917F, 26.12494F);
+            this.xrLabel4.StylePriority.UseFont = false;
             this.xrLabel4.Text = " ჰუმანიტარული დახმარების აღწერა";
             // 
             // txtHumNumber
             // 
+            this.txtHumNumber.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHumNumber.LocationFloat = new DevExpress.Utils.PointFloat(291.2917F, 437.7917F);
             this.txtHumNumber.Name = "txtHumNumber";
             this.txtHumNumber.SerializableRtfString = resources.GetString("txtHumNumber.SerializableRtfString");
             this.txtHumNumber.SizeF = new System.Drawing.SizeF(348.7083F, 26.12491F);
+            this.txtHumNumber.StylePriority.UseFont = false;
             // 
             // xrLabel3
             // 
+            this.xrLabel3.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(13.12496F, 322.8333F);
             this.xrLabel3.Name = "xrLabel3";
             this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel3.SizeF = new System.Drawing.SizeF(244.7917F, 82.37497F);
+            this.xrLabel3.StylePriority.UseFont = false;
             this.xrLabel3.Text = "ჰუმანიტარული მდგომარეობის აღწერა (რით არის გამოწვეული, რომელ გეოგრაფიულ არეალს მო" +
     "იცავს ჰუმანიტარული მდგომარეობის მიერ გამოწვეული შედეგები) ";
             // 
             // label13
             // 
+            this.label13.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.LocationFloat = new DevExpress.Utils.PointFloat(13.12494F, 241.75F);
             this.label13.Name = "label13";
             this.label13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.label13.SizeF = new System.Drawing.SizeF(244.7917F, 22.99997F);
+            this.label13.StylePriority.UseFont = false;
             this.label13.Text = "საკონტაქტო პირი (სახელი, გვარი, ტელეფონი)";
             // 
             // txtContactInfo
             // 
+            this.txtContactInfo.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContactInfo.LocationFloat = new DevExpress.Utils.PointFloat(290.2501F, 241.75F);
             this.txtContactInfo.Name = "txtContactInfo";
             this.txtContactInfo.SerializableRtfString = resources.GetString("txtContactInfo.SerializableRtfString");
             this.txtContactInfo.SizeF = new System.Drawing.SizeF(348.7083F, 22.99997F);
+            this.txtContactInfo.StylePriority.UseFont = false;
             // 
             // txtMission
             // 
+            this.txtMission.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMission.LocationFloat = new DevExpress.Utils.PointFloat(290.2501F, 150F);
             this.txtMission.Name = "txtMission";
             this.txtMission.SerializableRtfString = resources.GetString("txtMission.SerializableRtfString");
             this.txtMission.SizeF = new System.Drawing.SizeF(349.7499F, 88.75002F);
+            this.txtMission.StylePriority.UseFont = false;
             // 
             // xrLabel2
             // 
+            this.xrLabel2.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(10.12497F, 150F);
             this.xrLabel2.Name = "xrLabel2";
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel2.SizeF = new System.Drawing.SizeF(227.125F, 19F);
+            this.xrLabel2.StylePriority.UseFont = false;
             this.xrLabel2.Text = "ორგანიზაციის მისიის აღწერა:";
             // 
             // txtWebPage
             // 
+            this.txtWebPage.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtWebPage.LocationFloat = new DevExpress.Utils.PointFloat(290.2502F, 129F);
             this.txtWebPage.Name = "txtWebPage";
             this.txtWebPage.SerializableRtfString = resources.GetString("txtWebPage.SerializableRtfString");
             this.txtWebPage.SizeF = new System.Drawing.SizeF(349.7498F, 18.00002F);
+            this.txtWebPage.StylePriority.UseFont = false;
             // 
             // xrLabel1
             // 
+            this.xrLabel1.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(10.12497F, 128F);
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel1.SizeF = new System.Drawing.SizeF(145.8333F, 19F);
+            this.xrLabel1.StylePriority.UseFont = false;
             this.xrLabel1.Text = "ვებ გვერდი:";
             // 
             // txtOrgName
             // 
+            this.txtOrgName.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtOrgName.LocationFloat = new DevExpress.Utils.PointFloat(290.2502F, 10.00001F);
             this.txtOrgName.Name = "txtOrgName";
             this.txtOrgName.SerializableRtfString = resources.GetString("txtOrgName.SerializableRtfString");
             this.txtOrgName.SizeF = new System.Drawing.SizeF(349.7498F, 23F);
+            this.txtOrgName.StylePriority.UseFont = false;
             // 
             // txtAddress
             // 
+            this.txtAddress.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAddress.LocationFloat = new DevExpress.Utils.PointFloat(290.2502F, 33.99982F);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.SerializableRtfString = resources.GetString("txtAddress.SerializableRtfString");
             this.txtAddress.SizeF = new System.Drawing.SizeF(349.7498F, 23F);
+            this.txtAddress.StylePriority.UseFont = false;
             // 
             // txtTel
             // 
+            this.txtTel.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTel.LocationFloat = new DevExpress.Utils.PointFloat(290.2502F, 58.00009F);
             this.txtTel.Name = "txtTel";
             this.txtTel.SerializableRtfString = resources.GetString("txtTel.SerializableRtfString");
             this.txtTel.SizeF = new System.Drawing.SizeF(349.7498F, 23F);
+            this.txtTel.StylePriority.UseFont = false;
             // 
             // txtEMail
             // 
+            this.txtEMail.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEMail.LocationFloat = new DevExpress.Utils.PointFloat(290.2502F, 107F);
             this.txtEMail.Name = "txtEMail";
             this.txtEMail.SerializableRtfString = resources.GetString("txtEMail.SerializableRtfString");
             this.txtEMail.SizeF = new System.Drawing.SizeF(349.7498F, 20.00002F);
-            // 
-            // txtFax
-            // 
-            this.txtFax.LocationFloat = new DevExpress.Utils.PointFloat(290.2502F, 82F);
-            this.txtFax.Name = "txtFax";
-            this.txtFax.SerializableRtfString = resources.GetString("txtFax.SerializableRtfString");
-            this.txtFax.SizeF = new System.Drawing.SizeF(349.7498F, 23F);
+            this.txtEMail.StylePriority.UseFont = false;
             // 
             // label1
             // 
+            this.label1.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 10.00001F);
             this.label1.Name = "label1";
             this.label1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.label1.SizeF = new System.Drawing.SizeF(160.5833F, 23F);
+            this.label1.StylePriority.UseFont = false;
             this.label1.Text = "ორგანიზაციის სახელი:";
             // 
             // label3
             // 
+            this.label3.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 35.00001F);
             this.label3.Name = "label3";
             this.label3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.label3.SizeF = new System.Drawing.SizeF(144.9583F, 23.00003F);
+            this.label3.StylePriority.UseFont = false;
             this.label3.Text = "მისამართი";
             // 
             // label6
             // 
+            this.label6.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.LocationFloat = new DevExpress.Utils.PointFloat(10.00001F, 59.00005F);
             this.label6.Name = "label6";
             this.label6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.label6.SizeF = new System.Drawing.SizeF(145.8333F, 23.00002F);
+            this.label6.StylePriority.UseFont = false;
             this.label6.Text = "ტელეფონი:";
             // 
             // xrLabel5
             // 
+            this.xrLabel5.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(12.25001F, 107F);
             this.xrLabel5.Name = "xrLabel5";
             this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel5.SizeF = new System.Drawing.SizeF(142.7083F, 19F);
+            this.xrLabel5.StylePriority.UseFont = false;
             this.xrLabel5.Text = "ელ-ფოსტა:";
             // 
             // xrLabel6
             // 
+            this.xrLabel6.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(10.12497F, 85.99997F);
             this.xrLabel6.Name = "xrLabel6";
             this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel6.SizeF = new System.Drawing.SizeF(145.8333F, 19F);
+            this.xrLabel6.StylePriority.UseFont = false;
             this.xrLabel6.Text = "ფაქსი:";
             // 
             // xrRichText1
             // 
+            this.xrRichText1.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xrRichText1.LocationFloat = new DevExpress.Utils.PointFloat(64.66668F, 295.8333F);
             this.xrRichText1.Name = "xrRichText1";
             this.xrRichText1.SerializableRtfString = resources.GetString("xrRichText1.SerializableRtfString");
             this.xrRichText1.SizeF = new System.Drawing.SizeF(563.2918F, 23F);
+            this.xrRichText1.StylePriority.UseFont = false;
+            // 
+            // txtFax
+            // 
+            this.txtFax.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFax.LocationFloat = new DevExpress.Utils.PointFloat(290.2502F, 82F);
+            this.txtFax.Name = "txtFax";
+            this.txtFax.SerializableRtfString = resources.GetString("txtFax.SerializableRtfString");
+            this.txtFax.SizeF = new System.Drawing.SizeF(349.7498F, 23F);
+            this.txtFax.StylePriority.UseFont = false;
             // 
             // TopMargin
             // 
             this.TopMargin.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.txtName});
+            this.TopMargin.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TopMargin.Name = "TopMargin";
             this.TopMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.TopMargin.StylePriority.UseFont = false;
             this.TopMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // txtName
             // 
+            this.txtName.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.LocationFloat = new DevExpress.Utils.PointFloat(175.2501F, 51.04167F);
             this.txtName.Name = "txtName";
             this.txtName.SerializableRtfString = resources.GetString("txtName.SerializableRtfString");
             this.txtName.SizeF = new System.Drawing.SizeF(283.0832F, 23F);
+            this.txtName.StylePriority.UseFont = false;
             // 
             // BottomMargin
             // 
+            this.BottomMargin.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BottomMargin.HeightF = 66.66666F;
             this.BottomMargin.Name = "BottomMargin";
             this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.BottomMargin.StylePriority.UseFont = false;
             this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
-            // NotifForm1
+            // xrRichText2
+            // 
+            this.xrRichText2.Font = new System.Drawing.Font("Sylfaen", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xrRichText2.LocationFloat = new DevExpress.Utils.PointFloat(289.2086F, 82.00009F);
+            this.xrRichText2.Name = "xrRichText2";
+            this.xrRichText2.SerializableRtfString = resources.GetString("xrRichText2.SerializableRtfString");
+            this.xrRichText2.SizeF = new System.Drawing.SizeF(349.7498F, 23F);
+            this.xrRichText2.StylePriority.UseFont = false;
+            // 
+            // rptNotifForm1
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
             this.Detail,
@@ -427,23 +505,24 @@ public class NotifForm1 : DevExpress.XtraReports.UI.XtraReport
             ((System.ComponentModel.ISupportInitialize)(this.txtAddress)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtEMail)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFax)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
     }
 
     #endregion
 
-    public NotifForm1(Notifications nf1)
+    public rptNotifForm1(Notifications nf1)
     {
         InitializeComponent();
 
         txtOrgName.Text = nf1.OrgName;
         txtAddress.Text = nf1.Address;
         txtTel.Text = nf1.Mobile;
-        txtFax.Text = nf1.Fax;
+        //txtFax.Text = nf1.Fax;
         txtEMail.Text = nf1.Email;
         txtWebPage.Text = nf1.WebPage;
         txtMission.Text = nf1.MissionDesc;

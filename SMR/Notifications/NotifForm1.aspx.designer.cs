@@ -589,13 +589,13 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqProjectLDate;
         
         /// <summary>
-        /// FileUpload2 control.
+        /// fuURLNote1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload2;
+        protected global::System.Web.UI.WebControls.FileUpload fuURLNote1;
         
         /// <summary>
         /// Literal2 control.
@@ -733,13 +733,13 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqWebPage3;
         
         /// <summary>
-        /// FileUpload3 control.
+        /// fuURL2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload3;
+        protected global::System.Web.UI.WebControls.FileUpload fuURL2;
         
         /// <summary>
         /// Literal3 control.
@@ -1003,13 +1003,13 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqSchedule;
         
         /// <summary>
-        /// FileUpload4 control.
+        /// fuURLNote2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUpload4;
+        protected global::System.Web.UI.WebControls.FileUpload fuURLNote2;
         
         /// <summary>
         /// Literal4 control.
