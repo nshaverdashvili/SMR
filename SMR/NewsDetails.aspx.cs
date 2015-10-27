@@ -10,6 +10,12 @@ namespace SMR
 {
     public partial class NewsDetails : Models.PageBase
     {
+
+        public string ogUrl;
+        public string ogTitle;
+        public string ogDescription;
+        public string ogImg;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             
@@ -20,8 +26,13 @@ namespace SMR
                 var SingleNews = N.ListNews(_ID).SingleOrDefault();
                 if (SingleNews != null)
                 {
-                    ltrImgURL.Text = string.Format("<a href=\"Uploads/{0}\" class=\"mainImg\"  data-showpopup='true'><img src=\"Uploads/{0}?w=200\" /></a>", SingleNews.ImgURL);
+                    ltrImgURL.Text = string.Format("<a href=\"/Uploads/{0}\" class=\"mainImg\"  data-showpopup='true'><img src=\"Uploads/{0}?w=200\" /></a>", SingleNews.ImgURL);
+                    ogTitle=
                     ltrTitle.Text = SingleNews.Title;
+
+                    ogDescription = SingleNews.Description;
+                    ogUrl = "http://new.smr.gov.ge/NewsDetails.aspx?ID=" + SingleNews.NewsID;
+                    ogImg = "http://new.smr.gov.ge/Uploads/" + SingleNews.ImgURL;
 
                     ltrDate.Text = string.Format("{0:dd/MM/yyyy}", SingleNews.NewsDate);
                     ltrFulltxt.Text = SingleNews.FullText;

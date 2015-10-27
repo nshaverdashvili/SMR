@@ -17,7 +17,7 @@
                 <p>
                     <asp:Literal ID="ltrFulltxt" runat="server"></asp:Literal>
                 </p>
-            </div>
+            </div>            
         </div>
     </div>
 </asp:Content>
