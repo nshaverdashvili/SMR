@@ -1,0 +1,35 @@
+
+
+------------------------------------
+http://localhost:12175/default.aspx - 02.11.2015 1:57:20
+Source File - d:\gitProjects\SMR\Core\CM\News.cs
+Line Number - 100
+Core.CM.NewsRepository.ListNews() --- Ambiguous column name 'SortVal'.
+Could not use view or function 'dbo.fn_List_News' because of binding errors.
+
+
+------------------------------------
+
+
+
+------------------------------------
+http://localhost:12175/default.aspx - 02.11.2015 1:59:04
+Source File - d:\gitProjects\SMR\Core\CM\News.cs
+Line Number - 100
+Core.CM.NewsRepository.ListNews() --- Ambiguous column name 'SortVal'.
+Could not use view or function 'dbo.fn_List_News' because of binding errors.
+
+
+------------------------------------
+
+
+
+------------------------------------
+http://localhost:12175/FileList.aspx?ID=17 - 02.11.2015 2:16:40
+Source File - d:\gitProjects\SMR\Core\UM\Permissions.cs
+Line Number - 77
+Core.UM.PermissionsRepository.ListChildPermissions(ParentID) --- A transport-level error has occurred when receiving results from the server. (provider: TCP Provider, error: 0 - The semaphore timeout period has expired.)
+
+
+------------------------------------
+

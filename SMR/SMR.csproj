@@ -488,6 +488,7 @@
     <Content Include="Content\fonts\Smr\regular_up.ttf" />
     <Content Include="Content\fonts\Smr\regular_up.woff" />
     <Content Include="Content\fonts\Smr\regular_up.woff2" />
+    <Content Include="PublicInfo.aspx" />
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -728,6 +729,13 @@
     </Compile>
     <Compile Include="Manager\Tools\Dictionaries.aspx.designer.cs">
       <DependentUpon>Dictionaries.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PublicInfo.aspx.cs">
+      <DependentUpon>PublicInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PublicInfo.aspx.designer.cs">
+      <DependentUpon>PublicInfo.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

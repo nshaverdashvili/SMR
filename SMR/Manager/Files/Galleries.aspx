@@ -77,9 +77,9 @@
                                     </PropertiesComboBox>
                                 </dx:GridViewDataComboBoxColumn>
                                 
-                                <dx:GridViewDataColumn>
-                                    <EditItemTemplate></EditItemTemplate>
-                                </dx:GridViewDataColumn>
+                                <dx:GridViewDataTextColumn FieldName="SortVal" Caption="SortVal" Width="50">                                                                       
+                                </dx:GridViewDataTextColumn>
+
                             </Columns>
                             <SettingsEditing Mode="Inline"></SettingsEditing>
                         </dx:ASPxGridView>
@@ -104,6 +104,7 @@
                 <asp:Parameter Name="GalleryID" Type="Int32" />
                 <asp:Parameter Name="FileID" Type="Int32" />
                 <asp:Parameter Name="IsDefault" Type="Boolean" />
+                <asp:Parameter Name="SortVal" Type="Int32" />
             </DeleteParameters>
             <InsertParameters>
                 <asp:Parameter Name="iud" Type="Int32" DefaultValue="0" />
@@ -111,6 +112,7 @@
                 <asp:Parameter Name="GalleryID" Type="Int32" />
                 <asp:Parameter Name="FileID" Type="Int32" />
                 <asp:Parameter Name="IsDefault" Type="Boolean" DefaultValue="false" />
+                <asp:Parameter Name="SortVal" Type="Int32" />
             </InsertParameters>
             <SelectParameters>
                 <asp:Parameter Name="GalleryID" Type="Int32" />
@@ -121,6 +123,7 @@
                 <asp:Parameter Name="GalleryID" Type="Int32" />
                 <asp:Parameter Name="FileID" Type="Int32" />
                 <asp:Parameter Name="IsDefault" Type="Boolean" />
+                <asp:Parameter Name="SortVal" Type="Int32" />
             </UpdateParameters>
         </asp:ObjectDataSource>
         <asp:ObjectDataSource ID="dsFileType" runat="server" TypeName="Core.Tools.DictionariesRepository" SelectMethod="ListDictionary">

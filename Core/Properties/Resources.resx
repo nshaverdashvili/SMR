@@ -413,4 +413,7 @@
   <data name="PageTitle" xml:space="preserve">
     <value>შერიგებისა და სამოქალაქო თანასწორობის საკითხებში საქართველოს სახელმწიფო მინისტრის აპარატი</value>
   </data>
+  <data name="PublicInfo" xml:space="preserve">
+    <value>საჯარო ინფორმაციის მოთხოვნა</value>
+  </data>
 </root>

@@ -76,6 +76,7 @@ namespace Core.Files
         public string URLRu { get; set; }
         public int? TypeID { get; set; }
         public bool? IsDefault { get; set; }
+        public int? SortVal { get; set; }
     }
     public class FilesRepository : ObjectBase
     {
@@ -152,20 +153,21 @@ namespace Core.Files
                         URLKa = s.URLKa,
                         URLRu = s.URLRu,
                         TypeID = s.TypeID,
-                        IsDefault = s.IsDefault
-                    }).ToList();
+                        IsDefault = s.IsDefault,
+                        SortVal = s.SortVal
+                    }).OrderBy(o=>o.SortVal).ToList();
                 }
             });
 
         }
-        public void SP_GalleryFiles(int? iud, int? RecordID, int? GalleryID, int? FileID, bool? IsDefault)
+        public void SP_GalleryFiles(int? iud, int? RecordID, int? GalleryID, int? FileID, bool? IsDefault, int? SortVal)
         {
-            TryExecute(string.Format("SP_GalleryFiles(iud = {0},  RecordID = {1} , GalleryID = {2}, FileID = {3}, IsDefault = {4})", iud, RecordID, GalleryID, FileID, IsDefault), () =>
+            TryExecute(string.Format("SP_GalleryFiles(iud = {0},  RecordID = {1} , GalleryID = {2}, FileID = {3}, IsDefault = {4}, SortVal = {5})", iud, RecordID, GalleryID, FileID, IsDefault, SortVal), () =>
             {
                 using (var db = DB.DBCon.GetFilesDataContext())
                 {
                     int? NewID = RecordID;
-                    db.sp_GalleryFiles(iud, ref NewID, GalleryID, FileID, IsDefault);
+                    db.sp_GalleryFiles(iud, ref NewID, GalleryID, FileID, IsDefault, SortVal);
                     this.ID = NewID;
                 }
             });

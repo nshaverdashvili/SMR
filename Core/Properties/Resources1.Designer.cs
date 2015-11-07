@@ -783,6 +783,15 @@ namespace Core.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to საჯარო ინფორმაციის მოთხოვნა.
+        /// </summary>
+        public static string PublicInfo {
+            get {
+                return ResourceManager.GetString("PublicInfo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to შესვლის მიზანი.
         /// </summary>
         public static string PurposeofVisit {
