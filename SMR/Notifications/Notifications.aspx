@@ -105,7 +105,7 @@
                     <label for="ddGender"><%=Core.Properties.Resources.Gender%></label>
                     <asp:DropDownList runat="server" ID="ddGender" DataSourceID="dsGender" DataTextField="Caption" DataValueField="CodeVal" ClientIDMode="Static" CssClass="form-control">
                     </asp:DropDownList>
-                    <asp:RequiredFieldValidator runat="server" ID="reqGender" ControlToValidate="ddGender" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
+                    <!--<asp:RequiredFieldValidator runat="server" ID="reqGender" ControlToValidate="ddGender" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>-->
                 </div>
             </div>
 
@@ -114,7 +114,7 @@
                 <div class="form-group">
                     <label for="txtFDate"><%=Core.Properties.Resources.From%></label>
                     <asp:TextBox runat="server" CssClass="form-control ical" ID="txtFDate" ClientIDMode="Static"></asp:TextBox>
-                    <asp:RequiredFieldValidator runat="server" ID="reqFDate" ControlToValidate="txtFDate" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator runat="server" ID="reqFDate" ControlToValidate="txtFDate" Display="Dynamic" ValidationGroup="VelGroup" CssClass="text-danger"></asp:RequiredFieldValidator>
                 </div>
             </div>
 
@@ -122,15 +122,14 @@
                 <div class="form-group">
                     <label for="txtLDate"><%=Core.Properties.Resources.To%></label>
                     <asp:TextBox runat="server" CssClass="form-control ical" ID="txtLDate" ClientIDMode="Static"></asp:TextBox>
-                    <asp:RequiredFieldValidator runat="server" ID="reqLDate" ControlToValidate="txtLDate" Display="Dynamic" ValidationGroup="vg" CssClass="text-danger"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator runat="server" ID="reqLDate" ControlToValidate="txtLDate" Display="Dynamic" ValidationGroup="VelGroup" CssClass="text-danger"></asp:RequiredFieldValidator>
                 </div>
             </div>
 
             <div class="col-xs-6">
                 <div class="form-group">
                     <label for="ddOrganisator"><%=Core.Properties.Resources.VisitOrganizedby%></label>
-                    <asp:DropDownList runat="server" ID="ddOrganisator" DataSourceID="dsVisitOrganisedBy" DataTextField="Caption" DataValueField="DictionaryID" ClientIDMode="Static" CssClass="form-control">
-                    </asp:DropDownList>
+                    <asp:TextBox runat="server" CssClass="form-control" ID="txtVisitOrganisedBy" ClientIDMode="Static"></asp:TextBox>
                 </div>
 
                 <div class="form-group">

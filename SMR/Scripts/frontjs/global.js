@@ -15,7 +15,7 @@ function ShowPopupImg(url) {
         href: url       
     });
 }
-func
+
 
 function ShowPopupPage(url, width, height) {
     $.fancybox.open({

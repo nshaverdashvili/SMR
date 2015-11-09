@@ -89,8 +89,8 @@ public class rptNotification : DevExpress.XtraReports.UI.XtraReport
         txtEMail.Text = nt.Email;
         txtPassportN.Text = nt.PassportN;
         txtNationality.Text = nt.Nationality;
-        txtBDate.Text = nt.BDate.ToString();
-        txtDates.Text = nt.ProjectFDate.ToString(); //shecdomit maqvs mgoni
+        txtBDate.Text =  string.Format("{0:dd/MM/yyyy}", nt.BDate);
+        txtDates.Text = string.Format("{0:dd/MM/yyyy} - {1:dd/MM/yyyy}", nt.ProjectFDate, nt.ProjectLDate);
         txtTransportType.Text = nt.TransportType;
         txtDestination.Text = nt.Destination;
         txtHostName.Text = nt.HostName;
@@ -101,8 +101,8 @@ public class rptNotification : DevExpress.XtraReports.UI.XtraReport
         txtVisitorStatus.Text = nt.VisitorStatus;
         txtProjectName.Text = nt.ProjectTitle;
         txtVisitGoal.Text = nt.ProjectNote;
-        txtFDate.Text = nt.ProjectFDate.ToString();
-        txtLDate.Text = nt.ProjectLDate.ToString();
+        txtFDate.Text = string.Format("{0:dd/MM/yyyy}", nt.ProjectFDate);
+        txtLDate.Text = string.Format("{0:dd/MM/yyyy}", nt.ProjectLDate);
         txtPartner.Text = nt.Partner;
         txtIsSent.Text = nt.IsSent.ToString();
         txtAddInfo.Text = nt.Note; //??        
@@ -131,6 +131,10 @@ public class rptNotification : DevExpress.XtraReports.UI.XtraReport
     {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(rptNotification));
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
+            this.txtTel1 = new DevExpress.XtraReports.UI.XRRichText();
+            this.txtAddress1 = new DevExpress.XtraReports.UI.XRRichText();
+            this.txtLName1 = new DevExpress.XtraReports.UI.XRRichText();
+            this.txtFName1 = new DevExpress.XtraReports.UI.XRRichText();
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.txtHostName = new DevExpress.XtraReports.UI.XRRichText();
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
@@ -187,10 +191,10 @@ public class rptNotification : DevExpress.XtraReports.UI.XtraReport
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.txtName = new DevExpress.XtraReports.UI.XRRichText();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
-            this.txtFName1 = new DevExpress.XtraReports.UI.XRRichText();
-            this.txtLName1 = new DevExpress.XtraReports.UI.XRRichText();
-            this.txtAddress1 = new DevExpress.XtraReports.UI.XRRichText();
-            this.txtTel1 = new DevExpress.XtraReports.UI.XRRichText();
+            ((System.ComponentModel.ISupportInitialize)(this.txtTel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddress1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLName1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFName1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHostName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVisitorStatus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProjectName)).BeginInit();
@@ -224,10 +228,6 @@ public class rptNotification : DevExpress.XtraReports.UI.XtraReport
             ((System.ComponentModel.ISupportInitialize)(this.txtFName)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTransportType)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFName1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLName1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAddress1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Detail
@@ -296,6 +296,42 @@ public class rptNotification : DevExpress.XtraReports.UI.XtraReport
             this.Detail.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.Detail.StylePriority.UseFont = false;
             this.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // txtTel1
+            // 
+            this.txtTel1.Font = new System.Drawing.Font("Sylfaen", 9.75F);
+            this.txtTel1.LocationFloat = new DevExpress.Utils.PointFloat(290.4584F, 488.7709F);
+            this.txtTel1.Name = "txtTel1";
+            this.txtTel1.SerializableRtfString = resources.GetString("txtTel1.SerializableRtfString");
+            this.txtTel1.SizeF = new System.Drawing.SizeF(291.4166F, 18F);
+            this.txtTel1.StylePriority.UseFont = false;
+            // 
+            // txtAddress1
+            // 
+            this.txtAddress1.Font = new System.Drawing.Font("Sylfaen", 9.75F);
+            this.txtAddress1.LocationFloat = new DevExpress.Utils.PointFloat(290.4584F, 464.7709F);
+            this.txtAddress1.Name = "txtAddress1";
+            this.txtAddress1.SerializableRtfString = resources.GetString("txtAddress1.SerializableRtfString");
+            this.txtAddress1.SizeF = new System.Drawing.SizeF(291.4166F, 18.00003F);
+            this.txtAddress1.StylePriority.UseFont = false;
+            // 
+            // txtLName1
+            // 
+            this.txtLName1.Font = new System.Drawing.Font("Sylfaen", 9.75F);
+            this.txtLName1.LocationFloat = new DevExpress.Utils.PointFloat(290.4584F, 440.7708F);
+            this.txtLName1.Name = "txtLName1";
+            this.txtLName1.SerializableRtfString = resources.GetString("txtLName1.SerializableRtfString");
+            this.txtLName1.SizeF = new System.Drawing.SizeF(291.4166F, 18F);
+            this.txtLName1.StylePriority.UseFont = false;
+            // 
+            // txtFName1
+            // 
+            this.txtFName1.Font = new System.Drawing.Font("Sylfaen", 9.75F);
+            this.txtFName1.LocationFloat = new DevExpress.Utils.PointFloat(290.4584F, 416.6458F);
+            this.txtFName1.Name = "txtFName1";
+            this.txtFName1.SerializableRtfString = resources.GetString("txtFName1.SerializableRtfString");
+            this.txtFName1.SizeF = new System.Drawing.SizeF(291.4166F, 18F);
+            this.txtFName1.StylePriority.UseFont = false;
             // 
             // xrLabel6
             // 
@@ -822,42 +858,6 @@ public class rptNotification : DevExpress.XtraReports.UI.XtraReport
             this.BottomMargin.StylePriority.UseFont = false;
             this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
-            // txtFName1
-            // 
-            this.txtFName1.Font = new System.Drawing.Font("Sylfaen", 9.75F);
-            this.txtFName1.LocationFloat = new DevExpress.Utils.PointFloat(290.4584F, 416.6458F);
-            this.txtFName1.Name = "txtFName1";
-            this.txtFName1.SerializableRtfString = resources.GetString("txtFName1.SerializableRtfString");
-            this.txtFName1.SizeF = new System.Drawing.SizeF(291.4166F, 18F);
-            this.txtFName1.StylePriority.UseFont = false;
-            // 
-            // txtLName1
-            // 
-            this.txtLName1.Font = new System.Drawing.Font("Sylfaen", 9.75F);
-            this.txtLName1.LocationFloat = new DevExpress.Utils.PointFloat(290.4584F, 440.7708F);
-            this.txtLName1.Name = "txtLName1";
-            this.txtLName1.SerializableRtfString = resources.GetString("txtLName1.SerializableRtfString");
-            this.txtLName1.SizeF = new System.Drawing.SizeF(291.4166F, 18F);
-            this.txtLName1.StylePriority.UseFont = false;
-            // 
-            // txtAddress1
-            // 
-            this.txtAddress1.Font = new System.Drawing.Font("Sylfaen", 9.75F);
-            this.txtAddress1.LocationFloat = new DevExpress.Utils.PointFloat(290.4584F, 464.7709F);
-            this.txtAddress1.Name = "txtAddress1";
-            this.txtAddress1.SerializableRtfString = resources.GetString("txtAddress1.SerializableRtfString");
-            this.txtAddress1.SizeF = new System.Drawing.SizeF(291.4166F, 18.00003F);
-            this.txtAddress1.StylePriority.UseFont = false;
-            // 
-            // txtTel1
-            // 
-            this.txtTel1.Font = new System.Drawing.Font("Sylfaen", 9.75F);
-            this.txtTel1.LocationFloat = new DevExpress.Utils.PointFloat(290.4584F, 488.7709F);
-            this.txtTel1.Name = "txtTel1";
-            this.txtTel1.SerializableRtfString = resources.GetString("txtTel1.SerializableRtfString");
-            this.txtTel1.SizeF = new System.Drawing.SizeF(291.4166F, 18F);
-            this.txtTel1.StylePriority.UseFont = false;
-            // 
             // rptNotification
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -865,6 +865,10 @@ public class rptNotification : DevExpress.XtraReports.UI.XtraReport
             this.TopMargin,
             this.BottomMargin});
             this.Version = "13.2";
+            ((System.ComponentModel.ISupportInitialize)(this.txtTel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtAddress1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtLName1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtFName1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtHostName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtVisitorStatus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtProjectName)).EndInit();
@@ -898,10 +902,6 @@ public class rptNotification : DevExpress.XtraReports.UI.XtraReport
             ((System.ComponentModel.ISupportInitialize)(this.txtFName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTransportType)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtFName1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtLName1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtAddress1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtTel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
     }

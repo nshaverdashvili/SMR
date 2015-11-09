@@ -33,3 +33,14 @@ Core.UM.PermissionsRepository.ListChildPermissions(ParentID) --- A transport-lev
 
 ------------------------------------
 
+
+
+------------------------------------
+http://localhost:12175/default.aspx - 07.11.2015 23:43:33
+Source File - d:\gitProjects\SMR\Core\CM\News.cs
+Line Number - 100
+Core.CM.NewsRepository.ListNews() --- Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+
+
+------------------------------------
+

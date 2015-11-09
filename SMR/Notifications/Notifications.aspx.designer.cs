@@ -292,13 +292,13 @@ namespace SMR.Notifications {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator reqLDate;
         
         /// <summary>
-        /// ddOrganisator control.
+        /// txtVisitOrganisedBy control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddOrganisator;
+        protected global::System.Web.UI.WebControls.TextBox txtVisitOrganisedBy;
         
         /// <summary>
         /// ddTransportType control.

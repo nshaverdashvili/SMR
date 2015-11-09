@@ -26,6 +26,10 @@ namespace SMR.Notifications
                     litScripts.Text = "<script> alert('მონაცემები გადაგზავნილია')</script>";
                     Session["IsSent"] = null;
                 }
+                txtProjectFDate.Text = string.Format("{0:dd/MM/yyyy}",DateTime.Now);
+                txtFDate.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Now);
+                txtLDate.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Now);
+                txtProjectLDate.Text = string.Format("{0:dd/MM/yyyy}", DateTime.Now);
                 ddBDay.DataSource = Utility.List_RangeOfNumbers(1, 31).Select(s => new { Value = s }).ToList();
                 ddBDay.DataBind();
                 ddBMonth.DataSource = DateTimeFormatInfo.CurrentInfo.MonthNames.Select((item, index) => new { Caption = item, Value = index+1 }).ToList(); //Utility.List_RangeOfNumbers(1, 12).Select(s => new { Value = s }).ToList();
@@ -51,7 +55,6 @@ namespace SMR.Notifications
             reqGender.ErrorMessage = Core.Properties.Resources.Gender;
             reqFDate.ErrorMessage = Core.Properties.Resources.FDate;
             reqLDate.ErrorMessage = Core.Properties.Resources.LDate;
-            //reqOrganisator.ErrorMessage = Core.Properties.Resources.VisitOrganizedby;
             reqFName1.ErrorMessage = Core.Properties.Resources.FirstName;
             reqLName1.ErrorMessage = Core.Properties.Resources.LastName;
             reqAddress.ErrorMessage = Core.Properties.Resources.Address;
@@ -135,7 +138,7 @@ namespace SMR.Notifications
                     //Sex = bool.Parse(ddGender.SelectedValue),
                     EnteryDate = EnteryDate,
                     LeaveDate = LeaveDate,
-                    Organisator = ddOrganisator.SelectedValue,
+                    Organisator = txtVisitOrganisedBy.Text,
                     TransportType = ddTransportType.SelectedValue,
                     Destination = txtDestination.Text,
                     HostName = txtHostName.Text,
