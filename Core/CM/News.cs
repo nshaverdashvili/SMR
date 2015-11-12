@@ -181,6 +181,40 @@ namespace Core.CM
             });
         }
 
+    public List <News> NewsByDate (DateTime? FromDate, DateTime? ToDate)
+        {
+            return TryToReturn(string.Format("Core.CM.NewsRepository.ListNews()"), () =>
+            {
+                using (var db = DB.DBCon.GetCMDataContext())
+                {
+                    return db.fn_List_NewsByDate(FromDate, ToDate).Select(s => new News
+                    {
+                        NewsID = s.NewsID,
+                        NewsDate = s.NewsDate,
+                        TitleEN = s.TitleEN,
+                        TitleKA = s.TitleKA,
+                        TitleRU = s.TitleRU,
+                        DescriptionEN = s.DescriptionEN,
+                        DescriptionKA = s.DescriptionKA,
+                        DescriptionRU = s.DescriptionRU,
+                        FullTextEN = s.FullTextEN,
+                        FullTextKA = s.FullTextKA,
+                        FullTextRU = s.FullTextRU,
+                        CategoryID = s.CategoryID,
+                        SortVal = s.SortVal,
+                        IsVisible = s.IsVisible,
+                        IsVisibleSliderEN = s.IsVisibleSliderEN,
+                        IsVisibleSliderKA = s.IsVisibleSliderKA,
+                        IsVisibleSliderRU = s.IsVisibleSliderRU,
+                        VideoURL = s.VideoURL,
+                        GalleryID = s.GalleryID,
+                        ImgURLEn = s.URL
+                    }).ToList();
+                }
+            });
+
+        }
+    
     }
 
 }

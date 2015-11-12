@@ -18,7 +18,7 @@ namespace SMR
         private void InitStartup()
         {
             var p = new NewsRepository();
-            rptNews.DataSource = p.ListNews(null).Where(w=>w.IsVisible.Value).OrderByDescending(o=>o.NewsDate).Take(5);
+            rptNews.DataSource = p.ListNews(null).Where(w => w.IsVisible.Value && !string.IsNullOrEmpty(w.Description)).OrderByDescending(o => o.NewsDate).Take(5);
             rptNews.DataBind();
         }
     }

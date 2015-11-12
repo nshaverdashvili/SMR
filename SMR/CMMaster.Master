@@ -222,6 +222,7 @@
             }
 
             $(".Calendar").datepicker({
+                changeYear: true,
                 dateFormat: "yy-mm-dd",
                 defaultDate: currentDate,
                 onSelect: function (date) {

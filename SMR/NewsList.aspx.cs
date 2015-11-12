@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -39,7 +40,7 @@ namespace SMR
                 Year = NewDate.Year;
             }
 
-            var List = p.ListNews(null).Where(w => w.IsVisible.Value).OrderByDescending(o => o.NewsDate).ToList();
+            var List = p.ListNews(null).Where(w => w.IsVisible.Value && !string.IsNullOrEmpty(w.Description)).OrderByDescending(o => o.NewsDate).ToList();
 
             if (!string.IsNullOrEmpty(Request.QueryString["im"]) && Request.QueryString["im"]=="true")
             {
@@ -50,11 +51,13 @@ namespace SMR
                 List = List.Where(w=>w.NewsDate == NewDate).ToList();
             }
 
+           
             List = List.Take(take).Skip(pageSize).ToList();
 
             PagedDataSource page = new PagedDataSource();
             page.AllowCustomPaging = true;
             page.AllowPaging = true;
+                      
             page.DataSource = List;
             page.PageSize = 10;
             rptNews.DataSource = page;
