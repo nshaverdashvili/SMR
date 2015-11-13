@@ -25,9 +25,9 @@
     <div class="container-fluid main">
         <div class="col-xs-12" style="margin-top: 30px;">
             <ul class="nav nav-tabs" data-tabclass=".notifgroup">
-                <li role="presentation" class="active"><a href="#groupnotif1" data-value="2">სანოტიფიკაციო ფორმა 1</a></li>
-                <li role="presentation"><a href="#groupnotif2" data-value="3">სანოტიფიკაციო ფორმა 2</a></li>
-                <li role="presentation"><a href="#groupnotif3" data-value="4">სანოტიფიკაციო ფორმა 3</a></li>
+                <li role="presentation" class="active"><a href="#groupnotif1" data-value="2"><%=Core.Properties.Resources.NotificationForm1 %></a></li>
+                <li role="presentation"><a href="#groupnotif2" data-value="3"><%=Core.Properties.Resources.NotificationForm2 %></a></li>
+                <li role="presentation"><a href="#groupnotif3" data-value="4"><%=Core.Properties.Resources.NotificationForm3 %></a></li>
             </ul>
             <asp:HiddenField runat="server" ID ="hfNotifyType" ClientIDMode="Static" value="2"/>
             <div id="groupnotif1" class="notifgroup">
