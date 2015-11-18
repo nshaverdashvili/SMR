@@ -2,6 +2,11 @@
     $(".ical").datepicker();
     $(".ical").prop("readonly", true);
 
+    $(".fancybox").fancybox({
+        openEffect: 'none',
+        closeEffect: 'none'
+    });
+
     $("a[data-showpopup='true']").click(function () {
         var url = $(this).attr("href");
         var width = $(this).attr("data-width");

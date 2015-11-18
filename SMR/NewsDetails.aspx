@@ -39,7 +39,17 @@
             <div class="fb-share-button" data-href="<%=ogUrl %>" data-layout="button_count"></div>
         </div>
     </div>
-
+    <div class="row">
+        <div class="col-md-12">
+            <asp:Repeater runat ="server" ID="rptNewsGallery" ItemType="Core.Files.Files">
+                <ItemTemplate>
+                    <a href="/Uploads/<%#Item.URL %>" class="fancybox" data-fancybox-group="NewsGallery"><img src="/Uploads/<%#Item.URL %>?w=140" class="img-thumbnail" /></a>
+                </ItemTemplate>
+            </asp:Repeater>
+            
+            
+        </div>
+    </div>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="ScriptsPlaceHolder" runat="server">
 </asp:Content>
