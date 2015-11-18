@@ -67,7 +67,7 @@ namespace Core.UM
                         SortVal=s.SortVal,
                         IsVisible=s.IsVisible,
                         PermissionsCode=s.PermissionCode
-                    }).ToList();
+                    }).OrderBy(o=>o.SortVal).ToList();
                 }
             });
         }

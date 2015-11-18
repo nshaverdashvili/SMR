@@ -648,7 +648,7 @@ namespace Core.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to სანოტიფიკაციო ფორმა 2.
+        ///   Looks up a localized string similar to სანოტიფიკაციო ფორმა 3.
         /// </summary>
         public static string NotificationForm3 {
             get {
